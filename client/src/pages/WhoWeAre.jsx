@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import teamMember1 from '../assets/about/team-member-1.jpg';
+import teamMember2 from '../assets/about/team-member-2.jpg';
+import goldRockLogo from '../assets/service/goldrocklogo.png';
+import whoweHero from '../assets/about/whowe-hero.jpg';
 
 const WhoWeAre = () => {
   // Team data array
@@ -9,7 +13,7 @@ const WhoWeAre = () => {
       name: "Eng. Pietro Piccinetti",
       role: "(Honorary President)",
       description: "A high-profile manager with a long international experience and a consolidated reputation, equipped with an extensive network of relationships, a remarkable curriculum and a solid expertise in internationalization and international negotiation activities, with strong capabilities in defining strategies that allow companies to relaunch and expand on the global market. With a proven experience in M&A, he has driven a significant rate of improvement in performance in mergers/corporate management. Familiar with the complexities of due diligence and company valuation, in his long career he has successfully faced the challenges of different corporate cultures in various industrial and Financial (PE) sectors. CEO of Infratel SpA – Infrastructure and Telecommunications for Italy. Vice President of the Italian Association of Fairs and Events.",
-      image: "../../assets/about/team-member-1.jpg",
+      image: teamMember1,
       hasImage: true
     },
     {
@@ -17,7 +21,7 @@ const WhoWeAre = () => {
       name: "Dr. Angelo Rossi",
       role: "(Chief Executive Officer)",
       description: "A highly skilled international manager in the precious metals field with a worldwide network of commercial relationships. He is the visionary driving force of the group, assisted by a team of top-level managers.",
-      image: "../../assets/about/team-member-2.jpg",
+      image: teamMember2,
       hasImage: true
     },
     {
@@ -58,7 +62,7 @@ const WhoWeAre = () => {
           <div className="relative">
             {/* Normal Image */}
             <img 
-              src="../../assets/about/whowe-hero.jpg" 
+              src={whoweHero} 
               alt="Who We Are"
               className="w-full h-auto object-cover"
             />
@@ -190,7 +194,7 @@ const WhoWeAre = () => {
               {/* Partner Logo */}
               <div className="w-24 h-24 bg-black rounded-lg flex items-center justify-center border border-gray-200">
                 <img 
-                  src="../../assets/service/goldrocklogo.png" 
+                  src={goldRockLogo} 
                   alt="Gold Rock Capital Logo"
                   className="w-16 h-16 object-contain"
                 />

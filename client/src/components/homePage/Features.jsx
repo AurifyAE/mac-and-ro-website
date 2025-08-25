@@ -1,7 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import vaultImage from '../../assets/homepage/vault-image.jpg';
 import { useNavigate } from 'react-router-dom';
+import featureImage1 from '../../assets/homepage/feature-image1.jpg';
+import featureImage3 from '../../assets/homepage/feature-image3.jpg';
+import locationSwapVideo from '../../assets/location-swap/location-swap-video.mov';
+import googlePlay from '../../assets/homepage/googlePlay.png';
+import appStore from '../../assets/homepage/appStore.png';
 
 const Features = () => { 
     const navigate = useNavigate();
@@ -143,7 +147,7 @@ const Features = () => {
                     >
                         <div className="relative">
                             <img 
-                                src="../../assets/homepage/feature-image1.jpg" 
+                                src={featureImage1} 
                                 alt="Gold Investment Solutions" 
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
                             />
@@ -165,7 +169,7 @@ const Features = () => {
                     >
                         <div className="relative">
                             <video 
-                                src="../../assets/location-swap/location-swap-video.mov" 
+                                src={locationSwapVideo} 
                                 alt="Gold Market Intelligence" 
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
                                 autoPlay
@@ -245,8 +249,8 @@ const Features = () => {
                                 Download Now
                             </button>
                             <div className="flex justify-center gap-4 mt-8">
-                                <img src="../../assets/homepage/googlePlay.png" alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
-                                <img src="../../assets/homepage/appStore.png" alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
+                                <img src={googlePlay} alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
+                                <img src={appStore} alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
                             </div>
                         </motion.div>
                     </motion.div>
@@ -260,7 +264,7 @@ const Features = () => {
                     >
                         <div className="relative">
                             <img 
-                                src="../../assets/homepage/feature-image3.jpg" 
+                                src={featureImage3} 
                                 alt="Premium Metal Account Services" 
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
                             />
