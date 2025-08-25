@@ -143,7 +143,7 @@ const Features = () => {
                     >
                         <div className="relative">
                             <img 
-                                src="/src/assets/homepage/feature-image1.jpg" 
+                                src="../../assets/homepage/feature-image1.jpg" 
                                 alt="Gold Investment Solutions" 
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
                             />
@@ -165,7 +165,7 @@ const Features = () => {
                     >
                         <div className="relative">
                             <video 
-                                src="/src/assets/location-swap/location-swap-video.mov" 
+                                src="../../assets/location-swap/location-swap-video.mov" 
                                 alt="Gold Market Intelligence" 
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
                                 autoPlay
@@ -245,8 +245,8 @@ const Features = () => {
                                 Download Now
                             </button>
                             <div className="flex justify-center gap-4 mt-8">
-                                <img src="/src/assets/homepage/googlePlay.png" alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
-                                <img src="/src/assets/homepage/appStore.png" alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
+                                <img src="../../assets/homepage/googlePlay.png" alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
+                                <img src="../../assets/homepage/appStore.png" alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
                             </div>
                         </motion.div>
                     </motion.div>
@@ -260,7 +260,7 @@ const Features = () => {
                     >
                         <div className="relative">
                             <img 
-                                src="/src/assets/homepage/feature-image3.jpg" 
+                                src="../../assets/homepage/feature-image3.jpg" 
                                 alt="Premium Metal Account Services" 
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
                             />
