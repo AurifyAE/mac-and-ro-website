@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 // Import images
-import deluxeBanner from '../../assets/homePage/deluxe-flip.jpg';
-import macBanner from '../../assets/homePage/mac-flip.jpg';
-import keymanBanner from '../../assets/homePage/keyman-flip.jpg';
-import tfmBanner from '../../assets/homePage/tfm-flip.jpg';
+import deluxeBanner from '../../assets/homepage/deluxe-flip.jpg';
+import macBanner from '../../assets/homepage/mac-flip.jpg';
+import keymanBanner from '../../assets/homepage/keyman-flip.jpg';
+import tfmBanner from '../../assets/homepage/tfm-flip.jpg';
 
 const flipCardsData = [
     {
