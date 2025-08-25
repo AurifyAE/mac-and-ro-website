@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { products } from '../data/products';
 
 const ProductDetails = () => {
@@ -120,12 +120,13 @@ const ProductDetails = () => {
 
                             {/* Action Buttons */}
                             <div className="flex flex-col sm:flex-row gap-4">
+                                <Link to="/contact">
                                 <button 
-                                    onClick={() => handleEmailInquiry(product)}
                                     className="flex-1 bg-transparent border-1 border-black text-black py-3 px-6 rounded-sm hover:bg-black hover:border-transparent hover:text-white transition-all duration-300 font-semibold"
                                 >
                                     Shop Now
                                 </button>
+                                </Link>
                                 {/* <button 
                                     onClick={() => handleContactSales(product)}
                                     className="flex-1 bg-transparent border-2 border-[#DCBC7C] text-[#DCBC7C] py-3 px-6 rounded-sm hover:bg-[#DCBC7C] hover:text-white transition-all duration-300 font-semibold"
