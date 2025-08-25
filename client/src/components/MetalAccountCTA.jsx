@@ -1,11 +1,12 @@
 import React from 'react';
+import goldBar from '../assets/metalAccount/gold-bar.png';
 
 const MetalAccountCTA = ({title}) => {
     return (
         <section className="py-20 bg-black relative max-w-4xl mx-auto mb-20">
         {/* Background Image positioned at left -20px */}
         <div className="hidden lg:block absolute left-[-200px] top-1/2 transform -translate-y-1/2 w-[400px] h-[400px]">
-            <img src="/src/assets/metalAccount/gold-bar.png" alt="Gold Bar" className="w-full h-full object-cover" />
+            <img src={goldBar} alt="Gold Bar" className="w-full h-full object-cover" />
         </div>
         
         <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import productBanner from '../assets/service/product-banner.jpg';
 import goldRockLogo from '../assets/service/goldrocklogo.png';
-import productsData from '../data/products.json';
+import { products } from '../data/products';
 import whyInvest from '../assets/service/whyinvest.jpg';
 
 
@@ -65,7 +65,7 @@ const ProductGrid = () => {
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {productsData.map((product) => (
+                        {products.map((product) => (
                             <div key={product.id} className="bg-white rounded-sm shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                                 <div className="h-60 bg-gray-100 flex items-center justify-center p-6">
                                     <img 

@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import productsData from '../data/products.json';
+import { products } from '../data/products';
 
 const ProductDetails = () => {
     const { productId } = useParams();
     const navigate = useNavigate();
 
     // Find the product by ID
-    const product = productsData.find(p => p.id === parseInt(productId));
+    const product = products.find(p => p.id === parseInt(productId));
 
     // If product not found, redirect to products page
     if (!product) {
@@ -16,8 +16,9 @@ const ProductDetails = () => {
     }
 
     // Get related products (excluding current product)
-    const relatedProducts = productsData
+    const relatedProducts = products
         .filter(p => p.id !== parseInt(productId))
+        .sort(() => Math.random() - 0.5)
         .slice(0, 3);
 
     // Function to handle navigation to product details
