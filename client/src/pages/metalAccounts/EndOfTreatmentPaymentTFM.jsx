@@ -52,10 +52,10 @@ const EndOfTreatmentPaymentTFM = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <span className="text-[#DCBC7C] text-sm">
-              TFM SOLUTION
+              EOT SOLUTION
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
-            End of Term Compensation (TFM) in Physical Gold
+            End of Term Compensation (EOT) in Physical Gold
             </h1>
             <p className="max-w-lg text-white text-base">
               Protecting your leadership, securing your company's future.
@@ -71,14 +71,14 @@ const EndOfTreatmentPaymentTFM = () => {
             {/* Left Side - Title & Paragraph */}
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
-                What is TFM?
+                What is EOT?
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                The End of Term Compensation (TFM) is a corporate tool that allows companies to guarantee directors an additional, tax-efficient benefit at the end of their mandate. At Mac & Ro Capital, we make this compensation even stronger by linking it to physical investment gold.
+                The End of Term Compensation (EOT) is a corporate tool that allows companies to guarantee directors an additional, tax-efficient benefit at the end of their mandate. At Mac & Ro Capital, we make this compensation even stronger by linking it to physical investment gold.
                 </p>
                 <p>
-                TFM is an additional payment to directors beyond regular salary. For companies, it is fully deductible as a cost. For directors, it is a form of deferred compensation with tax advantages.
+                EOT is an additional payment to directors beyond regular salary. For companies, it is fully deductible as a cost. For directors, it is a form of deferred compensation with tax advantages.
                 </p>
               </div>
             </div>
@@ -95,8 +95,6 @@ const EndOfTreatmentPaymentTFM = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               
-              {/* Decorative element */}
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#DCBC7C] rounded-full opacity-20"></div>
             </div>
           </div>
         </div>
@@ -198,12 +196,12 @@ const EndOfTreatmentPaymentTFM = () => {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-4xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
-          With expertise in gold trading, international compliance, and vaulting solutions, we transform TFM into a strategic corporate advantage, offering directors and companies both protection and growth.
+          With expertise in gold trading, international compliance, and vaulting solutions, we transform EOT into a strategic corporate advantage, offering directors and companies both protection and growth.
           </h2>
       </div>
 
       {/* CTA Section */}
-      <MetalAccountCTA  title="Need to know more about TFM?" />
+      <MetalAccountCTA  title="Need to know more about EOT?" />
     </div>
   )
 }

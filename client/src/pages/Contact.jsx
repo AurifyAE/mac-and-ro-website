@@ -114,17 +114,17 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="py-20 bg-[#F1F0E8]">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
+      {/* <section className="py-20 bg-[#F1F0E8]">
+        <div className="max-w-6xl mx-auto px-4 text-left">
+          <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             Contact Us
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-base text-gray-600 mx-auto leading-relaxed">
             Ready to start your investment journey? Get in touch with our team of experts 
             for personalized guidance and support.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Form & Info */}
       <section className="py-20">
@@ -408,7 +408,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-[#F1F0E8]">
+      {/* <section className="py-20 bg-[#F1F0E8]">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 font-playfair">
             Ready to Get Started?
@@ -432,7 +432,7 @@ const Contact = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import goldBar from '../assets/metalAccount/gold-bar.png';
+import { Link } from 'react-router-dom';
 
 const MetalAccountCTA = ({title}) => {
     return (
@@ -15,7 +16,9 @@ const MetalAccountCTA = ({title}) => {
               {title}
             </h2>
             <button className="px-6 py-2 bg-transparent border-1 border-white hover:bg-white hover:text-black text-white font-semibold rounded-sm transition-all duration-300 text-base shadow-lg hover:shadow-xl">
+              <Link to="/contact">
               Book Consultant
+              </Link>
             </button>
           </div>
         </div>

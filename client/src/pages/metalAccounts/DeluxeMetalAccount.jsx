@@ -3,7 +3,7 @@ import StepbyStepData from '../../components/metalAccounts/StepbyStepData'
 import { motion } from 'framer-motion';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
 import deluxeBanner from '../../assets/metalAccount/deluxe-banner.jpg';
-import appleGold from '../../assets/metalAccount/apple-gold.jpg';
+import appleGold from '../../assets/metalAccount/apple-gold-video.mp4';
 import deluxeImg2 from '../../assets/metalAccount/deluxe-img2.jpg';
 
 const DeluxeMetalAccount = () => {
@@ -136,10 +136,13 @@ const DeluxeMetalAccount = () => {
             {/* Right Side - Image */}
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl">
-                <img 
+                <video 
                   src={appleGold} 
                   alt="Deluxe Metal Account - Gold Investment"
                   className="w-full h-auto object-cover"
+                  autoPlay
+                  muted
+                  loop
                 />
                 {/* Optional overlay for enhanced visual appeal */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

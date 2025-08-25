@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import Homepage from './pages/Homepage';
 import ProductGrid from './pages/ProductGrid';
 import ProductDetails from './pages/ProductDetails';
+import Portfolio from './pages/Portfolio';
 import { CurrencyProvider } from './context/CurrencyContext';
 import MetalAccounts from './pages/MetalAccounts';
 import DeluxeMetalAccount from './pages/metalAccounts/DeluxeMetalAccount';
@@ -23,39 +24,51 @@ import KeyManMetalAccount from './pages/metalAccounts/KeyManMetalAccount';
 import LocationSwap from './pages/LocationSwap';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+import useScrollToTop from './hooks/useScrollToTop';
   
 function App() {
   return (
     <CurrencyProvider>
       <Router>
-        <div className="App">
-          <Banner />
-          <Header />
-          <Navigation />
-          <Routes>
-            <Route path="/" element={<Homepage />} />
-            <Route path="/services" element={<ServicePage />} />
-            <Route path="/who-we-are" element={<WhoWeAre />} />
-            <Route path="/accreditations" element={<Accreditations />} />
-            <Route path="/corporate-governance" element={<CorporateGovernance />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/metal-accounts" element={<MetalAccounts />} />
-            <Route path="/metal-accounts/deluxe-metal-account" element={<DeluxeMetalAccount />} />
-            <Route path="/metal-accounts/mac-ro-metal-account" element={<MacRoMetalAccount />} />
-            <Route path="/metal-accounts/end-of-treatment-payment-tfm" element={<EndOfTreatmentPaymentTFM />} />
-            <Route path="/metal-accounts/key-man-metal-account" element={<KeyManMetalAccount />} />
-            <Route path="/products" element={<ProductGrid />} />
-            <Route path="/product/:productId" element={<ProductDetails />} />
-            <Route path="/location-swap" element={<LocationSwap />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          </Routes>
-          <Footer />
-        </div>
+        <AppContent />
       </Router>
     </CurrencyProvider>
+  );
+}
+
+// Separate component to use the hook inside Router context
+function AppContent() {
+  // Use the scroll to top hook inside Router context
+  useScrollToTop();
+
+  return (
+    <div className="App">
+      <Banner />
+      <Header />
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/who-we-are" element={<WhoWeAre />} />
+        <Route path="/accreditations" element={<Accreditations />} />
+        <Route path="/corporate-governance" element={<CorporateGovernance />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/metal-accounts" element={<MetalAccounts />} />
+        <Route path="/metal-accounts/deluxe-metal-account" element={<DeluxeMetalAccount />} />
+        <Route path="/metal-accounts/mac-ro-metal-account" element={<MacRoMetalAccount />} />
+        <Route path="/metal-accounts/end-of-treatment-payment-tfm" element={<EndOfTreatmentPaymentTFM />} />
+        <Route path="/metal-accounts/key-man-metal-account" element={<KeyManMetalAccount />} />
+        <Route path="/products" element={<ProductGrid />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/product/:productId" element={<ProductDetails />} />
+        <Route path="/location-swap" element={<LocationSwap />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

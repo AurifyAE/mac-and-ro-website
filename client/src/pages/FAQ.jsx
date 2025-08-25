@@ -47,11 +47,11 @@ const FAQ = () => {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <section className="py-20 bg-[#F1F0E8]">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
+        <div className="max-w-6xl mx-auto px-4 text-left">
+          <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             Frequently Asked Questions
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-base text-gray-600 mx-auto leading-relaxed">
             Find answers to common questions about our services, investment processes, 
             and how to get started with Mac & Ro.
           </p>

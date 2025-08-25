@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import metalAccountBanner from '../assets/metalAccount/metal-account-banner.jpg';
 import MetalAccountCTA from '../components/MetalAccountCTA';
+import { Link } from 'react-router-dom';
 
 const MetalAccounts = () => {
   const cardVariants = {
@@ -13,6 +14,7 @@ const MetalAccounts = () => {
     {
       id: 1,
       title: "Deluxe Metal Account",
+      link: "/metal-accounts/deluxe-metal-account",
       description: "Own physical gold with full security, certification, and growth potential.",
       whoItsFor: "Individuals, families, and businesses seeking stable, generational wealth.",
       keyBenefits: "Full ownership, secure vaults, extra gold, globally certified.",
@@ -21,6 +23,7 @@ const MetalAccounts = () => {
     {
       id: 2,
       title: "Mac & Ro Metal Account",
+      link: "/metal-accounts/mac-ro-metal-account",
       description: "Secure your wealth with allocated precious metals, fully certified and protected.",
       whoItsFor: "Investors and businesses seeking safe, tangible assets.",
       keyBenefits: "Numbered bars, segregated vaults, full ownership, no credit risk.",
@@ -29,6 +32,7 @@ const MetalAccounts = () => {
     {
       id: 3,
       title: "End Of Treatment (EOT)",
+      link: "/metal-accounts/end-of-treatment-payment-tfm",
       description: "Severance payments in physical gold for executives.",
       whoItsFor: "Corporates planning executive benefits",
       keyBenefits: "Tax efficient, secure, flexible",
@@ -37,6 +41,7 @@ const MetalAccounts = () => {
     {
       id: 4,
       title: "Key Man Metal Account",
+      link: "/metal-accounts/key-man-metal-account",
       description: "Protect your company from loss of key personnel.",
       whoItsFor: "Businesses with essential employees",
       keyBenefits: "Immediate payout, liquid asset",
@@ -112,8 +117,10 @@ const MetalAccounts = () => {
                     <span className="font-semibold text-[#DCBC7C]">Key Benefits:</span> {card.keyBenefits}
                   </p>
                 </div>
-                <button className="mt-6 px-4 py-2 bg-black hover:bg-white hover:text-black border-2 border-white text-white font-semibold rounded-sm transition-colors duration-200 ease-in-out tracking-wide">
+                <button className="mt-6 px-6 py-2 bg-black hover:bg-white hover:text-black border-1 border-white text-white font-semibold rounded-sm transition-colors duration-200 ease-in-out tracking-wide">
+                <Link to={card.link}>
                   Learn More
+                </Link>
                 </button>
               </motion.div>
             ))}
@@ -152,8 +159,10 @@ const MetalAccounts = () => {
                     <span className="font-semibold text-[#DCBC7C]">Key Benefits:</span> {card.keyBenefits}
                   </p>
                 </div>
-                <button className="mt-6 px-4 py-2 bg-black hover:bg-white hover:text-black border-2 border-white text-white font-semibold rounded-sm transition-colors duration-200 ease-in-out tracking-wide">
+                <button className="mt-6 px-6 py-2 bg-black hover:bg-white hover:text-black border-1 border-white text-white font-semibold rounded-sm transition-colors duration-200 ease-in-out tracking-wide">
+                <Link to={card.link}>
                   Learn More
+                </Link>
                 </button>
               </motion.div>
             ))}

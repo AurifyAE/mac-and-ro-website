@@ -2,7 +2,7 @@ import React from 'react'
 import StepbyStepData from '../../components/metalAccounts/StepbyStepData'
 import { motion } from 'framer-motion';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
-import macBanner from '../../assets/metalAccount/mac-banner.jpg';
+import macBanner from '../../assets/metalAccount/mac-video-banner.mp4';
 import macImg2 from '../../assets/metalAccount/mac-img2.jpg';
 
 const MacRoMetalAccount = () => {
@@ -56,12 +56,14 @@ const MacRoMetalAccount = () => {
   return (
     <div className="min-h-screen bg-white">
         <section className="relative h-[480px] flex items-center">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${macBanner})`
-          }}
+        {/* Background Video */}
+        <video 
+          src={macBanner} 
+          alt="Mac & Ro Metal Account - Gold Investment"
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
         />
         
         {/* Gradient Overlay - 90 degrees from black to transparent */}

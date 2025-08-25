@@ -103,7 +103,7 @@ const Header = () => {
                     submenuItems: [
                         { name: 'Deluxe Metal Account', path: '/metal-accounts/deluxe-metal-account' },
                         { name: 'Mac & Ro Metal Account', path: '/metal-accounts/mac-ro-metal-account' },
-                        { name: 'End Of Treatment Payment (TFM)', path: '/metal-accounts/end-of-treatment-payment-tfm' },
+                        { name: 'End Of Treatment Payment (EOT)', path: '/metal-accounts/end-of-treatment-payment-tfm' },
                         { name: 'Key Man Metal Account', path: '/metal-accounts/key-man-metal-account' }
                     ]
                 },

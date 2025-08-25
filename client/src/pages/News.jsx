@@ -33,11 +33,11 @@ const News = () => {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <section className="py-20 bg-[#F1F0E8]">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
+        <div className="max-w-6xl mx-auto px-4 text-left">
+          <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             News & Updates
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-base text-gray-600 mx-auto leading-relaxed">
             Stay informed about the latest developments at Mac & Ro, market insights, 
             and industry updates from the world of precious metals investment.
           </p>
@@ -46,7 +46,7 @@ const News = () => {
 
       {/* News Grid */}
       <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {newsItems.map((news, index) => (
               <div 

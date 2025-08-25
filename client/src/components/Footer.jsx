@@ -54,7 +54,7 @@ const Footer = () => {
                 <h3 className="text-lg font-bold mb-6 text-black">Info</h3>
                 <ul className="space-y-3">
                     <li><Link to="/terms-and-conditions" className="text-black hover:text-[#DCBC7C] transition-colors">Terms & Conditions</Link></li>
-                    <li><Link to="/documentation" className="text-black hover:text-[#DCBC7C] transition-colors">Documentation</Link></li>
+                    <li><Link to="/corporate-governance" className="text-black hover:text-[#DCBC7C] transition-colors">Corporate Governance</Link></li>
                     <li><Link to="/privacy-policy" className="text-black hover:text-[#DCBC7C] transition-colors">Privacy Policy</Link></li>
                     <li><Link to="/faq" className="text-black hover:text-[#DCBC7C] transition-colors">FAQ</Link></li>
                 </ul>
@@ -115,7 +115,7 @@ const Footer = () => {
                 {/* Column 1 - Logo & Code */}
                 <motion.div 
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}  
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="space-y-6"
@@ -126,17 +126,17 @@ const Footer = () => {
                 </div>
                 
                 {/* Professional Operator Code */}
-                <p className="text-sm text-black">
+                <p className="text-[13px] text-black">
                     Professional Operator Code Gold 24378
                 </p>
 
-                <p className="text-sm text-black">
+                <p className="text-[13px] text-black">
                     VAT number 104904019700003
                 </p>
                 
                 {/* Secure Payments */}
                 <div>
-                    <p className="text-sm text-black mb-3">Download App</p>
+                    <p className="text-[13px] text-black mb-3">Download App</p>
                     <div className="flex space-x-3">
                     <div className="w-24 h-auto bg-white rounded">
                         <a href="https://play.google.com/store/apps">
@@ -163,7 +163,7 @@ const Footer = () => {
                 {/* Dubai Address */}
                 <div>
                     <h4 className="text-lg font-semibold mb-3 text-black">Dubai:</h4>
-                    <p className="text-black text-sm leading-relaxed">
+                    <p className="text-black text-[13px] leading-relaxed">
                     MAC & RO CAPITAL FZC, <br />
                     Saif Suite - Gold Park, Q1-1-027 Sharjah <br />
                     Tel: +971 50 4815 553 <br />
@@ -210,7 +210,7 @@ const Footer = () => {
                 {/* First Address */}
                 <div>
                     <h4 className="text-lg font-semibold mb-3 text-black">Head Office:</h4>
-                    <p className="text-black text-sm leading-relaxed">
+                    <p className="text-black text-[13px] leading-relaxed">
                     MAC & RO SRL <br />
                     Via dei Mocenigo 9, 73100 Lecce, Italy. <br />
                     Tel: +39 392 294 7569 <br />
@@ -221,7 +221,7 @@ const Footer = () => {
                 {/* Second Address */}
                 <div>
                     <h4 className="text-lg font-semibold mb-3 text-black">Brazzaville:</h4>
-                    <p className="text-black text-sm leading-relaxed">   
+                    <p className="text-black text-[13px] leading-relaxed">   
                     MAC & RO BRAZZAVILLE SARLU, <br />
                     116 Avenue Felix Eboue Mpila Center -<br/> 
                     Ville Brazzaville. <br />
@@ -239,7 +239,7 @@ const Footer = () => {
                 <div className="flex justify-between items-center">
                     {/* Copyright */}
                     <div>
-                        <p className="text-white text-sm">
+                        <p className="text-white text-[13px]">
                             © 2025 Mac & Ro. All rights reserved.
                         </p>
                     </div>

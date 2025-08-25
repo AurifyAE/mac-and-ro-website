@@ -22,7 +22,7 @@ const Navigation = () => {
           subSubmenu: [
             { name: 'Deluxe Metal Account', path: '/metal-accounts/deluxe-metal-account' },
             { name: 'Mac & Ro Metal Account', path: '/metal-accounts/mac-ro-metal-account' },
-            { name: 'End Of Treatment Payment (TFM)', path: '/metal-accounts/end-of-treatment-payment-tfm' },
+            { name: 'End Of Treatment Payment (EOT)', path: '/metal-accounts/end-of-treatment-payment-tfm' },
             { name: 'Key Man Metal Account', path: '/metal-accounts/key-man-metal-account' }
           ]
         },
@@ -102,7 +102,7 @@ const Navigation = () => {
                     {/* Dropdown Menu */}
                     {isServicesOpen && (
                       <div 
-                        className="absolute top-full left-0 mt-1 w-64 bg-black rounded-lg shadow-lg border border-gray-700 z-50"
+                        className="absolute top-full left-0 mt-3 w-64 bg-black rounded-lg shadow-lg border border-gray-700 z-50"
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                       >

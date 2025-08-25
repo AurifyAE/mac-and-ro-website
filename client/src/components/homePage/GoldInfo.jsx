@@ -1,7 +1,7 @@
 import React from 'react';
 import GoldInfoImage from '../../assets/homepage/goldInfo.jpg';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const GoldInfo = () => {
   const navigate = useNavigate();
@@ -82,13 +82,13 @@ const GoldInfo = () => {
               <p className="text-gray-600 leading-relaxed tracking-wide mb-6">
                 Investing in gold allows you to diversify your portfolio, reducing overall risk. Gold has a low correlation with other financial assets such as stocks and bonds, which means it can increase in value even when other investments are losing value.
               </p>
-              <button 
-              onClick={() => {
-                navigate('/contact');
-              }}
-              className="px-6 py-2 bg-white border-1 border-black hover:bg-black hover:text-white  text-black font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base">
-                Create Your Gold Portfolio
-              </button>
+              <Link to="/portfolio">
+                <button 
+                  className="px-6 py-2 bg-white border-1 border-black hover:bg-black hover:text-white  text-black font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base"
+                >
+                  Create Your Gold Portfolio
+                </button>
+              </Link>
             </motion.div>
 
             {/* Third Sub-section */}

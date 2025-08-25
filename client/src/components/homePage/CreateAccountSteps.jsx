@@ -70,7 +70,7 @@ const CreateAccountSteps = () => {
             className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
-            Onboarding with Mac & Ro Dubai is fast, secure, and guided by our relationship managers.
+            Onboarding with Mac & Ro Capital FZC is fast, secure, and guided by our relationship managers.
             We support clients across time zones and offer multilingual assistance
           </motion.p>
         </motion.div>
