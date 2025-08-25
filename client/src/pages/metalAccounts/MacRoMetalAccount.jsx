@@ -2,6 +2,8 @@ import React from 'react'
 import StepbyStepData from '../../components/metalAccounts/StepbyStepData'
 import { motion } from 'framer-motion';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
+import macBanner from '../../assets/metalAccount/mac-banner.jpg';
+import macImg2 from '../../assets/metalAccount/mac-img2.jpg';
 
 const MacRoMetalAccount = () => {
   const containerVariants = {
@@ -58,7 +60,7 @@ const MacRoMetalAccount = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/src/assets/metalAccount/mac-banner.jpg')`
+            backgroundImage: `url(${macBanner})`
           }}
         />
         
@@ -235,7 +237,7 @@ const MacRoMetalAccount = () => {
               <div className="relative">
                 <div className="relative overflow-hidden shadow-2xl">
                   <img 
-                    src="/src/assets/metalAccount/mac-img2.jpg" 
+                    src={macImg2} 
                     alt="Mac & Ro Metal Account - Gold Investment"
                     className="w-full h-auto object-cover"
                   />

@@ -2,6 +2,9 @@ import React from 'react'
 import StepbyStepData from '../../components/metalAccounts/StepbyStepData'
 import { motion } from 'framer-motion';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
+import deluxeBanner from '../../assets/metalAccount/deluxe-banner.jpg';
+import appleGold from '../../assets/metalAccount/apple-gold.jpg';
+import deluxeImg2 from '../../assets/metalAccount/deluxe-img2.jpg';
 
 const DeluxeMetalAccount = () => {
   const containerVariants = {
@@ -86,7 +89,7 @@ const DeluxeMetalAccount = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/src/assets/metalAccount/deluxe-banner.jpg')`
+            backgroundImage: `url(${deluxeBanner})`
           }}
         />
         
@@ -134,7 +137,7 @@ const DeluxeMetalAccount = () => {
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl">
                 <img 
-                  src="/src/assets/metalAccount/apple-gold.jpg" 
+                  src={appleGold} 
                   alt="Deluxe Metal Account - Gold Investment"
                   className="w-full h-auto object-cover"
                 />
@@ -258,7 +261,7 @@ const DeluxeMetalAccount = () => {
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl">
                 <img 
-                  src="/src/assets/metalAccount/deluxe-img2.jpg" 
+                  src={deluxeImg2} 
                   alt="Deluxe Metal Account - Gold Investment"
                   className="w-full h-auto object-cover"
                 />

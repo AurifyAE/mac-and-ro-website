@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import governanceBg from '../assets/corporate/corporatebg.jpg';
+import dubaiIcon from '../assets/corporate/dubai-icon.svg';
+import italyIcon from '../assets/corporate/italy-icon.svg';
 
 const reportsDataOfItaly = [
 
@@ -137,7 +139,7 @@ const CorporateGovernance = () => {
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-playfair">
                      Dubai
                   </h1>
-                  <img src="/src/assets/corporate/dubai-icon.svg" alt="Corporate Governance" className="w-12 h-12" />
+                  <img src={dubaiIcon} alt="Corporate Governance" className="w-12 h-12" />
                 </div>
                 
                 {/* Reports and Downloads Table Of Dubai */}
@@ -186,7 +188,7 @@ const CorporateGovernance = () => {
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-playfair">
                      Italy
                   </h1>
-                  <img src="/src/assets/corporate/italy-icon.svg" alt="Corporate Governance" className="w-12 h-12" />
+                  <img src={italyIcon} alt="Corporate Governance" className="w-12 h-12" />
                 </div>
                 
                 {/* Reports and Downloads Table Of Dubai */}

@@ -1,5 +1,8 @@
 import React from 'react'
 import MetalAccountCTA from '../../components/MetalAccountCTA';
+import tfmBanner from '../../assets/metalAccount/tfm-banner.jpg';
+import tfmSection from '../../assets/metalAccount/tfm-section.jpg';
+import tfmImg2 from '../../assets/metalAccount/tfm-img2.jpg';
 
 const EndOfTreatmentPaymentTFM = () => {
 
@@ -33,7 +36,7 @@ const EndOfTreatmentPaymentTFM = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/src/assets/metalAccount/tfm-banner.jpg')`
+            backgroundImage: `url(${tfmBanner})`
           }}
         />
         
@@ -84,7 +87,7 @@ const EndOfTreatmentPaymentTFM = () => {
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl">
                 <img 
-                  src="/src/assets/metalAccount/tfm-section.jpg" 
+                  src={tfmSection} 
                   alt="Deluxe Metal Account - Gold Investment"
                   className="w-full h-auto object-cover"
                 />
@@ -180,7 +183,7 @@ const EndOfTreatmentPaymentTFM = () => {
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl">
                 <img 
-                  src="/src/assets/metalAccount/tfm-img2.jpg" 
+                  src={tfmImg2} 
                   alt="Deluxe Metal Account - Gold Investment"
                   className="w-full h-auto object-cover"
                 />

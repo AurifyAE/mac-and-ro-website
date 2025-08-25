@@ -1,7 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import productBanner from '../assets/service/product-banner.jpg';
+import goldRockLogo from '../assets/service/goldrocklogo.png';
 import productsData from '../data/products.json';
+import whyInvest from '../assets/service/whyinvest.jpg';
+
 
 const ProductGrid = () => {
     const navigate = useNavigate();
@@ -41,7 +44,7 @@ const ProductGrid = () => {
                         <p className="text-base mb-4 leading-relaxed flex items-center">
                         Distributed in partnership with 
                         <img 
-                            src="/src/assets/service/goldrocklogo.png" 
+                            src={goldRockLogo} 
                             alt="Gold Rock Capital Logo" 
                             className="w-12 h-12 inline-block ml-2" 
                         /> 
@@ -95,7 +98,7 @@ const ProductGrid = () => {
                         {/* Left Side - Image */}
                         <div className="order-2 lg:order-1">
                             <img 
-                                src="/src/assets/service/whyinvest.jpg"
+                                src={whyInvest}
                                 alt="Precious Metals Investment"
                                 className="w-full h-96 object-cover rounded-[42px] shadow-lg"
                             />

@@ -1,5 +1,8 @@
 import React from 'react'
 import MetalAccountCTA from '../../components/MetalAccountCTA';
+import keymanBanner from '../../assets/metalAccount/keyman-banner.jpg';
+import keyGold from '../../assets/metalAccount/key-gold.jpg';
+import keymanImg2 from '../../assets/metalAccount/keymanimg2.jpg';
 
 const KeyManMetalAccount = () => {
   // Dynamic cards data
@@ -33,7 +36,7 @@ const KeyManMetalAccount = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/src/assets/metalAccount/keyman-banner.jpg')`
+            backgroundImage: `url(${keymanBanner})`
           }}
         />
         
@@ -87,7 +90,7 @@ const KeyManMetalAccount = () => {
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl">
                 <img 
-                  src="/src/assets/metalAccount/key-gold.jpg" 
+                  src={keyGold} 
                   alt="Deluxe Metal Account - Gold Investment"
                   className="w-full h-auto object-cover"
                 />
@@ -165,7 +168,7 @@ const KeyManMetalAccount = () => {
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl">
                 <img 
-                  src="/src/assets/metalAccount/keymanimg2.jpg" 
+                  src={keymanImg2} 
                   alt="Deluxe Metal Account - Gold Investment"
                   className="w-full h-auto object-cover"
                 />

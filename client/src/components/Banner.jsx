@@ -3,6 +3,7 @@ import langselector from '../assets/homepage/langselector.svg';
 import appStore from '../assets/homepage/appStore.png';
 import googlePlay from '../assets/homepage/googlePlay.png';
 import { useCurrency } from '../context/CurrencyContext';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   const { selectedCurrency, updateCurrency } = useCurrency();
@@ -128,9 +129,11 @@ const Banner = () => {
             </div>
 
             {/* Sign In Button */}
+            <Link to="https://macandro.netlify.app/" target="_blank" rel="noopener noreferrer">
             <button className="px-4 py-1 text-sm font-semibold text-black bg-white border border-transparent hover:bg-[#f1f0e8ea] hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 tracking-wide">
               Sign In
             </button>
+            </Link>
           </div>
         </div>
       </div>

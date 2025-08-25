@@ -1,7 +1,19 @@
 import React from 'react'
 import MetalAccountCTA from '../components/MetalAccountCTA';
+import locationSwapHero from '../assets/location-swap/location-swap-hero.jpg';
+import locationIcon from '../assets/location-swap/location-icon.png';
 
 const LocationSwap = () => {
+    // Dynamic location data
+    const locations = [
+        { id: 1, name: 'London'},
+        { id: 2, name: 'Zurich'},
+        { id: 3, name: 'Lecce'},
+        { id: 4, name: 'Dubai'},
+        { id: 5, name: 'Hong Kong'},
+        { id: 6, name: 'New York'}
+    ];
+
     // Dynamic Q&A data
     const qaData = [
         {
@@ -70,7 +82,7 @@ const LocationSwap = () => {
                 <div 
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{
-                        backgroundImage: `url('/src/assets/location-swap/location-swap-hero.jpg')`
+                        backgroundImage: `url(${locationSwapHero})`
                     }}
                 />
                 
@@ -96,30 +108,12 @@ const LocationSwap = () => {
                         Mac & Ro Capital FZC can provide Gold Location Swap in the following hubs: 
                     </p>
                     <div className="flex flex-wrap gap-20 items-center justify-center py-10">
-                        <div className="flex flex-col items-center gap-2">
-                            <img src="/src/assets/location-swap/location-icon.png" alt="London" className="w-4 h-4" />
-                            <span className="text-gray-600 text-lg font-semibold uppercase">London</span>
-                        </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <img src="/src/assets/location-swap/location-icon.png" alt="Zurich" className="w-4 h-4" />
-                            <span className="text-gray-600 text-lg font-semibold uppercase">Zurich</span>
-                        </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <img src="/src/assets/location-swap/location-icon.png" alt="Lecce" className="w-4 h-4" />
-                            <span className="text-gray-600 text-lg font-semibold uppercase">Lecce</span>
-                        </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <img src="/src/assets/location-swap/location-icon.png" alt="Dubai" className="w-4 h-4" />
-                            <span className="text-gray-600 text-lg font-semibold uppercase">Dubai</span>
-                        </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <img src="/src/assets/location-swap/location-icon.png" alt="Hong Kong" className="w-4 h-4" />
-                            <span className="text-gray-600 text-lg font-semibold uppercase">Hong Kong</span>
-                        </div>
-                        <div className="flex flex-col items-center gap-2">
-                            <img src="/src/assets/location-swap/location-icon.png" alt="New York" className="w-4 h-4" />
-                            <span className="text-gray-600 text-lg font-semibold uppercase">New York</span>
-                        </div>
+                        {locations.map((location) => (
+                            <div key={location.id} className="flex flex-col items-center gap-2">
+                                <img src={locationIcon} alt={location.name} className="w-4 h-4" />
+                                <span className="text-gray-600 text-lg font-semibold uppercase">{location.name}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>

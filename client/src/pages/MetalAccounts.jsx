@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import metalAccountBanner from '../assets/metalAccount/metal-account-banner.jpg';
 import MetalAccountCTA from '../components/MetalAccountCTA';
 
 const MetalAccounts = () => {
@@ -51,7 +52,7 @@ const MetalAccounts = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('/src/assets/metalAccount/metal-account-banner.jpg')`
+            backgroundImage: `url(${metalAccountBanner})`
           }}
         />
         

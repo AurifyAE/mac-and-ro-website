@@ -9,6 +9,7 @@ import CapitalRaising from '../assets/service/capital.svg';
 import Sourcing from '../assets/service/sourcing.svg';
 import Mining from '../assets/service/mining.svg';
 import Smelting from '../assets/service/smelting.svg';
+import serviceBanner from '../assets/service/service-banner.jpg';
 
 const ServicePage = () => {
   const services = [
@@ -84,7 +85,7 @@ const ServicePage = () => {
         <div className="max-w-6xl mx-auto px-4 py-5">
           <div className="max-w-6xl mx-auto">
             <img 
-              src="/src/assets/service/service-banner.jpg" 
+              src={serviceBanner} 
               alt="Gold Investment Services" 
               className="w-full h-auto"
             />

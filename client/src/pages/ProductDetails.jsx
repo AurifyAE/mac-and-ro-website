@@ -35,13 +35,13 @@ const ProductDetails = () => {
     };
 
     // Function to handle contact sales email
-    const handleContactSales = (product) => {
-        const subject = `Sales Inquiry: ${product.name}`;
-        const body = `Hello Sales Team,\n\nI would like to discuss purchasing the following product:\n\nProduct: ${product.name}\nWeight: ${product.weight}\nLength: ${product.length}\nDiameter: ${product.diameter}\nThickness: ${product.thickness}\nFineness: ${product.fineness}\nCertification: ${product.certification}\n\nPlease contact me to discuss pricing, bulk orders, or any special requirements.\n\nThank you.`;
+    // const handleContactSales = (product) => {
+    //     const subject = `Sales Inquiry: ${product.name}`;
+    //     const body = `Hello Sales Team,\n\nI would like to discuss purchasing the following product:\n\nProduct: ${product.name}\nWeight: ${product.weight}\nLength: ${product.length}\nDiameter: ${product.diameter}\nThickness: ${product.thickness}\nFineness: ${product.fineness}\nCertification: ${product.certification}\n\nPlease contact me to discuss pricing, bulk orders, or any special requirements.\n\nThank you.`;
         
-        const mailtoLink = `mailto:sales@macandrocapital.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.open(mailtoLink);
-    };
+    //     const mailtoLink = `mailto:sales@macandrocapital.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    //     window.open(mailtoLink);
+    // };
 
     return (
         <div className="min-h-screen bg-white">
