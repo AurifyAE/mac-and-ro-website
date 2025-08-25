@@ -1,7 +1,7 @@
 import React from 'react';
 import bankCertified from '../../assets/homepage/bankCertified.jpg';
 import bancaDitalia from '../../assets/homepage/banca-ditalia-logo.svg';
-import oecd from '../../assets/homepage/oecd.svg';
+import oecd from '../../assets/homepage/OECD.svg';
 import { useNavigate } from 'react-router-dom';
 
 const InfoOne = () => {
