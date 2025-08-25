@@ -74,25 +74,14 @@ const Contact = () => {
       Best regards,
       ${formData.firstName} ${formData.lastName}`;
 
-    // Construct and test mailto URL
-    const mailtoUrl = `mailto:${COMPANY_EMAIL}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-    console.log('Mailto URL:', mailtoUrl);
-    console.log('Mailto URL length:', mailtoUrl.length);
-
-    // Attempt redirect with fallback
-    try {
-      window.location.href = mailtoUrl;
-      // Fallback to window.open after a short delay
-      setTimeout(() => {
-        window.open(mailtoUrl, '_blank');
-      }, 100);
-    } catch (error) {
-      console.error('Error triggering mailto redirect:', error);
-      alert('Unable to open email client. Please ensure an email client is configured or contact us directly at ' + COMPANY_EMAIL);
-    }
+    // Construct Gmail URL
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${COMPANY_EMAIL}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    
+    // Open Gmail compose window in new tab
+    window.open(gmailUrl, '_blank');
 
     resetForm();
-    alert('Form submitted! Please check your email client to send the message. If it does not open, contact us directly at ' + COMPANY_EMAIL);
+    alert('Form submitted! Gmail compose window has been opened. Please review and send your message.');
   };
 
   const resetForm = () => {
