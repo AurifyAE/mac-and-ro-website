@@ -1,11 +1,12 @@
 import { useRef, useEffect } from 'react';
-import heroVideo1 from '../../assets/homepage/hero-video1.mp4';
+import heroVideo1 from '../../assets/homepage/mac-hero-video1.mov';
 import heroVideo2 from '../../assets/homepage/hero-video2.mp4';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
     const videoRef = useRef(null);
     const secondVideoRef = useRef(null);
-
+    const navigate = useNavigate();
     useEffect(() => {
         if (videoRef.current) {
         videoRef.current.play().catch(error => {
@@ -37,19 +38,23 @@ const Hero = () => {
             </video>
 
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/20"></div>
+            <div className="absolute inset-0 bg-black/30"></div>
 
             {/* Content */}
             <div className="relative z-10 flex items-center justify-center pb-40 h-full">
-            <div className="text-left text-white px-4 sm:px-6 lg:px-8">
-                <h1 className="text-4xl sm:text-3xl lg:text-5xl font-bold mb-6 tracking-tight">
+            <div className="text-left text-white px-10 sm:px-12 lg:px-12">
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 tracking-tight">
                 Secure Your Wealth with Physical Gold -
                 </h1>
-                <p className="text-lg sm:text-xl lg:text-5xl mb-8 font-light tracking-wide">
+                <p className="text-2xl sm:text-3xl lg:text-4xl mb-8 font-light tracking-wide">
                 Trusted, Flexible Investment Solutions
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-start items-center">
-                <button className="px-6 py-2 bg-white/80 hover:bg-white text-black rounded-sm transition-colors duration-200 ease-in-out tracking-wide text-base">
+                <button 
+                onClick={() => {
+                    navigate('/contact');
+                }}
+                className="px-6 py-2 bg-white/80 hover:bg-white text-black rounded-sm transition-colors duration-200 ease-in-out tracking-wide text-base">
                     Get Started Today
                 </button>
                 </div>
@@ -81,12 +86,16 @@ const Hero = () => {
                             Secure. Empowered. Global.
                         </h2>
                         <p className="text-sm sm:text-base lg:text-base mb-8 font-light tracking-wide leading-relaxed">
-                            Mac & Ro brings decades of Italian gold banking expertise to Dubai—one of the world's leading hubs for physical precious metals. As a licensed Gold Bank in Italy, we now serve global clients through our Dubai entity with trusted, transparent, and Sharia-compliant services.
+                            Mac & Ro capital FZC brings decades of Italian gold banking expertise to Dubai—one of the world’s leading hubs for physical precious metals. As a licensed Gold Bank in Italy, we now serve global clients through our Dubai entity with trusted, transparent, and world-class services.
                         </p>
                         <p className="text-sm sm:text-base lg:text-base mb-8 font-light tracking-wide leading-relaxed">
-                            Our role is to support individuals, families, businesses, and professional investors in safeguarding and growing their assets using structured, tangible gold strategies. We operate independently, with no conflicts of interest, and provide support with full transparency, legal compliance, and operational integrity. From digital gold accounts to institutional-grade vaulting and physical bullion trading, Mac & Ro offers a seamless way to store, grow, and manage your wealth in gold.
+                            We help individuals, families, businesses, and professional investors safeguard and grow their wealth through structured gold strategies. Operating independently and free from conflicts of interest, we ensure complete transparency, legal compliance, and operational integrity. From digital gold accounts to institutional-grade vaulting and physical bullion trading, Mac & Ro Capital FZC provides a seamless, secure, and innovative way to manage and grow your wealth with gold.
                         </p>
-                        <button className="px-8 py-4 bg-white opacity-80 hover:opacity-100 text-black font-semibold rounded-lg transition-opacity duration-200 ease-in-out tracking-wide text-lg">
+                        <button 
+                        onClick={() => {
+                            navigate('/services');
+                        }}
+                        className="px-6 py-2 bg-white opacity-80 hover:opacity-100 text-black font-semibold rounded-lg transition-opacity duration-200 ease-in-out tracking-wide text-lg">
                             Know More
                         </button>
                     </div>

@@ -3,38 +3,44 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Accounts from '../components/homePage/Accounts';
 import CreateAccountSteps from '../components/homePage/CreateAccountSteps';
+import InvestmentAdvisory from '../assets/service/investment-advisory.svg';
+import MetalAccounts from '../assets/service/bullion-bars.svg';
+import CapitalRaising from '../assets/service/capital.svg';
+import Sourcing from '../assets/service/sourcing.svg';
+import Mining from '../assets/service/mining.svg';
+import Smelting from '../assets/service/smelting.svg';
 
 const ServicePage = () => {
   const services = [
     {
-      title: "Investment Advisory",
-      description: "We provide strategic investment advice based on in-depth market analysis and risk profiling. Our goal is to help clients build diversified, performance-driven portfolios that align with their financial objectives.",
-      
+      title: "Consultancy",
+      description: "Mac & Ro Capital FZC provides specialized consultancy in gold investment and wealth management. Our experts guide individuals, families, and businesses in building tailored strategies that focus on security, diversification, and long-term growth, with full compliance to international standards.",
+      image: InvestmentAdvisory,
     },
     {
-      title: "Wealth Management",
-      description: "Our comprehensive wealth management services combine financial planning, asset management, and succession strategies to protect and grow your wealth for generations to come.",
-    
+      title: "Sourcing",
+      description: "We ensure the ethical and responsible sourcing of raw gold through partnerships with certified and traceable suppliers. Every step follows strict OECD guidelines, giving our clients complete transparency and confidence in the origins of their investments.",
+      image: Sourcing,
     },
     {
-      title: "Corporate Finance Solutions",
-      description: "We support businesses with tailored capital structuring, mergers and acquisitions advisory, and debt financing solutions—ensuring sustainable growth and operational efficiency.",
-      
+      title: "Mining",
+      description: "Through strategic mining collaborations, Mac & Ro secures access to high-quality raw gold. Our commitment to responsible mining practices ensures sustainability, legal compliance, and respect for environmental and social standards.",
+      image: Mining,
     },
     {
-      title: "Metal Accounts & Bullion Services",
-      description: "Clients can access secure and transparent trading, storage, and management of precious metals. Our metal account services offer real-time tracking and physical delivery options.",
-      
+      title: "Smelting",
+      description: "Our advanced smelting facilities transform mined materials into uniform, high-quality inputs for refining. This process guarantees reliability, consistency, and full traceability as raw material progresses through the gold value chain.",
+      image: Smelting,
     },
     {
-      title: "Compliance & Risk Consulting",
-      description: "We assist businesses in navigating regulatory frameworks by offering governance audits, policy development, and risk mitigation strategies in line with UAE laws and international best practices.",
-      
+      title: "Refining",
+      description: "Mac & Ro refines gold to the highest international standards, delivering LBMA-certified 24K (999.9) pure gold. Every bar is numbered, documented, and accompanied by certification to ensure authenticity and investment-grade quality.",
+      image: MetalAccounts, 
     },
     {
-      title: "Private Placement & Fund Structuring",
-      description: "We help structure private investment vehicles and facilitate capital raising through private placements—ensuring full regulatory alignment and investor confidence.",
-      
+      title: "Vault Safe Deposit",
+      description: "We provide world-class storage solutions for precious metals in international vaults such as Brinks, Loomis, and Malca-Amit. With segregated deposits, constant tracking, and full insurance coverage, clients enjoy complete peace of mind and full legal ownership of their assets.",
+      image: CapitalRaising,
     }
   ];
 
@@ -47,20 +53,21 @@ const ServicePage = () => {
             Our Services
           </h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-6xl mx-auto leading-relaxed">
-          At Mac and Ro Capital, we offer a suite of specialized financial and investment services tailored to meet the needs of individuals, corporations, and institutional clients. Our services are designed with a deep understanding of market trends, compliance requirements, and client goals—ensuring integrity, transparency, and long-term value.
+          At Mac & Ro Capital, we provide end-to-end solutions across the gold value chain — from sourcing and mining to refining and secure vaulting. With decades of expertise and strict adherence to international standards, our services are designed to deliver transparency, reliability, and long-term value for individuals, families, and businesses seeking to safeguard and grow their wealth through physical gold.
           </p>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
+      <section className="py-10">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div 
                 key={index}
-                className="bg-white shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-all duration-300"
+                className="bg-white p-8 border border-gray-200 hover:shadow-lg transition-all duration-300"
               >
+                <img src={service.image} alt={service.title} className="w-12 h-12 mb-4" />
                 <h3 className="text-lg font-playfair font-bold mb-4 text-black">
                   {service.title}
                 </h3>
@@ -72,36 +79,21 @@ const ServicePage = () => {
           </div>
         </div>
       </section>
-      
-      <Accounts />
-      <CreateAccountSteps />  
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#F1F0E8]">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 font-playfair">
-            Ready to Get Started?
-          </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Contact our team of experts to discuss your investment needs and learn how 
-            Mac & Ro can help you achieve your financial goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="px-8 py-4 bg-[#DCBC7C] hover:bg-[#C4A76A] text-black font-semibold rounded-lg transition-all duration-300 text-lg"
-            >
-              Contact Us
-            </Link>
-            <Link 
-              to="/"
-              className="px-8 py-4 bg-transparent border-2 border-[#DCBC7C] text-[#DCBC7C] hover:bg-[#DCBC7C] hover:text-black font-semibold rounded-lg transition-all duration-300 text-lg"
-            >
-              Back to Home
-            </Link>
+      <section>
+        <div className="max-w-6xl mx-auto px-4 py-5">
+          <div className="max-w-6xl mx-auto">
+            <img 
+              src="/src/assets/service/service-banner.jpg" 
+              alt="Gold Investment Services" 
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </section>
+      
+      <CreateAccountSteps />  
+
     </div>
   );
 };

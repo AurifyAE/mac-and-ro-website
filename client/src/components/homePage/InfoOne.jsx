@@ -2,19 +2,14 @@ import React from 'react';
 import bankCertified from '../../assets/homepage/bankCertified.jpg';
 import bancaDitalia from '../../assets/homepage/banca-ditalia-logo.svg';
 import oecd from '../../assets/homepage/oecd.svg';
+import { useNavigate } from 'react-router-dom';
 
 const InfoOne = () => {
-  const handleDownload = () => {
-    // Create a link element for PDF download
-    const link = document.createElement('a');
-    link.href = '/document.pdf'; // Update with your actual PDF path
-    link.download = 'Mac-Ro-Document.pdf';
-    link.click();
-  };
+  const navigate = useNavigate();
 
   return (
     <div className="bg-black w-full">
-      <div className="mx-auto px-4 sm:px-6 lg:px-0">
+      <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Side - Image */}
@@ -23,7 +18,7 @@ const InfoOne = () => {
               <img 
                 src={bankCertified} 
                 alt="Information" 
-                className="w-full h-full"
+                className="w-full h-full rounded-[45px]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
             </div>
@@ -33,15 +28,12 @@ const InfoOne = () => {
           <div className="order-1 lg:order-2 text-white p-10">
             {/* Heading */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 tracking-wide leading-snug">
-                Metal Bank Certified by the Bank of Italy
+            Metal Bank certified by the Bank of Italy
             </h2>
 
             {/* Paragraph */}
             <p className="text-sm sm:text-base lg:text-base mb-8 font-light tracking-wide leading-relaxed text-gray-300">
-                Mac & Ro Capital FZC operates fully under Islamic Sharia principles—no commissions, no interest.
-            </p>
-            <p className="text-sm sm:text-base lg:text-base mb-8 font-light tracking-wide leading-relaxed text-gray-300">
-                Regulatory compliance: Registered with Bank of Italy (code no. 5010277), follows OECD guidelines for responsible supply chains.
+              Mac & Ro Srl is a licensed Gold Bank in Italy, registered with the Banca d’Italia, ensuring all transactions meet the highest European standards of legality, transparency, and integrity. Aligned with OECD principles, we uphold responsible sourcing, sustainability, and ethical practices — giving clients full confidence in their investments.
             </p>
 
             {/* Two Logos in Same Line */}
@@ -64,7 +56,9 @@ const InfoOne = () => {
 
             {/* Download Button */}
             <button 
-              onClick={handleDownload}
+              onClick={() => {
+                navigate('/corporate-governance');
+              }}
               className="px-6 py-2 bg-white text-black hover:bg-black hover:text-white hover:border-white/50 border-2 rounded-lg transition-all duration-300 ease-in-out tracking-wide flex items-center space-x-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import langselector from '../assets/homepage/langselector.svg';
+import appStore from '../assets/homepage/appStore.png';
+import googlePlay from '../assets/homepage/googlePlay.png';
 import { useCurrency } from '../context/CurrencyContext';
 
 const Banner = () => {
@@ -7,6 +9,8 @@ const Banner = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('EN');
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  
+  const dropdownsRef = useRef(null);
 
   const currencies = [
     { code: 'AED', name: 'UAE Dirham' },
@@ -16,15 +20,47 @@ const Banner = () => {
 
   const languages = [
     { code: 'EN', name: 'English' },
-    { code: 'AR', name: 'العربية' }
+    { code: 'AR', name: 'العربية' },
+    { code: 'IT', name: 'Italiano' }
   ];
 
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownsRef.current && !dropdownsRef.current.contains(event.target)) {
+        setIsCurrencyOpen(false);
+        setIsLanguageOpen(false);
+      }
+    };
+
+    // Add event listener
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    // Cleanup event listener
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="bg-black shadow-sm border-b border-gray-800">
+    <div className="bg-black shadow-sm border-b border-gray-800 z-60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-end items-center h-12">
+        <div className="flex justify-between items-center h-12">
+          {/* Left side - Download App */}
+          <div className="flex items-center space-x-3">
+            <span className="text-white text-sm font-medium">Download App</span>
+            <div className="flex items-center space-x-2">
+              <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer">
+                <img src={googlePlay} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+              </a>
+              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
+                <img src={appStore} alt="App Store" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+              </a>
+            </div>
+          </div>
+
           {/* Right side - Controls */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 z-60" ref={dropdownsRef}>
             {/* Currency Dropdown */}
             <div className="relative">
               <button
@@ -98,17 +134,6 @@ const Banner = () => {
           </div>
         </div>
       </div>
-
-      {/* Close dropdowns when clicking outside */}
-      {(isCurrencyOpen || isLanguageOpen) && (
-        <div
-          className="fixed inset-0 z-0"
-          onClick={() => {
-            setIsCurrencyOpen(false);
-            setIsLanguageOpen(false);
-          }}
-        />
-      )}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Hero from '../components/homePage/Hero'
 import GoldInfo from '../components/homePage/GoldInfo'
 import Accounts from '../components/homePage/Accounts'
 import InfoOne from '../components/homePage/InfoOne'
-import InfoTwo from '../components/homePage/InfoTwo'
+import Features from '../components/homePage/Features'
 import Cta from '../components/homePage/Cta'
 import CreateAccountSteps from '../components/homePage/CreateAccountSteps'
 
@@ -14,8 +14,8 @@ export default function Homepage() {
             <GoldInfo />
             <Accounts />
             <InfoOne />
-            <InfoTwo />
             <Cta />
+            <Features />
             <CreateAccountSteps />            
         </div>
     )

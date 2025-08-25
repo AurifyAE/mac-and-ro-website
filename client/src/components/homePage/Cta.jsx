@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import gold1kg from '../../assets/homepage/gold1kg.png';
+import ingotsImg from '../../assets/homepage/ingotsImg.png';
+import { useNavigate } from 'react-router-dom';
 
 const Cta = () => {
+  const navigate = useNavigate();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -47,7 +49,7 @@ const Cta = () => {
           className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           variants={itemVariants}
         >
-          Mac & Ro offers a wide range of highly qualified and professional services in the field of investment gold and precious metals with particular attention to flexibility, creating ad hoc products based on the needs of our Customers.
+          Mac & Ro Capital offers LBMA-certified 24K gold bars from 1g to 1kg, crafted with precision and distributed in partnership with Gold Rock Capital.
         </motion.p>
       </motion.div>
 
@@ -67,7 +69,7 @@ const Cta = () => {
               variants={itemVariants}
             >
               <img 
-                src={gold1kg} 
+                src={ingotsImg} 
                 alt="Investment Consultation" 
                 className="w-full h-full object-contain"
               />
@@ -75,14 +77,14 @@ const Cta = () => {
 
             {/* Right Content */}
             <motion.div 
-              className="lg:w-1/2 p-8 sm:p-12 lg:p-16 flex flex-col justify-center"
+              className="lg:w-2/3 p-8 sm:p-12 lg:p-16 flex flex-col justify-center"
               variants={itemVariants}
             >
               <motion.h3 
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#DCBC7C] mb-6 tracking-tight"
                 variants={itemVariants}
               >
-                Ingots
+                Gold Bars
               </motion.h3>
               
               <motion.p 
@@ -93,9 +95,12 @@ const Cta = () => {
               </motion.p>
 
               <motion.button 
-                className="px-6 py-2 bg-transparent hover:bg-white hover:text-black hover:border-white/50 border-2 text-white font-semibold rounded-lg transition-all duration-300 ease-in-out tracking-wide text-base flex items-center space-x-2 mt-6 w-fit"
+                className="px-6 py-2 bg-transparent hover:bg-white hover:text-black hover:border-white/50 border-1 text-white font-semibold rounded-lg transition-all duration-300 ease-in-out tracking-wide text-base flex items-center space-x-2 mt-6 w-fit"
                 variants={itemVariants}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  navigate('/products');
+                }}
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

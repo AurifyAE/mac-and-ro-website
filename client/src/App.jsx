@@ -12,8 +12,16 @@ import News from './pages/News';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import Homepage from './pages/Homepage';
+import ProductGrid from './pages/ProductGrid';
+import ProductDetails from './pages/ProductDetails';
 import { CurrencyProvider } from './context/CurrencyContext';
-
+import MetalAccounts from './pages/MetalAccounts';
+import DeluxeMetalAccount from './pages/metalAccounts/DeluxeMetalAccount';
+import MacRoMetalAccount from './pages/metalAccounts/MacRoMetalAccount';
+import EndOfTreatmentPaymentTFM from './pages/metalAccounts/EndOfTreatmentPaymentTFM';
+import KeyManMetalAccount from './pages/metalAccounts/KeyManMetalAccount';
+import LocationSwap from './pages/LocationSwap';
+  
 function App() {
   return (
     <CurrencyProvider>
@@ -31,6 +39,14 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/metal-accounts" element={<MetalAccounts />} />
+            <Route path="/metal-accounts/deluxe-metal-account" element={<DeluxeMetalAccount />} />
+            <Route path="/metal-accounts/mac-ro-metal-account" element={<MacRoMetalAccount />} />
+            <Route path="/metal-accounts/end-of-treatment-payment-tfm" element={<EndOfTreatmentPaymentTFM />} />
+            <Route path="/metal-accounts/key-man-metal-account" element={<KeyManMetalAccount />} />
+            <Route path="/products" element={<ProductGrid />} />
+            <Route path="/product/:productId" element={<ProductDetails />} />
+            <Route path="/location-swap" element={<LocationSwap />} />
           </Routes>
           <Footer />
         </div>

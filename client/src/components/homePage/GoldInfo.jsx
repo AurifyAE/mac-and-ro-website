@@ -1,8 +1,10 @@
 import React from 'react';
 import GoldInfoImage from '../../assets/homepage/goldInfo.jpg';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const GoldInfo = () => {
+  const navigate = useNavigate();
   const itemVariants = {
     hidden: { 
       opacity: 0, 
@@ -61,7 +63,7 @@ const GoldInfo = () => {
                 Inflation Protection
               </h3>
               <p className="text-gray-600 leading-relaxed tracking-wide">
-                Gold has historically been recognised as a store of value that protects assets from the erosion caused by inflation. When the cost of living increases, the value of gold tends to rise, providing a natural defence against the loss of purchasing power.
+                Physical gold is a reliable, tangible asset known for its ability to retain value over time, free from market speculation. It's simple to own, flexible to pass on, and immune to financial instability. Whether you're looking for long-term stability or an inflation hedge, gold provides a trusted foundation.
               </p>
             </motion.div>
 
@@ -80,8 +82,12 @@ const GoldInfo = () => {
               <p className="text-gray-600 leading-relaxed tracking-wide mb-6">
                 Investing in gold allows you to diversify your portfolio, reducing overall risk. Gold has a low correlation with other financial assets such as stocks and bonds, which means it can increase in value even when other investments are losing value.
               </p>
-              <button className="px-4 py-2 bg-white border-2 border-black hover:bg-black hover:text-white  text-black font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base">
-                Know More
+              <button 
+              onClick={() => {
+                navigate('/contact');
+              }}
+              className="px-6 py-2 bg-white border-1 border-black hover:bg-black hover:text-white  text-black font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base">
+                Create Your Gold Portfolio
               </button>
             </motion.div>
 
@@ -101,7 +107,6 @@ const GoldInfo = () => {
                 Gold is a highly liquid asset that can be sold quickly and easily in almost any part of the world. This means you can turn your gold investments into cash when you need it, without long waits or complications.
               </p>
             </motion.div>
-
           </div>
         </div>
       </div>
