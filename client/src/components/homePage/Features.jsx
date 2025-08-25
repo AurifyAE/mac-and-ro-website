@@ -104,7 +104,7 @@ const Features = () => {
                             </motion.li>
                             
                             <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            Milan - Head office, Gold Bank licensed jurisdiction
+                            Lecce - Head office, Gold Bank licensed jurisdiction
                             </motion.li>
                             
                             <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>

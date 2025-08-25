@@ -5,6 +5,9 @@ import send from '../assets/homepage/send.svg';
 import googlePlay from '../assets/homepage/googlePlay.png';
 import appStore from '../assets/homepage/appStore.png';
 import { Link } from 'react-router-dom';
+import visa from '../assets/homepage/visa.svg';
+import mastercard from '../assets/homepage/mastercard.svg';
+import bankTransfer from '../assets/homepage/bankTransfer.png';
 
 const Footer = () => {
     const [email, setEmail] = useState('');
@@ -92,7 +95,10 @@ const Footer = () => {
                         required
                     />
                     <label htmlFor="privacy" className="text-sm text-black leading-relaxed">
-                        By sending this email I declare that I have read the privacy policy
+                        By sending this email I declare that I have read the{' '}
+                        <Link to="/privacy-policy" className="text-[#DCBC7C] hover:underline">
+                            privacy policy
+                        </Link>
                     </label>
                     </div>
                 </form>
@@ -229,10 +235,22 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="bg-black py-6">
-            <div className="max-w-6xl mx-auto px-4 text-center">
-            <p className="text-white text-sm">
-                © 2025 Mac & Ro. All rights reserved.
-            </p>
+            <div className="max-w-6xl mx-auto px-4">
+                <div className="flex justify-between items-center">
+                    {/* Copyright */}
+                    <div>
+                        <p className="text-white text-sm">
+                            © 2025 Mac & Ro. All rights reserved.
+                        </p>
+                    </div>
+                    
+                    {/* Payment Methods */}
+                    <div className="flex items-center space-x-2">
+                        <img src={visa} alt="Visa" className="w-12 h-6 object-cover rounded-md grayscale" />
+                        <img src={mastercard} alt="MasterCard" className="w-12 h-6 object-cover rounded-md grayscale" />
+                        <img src={bankTransfer} alt="Bank Transfer" className="w-12 h-6 object-cover rounded-md grayscale" />
+                    </div>
+                </div>
             </div>
         </div>
         </footer>

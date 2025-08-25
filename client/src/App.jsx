@@ -21,6 +21,8 @@ import MacRoMetalAccount from './pages/metalAccounts/MacRoMetalAccount';
 import EndOfTreatmentPaymentTFM from './pages/metalAccounts/EndOfTreatmentPaymentTFM';
 import KeyManMetalAccount from './pages/metalAccounts/KeyManMetalAccount';
 import LocationSwap from './pages/LocationSwap';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
   
 function App() {
   return (
@@ -47,6 +49,8 @@ function App() {
             <Route path="/products" element={<ProductGrid />} />
             <Route path="/product/:productId" element={<ProductDetails />} />
             <Route path="/location-swap" element={<LocationSwap />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           </Routes>
           <Footer />
         </div>
