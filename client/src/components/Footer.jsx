@@ -166,7 +166,7 @@ const Footer = () => {
                     <p className="text-black text-[13px] leading-relaxed">
                     MAC & RO CAPITAL FZC, <br />
                     Saif Suite - Gold Park, Q1-1-027 Sharjah <br />
-                    Tel: +971 50 4815 553 <br />
+                    Tel: +971 58 592 8981 <br />
                     info@mac-ro-capital.com
                     </p>
                 </div>
