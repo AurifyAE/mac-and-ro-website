@@ -218,7 +218,11 @@ const Header = () => {
 
                     {/* Right side - Gold Spot Price */}
                     <div className="flex items-center space-x-3 w-auto justify-end ml-auto">
-                        <div className="flex items-center space-x-3">
+                        <div className="relative flex items-center space-x-3 cursor-pointer group"
+                        onClick={() => {
+                            navigate('/live-rate');
+                        }}
+                        >
                             <span className="text-xs font-medium text-gray-600 tracking-light">Gold Spot Price</span>
                             <img 
                                 src={`https://flagcdn.com/${currencyInfo.countryCode}.svg`}
@@ -256,6 +260,12 @@ const Header = () => {
                                 </p>
                                 <span className="text-sm font-medium text-gray-500 tracking-wide">{currencyInfo.unit}</span>
                             </div>
+
+                            {/* Tooltip */}
+                            <span className="absolute -top-6 -left-36 whitespace-nowrap text-xs bg-neutral-900 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-70 transition-opacity duration-200">
+                                Click to show live rates
+                            <span className="absolute bottom-0 -right-0 w-2 h-2 bg-gray-900 rotate-90"></span>
+                            </span>
                         </div>
                     </div>
                 </div>

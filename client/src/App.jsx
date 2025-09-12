@@ -25,6 +25,7 @@ import LocationSwap from './pages/LocationSwap';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 import useScrollToTop from './hooks/useScrollToTop';
+import LiveRate from './pages/LiveRate';
   
 function App() {
   return (
@@ -60,6 +61,7 @@ function AppContent() {
         <Route path="/metal-accounts/mac-ro-metal-account" element={<MacRoMetalAccount />} />
         <Route path="/metal-accounts/end-of-treatment-payment-tfm" element={<EndOfTreatmentPaymentTFM />} />
         <Route path="/metal-accounts/key-man-metal-account" element={<KeyManMetalAccount />} />
+        <Route path="/live-rate" element={<LiveRate />} />
         <Route path="/products" element={<ProductGrid />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
