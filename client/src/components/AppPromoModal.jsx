@@ -1,17 +1,19 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import appStore from '../assets/homepage/appStore.png';
 import googlePlay from '../assets/homepage/googlePlay.png';
 import featureImage3 from '../assets/homepage/feature-image3.jpg';
 
 const AppPromoModal = ({ isOpen, onClose }) => {
+  const [isClosing, setIsClosing] = useState(false);
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === 'Escape') {
-        onClose();
+        handleClose();
       }
     };
 
     if (isOpen) {
+      setIsClosing(false);
       document.addEventListener('keydown', handleEscape);
       document.body.style.overflow = 'hidden';
     }
@@ -20,25 +22,36 @@ const AppPromoModal = ({ isOpen, onClose }) => {
       document.removeEventListener('keydown', handleEscape);
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen, onClose]);
+  }, [isOpen]);
+
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      onClose();
+    }, 300); // Match fade out duration
+  };
 
   if (!isOpen) return null;
 
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
-      onClose();
+      handleClose();
     }
   };
 
   return (
     <div 
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[100] p-4"
+      className={`fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[100] p-4 transition-opacity duration-300 ${
+        isClosing ? 'opacity-0' : 'opacity-100 animate-fadeIn'
+      }`}
       onClick={handleBackdropClick}
     >
-      <div className="bg-white rounded-2xl max-w-4xl w-full mx-4 relative overflow-hidden shadow-2xl flex">
+      <div className={`bg-white rounded-2xl max-w-4xl w-full mx-4 relative overflow-hidden shadow-2xl flex transition-all duration-300 ${
+        isClosing ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100 animate-slideIn'
+      }`}>
         {/* Close Button */}
         <button
-          onClick={onClose}
+          onClick={handleClose}
           className="absolute top-4 right-4 z-50 w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors cursor-pointer"
         >
           <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
