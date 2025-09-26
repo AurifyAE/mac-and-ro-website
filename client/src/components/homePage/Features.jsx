@@ -230,14 +230,14 @@ const Features = () => {
                             className="font-playfair text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 leading-tight"
                             variants={fadeInUp}
                         >
-                            Mac & Ro App
+                            OROVIVO App
                         </motion.h2>
                         
                         <motion.p 
                             className="text-lg text-gray-600 mb-8 leading-relaxed"
                             variants={fadeInUp}
                         >
-                            The Mac & Ro App lets you buy, sell, and location Swap of Gold securely in specified locations. Easily convert gold to cash and vice versa or move it to specified locations with just a few taps.
+                            The OROVIVO App lets you buy, sell, and location Swap of Gold securely in specified locations. Easily convert gold to cash and vice versa or move it to specified locations with just a few taps.
                         </motion.p>
                         
                         <motion.div variants={fadeInUp}>
@@ -249,8 +249,8 @@ const Features = () => {
                                 Download Now
                             </button>
                             <div className="flex justify-center gap-4 mt-8">
-                                <img src={googlePlay} alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
-                                <img src={appStore} alt="Mac & Ro App" className="w-28 h-auto shadow-2xl" />
+                                <img src={googlePlay} alt="OROVIVO App" className="w-28 h-auto shadow-2xl" />
+                                <img src={appStore} alt="OROVIVO App" className="w-28 h-auto shadow-2xl" />
                             </div>
                         </motion.div>
                     </motion.div>
