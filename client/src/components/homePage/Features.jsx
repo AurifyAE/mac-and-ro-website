@@ -237,7 +237,7 @@ const Features = () => {
                             className="text-lg text-gray-600 mb-8 leading-relaxed"
                             variants={fadeInUp}
                         >
-                            The OROVIVO App lets you buy, sell, and location Swap of Gold securely in specified locations. Easily convert gold to cash and vice versa or move it to specified locations with just a few taps.
+                            The OROVIVO App by Mac & Ro Capital FZC lets you buy, sell, and location Swap of Gold securely in specified locations. Easily convert gold to cash and vice versa or move it to specified locations with just a few taps.
                         </motion.p>
                         
                         <motion.div variants={fadeInUp}>

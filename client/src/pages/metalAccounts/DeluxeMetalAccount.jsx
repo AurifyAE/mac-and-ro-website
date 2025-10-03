@@ -160,7 +160,7 @@ const DeluxeMetalAccount = () => {
           How does it work?
         </h2>
         <p className="text-left text-gray-600 leading-relaxed text-base">
-          Through a <span className="font-bold">loan-for-use contract</span>, your physical gold — which always remains your property — is temporarily employed by certified industrial companies. During this time, the gold remains securely stored in certified vaults and fully tracked. In return, you receive additional physical gold credited directly to your Metal Account Deluxe. All processes comply with Italian law, ensuring transparency, contractual protection, and a focus on wealth enhancement.
+          Through a <span className="font-bold">loan-for-use contract</span>, your physical gold — which always remains your property — is temporarily employed by certified industrial companies. During this time, the gold remains securely stored in certified vaults and fully tracked. In return, you receive additional physical gold credited directly to your Metal Account Deluxe. All processes comply with regulations, ensuring transparency, contractual protection, and a focus on wealth enhancement.
         </p>
 
         <div className="py-10 bg-gray-50">
