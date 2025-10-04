@@ -35,7 +35,7 @@ const ServicePage = () => {
     },
     {
       title: "Refining",
-      description: "Mac & Ro refines gold to the highest international standards, delivering LBMA-certified 24K (999.9) pure gold. Every bar is numbered, documented, and accompanied by certification to ensure authenticity and investment-grade quality.",
+      description: "Mac & Ro refines gold to the highest international standards, delivering LBMA and non LBMA-certified 24K (999.9) pure gold. Every bar is numbered, documented, and accompanied by certification to ensure authenticity and investment-grade quality.",
       image: MetalAccounts, 
     },
     {
@@ -48,7 +48,7 @@ const ServicePage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="py-20 bg-[#F1F0E8]">
+      <section className="md:py-20 py-10 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             Our Services

@@ -317,7 +317,7 @@ const FAQ = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="py-20 bg-[#F1F0E8]">
+      <section className="py-10 md:py-20 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4 text-left">
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             Frequently Asked Questions
@@ -330,7 +330,7 @@ const FAQ = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
+      <section className="py-10 md:py-20">
         <div className="max-w-4xl mx-auto px-4">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
@@ -371,7 +371,7 @@ const FAQ = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6 font-playfair">
             Still Have Questions?
@@ -398,7 +398,7 @@ const FAQ = () => {
       </section>
 
       {/* Quick Links */}
-      <section className="py-20 bg-[#F1F0E8]">
+      <section className="py-10 md:py-20 bg-[#F1F0E8]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 font-playfair">

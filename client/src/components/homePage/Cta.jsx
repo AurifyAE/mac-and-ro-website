@@ -49,7 +49,7 @@ const Cta = () => {
           className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           variants={itemVariants}
         >
-          Mac & Ro Capital offers LBMA-certified 24K gold bars from 1g to 1kg, crafted with precision and distributed in partnership with Gold Rock Capital.
+          Mac & Ro Capital offers LBMA and non LBMA-certified 24K gold bars from 1g to 1kg, crafted with precision and distributed in partnership with Gold Rock Capital.
         </motion.p>
       </motion.div>
 

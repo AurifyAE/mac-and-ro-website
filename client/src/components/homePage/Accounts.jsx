@@ -4,7 +4,7 @@ import FlipCards from './FlipCards';
 const Accounts = () => {
 
     return (
-        <div className="bg-gray-50 py-20">
+        <div className="bg-gray-50 md:py-20 py-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
                 
                 {/* Left-aligned Heading and Paragraph */}

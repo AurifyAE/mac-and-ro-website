@@ -57,19 +57,19 @@ const WhoWeAre = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="relative py-20">
+      <section className="relative md:py-20 py-10">
         <div className="max-w-6xl mx-auto">
           <div className="relative">
             {/* Normal Image */}
             <img 
               src={whoweHero} 
               alt="Who We Are"
-              className="w-full h-auto object-cover"
+              className="w-full md:h-auto h-56 object-cover"
             />
             
             {/* Text Content - Positioned at bottom left of image with black background */}
             <div className="absolute bottom-0 left-0 text-left bg-black px-12 py-4">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#A78E52] mb-6 tracking-tight font-playfair">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#A78E52] mb-2 md:mb-6 tracking-tight font-playfair">
                 Who we are?
               </h1>
             </div>

@@ -168,7 +168,7 @@ const MetalAccounts = () => {
             ))}
           </div>
           <div className="my-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
+            <h2 className="text-2xl sm:text-3xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
             With global expertise, ethical sourcing, and strict compliance, Mac & Ro Capital ensures your Metal Account protects both your gold and your critical personnel.
             </h2>
           </div>

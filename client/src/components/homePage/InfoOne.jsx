@@ -33,7 +33,7 @@ const InfoOne = () => {
 
             {/* Paragraph */}
             <p className="text-sm sm:text-base lg:text-base mb-8 font-light tracking-wide leading-relaxed text-gray-300">
-              Mac & Ro Srl is a licensed Gold Bank in Italy, registered with the Banca d’Italia, ensuring all transactions meet the highest European standards of legality, transparency, and integrity. Aligned with OECD principles, we uphold responsible sourcing, sustainability, and ethical practices — giving clients full confidence in their investments.
+              Mac & Ro Srl is a licensed Gold Bank in Italy, registered with the Banca d'Italia, ensuring all transactions meet the highest European standards of legality, transparency, and integrity. Aligned with OECD principles, we uphold responsible sourcing, sustainability, and ethical practices — giving clients full confidence in their investments.
             </p>
 
             {/* Two Logos in Same Line */}

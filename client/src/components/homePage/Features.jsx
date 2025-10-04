@@ -71,7 +71,7 @@ const Features = () => {
 
     return (
         <>
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <section className="md:py-20 py-10 bg-gradient-to-br from-gray-50 to-white">
             <div className="container mx-auto px-4 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <motion.div 
@@ -158,7 +158,7 @@ const Features = () => {
             </div>
         </section>
 
-        <section className="py-20 bg-white">
+        <section className="md:py-20 py-10 bg-white">
             <div className="container mx-auto px-4 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <motion.div 
@@ -216,7 +216,7 @@ const Features = () => {
             </div>
         </section>
 
-        <section className="py-20 bg-white">
+        <section className="md:py-20 py-10 bg-white">
             <div className="container mx-auto px-4 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <motion.div 

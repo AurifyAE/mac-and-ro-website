@@ -277,7 +277,7 @@ const DeluxeMetalAccount = () => {
       </section>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
+            <h2 className="text-2xl sm:text-3xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
                 With Mac & Ro Capital, gold is no longer just a safe store of value. It becomes a dynamic asset that offers stability, flexibility, and tangible growth — without compromising ownership or security.
             </h2>
         </div>

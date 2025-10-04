@@ -119,7 +119,7 @@ const Contact = () => {
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="py-20 bg-black relative">
+            <div className="order-2 md:order-1 py-10 md:py-20 bg-black relative">
               <div className="max-w-6xl mx-auto px-4">
                 <div className="flex items-center justify-center min-h-[600px]">
                   <div className="text-white text-center">
@@ -145,7 +145,7 @@ const Contact = () => {
               </h2>
               
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid order-1 md:order-2 grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
                       First Name *

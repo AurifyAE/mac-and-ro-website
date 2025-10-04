@@ -50,7 +50,7 @@ const CreateAccountSteps = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="md:py-20 py-10 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading and Paragraph */}
         <motion.div 
@@ -77,7 +77,7 @@ const CreateAccountSteps = () => {
 
         {/* Steps with Numbered Boxes */}
         <motion.div 
-          className="flex flex-col lg:flex-row items-start justify-center space-y-8 lg:space-y-0 lg:space-x-2"
+          className="flex flex-wrap md:flex-row items-start md:justify-start lg:justify-center justify-center space-y-8 md:space-y-2 space-x-10 lg:space-x-2"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -104,7 +104,7 @@ const CreateAccountSteps = () => {
               {/* Right Arrow (except for last step) - Positioned at box level */}
               {index < steps.length - 1 && (
                 <motion.div 
-                  className="hidden lg:flex items-center justify-center self-start mt-5"
+                  className="hidden md:flex items-center justify-center self-start mt-5"
                   variants={itemVariants}
                 >
                   <svg className="w-18 h-18 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">

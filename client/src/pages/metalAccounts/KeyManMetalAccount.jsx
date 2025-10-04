@@ -184,7 +184,7 @@ const KeyManMetalAccount = () => {
       </section>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-4xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
+            <h2 className="text-2xl sm:text-3xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
             The Mac & Ro Key Man Metal Account secures your people, protects your business, and ensures lasting resilience with the strength of gold.
             </h2>
           </div>

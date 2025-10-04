@@ -195,7 +195,7 @@ const EndOfTreatmentPaymentTFM = () => {
       </section>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-4xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
+          <h2 className="text-2xl sm:text-3xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
           With expertise in gold trading, international compliance, and vaulting solutions, we transform EOT into a strategic corporate advantage, offering directors and companies both protection and growth.
           </h2>
       </div>

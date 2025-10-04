@@ -81,7 +81,7 @@ const AppPromoModal = ({ isOpen, onClose }) => {
             <h2 className="text-2xl font-bold text-gray-900 mb-2 font-playfair">
               Download ORO VIVO App
             </h2>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed text-left">
               Trade gold anytime, anywhere with our cutting-edge mobile application
             </p>
           </div>
@@ -115,7 +115,7 @@ const AppPromoModal = ({ isOpen, onClose }) => {
           </div>
 
           {/* Download Buttons */}
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-start gap-4">
             <a
               href="#"
               onClick={(e) => {
@@ -145,7 +145,7 @@ const AppPromoModal = ({ isOpen, onClose }) => {
           </div>
 
           {/* Footer */}
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-left">
             <p className="text-xs text-gray-500">
               Available for iOS, Android, and Huawei devices
             </p>

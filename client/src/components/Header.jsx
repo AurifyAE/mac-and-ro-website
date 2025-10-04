@@ -1,8 +1,9 @@
 import logo from '../assets/homepage/logo.svg';
+import langselector from '../assets/homepage/langselector.svg';
 import useMarketData from '../hooks/useMarketData';
 import { useCurrency } from '../context/CurrencyContext';
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -13,6 +14,8 @@ const Header = () => {
     const [activeNestedSubmenu, setActiveNestedSubmenu] = useState(null);
     const [previousPrice, setPreviousPrice] = useState(null);
     const [priceDirection, setPriceDirection] = useState(null); // 'up', 'down', or null
+    const [selectedLanguage, setSelectedLanguage] = useState('EN');
+    const [isLanguageOpen, setIsLanguageOpen] = useState(false);
     const submenuRef = useRef(null);
 
     // Get the appropriate currency symbol, unit, exchange rate, and country code for flag
@@ -71,6 +74,7 @@ const Header = () => {
             if (submenuRef.current && !submenuRef.current.contains(event.target)) {
                 setActiveSubmenu(null);
                 setActiveNestedSubmenu(null);
+                setIsLanguageOpen(false);
             }
         };
 
@@ -79,6 +83,12 @@ const Header = () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    const languages = [
+        { code: 'EN', name: 'English' },
+        { code: 'AR', name: 'العربية' },
+        { code: 'IT', name: 'Italiano' }
+    ];
 
     const navItems = [
         {
@@ -206,13 +216,18 @@ const Header = () => {
                         onClick={() => {
                             navigate('/');
                         }}
-                        className="flex items-center justify-center">
+                        className="flex items-center justify-center cursor-pointer">
                             <img src={logo} alt="" className='w-30 h-15' />
                         </div>
                     </div>
 
                     {/* Center Logo - Desktop Only */}
-                    <div className="hidden lg:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
+                    <div 
+                    className="hidden lg:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
+                    onClick={() => {
+                        navigate('/');
+                    }}
+                    >
                         <img src={logo} alt="" className='w-30 h-15' />
                     </div>
 
@@ -223,49 +238,91 @@ const Header = () => {
                             navigate('/live-rate');
                         }}
                         >
-                            <span className="text-xs font-medium text-gray-600 tracking-light">Gold Spot Price</span>
-                            <img 
-                                src={`https://flagcdn.com/${currencyInfo.countryCode}.svg`}
-                                alt={`${selectedCurrency} flag`} 
-                                className="w-7 h-4 rounded-sm object-cover"
-                                onError={(e) => {
-                                    // Fallback to a colored div if flag fails to load
-                                    e.target.style.display = 'none';
-                                    e.target.nextSibling.style.display = 'block';
-                                }}
-                            />
-                            <div 
-                                className="w-7 h-4 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-sm hidden"
-                                style={{ display: 'none' }}
-                            ></div>
-                            <div className="flex items-center space-x-2">
-                                {/* Price change indicator - you can add logic to determine if price went up or down */}
-                                {priceDirection === 'up' && (
-                                    <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
-                                    </svg>
-                                )}
-                                {priceDirection === 'down' && (
-                                    <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                                    </svg>
-                                )}
-                                {priceDirection === null && (
-                                    <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
-                                    </svg>
-                                )}
-                                <p className="w-20 text-sm font-semibold text-gray-900 tracking-wide">
-                                    {convertedPrice ? `${currencyInfo.symbol} ${convertedPrice}` : '--'}
-                                </p>
-                                <span className="text-sm font-medium text-gray-500 tracking-wide">{currencyInfo.unit}</span>
+                            {/* Desktop Layout */}
+                            <div className="hidden md:flex items-center space-x-3">
+                                <span className="text-xs font-medium text-gray-600 tracking-light">Gold Spot Price</span>
+                                <img 
+                                    src={`https://flagcdn.com/${currencyInfo.countryCode}.svg`}
+                                    alt={`${selectedCurrency} flag`} 
+                                    className="w-7 h-4 rounded-sm object-cover"
+                                    onError={(e) => {
+                                        // Fallback to a colored div if flag fails to load
+                                        e.target.style.display = 'none';
+                                        e.target.nextSibling.style.display = 'block';
+                                    }}
+                                />
+                                <div 
+                                    className="w-7 h-4 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-sm hidden"
+                                    style={{ display: 'none' }}
+                                ></div>
+                                <div className="flex items-center space-x-2">
+                                    {/* Price change indicator */}
+                                    {priceDirection === 'up' && (
+                                        <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    )}
+                                    {priceDirection === 'down' && (
+                                        <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    )}
+                                    {priceDirection === null && (
+                                        <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    )}
+                                    <p className="w-20 text-sm font-semibold text-gray-900 tracking-wide">
+                                        {convertedPrice ? `${currencyInfo.symbol} ${convertedPrice}` : '--'}
+                                    </p>
+                                    <span className="text-sm font-medium text-gray-500 tracking-wide">{currencyInfo.unit}</span>
+                                </div>
+
+                                {/* Tooltip */}
+                                <span className="absolute -top-6 -left-36 whitespace-nowrap text-xs bg-neutral-900 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-70 transition-opacity duration-200">
+                                    Click to show live rates
+                                <span className="absolute bottom-0 -right-0 w-2 h-2 bg-gray-900 rotate-90"></span>
+                                </span>
                             </div>
 
-                            {/* Tooltip */}
-                            <span className="absolute -top-6 -left-36 whitespace-nowrap text-xs bg-neutral-900 text-white px-2 py-1 rounded opacity-0 group-hover:opacity-70 transition-opacity duration-200">
-                                Click to show live rates
-                            <span className="absolute bottom-0 -right-0 w-2 h-2 bg-gray-900 rotate-90"></span>
-                            </span>
+                            {/* Mobile Layout */}
+                            <div className="flex md:hidden flex-col items-end">
+                                <div className="text-xs font-medium text-gray-600">Gold Spot Price</div>
+                                <div className="flex items-center space-x-1">
+                                    <img 
+                                        src={`https://flagcdn.com/${currencyInfo.countryCode}.svg`}
+                                        alt={`${selectedCurrency} flag`} 
+                                        className="w-5 h-3 rounded-sm object-cover"
+                                        onError={(e) => {
+                                            e.target.style.display = 'none';
+                                            e.target.nextSibling.style.display = 'block';
+                                        }}
+                                    />
+                                    <div 
+                                        className="w-5 h-3 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-sm hidden"
+                                        style={{ display: 'none' }}
+                                    ></div>
+                                    {priceDirection === 'up' && (
+                                        <svg className="w-3 h-3 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    )}
+                                    {priceDirection === 'down' && (
+                                        <svg className="w-3 h-3 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    )}
+                                    {priceDirection === null && (
+                                        <svg className="w-3 h-3 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+                                        </svg>
+                                    )}
+                                    <p className="text-xs font-semibold text-gray-900">
+                                        {convertedPrice ? `${currencyInfo.symbol} ${convertedPrice}` : '--'}
+                                    </p>
+                                </div>
+                                <div className="text-xs text-gray-500">{currencyInfo.unit}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -339,6 +396,64 @@ const Header = () => {
                                     )}
                                 </div>
                             ))}
+                            
+                            {/* Mobile Sign In and Language Selector */}
+                            <div className="border-t border-gray-200 pt-4 mt-4">
+                                {/* Language Selector */}
+                                <div className="px-3 py-2">
+                                    <div className="relative">
+                                        <button
+                                            onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                                            className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+                                        >
+                                            <div className="flex items-center space-x-2">
+                                                <img src={langselector} alt="" className='w-5 h-5' />
+                                                <span>Language: {selectedLanguage}</span>
+                                            </div>
+                                            <svg 
+                                                className={`w-4 h-4 transition-transform duration-200 ${
+                                                    isLanguageOpen ? 'rotate-180' : ''
+                                                }`} 
+                                                fill="none" 
+                                                stroke="currentColor" 
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </button>
+                                        
+                                        {/* Language Dropdown */}
+                                        {isLanguageOpen && (
+                                            <div className="ml-4 mt-1 space-y-1">
+                                                {languages.map((language) => (
+                                                    <button
+                                                        key={language.code}
+                                                        onClick={() => {
+                                                            setSelectedLanguage(language.code);
+                                                            setIsLanguageOpen(false);
+                                                        }}
+                                                        className="block w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md"
+                                                    >
+                                                        {language.name}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                                
+                                {/* Sign In Button */}
+                                <div className="px-3 py-2">
+                                    <Link to="https://macandro.netlify.app/" target="_blank" rel="noopener noreferrer">
+                                        <button 
+                                            onClick={() => setIsMobileMenuOpen(false)}
+                                            className="w-full px-4 py-2 text-sm font-semibold text-white bg-black border border-transparent hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 rounded-md transition duration-200 ease-in-out"
+                                        >
+                                            Sign In
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 )}

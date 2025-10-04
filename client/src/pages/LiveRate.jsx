@@ -45,55 +45,42 @@ function LiveRate() {
     containerEl.appendChild(script);
   }, [activeTab]);
 
-  const tabBaseStyle = {
-    padding: '8px 16px',
-    borderRadius: 9999,
-    cursor: 'pointer',
-    fontSize: '14px',
-    fontWeight: 600,
-    margin: '0 6px',
-    border: '1px solid #ccc',
-    background: '#fff',
-    color: '#000',
-  };
-
-  const tabActiveStyle = {
-    ...tabBaseStyle,
-    background: '#000',
-    color: '#fff',
-    border: '1px solid #000',
-  };
-
   return (
-    <div className="py-20 px-40">
+    <div className="py-8 px-4 sm:py-12 sm:px-6 lg:py-20 lg:px-40">
+      {/* Tab Container */}
       <div className="flex justify-center mb-4">
         <div className="inline-flex rounded-full p-1 bg-gray-100 dark:bg-neutral-800">
           <button
             type="button"
             onClick={() => setActiveTab('oz')}
-            className={`${
-              /* active */
-              true
-            }` && (activeTab === 'oz'
-              ? 'px-4 py-2 rounded-full text-sm font-semibold border bg-black text-white border-black dark:bg-white dark:text-black dark:border-white'
-              : 'px-4 py-2 rounded-full text-sm font-semibold border bg-white text-black border-gray-300 dark:bg-neutral-900 dark:text-white dark:border-neutral-700')}
+            className={
+              activeTab === 'oz'
+                ? 'px-3 py-2 sm:px-4 rounded-full text-sm font-semibold border bg-black text-white border-black dark:bg-white dark:text-black dark:border-white'
+                : 'px-3 py-2 sm:px-4 rounded-full text-sm font-semibold border bg-white text-black border-gray-300 dark:bg-neutral-900 dark:text-white dark:border-neutral-700'
+            }
           >
             Gold/oz
           </button>
           <button
             type="button"
             onClick={() => setActiveTab('g')}
-            className={activeTab === 'g'
-              ? 'ml-2 px-4 py-2 rounded-full text-sm font-semibold border bg-black text-white border-black dark:bg-white dark:text-black dark:border-white'
-              : 'ml-2 px-4 py-2 rounded-full text-sm font-semibold border bg-white text-black border-gray-300 dark:bg-neutral-900 dark:text-white dark:border-neutral-700'}
+            className={
+              activeTab === 'g'
+                ? 'ml-2 px-3 py-2 sm:px-4 rounded-full text-sm font-semibold border bg-black text-white border-black dark:bg-white dark:text-black dark:border-white'
+                : 'ml-2 px-3 py-2 sm:px-4 rounded-full text-sm font-semibold border bg-white text-black border-gray-300 dark:bg-neutral-900 dark:text-white dark:border-neutral-700'
+            }
           >
             Gold/g
           </button>
         </div>
       </div>
-      <h2 className="text-black text-2xl font-playfair font-bold mb-3">
+
+      {/* Title */}
+      <h2 className="text-black text-xl sm:text-2xl font-playfair font-bold mb-3">
         {activeTab === 'oz' ? 'GOLD/oz' : 'GOLD/g'}
       </h2>
+
+      {/* TradingView Container */}
       <div className="tradingview-widget-container w-full" ref={containerRef}>
         <div className="tradingview-widget-container__widget"></div>
       </div>
