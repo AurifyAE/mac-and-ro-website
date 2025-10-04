@@ -52,7 +52,7 @@ const ProductDetails = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
                         {/* Left Side - Product Image */}
                         <div className="order-2 lg:order-1 lg:col-span-1">
-                            <div className="bg-gray-100 rounded-lg p-8 flex items-center justify-center">
+                            <div className="bg-white rounded-lg p-8 flex items-center justify-center">
                                 <img 
                                     src={product.image}
                                     alt={product.name}
@@ -151,7 +151,7 @@ const ProductDetails = () => {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {relatedProducts.map((relatedProduct) => (
                             <div key={relatedProduct.id} className="bg-white rounded-sm shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                                <div className="h-60 bg-gray-100 flex items-center justify-center p-6">
+                                <div className="h-60 bg-white flex items-center justify-center p-6">
                                     <img 
                                         src={relatedProduct.image} 
                                         alt={relatedProduct.name}

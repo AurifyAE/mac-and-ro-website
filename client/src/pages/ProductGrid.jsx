@@ -38,7 +38,7 @@ const ProductGrid = () => {
                         <p className="text-base mb-4 leading-relaxed">
                         At Mac and Ro Capital, we craft premium-grade gold ingots with meticulous precision. 
                         Available in a range of sizes—from 1 gram to 1 kilogram—each piece is produced in 24K 
-                        (999.9‰) purity and certified to LBMA standards.
+                        (999.9‰) purity and certified to LBMA and non LBMA standards.
                         </p>
 
                         <p className="text-base mb-4 leading-relaxed flex items-center">
