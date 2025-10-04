@@ -38,7 +38,7 @@ const Accreditations = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             Accreditations & Compliance
           </h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Mac & Ro operates under the highest standards of regulatory compliance and 
             industry certifications, ensuring the security and legitimacy of all operations.
           </p>
@@ -93,7 +93,7 @@ const Accreditations = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6 font-playfair">
               Our Compliance Standards
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
               We maintain rigorous internal controls and regularly undergo external audits 
               to ensure continued compliance with all regulatory requirements.
             </p>

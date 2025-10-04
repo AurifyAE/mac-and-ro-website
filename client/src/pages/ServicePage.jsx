@@ -53,7 +53,7 @@ const ServicePage = () => {
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             Our Services
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 max-w-6xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-600 max-w-6xl mx-auto leading-relaxed">
           At Mac & Ro Capital, we provide end-to-end solutions across the gold value chain — from sourcing and mining to refining and secure vaulting. With decades of expertise and strict adherence to international standards, our services are designed to deliver transparency, reliability, and long-term value for individuals, families, and businesses seeking to safeguard and grow their wealth through physical gold.
           </p>
         </div>

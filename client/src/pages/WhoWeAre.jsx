@@ -81,12 +81,12 @@ const WhoWeAre = () => {
       <section className="py-5 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-left">
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+            <p className="text-base text-gray-700 mb-6 leading-relaxed">
               Mac & Ro represents the pinnacle of excellence in precious metals investment and wealth management. 
               As a globally recognized firm with deep roots in Italian financial tradition, we combine centuries-old 
               expertise with cutting-edge technology to deliver exceptional value to our clients worldwide.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-base text-gray-700 leading-relaxed">
               Our commitment to transparency, regulatory compliance, and client success has positioned us as a trusted 
               partner for individuals and institutions seeking to diversify their portfolios with precious metals. 
               Through our innovative metal accounts and comprehensive investment solutions, we empower our clients 
@@ -129,7 +129,7 @@ const WhoWeAre = () => {
           {/* Team Header */}
           <div className="text-left mb-16">
             <h2 className="text-4xl font-bold text-[#A78E52] mb-6 font-playfair">Our Team</h2>
-            <p className="text-lg text-gray-700 mx-auto leading-relaxed">
+            <p className="text-base text-gray-700 mx-auto leading-relaxed">
             Our team combines decades of Italian gold banking expertise with Dubai's role as a global hub for precious metals. With specialists in finance, law, operations, and technology, we provide tailored solutions built on trust, integrity, and innovation.
             </p>
           </div>
@@ -184,7 +184,7 @@ const WhoWeAre = () => {
           {/* Our Distribution Partner Section */}
           <div className="mt-16 text-left">
             <h3 className="text-3xl font-bold text-[#A78E52] mb-6 font-playfair">Our Distribution Partner</h3>
-            <p className="text-lg text-gray-700 mx-auto mb-8 leading-relaxed">
+            <p className="text-base text-gray-700 mx-auto mb-8 leading-relaxed">
               Mac & Ro Capital proudly collaborates with Gold Rock Capital as our official distribution company. 
               This partnership ensures that our gold products and solutions are delivered with the same values we 
               stand for — security, transparency, and professionalism.
@@ -216,8 +216,6 @@ const WhoWeAre = () => {
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 };

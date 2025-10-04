@@ -322,7 +322,7 @@ const FAQ = () => {
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             Frequently Asked Questions
           </h1>
-          <p className="text-base sm:text-base text-gray-600 mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-gray-600 mx-auto leading-relaxed">
             Find answers to common questions about our services, investment processes, 
             and how to get started with Mac & Ro.
           </p>
@@ -398,13 +398,13 @@ const FAQ = () => {
       </section>
 
       {/* Quick Links */}
-      <section className="py-10 md:py-20 bg-[#F1F0E8]">
+      {/* <section className="py-10 md:py-20 bg-[#F1F0E8]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 font-playfair">
               Quick Links
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
               Explore more about Mac & Ro and our comprehensive investment solutions.
             </p>
           </div>
@@ -441,7 +441,7 @@ const FAQ = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

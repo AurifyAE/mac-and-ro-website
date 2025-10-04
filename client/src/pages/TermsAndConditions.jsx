@@ -9,7 +9,7 @@ const TermsAndConditions = () => {
                     <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 font-playfair leading-tight mb-6">
                         Terms & Conditions
                     </h1>
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <p className="text-base text-gray-600 leading-relaxed">
                         Please read these terms and conditions carefully before using our website and services.
                     </p>
                 </div>
