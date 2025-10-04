@@ -46,7 +46,7 @@ const Cta = () => {
           Build your future on solid gold
         </motion.h2>
         <motion.p 
-          className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
           variants={itemVariants}
         >
           Mac & Ro Capital offers LBMA and non LBMA-certified 24K gold bars from 1g to 1kg, crafted with precision and distributed in partnership with Gold Rock Capital.
@@ -88,7 +88,7 @@ const Cta = () => {
               </motion.h3>
               
               <motion.p 
-                className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed"
+                className="text-sm sm:text-base text-gray-300 mb-8 leading-relaxed"
                 variants={itemVariants}
               >
                 Gold bars offer a cost-effective way to invest in pure gold at scale. Available in sizes from 1 gram to 1 kilo, each bar is certified for purity and globally recognized—perfect for building a strong, secure portfolio.

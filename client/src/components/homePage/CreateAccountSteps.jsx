@@ -67,7 +67,7 @@ const CreateAccountSteps = () => {
             Begin Securely. Operate Confidently.
           </motion.h2>
           <motion.p 
-            className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
             Onboarding with Mac & Ro Capital FZC is fast, secure, and guided by our relationship managers.
@@ -77,7 +77,7 @@ const CreateAccountSteps = () => {
 
         {/* Steps with Numbered Boxes */}
         <motion.div 
-          className="flex flex-wrap md:flex-row items-start md:justify-start lg:justify-center justify-center space-y-8 md:space-y-2 space-x-10 lg:space-x-2"
+          className="flex flex-col lg:flex-row lg:items-start items-center justify-center space-y-8 lg:space-y-0 lg:space-x-2"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -104,7 +104,7 @@ const CreateAccountSteps = () => {
               {/* Right Arrow (except for last step) - Positioned at box level */}
               {index < steps.length - 1 && (
                 <motion.div 
-                  className="hidden md:flex items-center justify-center self-start mt-5"
+                  className="hidden lg:flex items-center justify-center self-start mt-5"
                   variants={itemVariants}
                 >
                   <svg className="w-18 h-18 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">

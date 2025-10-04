@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import featureImage1 from '../../assets/homepage/feature-image1.jpg';
-import featureImage3 from '../../assets/homepage/feature-image3.jpg';
+import featureImage3 from '../../assets/homepage/orovivo-app.png';
 import locationSwapVideo from '../../assets/location-swap/location-swap-video.mov';
 import googlePlay from '../../assets/homepage/googlePlay.png';
 import appStore from '../../assets/homepage/appStore.png';
@@ -196,7 +196,7 @@ const Features = () => {
                         </motion.h2>
                         
                         <motion.p 
-                            className="text-lg text-gray-600 mb-8 leading-relaxed"
+                            className="text-base text-gray-600 mb-8 leading-relaxed"
                             variants={fadeInUp}
                         >
                             A location swap (from the Latina for “locus/locatio”) is a physical gold transaction where equivalent amounts of gold are exchanged between two different locations, typically two gold hubs. Location swaps allow an efficient transfer of metal without the need to physically transport gold to a single central location.
@@ -234,7 +234,7 @@ const Features = () => {
                         </motion.h2>
                         
                         <motion.p 
-                            className="text-lg text-gray-600 mb-8 leading-relaxed"
+                            className="text-base text-gray-600 mb-8 leading-relaxed"
                             variants={fadeInUp}
                         >
                             The OROVIVO App by Mac & Ro Capital FZC lets you buy, sell, and location Swap of Gold securely in specified locations. Easily convert gold to cash and vice versa or move it to specified locations with just a few taps.

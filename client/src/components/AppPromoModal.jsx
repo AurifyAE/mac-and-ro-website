@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import appStore from '../assets/homepage/appStore.png';
 import googlePlay from '../assets/homepage/googlePlay.png';
-import featureImage3 from '../assets/homepage/feature-image3.jpg';
+import featureImage3 from '../assets/homepage/orovivo-app.png';
 
 const AppPromoModal = ({ isOpen, onClose }) => {
   const [isClosing, setIsClosing] = useState(false);
