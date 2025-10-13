@@ -142,7 +142,7 @@ const Features = () => {
                     
                     <motion.div 
                         className="order-1 lg:order-2"
-                        variants={slideInRight}
+                        variants={slideInLeft}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
@@ -185,7 +185,7 @@ const Features = () => {
                     
                     <motion.div 
                         className="text-center"
-                        variants={slideInRight}
+                        variants={slideInLeft}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}
@@ -259,7 +259,7 @@ const Features = () => {
                     
                     <motion.div 
                         className="order-1 lg:order-2"
-                        variants={slideInRight}
+                        variants={slideInLeft}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.3 }}

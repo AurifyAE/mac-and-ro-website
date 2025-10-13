@@ -31,7 +31,7 @@ const StepbyStepData = ({ steps }) => {
 
         {/* Steps with Numbered Boxes */}
         <motion.div 
-          className="flex flex-col lg:flex-row items-start justify-center space-y-8 lg:space-y-0 lg:space-x-2"
+          className="flex flex-wrap lg:flex-nowrap lg:flex-row items-center justify-center gap-8 lg:space-y-0 lg:gap-0"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -41,7 +41,7 @@ const StepbyStepData = ({ steps }) => {
             <React.Fragment key={step.number}>
               {/* Step Box with Number Only */}
               <motion.div 
-                className="flex flex-col items-center"
+                className="flex w-52 h-auto flex-col items-center justify-start"
                 variants={itemVariants}
               >
                 <div className="w-16 h-16 bg-[#C9A14A] rounded-full shadow-lg flex items-center justify-center mb-4 hover:border-gray-300 transition-all duration-300">

@@ -56,6 +56,15 @@ const LocationSwap = () => {
         }
     ];
 
+    // Interleave benefits for correct reading order on mobile and desktop (1,5,2,6,3,7,4)
+    const leftCol = qaData.slice(0, 4);
+    const rightCol = qaData.slice(4);
+    const interleavedQa = [];
+    for (let i = 0; i < leftCol.length; i++) {
+        interleavedQa.push(leftCol[i]);
+        if (rightCol[i]) interleavedQa.push(rightCol[i]);
+    }
+
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section with Background Image */}
@@ -108,51 +117,25 @@ const LocationSwap = () => {
                     </h2>
                     
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Left Column */}
-                        <div className="space-y-8">
-                            {qaData.slice(0, 4).map((qa) => (
-                                <div key={qa.id} className="bg-white p-6">
-                                    <div className="flex items-start gap-3 mb-4">
-                                        <h3 className="text-lg font-semibold text-gray-900">
-                                            {qa.question}
-                                        </h3>
-                                    </div>
-                                    <div className="ml-11 space-y-3">
-                                        {qa.points.map((point, index) => (
-                                            <div key={index} className="flex items-start gap-3">
-                                                <span className="text-[#DCBC7C] text-lg font-bold mt-0.5">•</span>
-                                                <p className="text-gray-600 leading-relaxed text-sm">
-                                                    {point}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </div>
+                        {interleavedQa.map((qa) => (
+                            <div key={qa.id} className="bg-white p-6">
+                                <div className="flex items-start gap-3 mb-4">
+                                    <h3 className="text-lg font-semibold text-gray-900">
+                                        {qa.question}
+                                    </h3>
                                 </div>
-                            ))}
-                        </div>
-
-                        {/* Right Column */}
-                        <div className="space-y-8">
-                            {qaData.slice(4, 7).map((qa) => (
-                                <div key={qa.id} className="bg-white p-6">
-                                    <div className="flex items-start gap-3 mb-4">
-                                        <h3 className="text-lg font-semibold text-gray-900">
-                                            {qa.question}
-                                        </h3>
-                                    </div>
-                                    <div className="ml-11 space-y-3">
-                                        {qa.points.map((point, index) => (
-                                            <div key={index} className="flex items-start gap-3">
-                                                <span className="text-[#DCBC7C] text-lg font-bold mt-0.5">•</span>
-                                                <p className="text-gray-600 leading-relaxed text-sm">
-                                                    {point}
-                                                </p>
-                                            </div>
-                                        ))}
-                                    </div>
+                                <div className="ml-11 space-y-3">
+                                    {qa.points.map((point, index) => (
+                                        <div key={index} className="flex items-start gap-3">
+                                            <span className="text-[#DCBC7C] text-lg font-bold mt-0.5">•</span>
+                                            <p className="text-gray-600 leading-relaxed text-sm">
+                                                {point}
+                                            </p>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
