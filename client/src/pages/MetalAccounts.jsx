@@ -1,10 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import metalAccountBanner from '../assets/metalAccount/metal-account-banner.jpg';
 import MetalAccountCTA from '../components/MetalAccountCTA';
 import { Link } from 'react-router-dom';
 
 const MetalAccounts = () => {
+  const { t } = useTranslation();
+  
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 }
@@ -13,38 +16,38 @@ const MetalAccounts = () => {
   const accountCards = [
     {
       id: 1,
-      title: "Deluxe Metal Account",
+      title: t('metalAccountsPage.accounts.deluxe.title'),
       link: "/metal-accounts/deluxe-metal-account",
-      description: "Own physical gold with full security, certification, and growth potential.",
-      whoItsFor: "Individuals, families, and businesses seeking stable, generational wealth.",
-      keyBenefits: "Full ownership, secure vaults, extra gold, globally certified.",
+      description: t('metalAccountsPage.accounts.deluxe.description'),
+      whoItsFor: t('metalAccountsPage.accounts.deluxe.whoItsFor'),
+      keyBenefits: t('metalAccountsPage.accounts.deluxe.keyBenefits'),
       type: "individual"
     },
     {
       id: 2,
-      title: "Mac & Ro Metal Account",
+      title: t('metalAccountsPage.accounts.macRo.title'),
       link: "/metal-accounts/mac-ro-metal-account",
-      description: "Secure your wealth with allocated precious metals, fully certified and protected.",
-      whoItsFor: "Investors and businesses seeking safe, tangible assets.",
-      keyBenefits: "Numbered bars, segregated vaults, full ownership, no credit risk.",
+      description: t('metalAccountsPage.accounts.macRo.description'),
+      whoItsFor: t('metalAccountsPage.accounts.macRo.whoItsFor'),
+      keyBenefits: t('metalAccountsPage.accounts.macRo.keyBenefits'),
       type: "individual"
     },
     {
       id: 3,
-      title: "End Of Treatment (EOT)",
+      title: t('metalAccountsPage.accounts.eot.title'),
       link: "/metal-accounts/end-of-treatment-payment-tfm",
-      description: "Severance payments in physical gold for executives.",
-      whoItsFor: "Corporates planning executive benefits",
-      keyBenefits: "Tax efficient, secure, flexible",
+      description: t('metalAccountsPage.accounts.eot.description'),
+      whoItsFor: t('metalAccountsPage.accounts.eot.whoItsFor'),
+      keyBenefits: t('metalAccountsPage.accounts.eot.keyBenefits'),
       type: "company"
     },
     {
       id: 4,
-      title: "Key Man Metal Account",
+      title: t('metalAccountsPage.accounts.keyman.title'),
       link: "/metal-accounts/key-man-metal-account",
-      description: "Protect your company from loss of key personnel.",
-      whoItsFor: "Businesses with essential employees",
-      keyBenefits: "Immediate payout, liquid asset",
+      description: t('metalAccountsPage.accounts.keyman.description'),
+      whoItsFor: t('metalAccountsPage.accounts.keyman.whoItsFor'),
+      keyBenefits: t('metalAccountsPage.accounts.keyman.keyBenefits'),
       type: "company"
     }
   ];
@@ -73,7 +76,7 @@ const MetalAccounts = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
-              Metal Accounts: <br /> Secure Gold Ownership <br /> with Lasting Value
+              {t('metalAccountsPage.hero.title1')} <br /> {t('metalAccountsPage.hero.title2')} <br /> {t('metalAccountsPage.hero.title3')}
             </h1>
           </div>
         </div>
@@ -83,11 +86,11 @@ const MetalAccounts = () => {
       <section className="py-10 bg-[#F1F0E8]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className='text-left text-base text-black mb-6'>
-            Mac & Ro Capital offers to all interested parties four different types of Metal Accounts to provide solutions dedicated to the different needs of the Physical Gold Investment Market. In addition to the classic Accumulation Plan for cyclical purchases on a monthly and quarterly basis, called PAC, we have launched the possibility of taking advantage of additional targeted opportunities, suitable for specific investors. We promote a responsible wealth culture founded on stability, direct control, certified documentation, and full regulatory compliance. The Metal Trading Account is a new type of solution available for the most demanding customers, always looking for new opportunities. This is an account through which you operate on daily trading on international markets.
+            {t('metalAccountsPage.intro.description')}
             </p>
           <div className="my-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#A78E52] mb-6 tracking-tight font-playfair">
-              For Individuals
+              {t('metalAccountsPage.sections.forIndividuals')}
             </h2>
           </div>
 
@@ -111,15 +114,15 @@ const MetalAccounts = () => {
                 </p>
                 <div className="space-y-3">
                   <p className="text-sm">
-                    <span className="font-semibold text-[#DCBC7C]">Who It's For:</span> {card.whoItsFor}
+                    <span className="font-semibold text-[#DCBC7C]">{t('metalAccountsPage.labels.whoItsFor')}</span> {card.whoItsFor}
                   </p>
                   <p className="text-sm">
-                    <span className="font-semibold text-[#DCBC7C]">Key Benefits:</span> {card.keyBenefits}
+                    <span className="font-semibold text-[#DCBC7C]">{t('metalAccountsPage.labels.keyBenefits')}</span> {card.keyBenefits}
                   </p>
                 </div>
                 <button className="mt-6 px-6 py-2 bg-black hover:bg-white hover:text-black border-1 border-white text-white font-semibold rounded-sm transition-colors duration-200 ease-in-out tracking-wide">
                 <Link to={card.link}>
-                  Learn More
+                  {t('metalAccountsPage.labels.learnMore')}
                 </Link>
                 </button>
               </motion.div>
@@ -129,7 +132,7 @@ const MetalAccounts = () => {
           {/* For Companies Section */}
           <div className="my-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#A78E52] mb-6 tracking-tight font-playfair">
-              For Companies
+              {t('metalAccountsPage.sections.forCompanies')}
             </h2>
           </div>
 
@@ -153,15 +156,15 @@ const MetalAccounts = () => {
                 </p>
                 <div className="space-y-3">
                   <p className="text-sm">
-                    <span className="font-semibold text-[#DCBC7C]">Who It's For:</span> {card.whoItsFor}
+                    <span className="font-semibold text-[#DCBC7C]">{t('metalAccountsPage.labels.whoItsFor')}</span> {card.whoItsFor}
                   </p>
                   <p className="text-sm">
-                    <span className="font-semibold text-[#DCBC7C]">Key Benefits:</span> {card.keyBenefits}
+                    <span className="font-semibold text-[#DCBC7C]">{t('metalAccountsPage.labels.keyBenefits')}</span> {card.keyBenefits}
                   </p>
                 </div>
                 <button className="mt-6 px-6 py-2 bg-black hover:bg-white hover:text-black border-1 border-white text-white font-semibold rounded-sm transition-colors duration-200 ease-in-out tracking-wide">
                 <Link to={card.link}>
-                  Learn More
+                  {t('metalAccountsPage.labels.learnMore')}
                 </Link>
                 </button>
               </motion.div>
@@ -169,7 +172,7 @@ const MetalAccounts = () => {
           </div>
           <div className="my-16">
             <h2 className="text-2xl sm:text-3xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
-            With global expertise, ethical sourcing, and strict compliance, Mac & Ro Capital ensures your Metal Account protects both your gold and your critical personnel.
+            {t('metalAccountsPage.conclusion')}
             </h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
@@ -177,7 +180,7 @@ const MetalAccounts = () => {
       </section>
 
       {/* CTA Section */}
-      <MetalAccountCTA  title="Start your investment journey today!" />
+      <MetalAccountCTA  title={t('metalAccountsPage.cta.title')} />
       
     </div>
   );

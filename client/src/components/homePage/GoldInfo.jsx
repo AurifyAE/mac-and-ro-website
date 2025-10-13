@@ -2,9 +2,11 @@ import React from 'react';
 import GoldInfoImage from '../../assets/homepage/goldInfo.jpg';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const GoldInfo = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const itemVariants = {
     hidden: { 
       opacity: 0, 
@@ -47,7 +49,7 @@ const GoldInfo = () => {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              Why invest in gold?
+              {t('homepage.goldInfo.title')}
             </motion.h2>
 
             {/* First Sub-section */}
@@ -60,10 +62,10 @@ const GoldInfo = () => {
               transition={{ delay: 0.2 }}
             >
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide">
-                Inflation Protection
+                {t('homepage.goldInfo.inflationProtection')}
               </h3>
               <p className="text-gray-600 leading-relaxed tracking-wide">
-                Physical gold is a reliable, tangible asset known for its ability to retain value over time, free from market speculation. It's simple to own, flexible to pass on, and immune to financial instability. Whether you're looking for long-term stability or an inflation hedge, gold provides a trusted foundation.
+                {t('homepage.goldInfo.inflationDescription')}
               </p>
             </motion.div>
 
@@ -77,16 +79,16 @@ const GoldInfo = () => {
               transition={{ delay: 0.4 }}
             >
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide">
-                Portfolio Diversification
+                {t('homepage.goldInfo.portfolioDiversification')}
               </h3>
               <p className="text-gray-600 leading-relaxed tracking-wide mb-6">
-                Investing in gold allows you to diversify your portfolio, reducing overall risk. Gold has a low correlation with other financial assets such as stocks and bonds, which means it can increase in value even when other investments are losing value.
+                {t('homepage.goldInfo.diversificationDescription')}
               </p>
               <Link to="/portfolio">
                 <button 
                   className="px-6 py-2 bg-white border-1 border-black hover:bg-black hover:text-white  text-black font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base"
                 >
-                  Create Your Gold Portfolio
+                  {t('homepage.goldInfo.createPortfolio')}
                 </button>
               </Link>
             </motion.div>
@@ -101,10 +103,10 @@ const GoldInfo = () => {
               transition={{ delay: 0.6 }}
             >
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide">
-                Liquidity and Ease of Sale
+                {t('homepage.goldInfo.liquidity')}
               </h3>
               <p className="text-gray-600 leading-relaxed tracking-wide">
-                Gold is a highly liquid asset that can be sold quickly and easily in almost any part of the world. This means you can turn your gold investments into cash when you need it, without long waits or complications.
+                {t('homepage.goldInfo.liquidityDescription')}
               </p>
             </motion.div>
           </div>

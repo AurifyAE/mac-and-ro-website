@@ -1,8 +1,10 @@
 import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { products } from '../data/products';
+import { useTranslation } from 'react-i18next';
 
 const ProductDetails = () => {
+    const { t } = useTranslation();
     const { productId } = useParams();
     const navigate = useNavigate();
 
@@ -69,41 +71,41 @@ const ProductDetails = () => {
                             
                             {/* Product Specifications */}
                             <div className="bg-gray-50 rounded-lg py-6 mb-8">
-                                <h3 className="text-lg font-semibold text-gray-900 mb-4">Specifications</h3>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('productDetails.specifications')}</h3>
                                 <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                     <div className="bg-white rounded-md p-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
                                         <div className="text-left">
-                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">Weight</span>
+                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">{t('productDetails.weight')}</span>
                                             <span className="text-gray-900 font-bold text-base">{product.weight}</span>
                                         </div>
                                     </div>
                                     <div className="bg-white rounded-md p-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
                                         <div className="text-left">
-                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">Length</span>
+                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">{t('productDetails.length')}</span>
                                             <span className="text-gray-900 font-bold text-base">{product.length}</span>
                                         </div>
                                     </div>
                                     <div className="bg-white rounded-md p-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
                                         <div className="text-left">
-                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">Diameter</span>
+                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">{t('productDetails.diameter')}</span>
                                             <span className="text-gray-900 font-bold text-base">{product.diameter}</span>
                                         </div>
                                     </div>
                                     <div className="bg-white rounded-md p-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
                                         <div className="text-left">
-                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">Thickness</span>
+                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">{t('productDetails.thickness')}</span>
                                             <span className="text-gray-900 font-bold text-base">{product.thickness}</span>
                                         </div>
                                     </div>
                                     <div className="bg-white rounded-md p-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
                                         <div className="text-left">
-                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">Fineness</span>
+                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">{t('productDetails.fineness')}</span>
                                             <span className="text-gray-900 font-bold text-base">{product.fineness}</span>
                                         </div>
                                     </div>
                                     <div className="bg-white rounded-md p-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
                                         <div className="text-left">
-                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">Certification</span>
+                                            <span className="text-gray-500 text-xs font-medium uppercase tracking-wide block mb-1">{t('productDetails.certification')}</span>
                                             <span className="text-gray-900 font-bold text-base">{product.certification}</span>
                                         </div>
                                     </div>
@@ -112,7 +114,7 @@ const ProductDetails = () => {
 
                             {/* Product Description */}
                             <div className="mb-8">
-                                <h3 className="text-lg font-semibold text-gray-900 mb-4">Description</h3>
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('productDetails.description')}</h3>
                                 <p className="text-gray-600 leading-relaxed">
                                     {product.description}
                                 </p>
@@ -124,7 +126,7 @@ const ProductDetails = () => {
                                 <button 
                                     className="flex-1 bg-transparent border-1 border-black text-black py-3 px-6 rounded-sm hover:bg-black hover:border-transparent hover:text-white transition-all duration-300 font-semibold"
                                 >
-                                    Shop Now
+                                    {t('productDetails.shopNow')}
                                 </button>
                                 </Link>
                                 {/* <button 
@@ -144,7 +146,7 @@ const ProductDetails = () => {
                 <div className="max-w-5xl mx-auto">
                     <div className="text-left mb-12">
                         <h2 className="text-4xl font-playfair font-bold text-gray-900 mb-4">
-                            You May Also Prefer
+                            {t('productDetails.relatedProducts')}
                         </h2>
                     </div>
                     
@@ -166,7 +168,7 @@ const ProductDetails = () => {
                                         onClick={() => handleShopNow(relatedProduct.id)}
                                         className="w-2/3 bg-transparent border-2 border-black text-black py-2 px-4 rounded-sm hover:bg-[#DCBC7C] hover:border-transparent hover:text-white transition-all duration-300"
                                     >
-                                        Shop Now
+                                        {t('productDetails.shopNow')}
                                     </button>
                                 </div>
                             </div>

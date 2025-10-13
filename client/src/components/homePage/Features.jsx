@@ -6,9 +6,11 @@ import featureImage3 from '../../assets/homepage/orovivo-app.png';
 import locationSwapVideo from '../../assets/location-swap/location-swap-video.mov';
 import googlePlay from '../../assets/homepage/googlePlay.png';
 import appStore from '../../assets/homepage/appStore.png';
+import { useTranslation } from 'react-i18next';
 
 const Features = () => { 
     const navigate = useNavigate();
+    const { t } = useTranslation();
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -85,14 +87,14 @@ const Features = () => {
                             className="font-playfair text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 leading-tight text-center"
                             variants={fadeInUp}
                         >
-                            Global Vault Locations
+                            {t('homepage.features.globalVaults')}
                         </motion.h2>
                         
                         <motion.p 
                             className="text-base text-gray-600 mb-8 leading-relaxed text-center"
                             variants={fadeInUp}
                         >
-                            Your Gold, Strategically Positioned Mac & Ro operates across a trusted network of vaults, providing geographical diversity and client choice
+                            {t('homepage.features.vaultDescription')}
                         </motion.p>
 
                         <motion.ul 
@@ -100,23 +102,23 @@ const Features = () => {
                             variants={itemVariants}
                         >
                             <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            Dubai - Middle East hub with world-class infrastructure
+                            {t('homepage.features.dubai')}
                             </motion.li>
                             
                             <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            Lecce - Head office, Gold Bank licensed jurisdiction
+                            {t('homepage.features.lecce')}
                             </motion.li>
                             
                             <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            Zurich - Swiss precision and neutrality
+                            {t('homepage.features.zurich')}
                             </motion.li>
                             
                             <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            Singapore - Gateway to Asia's high-growth economies
+                            {t('homepage.features.singapore')}
                             </motion.li>
                             
                             <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            Istanbul - Regional vault under development
+                            {t('homepage.features.istanbul')}
                             </motion.li>
                         </motion.ul>
 
@@ -124,7 +126,7 @@ const Features = () => {
                             className="text-base text-gray-600 mb-8 leading-relaxed text-center"
                             variants={fadeInUp}
                         >
-                            Clients can shift balances or request physical delivery under applicable protocols.
+                            {t('homepage.features.vaultProtocols')}
                         </motion.p>
                         
                         <motion.div variants={fadeInUp} className='flex justify-center'>
@@ -133,7 +135,7 @@ const Features = () => {
                                 navigate('/contact');
                             }}
                             className="px-6 py-2 bg-transparent hover:bg-black hover:text-white border-2 border-black text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                                Book Consultant
+                                {t('homepage.features.bookConsultant')}
                             </button>
                         </motion.div>
                     </motion.div>
@@ -192,14 +194,14 @@ const Features = () => {
                             className="font-playfair text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 leading-tight"
                             variants={fadeInUp}
                         >
-                            Location Swap of Gold
+                            {t('homepage.features.locationSwapTitle')}
                         </motion.h2>
                         
                         <motion.p 
                             className="text-base text-gray-600 mb-8 leading-relaxed"
                             variants={fadeInUp}
                         >
-                            A location swap (from the Latina for “locus/locatio”) is a physical gold transaction where equivalent amounts of gold are exchanged between two different locations, typically two gold hubs. Location swaps allow an efficient transfer of metal without the need to physically transport gold to a single central location.
+                            {t('homepage.features.locationSwapDescription')}
                         </motion.p>
                         
                         <motion.div variants={fadeInUp}>
@@ -208,7 +210,7 @@ const Features = () => {
                                 navigate('/location-swap');
                             }}
                             className="px-6 py-2 bg-transparent hover:bg-black hover:text-white border-2 border-black text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                                Know more
+                                {t('homepage.features.knowMore')}
                             </button>
                         </motion.div>
                     </motion.div>
@@ -230,14 +232,14 @@ const Features = () => {
                             className="font-playfair text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 leading-tight"
                             variants={fadeInUp}
                         >
-                            OROVIVO App
+                            {t('homepage.features.orovivoTitle')}
                         </motion.h2>
                         
                         <motion.p 
                             className="text-base text-gray-600 mb-8 leading-relaxed"
                             variants={fadeInUp}
                         >
-                            The OROVIVO App by Mac & Ro Capital FZC lets you buy, sell, and location Swap of Gold securely in specified locations. Easily convert gold to cash and vice versa or move it to specified locations with just a few taps.
+                            {t('homepage.features.orovivoDescription')}
                         </motion.p>
                         
                         <motion.div variants={fadeInUp}>
@@ -246,7 +248,7 @@ const Features = () => {
                                 navigate('/');
                             }}
                             className="px-6 py-2 bg-transparent hover:bg-black hover:text-white border-2 border-black text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                                Download Now
+                                {t('homepage.features.downloadNow')}
                             </button>
                             <div className="flex justify-center gap-4 mt-8">
                                 <img src={googlePlay} alt="OROVIVO App" className="w-28 h-auto shadow-2xl" />

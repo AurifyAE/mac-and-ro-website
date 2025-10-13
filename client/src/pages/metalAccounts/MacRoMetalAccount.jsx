@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
 import macBanner from '../../assets/metalAccount/mac-video-banner.mp4';
 import macImg2 from '../../assets/metalAccount/mac-img2.jpg';
+import { useTranslation } from 'react-i18next';
 
 const MacRoMetalAccount = () => {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,25 +34,25 @@ const MacRoMetalAccount = () => {
   const steps = [
     {
       number: "1",
-      title: "Direct Allocation",
-      description: "Your account reflects actual physical holdings, not just a balance."
+      title: t('stepByStep.macRoMetalAccount.steps.step1.title'),
+      description: t('stepByStep.macRoMetalAccount.steps.step1.description')
     },
     {
       number: "2",
-      title: "Physical Movement",
-      description: "Credits and debits match the real transfer of bars in or out of the vault."
+      title: t('stepByStep.macRoMetalAccount.steps.step2.title'),
+      description: t('stepByStep.macRoMetalAccount.steps.step2.description')
     },
     
     {
       number: "3",
-      title: "Full Ownership",
-      description: "You retain full rights to your bars, even if the account operator defaults."
+      title: t('stepByStep.macRoMetalAccount.steps.step3.title'),
+      description: t('stepByStep.macRoMetalAccount.steps.step3.description')
     },
     
     {
       number: "4",
-      title: "Secure Custody",
-      description: "High-security vaults ensure your metals are protected at all times. (though physical collection is complex due to vault security)."
+      title: t('stepByStep.macRoMetalAccount.steps.step4.title'),
+      description: t('stepByStep.macRoMetalAccount.steps.step4.description')
     },
   ]
   return (
@@ -77,12 +79,12 @@ const MacRoMetalAccount = () => {
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
-            <span className="text-[#DCBC7C] text-sm">MAC & RO  METAL ACCOUNT</span>
+            <span className="text-[#DCBC7C] text-sm">{t('metalAccounts.macRo.hero.badge')}</span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
-              Invest in Certainty.
+              {t('metalAccounts.macRo.hero.title')}
             </h1>
             <p className="max-w-lg text-white text-base">
-              A Smarter Way to Own Precious Metals
+              {t('metalAccounts.macRo.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -95,14 +97,14 @@ const MacRoMetalAccount = () => {
             {/* Question */}
             <div>
               <h3 className="text-4xl font-semibold text-gray-900 mb-4 font-playfair">
-                What is a Mac & Ro Metal Account?
+                {t('metalAccounts.macRo.whatIs.title')}
               </h3>
             </div>
             
             {/* Answer */}
             <div>
               <p className="text-gray-600 leading-relaxed text-base">
-              The Mac & Ro Metal Account is a secure and cost-effective way to invest in gold and other precious metals. Designed for both individuals and institutions, it allows you to build long-term reserves or manage short-to-medium-term investments with ease and transparency.
+              {t('metalAccounts.macRo.whatIs.description')}
               </p>
             </div>
           </div>
@@ -112,35 +114,35 @@ const MacRoMetalAccount = () => {
             {/* Question */}
             <div>
               <h3 className="text-3xl sm:text-4xl lg:text-4xl font-semibold text-gray-900 mb-4 font-playfair">
-                What Makes It Different?
+                {t('metalAccounts.macRo.whatMakesDifferent.title')}
               </h3>
             </div>
             
             {/* Answer */}
             <div>
               <p className="text-gray-600 leading-relaxed text-base mb-6">
-              Unlike traditional investments, the Metal Account is allocated — meaning your holdings are backed by specific, identifiable bars, plates, or ingots. Each piece is recorded with:
+              {t('metalAccounts.macRo.whatMakesDifferent.description')}
               </p>
               <ul className="space-y-3 text-gray-600 leading-relaxed text-base font-bold">
                 <li className="flex items-start">
                   <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                  A unique serial number
+                  {t('metalAccounts.macRo.whatMakesDifferent.features.serialNumber')}
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                  Gross weight
+                  {t('metalAccounts.macRo.whatMakesDifferent.features.grossWeight')}
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                  Purity / fineness
+                  {t('metalAccounts.macRo.whatMakesDifferent.features.purity')}
                 </li>
                 <li className="flex items-start">
                   <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                  Fine weight (for gold)
+                  {t('metalAccounts.macRo.whatMakesDifferent.features.fineWeight')}
                 </li>
               </ul>
               <p className="text-gray-600 leading-relaxed text-base mt-6">
-                This ensures complete transparency and direct ownership of your metals.
+                {t('metalAccounts.macRo.whatMakesDifferent.conclusion')}
               </p>
             </div>
           </div>
@@ -160,7 +162,7 @@ const MacRoMetalAccount = () => {
                     className="text-3xl lg:text-4xl  font-bold text-gray-900 mb-6 tracking-tight font-playfair"
                     variants={itemVariants}
                 >
-                    How it works?
+                    {t('metalAccounts.macRo.howItWorks.title')}
                 </motion.h2>
             </motion.div>
           <StepbyStepData steps={steps} />
@@ -173,7 +175,7 @@ const MacRoMetalAccount = () => {
             {/* Column 1: Title */}
             <div className="lg:col-span-1">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight mb-6">
-                Key Benefits
+                {t('metalAccounts.macRo.keyBenefits.title')}
               </h2>
             </div>
 
@@ -189,7 +191,7 @@ const MacRoMetalAccount = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Tangible Ownership</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('metalAccounts.macRo.keyBenefits.items.tangibleOwnership')}</h3>
                   </div>
                 </div>
 
@@ -202,7 +204,7 @@ const MacRoMetalAccount = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">No Overdraft Risk</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('metalAccounts.macRo.keyBenefits.items.noOverdraftRisk')}</h3>
                   </div>
                 </div>
 
@@ -215,7 +217,7 @@ const MacRoMetalAccount = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Custodial Simplicity</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('metalAccounts.macRo.keyBenefits.items.custodialSimplicity')}</h3>
                   </div>
                 </div>
 
@@ -228,7 +230,7 @@ const MacRoMetalAccount = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Flexibility</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('metalAccounts.macRo.keyBenefits.items.flexibility')}</h3>
                   </div>
                 </div>
               </div>
@@ -262,14 +264,14 @@ const MacRoMetalAccount = () => {
             {/* Question */}
             <div>
               <h3 className="text-4xl font-semibold text-gray-900 mb-4 font-playfair">
-              Insurance
+              {t('metalAccounts.macRo.insurance.title')}
               </h3>
             </div>
             
             {/* Answer */}
             <div>
               <p className="text-gray-600 leading-relaxed text-base">
-                By default, account holders are responsible for arranging their own insurance unless otherwise agreed. This ensures maximum flexibility and control over your asset protection.
+                {t('metalAccounts.macRo.insurance.description')}
               </p>
             </div>
           </div>
@@ -277,7 +279,7 @@ const MacRoMetalAccount = () => {
       </div>
 
       {/* CTA Section */}
-      <MetalAccountCTA  title="Start your Metal Account Today!" />
+      <MetalAccountCTA  title={t('metalAccounts.macRo.cta')} />
     </div>
   )
 }

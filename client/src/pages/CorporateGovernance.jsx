@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import governanceBg from '../assets/corporate/corporatebg.jpg';
 import dubaiIcon from '../assets/corporate/dubai-icon.svg';
 import italyIcon from '../assets/corporate/italy-icon.svg';
+import { useTranslation } from 'react-i18next';
 
 const reportsDataOfItaly = [
 
@@ -14,6 +15,7 @@ const reportsDataOfItaly = [
 ]
 
 const CorporateGovernance = () => {
+  const { t } = useTranslation();
 
   const reportsDataOfItaly = [
 
@@ -79,7 +81,7 @@ const CorporateGovernance = () => {
 
   const handleDownload = (report) => {
     if (!report.downloadUrl) {
-      alert('Download link not available for this report.');
+      alert(t('corporateGovernance.alerts.downloadNotAvailable'));
       return;
     }
 
@@ -100,7 +102,7 @@ const CorporateGovernance = () => {
       document.body.removeChild(link);
     } catch (error) {
       console.error('Download failed:', error);
-      alert('Download failed. Please try again or contact support.');
+      alert(t('corporateGovernance.alerts.downloadFailed'));
     }
   };
 
@@ -113,11 +115,11 @@ const CorporateGovernance = () => {
                 <div className="relative z-10 flex items-center justify-center h-full">
                     <div className="text-white max-w-6xl px-6">
                         <h1 className="text-3xl sm:text-3xl lg:text-4xl text-[#DCBC7C] font-bold mb-6 leading-tight font-playfair">
-                          Responsible Sourcing
+                          {t('corporateGovernance.hero.title')}
                         </h1>
 
                         <p className="text-base mb-4 leading-relaxed">
-                        We are committed to the ethical and responsible sourcing of gold, ensuring full compliance with international standards and due diligence practices. Our supply chain is carefully vetted to support transparency, human rights, and environmental sustainability.
+                        {t('corporateGovernance.hero.description')}
                         </p>
 
                         {/* <p className="text-base mb-4 leading-relaxed flex items-center">
@@ -137,7 +139,7 @@ const CorporateGovernance = () => {
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex items-center justify-center gap-6 mb-12">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-playfair">
-                     Dubai
+                     {t('corporateGovernance.sections.dubai')}
                   </h1>
                   <img src={dubaiIcon} alt="Corporate Governance" className="w-12 h-12" />
                 </div>
@@ -149,10 +151,10 @@ const CorporateGovernance = () => {
                       <thead className="bg-black">
                         <tr>
                           <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
-                            Reports
+{t('corporateGovernance.table.reports')}
                           </th>
                           <th className="px-6 py-4 text-center text-sm font-semibold text-white uppercase tracking-wider">
-                            Downloads
+{t('corporateGovernance.table.downloads')}
                           </th>
                         </tr>
                       </thead>
@@ -170,7 +172,7 @@ const CorporateGovernance = () => {
                                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                 </svg>
-                                Download 
+                                {t('corporateGovernance.table.downloadButton')} 
                               </button>
                             </td>
                           </tr>
@@ -186,7 +188,7 @@ const CorporateGovernance = () => {
               <div className="max-w-6xl mx-auto px-4  py-20">
                 <div className="flex items-center justify-center gap-6 mb-12">
                   <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-playfair">
-                     Italy
+                     {t('corporateGovernance.sections.italy')}
                   </h1>
                   <img src={italyIcon} alt="Corporate Governance" className="w-12 h-12" />
                 </div>
@@ -198,10 +200,10 @@ const CorporateGovernance = () => {
                       <thead className="bg-black">
                         <tr>
                           <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
-                            Reports
+{t('corporateGovernance.table.reports')}
                           </th>
                           <th className="px-6 py-4 text-center text-sm font-semibold text-white uppercase tracking-wider">
-                            Downloads
+{t('corporateGovernance.table.downloads')}
                           </th>
                         </tr>
                       </thead>
@@ -219,7 +221,7 @@ const CorporateGovernance = () => {
                                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                 </svg>
-                                Download
+                                {t('corporateGovernance.table.downloadButton')}
                               </button>
                             </td>
                           </tr>

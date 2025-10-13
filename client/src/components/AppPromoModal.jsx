@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import appStore from '../assets/homepage/appStore.png';
 import googlePlay from '../assets/homepage/googlePlay.png';
 import featureImage3 from '../assets/homepage/orovivo-app.png';
+import { useTranslation } from 'react-i18next';
 
 const AppPromoModal = ({ isOpen, onClose }) => {
+  const { t } = useTranslation();
   const [isClosing, setIsClosing] = useState(false);
   useEffect(() => {
     const handleEscape = (e) => {
@@ -79,10 +81,10 @@ const AppPromoModal = ({ isOpen, onClose }) => {
           {/* Header */}
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-2 font-playfair">
-              Download ORO VIVO App
+              {t('appModal.downloadTitle')}
             </h2>
             <p className="text-gray-600 text-sm leading-relaxed text-left">
-              Trade gold anytime, anywhere with our cutting-edge mobile application
+              {t('appModal.description')}
             </p>
           </div>
 
@@ -92,25 +94,25 @@ const AppPromoModal = ({ isOpen, onClose }) => {
               <svg className="w-4 h-4 text-[#DCBC7C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              Real-time gold trading
+              {t('appModal.realTimeTrading')}
             </div>
             <div className="flex items-center text-sm text-gray-700">
               <svg className="w-4 h-4 text-[#DCBC7C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              Location Swap feature
+              {t('appModal.locationSwap')}
             </div>
             <div className="flex items-center text-sm text-gray-700">
               <svg className="w-4 h-4 text-[#DCBC7C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              Secure portfolio management
+              {t('appModal.securePortfolio')}
             </div>
             <div className="flex items-center text-sm text-gray-700">
               <svg className="w-4 h-4 text-[#DCBC7C] mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              Market fluctuations tracking
+              {t('appModal.marketTracking')}
             </div>
           </div>
 
@@ -147,7 +149,7 @@ const AppPromoModal = ({ isOpen, onClose }) => {
           {/* Footer */}
           <div className="mt-6 text-left">
             <p className="text-xs text-gray-500">
-              Available for iOS, Android, and Huawei devices
+              {t('appModal.availableDevices')}
             </p>
           </div>
           </div>

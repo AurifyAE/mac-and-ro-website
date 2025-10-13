@@ -1,7 +1,9 @@
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, useState, memo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 function LiveRate() {
+  const { t } = useTranslation();
   const containerRef = useRef();
   const [activeTab, setActiveTab] = useState('oz'); // 'oz' | 'g'
 
@@ -59,7 +61,7 @@ function LiveRate() {
                 : 'px-3 py-2 sm:px-4 rounded-full text-sm font-semibold border bg-white text-black border-gray-300 dark:bg-neutral-900 dark:text-white dark:border-neutral-700'
             }
           >
-            Gold/oz
+            {t('liveRate.tabs.goldOz')}
           </button>
           <button
             type="button"
@@ -70,14 +72,14 @@ function LiveRate() {
                 : 'ml-2 px-3 py-2 sm:px-4 rounded-full text-sm font-semibold border bg-white text-black border-gray-300 dark:bg-neutral-900 dark:text-white dark:border-neutral-700'
             }
           >
-            Gold/g
+            {t('liveRate.tabs.goldG')}
           </button>
         </div>
       </div>
 
       {/* Title */}
       <h2 className="text-black text-xl sm:text-2xl font-playfair font-bold mb-3">
-        {activeTab === 'oz' ? 'GOLD/oz' : 'GOLD/g'}
+        {activeTab === 'oz' ? t('liveRate.title.goldOz') : t('liveRate.title.goldG')}
       </h2>
 
       {/* TradingView Container */}

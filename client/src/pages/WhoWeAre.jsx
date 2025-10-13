@@ -4,52 +4,55 @@ import teamMember1 from '../assets/about/team-member-1.jpg';
 import teamMember2 from '../assets/about/team-member-2.jpg';
 import goldRockLogo from '../assets/service/goldrocklogo.png';
 import whoweHero from '../assets/about/whowe-hero.jpg';
+import { useTranslation } from 'react-i18next';
 
 const WhoWeAre = () => {
+  const { t } = useTranslation();
+  
   // Team data array
   const teamMembers = [
     {
       id: 1,
-      name: "Eng. Pietro Piccinetti",
-      role: "(Honorary President)",
-      description: "A high-profile manager with a long international experience and a consolidated reputation, equipped with an extensive network of relationships, a remarkable curriculum and a solid expertise in internationalization and international negotiation activities, with strong capabilities in defining strategies that allow companies to relaunch and expand on the global market. With a proven experience in M&A, he has driven a significant rate of improvement in performance in mergers/corporate management. Familiar with the complexities of due diligence and company valuation, in his long career he has successfully faced the challenges of different corporate cultures in various industrial and Financial (PE) sectors. CEO of Infratel SpA – Infrastructure and Telecommunications for Italy. Vice President of the Italian Association of Fairs and Events.",
+      name: t('whoWeAre.team.members.pietro.name'),
+      role: t('whoWeAre.team.members.pietro.role'),
+      description: t('whoWeAre.team.members.pietro.description'),
       image: teamMember1,
       hasImage: true
     },
     {
       id: 2,
-      name: "Dr. Angelo Rossi",
-      role: "(Chief Executive Officer)",
-      description: "A highly skilled international manager in the precious metals field with a worldwide network of commercial relationships. He is the visionary driving force of the group, assisted by a team of top-level managers.",
+      name: t('whoWeAre.team.members.angelo.name'),
+      role: t('whoWeAre.team.members.angelo.role'),
+      description: t('whoWeAre.team.members.angelo.description'),
       image: teamMember2,
       hasImage: true
     },
     {
       id: 3,
-      name: "Dr. Francesco Mariano Mariano",
-      role: "(Chief Financial Officer)",
-      description: "An Italian banker gifted with a unique understanding of the international banking system. President of the Vis Foundation at Lecce, the non-profit entity managing the Campus of the University of Salento, in Lecce.",
+      name: t('whoWeAre.team.members.francesco.name'),
+      role: t('whoWeAre.team.members.francesco.role'),
+      description: t('whoWeAre.team.members.francesco.description'),
       hasImage: false
     },
     {
       id: 4,
-      name: "Dr. Sa Elena Actis",
-      role: "(Compliance Officer)",
-      description: "One of the best Institutional Relationships and Public Affair experts in Italy, President of Hydro Aid Association and a University's Professor at the European Institute of Design for Marketing and Strategic Communication course.",
+      name: t('whoWeAre.team.members.elena.name'),
+      role: t('whoWeAre.team.members.elena.role'),
+      description: t('whoWeAre.team.members.elena.description'),
       hasImage: false
     },
     {
       id: 5,
-      name: "Mr. Ed Bass",
-      role: " (Chief Executive Officer USA)",
-      description: "He serves as President and Chief Financial Officer of Equitus Corporation and prior to that he was President of Xerox Business Solutions.",
+      name: t('whoWeAre.team.members.ed.name'),
+      role: t('whoWeAre.team.members.ed.role'),
+      description: t('whoWeAre.team.members.ed.description'),
       hasImage: false
     },
     {
       id: 6,
-      name: "Miss Valentina Rossi",
-      role: "(Chief Administration Officer)",
-      description: "She is a former CRN's intern and today she oversees the administration of the Group",
+      name: t('whoWeAre.team.members.valentina.name'),
+      role: t('whoWeAre.team.members.valentina.role'),
+      description: t('whoWeAre.team.members.valentina.description'),
       hasImage: false
     }
   ];
@@ -70,7 +73,7 @@ const WhoWeAre = () => {
             {/* Text Content - Positioned at bottom left of image with black background */}
             <div className="absolute bottom-0 left-0 text-left bg-black px-12 py-4">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#A78E52] mb-2 md:mb-6 tracking-tight font-playfair">
-                Who we are?
+                {t('whoWeAre.hero.title')}
               </h1>
             </div>
           </div>
@@ -82,15 +85,10 @@ const WhoWeAre = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-left">
             <p className="text-base text-gray-700 mb-6 leading-relaxed">
-              Mac & Ro represents the pinnacle of excellence in precious metals investment and wealth management. 
-              As a globally recognized firm with deep roots in Italian financial tradition, we combine centuries-old 
-              expertise with cutting-edge technology to deliver exceptional value to our clients worldwide.
+              {t('whoWeAre.intro.description1')}
             </p>
             <p className="text-base text-gray-700 leading-relaxed">
-              Our commitment to transparency, regulatory compliance, and client success has positioned us as a trusted 
-              partner for individuals and institutions seeking to diversify their portfolios with precious metals. 
-              Through our innovative metal accounts and comprehensive investment solutions, we empower our clients 
-              to build lasting wealth in an ever-changing financial landscape.
+              {t('whoWeAre.intro.description2')}
             </p>
           </div>
         </div>
@@ -102,21 +100,17 @@ const WhoWeAre = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Our Mission */}
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-4xl font-bold text-[#A78E52] mb-4 font-playfair">Our Mission</h3>
+              <h3 className="text-4xl font-bold text-[#A78E52] mb-4 font-playfair">{t('whoWeAre.missionVision.mission.title')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                To democratize access to precious metals investments by providing innovative, 
-                secure, and transparent financial solutions that empower individuals and 
-                institutions to build lasting wealth through strategic diversification.
+                {t('whoWeAre.missionVision.mission.description')}
               </p>
             </div>
 
             {/* Our Vision */}
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <h3 className="text-4xl font-bold text-[#A78E52] mb-4 font-playfair">Our Vision</h3>
+              <h3 className="text-4xl font-bold text-[#A78E52] mb-4 font-playfair">{t('whoWeAre.missionVision.vision.title')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                To become the global leader in precious metals investment solutions, 
-                setting industry standards for innovation, client service, and regulatory 
-                compliance while expanding access to wealth-building opportunities worldwide.
+                {t('whoWeAre.missionVision.vision.description')}
               </p>
             </div>
           </div>
@@ -128,9 +122,9 @@ const WhoWeAre = () => {
         <div className="max-w-6xl mx-auto px-4">
           {/* Team Header */}
           <div className="text-left mb-16">
-            <h2 className="text-4xl font-bold text-[#A78E52] mb-6 font-playfair">Our Team</h2>
+            <h2 className="text-4xl font-bold text-[#A78E52] mb-6 font-playfair">{t('whoWeAre.team.title')}</h2>
             <p className="text-base text-gray-700 mx-auto leading-relaxed">
-            Our team combines decades of Italian gold banking expertise with Dubai's role as a global hub for precious metals. With specialists in finance, law, operations, and technology, we provide tailored solutions built on trust, integrity, and innovation.
+            {t('whoWeAre.team.description')}
             </p>
           </div>
 
@@ -170,24 +164,22 @@ const WhoWeAre = () => {
           {/* Want to Work with Us Card */}
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-4xl shadow-sm border-2 border-black p-8 text-center">
-              <h3 className="text-2xl font-bold text-black mb-4 font-playfair">Want to Work with Us?</h3>
-              <p className="text-black mb-4">Send your resume at:</p>
+              <h3 className="text-2xl font-bold text-black mb-4 font-playfair">{t('whoWeAre.careers.title')}</h3>
+              <p className="text-black mb-4">{t('whoWeAre.careers.description')}</p>
               <a 
-                href="mailto:info@mac-ro-capital.com" 
+                href={`mailto:${t('whoWeAre.careers.email')}`} 
                 className="text-black font-semibold text-lg hover:underline"
               >
-                info@mac-ro-capital.com
+                {t('whoWeAre.careers.email')}
               </a>
             </div>
           </div>
 
           {/* Our Distribution Partner Section */}
           <div className="mt-16 text-left">
-            <h3 className="text-3xl font-bold text-[#A78E52] mb-6 font-playfair">Our Distribution Partner</h3>
+            <h3 className="text-3xl font-bold text-[#A78E52] mb-6 font-playfair">{t('whoWeAre.partner.title')}</h3>
             <p className="text-base text-gray-700 mx-auto mb-8 leading-relaxed">
-              Mac & Ro Capital proudly collaborates with Gold Rock Capital as our official distribution company. 
-              This partnership ensures that our gold products and solutions are delivered with the same values we 
-              stand for — security, transparency, and professionalism.
+              {t('whoWeAre.partner.description')}
             </p>
             
             <div className="flex flex-row items-center justify-start space-x-6">
@@ -207,7 +199,7 @@ const WhoWeAre = () => {
                 rel="noopener noreferrer"
                 className="text-[#A78E52] font-semibold text-lg hover:underline hover:text-[#c59c6a] transition-all duration-300"
               >
-                Visit: Gold Rock Capital
+                {t('whoWeAre.partner.visitLink')}
                 <svg className="w-4 h-4 ml-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>

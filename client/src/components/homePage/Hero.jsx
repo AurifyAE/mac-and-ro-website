@@ -3,11 +3,13 @@ import { motion } from 'framer-motion';
 import heroVideo1 from '../../assets/homepage/mac-hero-video1.mov';
 import heroVideo2 from '../../assets/homepage/hero-video2.mp4';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
     const videoRef = useRef(null);
     const secondVideoRef = useRef(null);
     const navigate = useNavigate();
+    const { t } = useTranslation();
     useEffect(() => {
         if (videoRef.current) {
         videoRef.current.play().catch(error => {
@@ -55,7 +57,7 @@ const Hero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.1, duration: 0.5 }}
 					>
-						Secure Your Wealth with Physical Gold -
+						{t('homepage.hero.title1')}
 					</motion.h1>
 					<motion.p
 						className="text-2xl sm:text-3xl lg:text-4xl mb-8 font-light tracking-wide"
@@ -63,7 +65,7 @@ const Hero = () => {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.25, duration: 0.5 }}
 					>
-						Trusted, Flexible Investment Solutions
+						{t('homepage.hero.title2')}
 					</motion.p>
 					<motion.div
 						className="flex flex-col sm:flex-row gap-4 justify-start items-start md:items-center"
@@ -77,7 +79,7 @@ const Hero = () => {
 						}}
 						className="px-6 py-2 bg-transparent border border-white hover:bg-white hover:text-black hover:border-white/50 text-white font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base"
 						>
-							Get Started Today
+							{t('homepage.hero.getStarted')}
 						</button>
 					</motion.div>
 				</motion.div>
@@ -86,7 +88,7 @@ const Hero = () => {
             {/* Scroll Indicator */}
             <div className="absolute md:bottom-50 bottom-20 left-1/2 transform -translate-x-1/2 z-10">
             <div className="flex flex-col items-center text-white">
-                <span className="text-sm font-medium mb-2 tracking-wide">Scroll Down</span>
+                <span className="text-sm font-medium mb-2 tracking-wide">{t('homepage.hero.scrollDown')}</span>
                 <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
                 <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
                 </div>
@@ -111,7 +113,7 @@ const Hero = () => {
 							viewport={{ once: true, amount: 0.3 }}
 							transition={{ duration: 0.5 }}
 						>
-							Secure. Empowered. Global.
+							{t('homepage.hero.secureEmpowered')}
 						</motion.h2>
 						<motion.p
 							className="text-sm sm:text-base mb-8 font-light tracking-wide leading-relaxed"
@@ -120,7 +122,7 @@ const Hero = () => {
 							viewport={{ once: true, amount: 0.3 }}
 							transition={{ delay: 0.1, duration: 0.5 }}
 						>
-							Mac & Ro capital FZC brings decades of Italian gold banking expertise to Dubai—one of the world’s leading hubs for physical precious metals. As a licensed Gold Bank in Italy, we now serve global clients through our Dubai entity with trusted, transparent, and world-class services.
+							{t('homepage.hero.description1')}
 						</motion.p>
 						<motion.p
 							className="text-sm sm:text-base mb-8 font-light tracking-wide leading-relaxed"
@@ -129,14 +131,14 @@ const Hero = () => {
 							viewport={{ once: true, amount: 0.3 }}
 							transition={{ delay: 0.2, duration: 0.5 }}
 						>
-							We help individuals, families, businesses, and professional investors safeguard and grow their wealth through structured gold strategies. Operating independently and free from conflicts of interest, we ensure complete transparency, legal compliance, and operational integrity. From digital gold accounts to institutional-grade vaulting and physical bullion trading, Mac & Ro Capital FZC provides a seamless, secure, and innovative way to manage and grow your wealth with gold.
+							{t('homepage.hero.description2')}
 						</motion.p>
-						<button 
+                        <button 
                         onClick={() => {
                             navigate('/services');
                         }}
                         className="px-6 py-2 bg-transparent border border-white hover:bg-white hover:text-black hover:border-white/50 text-white font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base">
-                            Know More
+                            {t('homepage.hero.knowMore')}
                         </button>
                     </div>
                 </div>

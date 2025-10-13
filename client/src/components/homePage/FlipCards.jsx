@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 // Import images
 import deluxeBanner from '../../assets/homepage/deluxe-flip.jpg';
@@ -8,52 +9,52 @@ import macBanner from '../../assets/homepage/mac-flip.jpg';
 import keymanBanner from '../../assets/homepage/keyman-flip.jpg';
 import tfmBanner from '../../assets/homepage/tfm-flip.jpg';
 
-const flipCardsData = [
+const getFlipCardsData = (t) => [
     {
         id: 1,
-        title: "DELUXE METAL ACCOUNT",
+        title: t('homepage.flipCards.deluxeTitle'),
         bgImage: deluxeBanner,
-        frontContent: "Secure your future with physical gold investments",
+        frontContent: t('homepage.flipCards.deluxeFront'),
         backContent: {
-            description: "Invest in certified physical gold with secure vault storage and full ownership rights.",
-            who: "Individuals, families, and businesses seeking stable, generational wealth.",
-            benefits: "Full ownership, secure vaults, extra gold, globally certified.",
+            description: t('homepage.flipCards.deluxeDescription'),
+            who: t('homepage.flipCards.targetAudience'),
+            benefits: t('homepage.flipCards.benefits'),
             ctaLink: "/metal-accounts/deluxe-metal-account"
         }
     },
     {
         id: 2,
-        title: "MAC & RO METAL ACCOUNT",
+        title: t('homepage.flipCards.macRoTitle'),
         bgImage: macBanner,
-        frontContent: "Professional wealth management services",
+        frontContent: t('homepage.flipCards.macRoFront'),
         backContent: {
-            description: "Expert financial advisors help you build and protect your wealth portfolio.",
-            who: "Individuals, families, and businesses seeking stable, generational wealth.",
-            benefits: "Full ownership, secure vaults, extra gold, globally certified.",
+            description: t('homepage.flipCards.macRoDescription'),
+            who: t('homepage.flipCards.targetAudience'),
+            benefits: t('homepage.flipCards.benefits'),
             ctaLink: "/metal-accounts/mac-ro-metal-account"
         }
     },
     {
         id: 3,
-        title: "KEYMAN METAL ACCOUNT",
+        title: t('homepage.flipCards.keymanTitle'),
         bgImage: keymanBanner,
-        frontContent: "Strategic corporate investment solutions",
+        frontContent: t('homepage.flipCards.keymanFront'),
         backContent: {
-            description: "Tailored investment strategies for businesses and corporate entities.",
-            who: "Individuals, families, and businesses seeking stable, generational wealth.",
-            benefits: "Full ownership, secure vaults, extra gold, globally certified.",
+            description: t('homepage.flipCards.keymanDescription'),
+            who: t('homepage.flipCards.targetAudience'),
+            benefits: t('homepage.flipCards.benefits'),
             ctaLink: "/metal-accounts/key-man-metal-account"
         }
     },
     {
         id: 4,
-        title: "END OF TREATMENT (EOT)",
+        title: t('homepage.flipCards.eotTitle'),
         bgImage: tfmBanner,
-        frontContent: "Trade precious metals on global markets",
+        frontContent: t('homepage.flipCards.eotFront'),
         backContent: {
-            description: "Access international precious metals markets with professional trading tools.",
-            who: "Individuals, families, and businesses seeking stable, generational wealth.",
-            benefits: "Full ownership, secure vaults, extra gold, globally certified.",
+            description: t('homepage.flipCards.eotDescription'),
+            who: t('homepage.flipCards.targetAudience'),
+            benefits: t('homepage.flipCards.benefits'),
             ctaLink: "/metal-accounts/end-of-treatment-payment-tfm"
         }
     }
@@ -61,6 +62,7 @@ const flipCardsData = [
 
 const FlipCards = () => {
     const [flippedCards, setFlippedCards] = useState({});
+    const { t } = useTranslation();
     // const navigate = useNavigate();
 
     const handleCardFlip = (cardId, isFlipped) => {
@@ -84,6 +86,8 @@ const FlipCards = () => {
             }
         }
     };
+
+    const flipCardsData = getFlipCardsData(t);
 
     return (
         <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -147,17 +151,17 @@ const FlipCards = () => {
                                         {card.backContent.description}
                                     </p>
                                     <p className="text-lg leading-relaxed mb-4">
-                                        <span className="font-semibold text-black">Who It's For:</span> {card.backContent.who}
+                                        <span className="font-semibold text-black">{t('homepage.flipCards.whoItsFor')}</span> {card.backContent.who}
                                     </p>
                                     <p className="text-lg leading-relaxed mb-4">
-                                        <span className="font-semibold text-black">Key Benefits:</span> {card.backContent.benefits}
+                                        <span className="font-semibold text-black">{t('homepage.flipCards.keyBenefits')}</span> {card.backContent.benefits}
                                     </p>
                                 </div>
                                 <Link 
                                     to={card.backContent.ctaLink}
                                     className="w-full max-w-xs mx-auto px-4 py-2 bg-black hover:bg-transparent hover:border-1 hover:border-black hover:text-black text-white font-semibold rounded-lg transition-all duration-300 text-sm cursor-pointer block text-center"
                                 >
-                                    Learn More
+                                    {t('homepage.flipCards.learnMore')}
                                 </Link>
                             </div>
                         </div>

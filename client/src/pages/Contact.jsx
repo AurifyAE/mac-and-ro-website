@@ -2,8 +2,10 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const COMPANY_EMAIL = 'info@mac-ro-capital.com';
   const [formData, setFormData] = useState({
     firstName: '',
@@ -37,42 +39,45 @@ const Contact = () => {
 
     // Validate required fields
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.message) {
-      alert('Please fill in all required fields.');
+      alert(t('contact.form.alerts.fillRequired'));
       return;
     }
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      alert('Please enter a valid email address.');
+      alert(t('contact.form.alerts.validEmail'));
       return;
     }
 
     // Validate message length
     if (formData.message.length > 500) {
-      alert('Message is too long. Please keep it under 500 characters.');
+      alert(t('contact.form.alerts.messageTooLong'));
       return;
     }
 
-    const emailSubject = `New Contact Form Submission from ${formData.firstName} ${formData.lastName}`;
-    const branchDisplay = formData.branch === 'uae' ? 'UAE' : formData.branch === 'italy' ? 'Italy' : 'Unknown';
-    const emailBody = `Hello MAC & RO Capital Team,
+    const emailSubject = t('contact.form.emailTemplate.subject', { firstName: formData.firstName, lastName: formData.lastName });
+    const branchDisplay = formData.branch === 'uae' ? t('contact.form.fields.branch.uae') : formData.branch === 'italy' ? t('contact.form.fields.branch.italy') : 'Unknown';
+    const contactModeDisplay = formData.contactMode === 'phone' ? t('contact.form.fields.contactMode.phone') : 
+                              formData.contactMode === 'email' ? t('contact.form.fields.contactMode.email') : 
+                              formData.contactMode === 'whatsapp' ? t('contact.form.fields.contactMode.whatsapp') : formData.contactMode;
+    
+    const emailBody = `${t('contact.form.emailTemplate.greeting')}
 
-      I would like to get in touch regarding precious metals investment. Here are my details:
+      ${t('contact.form.emailTemplate.intro')}
 
-      Name: ${formData.firstName} ${formData.lastName}
-      Email: ${formData.email}
-      Phone: ${formData.phone}
-      Branch: ${branchDisplay}
-      Preferred Contact Method: ${formData.contactMode}
+      ${t('contact.form.emailTemplate.name', { firstName: formData.firstName, lastName: formData.lastName })}
+      ${t('contact.form.emailTemplate.email', { email: formData.email })}
+      ${t('contact.form.emailTemplate.phone', { phone: formData.phone })}
+      ${t('contact.form.emailTemplate.branch', { branch: branchDisplay })}
+      ${t('contact.form.emailTemplate.contactMode', { contactMode: contactModeDisplay })}
 
-      Message:
+      ${t('contact.form.emailTemplate.message')}
       ${formData.message}
 
-      I look forward to hearing from you.
+      ${t('contact.form.emailTemplate.closing')}
 
-      Best regards,
-      ${formData.firstName} ${formData.lastName}`;
+      ${t('contact.form.emailTemplate.signature', { firstName: formData.firstName, lastName: formData.lastName })}`;
 
     // Construct Gmail URL
     const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${COMPANY_EMAIL}&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
@@ -81,7 +86,7 @@ const Contact = () => {
     window.open(gmailUrl, '_blank');
 
     resetForm();
-    alert('Form submitted! Gmail compose window has been opened. Please review and send your message.');
+    alert(t('contact.form.alerts.formSubmitted'));
   };
 
   const resetForm = () => {
@@ -124,16 +129,16 @@ const Contact = () => {
                 <div className="flex items-center justify-center min-h-[600px]">
                   <div className="text-white text-center">
                     <h2 className="text-2xl font-medium text-white mb-4 tracking-wide">
-                      WE'D LOVE TO
+                      {t('contact.hero.subtitle')}
                     </h2>
                     <h1 className="text-5xl sm:text-6xl lg:text-6xl font-bold text-[#DCBC7C] tracking-tight font-playfair mb-8">
-                      Hear From You
+                      {t('contact.hero.title')}
                     </h1>
                   </div>
                 </div>
                 <div className="absolute bottom-10 left-0 right-0 flex items-end justify-center text-center">
                   <p className="text-lg text-gray-300">
-                    Get in touch for more details
+                    {t('contact.hero.description')}
                   </p>
                 </div>
               </div>
@@ -141,14 +146,14 @@ const Contact = () => {
 
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8 font-playfair">
-                Send Us a Message
+                {t('contact.form.title')}
               </h2>
               
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid order-1 md:order-2 grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      First Name *
+                      {t('contact.form.fields.firstName.label')} *
                     </label>
                     <input
                       id="firstName"
@@ -160,18 +165,18 @@ const Contact = () => {
                       aria-required="true"
                       aria-describedby="firstName-error"
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A78E52] focus:border-transparent"
-                      placeholder="Enter your first name"
+                      placeholder={t('contact.form.fields.firstName.placeholder')}
                     />
                     {formSubmitted && !formData.firstName && (
                       <p id="firstName-error" className="text-red-600 text-sm mt-1">
-                        First name is required.
+                        {t('contact.form.fields.firstName.error')}
                       </p>
                     )}
                   </div>
                   
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Last Name *
+                      {t('contact.form.fields.lastName.label')} *
                     </label>
                     <input
                       id="lastName"
@@ -183,11 +188,11 @@ const Contact = () => {
                       aria-required="true"
                       aria-describedby="lastName-error"
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A78E52] focus:border-transparent"
-                      placeholder="Enter your last name"
+                      placeholder={t('contact.form.fields.lastName.placeholder')}
                     />
                     {formSubmitted && !formData.lastName && (
                       <p id="lastName-error" className="text-red-600 text-sm mt-1">
-                        Last name is required.
+                        {t('contact.form.fields.lastName.error')}
                       </p>
                     )}
                   </div>
@@ -195,18 +200,18 @@ const Contact = () => {
                 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number *
+                    {t('contact.form.fields.phone.label')} *
                   </label>
                   <PhoneInput
                     country={'ae'}
                     value={formData.phone}
                     onChange={handlePhoneChange}
                     enableSearch={true}
-                    searchPlaceholder="Search country..."
+                    searchPlaceholder={t('contact.form.fields.phone.searchPlaceholder')}
                     countryCodeEditable={false}
                     inputProps={{
                       required: true,
-                      placeholder: 'Enter phone number',
+                      placeholder: t('contact.form.fields.phone.placeholder'),
                       id: 'phone',
                     }}
                     inputStyle={{
@@ -239,14 +244,14 @@ const Contact = () => {
                   />
                   {formSubmitted && !formData.phone && (
                     <p id="phone-error" className="text-red-600 text-sm mt-1">
-                      Phone number is required.
+                      {t('contact.form.fields.phone.error')}
                     </p>
                   )}
                 </div>
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
+                    {t('contact.form.fields.email.label')} *
                   </label>
                   <input
                     id="email"
@@ -258,18 +263,18 @@ const Contact = () => {
                     aria-required="true"
                     aria-describedby="email-error"
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A78E52] focus:border-transparent"
-                    placeholder="Enter your email address"
+                    placeholder={t('contact.form.fields.email.placeholder')}
                   />
                   {formSubmitted && !emailRegex.test(formData.email) && (
                     <p id="email-error" className="text-red-600 text-sm mt-1">
-                      Please enter a valid email address.
+                      {t('contact.form.fields.email.error')}
                     </p>
                   )}
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Select the Branch *
+                    {t('contact.form.fields.branch.label')} *
                   </label>
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                     <label className="flex items-center cursor-pointer">
@@ -282,7 +287,7 @@ const Contact = () => {
                         required
                         className="w-4 h-4 text-black border-gray-300 accent-[#DCBC7C] focus:ring-black"
                       />
-                      <span className="ml-3 text-sm text-gray-700">UAE</span>
+                      <span className="ml-3 text-sm text-gray-700">{t('contact.form.fields.branch.uae')}</span>
                     </label>
                     <label className="flex items-center cursor-pointer">
                       <input
@@ -293,14 +298,14 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-4 h-4 text-black border-gray-300 accent-[#DCBC7C] focus:ring-black"
                       />
-                      <span className="ml-3 text-sm text-gray-700">Italy</span>
+                      <span className="ml-3 text-sm text-gray-700">{t('contact.form.fields.branch.italy')}</span>
                     </label>
                   </div>
                 </div>
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                    {t('contact.form.fields.message.label')} *
                   </label>
                   <textarea
                     id="message"
@@ -312,18 +317,18 @@ const Contact = () => {
                     aria-required="true"
                     aria-describedby="message-error"
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A78E52] focus:border-transparent"
-                    placeholder="Tell us about your investment goals and how we can help..."
+                    placeholder={t('contact.form.fields.message.placeholder')}
                   />
                   {formSubmitted && !formData.message && (
                     <p id="message-error" className="text-red-600 text-sm mt-1">
-                      Message is required.
+                      {t('contact.form.fields.message.error')}
                     </p>
                   )}
                 </div>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-3">
-                    Preferred Mode of Contact *
+                    {t('contact.form.fields.contactMode.label')} *
                   </label>
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                     <label className="flex items-center cursor-pointer">
@@ -336,7 +341,7 @@ const Contact = () => {
                         required
                         className="w-4 h-4 text-black border-gray-300 accent-[#A78E52] focus:ring-black"
                       />
-                      <span className="ml-3 text-sm text-gray-700">Phone</span>
+                      <span className="ml-3 text-sm text-gray-700">{t('contact.form.fields.contactMode.phone')}</span>
                     </label>
                     <label className="flex items-center cursor-pointer">
                       <input
@@ -347,7 +352,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-4 h-4 text-black border-gray-300 accent-[#DCBC7C] focus:ring-black"
                       />
-                      <span className="ml-3 text-sm text-gray-700">Email</span>
+                      <span className="ml-3 text-sm text-gray-700">{t('contact.form.fields.contactMode.email')}</span>
                     </label>
                     <label className="flex items-center cursor-pointer">
                       <input
@@ -358,7 +363,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-4 h-4 text-black border-gray-300 accent-[#A78E52]"
                       />
-                      <span className="ml-3 text-sm text-gray-700">WhatsApp</span>
+                      <span className="ml-3 text-sm text-gray-700">{t('contact.form.fields.contactMode.whatsapp')}</span>
                     </label>
                   </div>
                 </div>
@@ -366,13 +371,13 @@ const Contact = () => {
                   type="submit"
                   className="w-full px-8 py-4 font-semibold rounded-lg transition-all duration-300 text-base bg-transparent border-2 border-black hover:bg-black text-black hover:text-white"
                 >
-                  Submit
+                  {t('contact.form.submit')}
                 </button>
               </form>
               
               <div className="py-8 mt-12 border-t border-gray-200">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 font-playfair">
-                  Contact Information
+                  {t('contact.info.title')}
                 </h2>
                 <div className="space-y-4">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-base text-gray-600">
@@ -380,14 +385,14 @@ const Contact = () => {
                       <svg className="w-5 h-5 mr-2 text-[#DCBC7C]" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                       </svg>
-                      <span>Tel: +39 392 294 7569</span>
+                      <span>{t('contact.info.phone')}</span>
                     </div>
                     <div className="flex items-center">
                       <svg className="w-5 h-5 mr-2 text-[#DCBC7C]" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                       </svg>
-                      <span>Email: {COMPANY_EMAIL}</span>
+                      <span>{t('contact.info.email', { email: COMPANY_EMAIL })}</span>
                     </div>
                   </div>
                 </div>

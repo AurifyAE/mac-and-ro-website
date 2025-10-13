@@ -5,11 +5,12 @@ import appleMobile from '../assets/homepage/apple-png.png';
 import googleMobile from '../assets/homepage/gplay.webp';
 import googlePlay from '../assets/homepage/googlePlay.png';
 import { useCurrency } from '../context/CurrencyContext';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const Banner = () => {
   const { selectedCurrency, updateCurrency } = useCurrency();
-  const [selectedLanguage, setSelectedLanguage] = useState('EN');
+  const { t, i18n } = useTranslation();
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   
@@ -22,9 +23,9 @@ const Banner = () => {
   ];
 
   const languages = [
-    { code: 'EN', name: 'English' },
-    { code: 'AR', name: 'العربية' },
-    { code: 'IT', name: 'Italiano' }
+    { code: 'en', name: t('languages.english') },
+    { code: 'ar', name: t('languages.arabic') },
+    { code: 'it', name: t('languages.italian') }
   ];
 
   // Close dropdowns when clicking outside
@@ -51,7 +52,7 @@ const Banner = () => {
         <div className="flex justify-between items-center h-12">
           {/* Left side - Download App */}
           <div className="flex items-center space-x-3">
-            <span className="text-white text-sm font-medium">Download App</span>
+            <span className="text-white text-sm font-medium">{t('banner.downloadApp')}</span>
             <div className="hidden md:flex items-center space-x-2">
               <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer">
                 <img src={googlePlay} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
@@ -114,7 +115,7 @@ const Banner = () => {
                 className="hidden md:flex items-center space-x-2 px-3 py-1 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 transition duration-200 ease-in-out tracking-wide"
               >
                 <img src={langselector} alt="" className='w-5 h-5' />
-                <span>{selectedLanguage}</span>
+                <span>{i18n.language.toUpperCase()}</span>
               </button>
 
               {isLanguageOpen && (
@@ -124,7 +125,7 @@ const Banner = () => {
                       <button
                         key={language.code}
                         onClick={() => {
-                          setSelectedLanguage(language.code);
+                          i18n.changeLanguage(language.code);
                           setIsLanguageOpen(false);
                         }}
                         className="block w-full text-left px-4 py-2 text-sm font-medium text-white hover:text-black hover:bg-[#f1f0e8ea] focus:outline-none focus:bg-[#f1f0e8ea] transition duration-200 ease-in-out tracking-wide"
@@ -141,7 +142,7 @@ const Banner = () => {
             {/* Sign In Button */}
             <Link to="https://macandro.netlify.app/" target="_blank" rel="noopener noreferrer">
             <button className="hidden md:flex px-4 py-1 text-sm font-semibold text-black bg-white border border-transparent hover:bg-[#f1f0e8ea] hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 tracking-wide">
-              Sign In
+              {t('header.signIn')}
             </button>
             </Link>
           </div>

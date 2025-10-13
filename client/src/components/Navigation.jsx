@@ -1,39 +1,41 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
   const location = useLocation();
-  const [activeItem, setActiveItem] = useState('Home');
+  const { t } = useTranslation();
+  const [activeItem, setActiveItem] = useState(t('navigation.home'));
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [openTimeout, setOpenTimeout] = useState(null);
   const [closeTimeout, setCloseTimeout] = useState(null);
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Who We Are', path: '/who-we-are' },
-    { name: 'Products', 
+    { name: t('navigation.home'), path: '/' },
+    { name: t('navigation.whoWeAre'), path: '/who-we-are' },
+    { name: t('navigation.products'), 
       path: '/products',
       hasDropdown: true,
       submenu: [
         { 
-          name: 'Metal Accounts', 
+          name: t('products.metalAccounts'), 
           path: '/metal-accounts',
           hasSubSubmenu: true,
           subSubmenu: [
-            { name: 'Deluxe Metal Account', path: '/metal-accounts/deluxe-metal-account' },
-            { name: 'Mac & Ro Metal Account', path: '/metal-accounts/mac-ro-metal-account' },
-            { name: 'End Of Treatment Payment (EOT)', path: '/metal-accounts/end-of-treatment-payment-tfm' },
-            { name: 'Key Man Metal Account', path: '/metal-accounts/key-man-metal-account' }
+            { name: t('products.deluxeMetalAccount'), path: '/metal-accounts/deluxe-metal-account' },
+            { name: t('products.macRoMetalAccount'), path: '/metal-accounts/mac-ro-metal-account' },
+            { name: t('products.endOfTreatmentPayment'), path: '/metal-accounts/end-of-treatment-payment-tfm' },
+            { name: t('products.keyManMetalAccount'), path: '/metal-accounts/key-man-metal-account' }
           ]
         },
-        { name: 'Purchase of Physical Investment Gold (Bullion)', path: '/products' }
+        { name: t('products.physicalGoldBullion'), path: '/products' }
       ]
     },
-    { name: 'Services', path: '/services' },
-    { name: 'Corporate Governance', path: '/corporate-governance' },
-    { name: 'News', path: '/news' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Contact', path: '/contact' }
+    { name: t('navigation.services'), path: '/services' },
+    { name: t('navigation.corporateGovernance'), path: '/corporate-governance' },
+    { name: t('navigation.news'), path: '/news' },
+    { name: t('navigation.faq'), path: '/faq' },
+    { name: t('navigation.contact'), path: '/contact' }
   ];
 
   // Update active item when location changes

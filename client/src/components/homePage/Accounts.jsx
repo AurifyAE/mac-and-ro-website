@@ -1,7 +1,9 @@
 import React from 'react';
 import FlipCards from './FlipCards';
+import { useTranslation } from 'react-i18next';
 
 const Accounts = () => {
+    const { t } = useTranslation();
 
     return (
         <div className="bg-gray-50 md:py-20 py-10">
@@ -10,10 +12,10 @@ const Accounts = () => {
                 {/* Left-aligned Heading and Paragraph */}
                 <div className="text-left mb-16">
                     <h2 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
-                        Our Services
+                        {t('homepage.accounts.title')}
                     </h2>
                     <p className="text-sm sm:text-base lg:text-base text-gray-600 leading-relaxed tracking-wide">
-                        Mac & Ro Capital offers to all interested parties  different types of Metal Accounts and services to provide solutions dedicated to the different needs of the Physical Gold Investment Market. In addition to the classic Accumulation Plan for cyclical purchases on a monthly and quarterly basis, called PAC, we have launched the possibility of  taking advantage of additional targeted opportunities, suitable for specific investors. We promote a responsible wealth culture founded on stability, direct control, certified documentation, and full regulatory compliance. 
+                        {t('homepage.accounts.description')}
                     </p>
                 </div>
 

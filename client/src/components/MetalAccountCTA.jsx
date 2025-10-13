@@ -1,8 +1,11 @@
 import React from 'react';
 import goldBar from '../assets/metalAccount/gold-bar.png';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const MetalAccountCTA = ({title}) => {
+    const { t } = useTranslation();
+    
     return (
         <section className="py-20 bg-black relative max-w-4xl mx-auto mb-20">
         {/* Background Image positioned at left -20px */}
@@ -17,7 +20,7 @@ const MetalAccountCTA = ({title}) => {
             </h2>
             <button className="px-6 py-2 bg-transparent border-1 border-white hover:bg-white hover:text-black text-white font-semibold rounded-sm transition-all duration-300 text-base shadow-lg hover:shadow-xl">
               <Link to="/contact">
-              Book Consultant
+              {t('footer.bookConsultant')}
               </Link>
             </button>
           </div>

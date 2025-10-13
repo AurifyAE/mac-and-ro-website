@@ -5,8 +5,10 @@ import MetalAccountCTA from '../../components/MetalAccountCTA';
 import deluxeBanner from '../../assets/metalAccount/deluxe-banner.jpg';
 import appleGold from '../../assets/metalAccount/apple-gold-video.mp4';
 import deluxeImg2 from '../../assets/metalAccount/deluxe-img2.jpg';
+import { useTranslation } from 'react-i18next';
 
 const DeluxeMetalAccount = () => {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -34,51 +36,51 @@ const DeluxeMetalAccount = () => {
   const advantagesData = [
     {
       id: 1,
-      title: "100 % Ownership",
-      description: "Gold is legally yours at all times — individually titled, traceable, and never pooled."
+      title: t('metalAccounts.deluxe.advantages.items.ownership.title'),
+      description: t('metalAccounts.deluxe.advantages.items.ownership.description')
     },
     {
       id: 2,
-      title: "Additional Returns",
-      description: "Additional physical gold 6-10% credited to your account."
+      title: t('metalAccounts.deluxe.advantages.items.returns.title'),
+      description: t('metalAccounts.deluxe.advantages.items.returns.description')
     },
     {
       id: 3,
-      title: "Certified & Traceable",
-      description: "Each bar is numbered, documented, and accompanied by certification of purity and origin."
+      title: t('metalAccounts.deluxe.advantages.items.certified.title'),
+      description: t('metalAccounts.deluxe.advantages.items.certified.description')
     },
     {
       id: 4,
-      title: "Compliance & Transparency",
-      description: "International standards and legal protection."
+      title: t('metalAccounts.deluxe.advantages.items.compliance.title'),
+      description: t('metalAccounts.deluxe.advantages.items.compliance.description')
     }
   ];
 
   const steps = [
     {
       number: "1",
-      title: "Acquisition",
-      description: "Raw gold sourced from certified, traceable suppliers."
+      title: t('stepByStep.deluxeMetalAccount.steps.step1.title'),
+      description: t('stepByStep.deluxeMetalAccount.steps.step1.description')
     },
     {
       number: "2", 
-      title: "Refining",
-      description: "Processed in LBMA-accredited facilities to 999.9 purity."
+      title: t('stepByStep.deluxeMetalAccount.steps.step2.title'),
+      description: t('stepByStep.deluxeMetalAccount.steps.step2.description')
     },
     {
       number: "3",
-      title: "Conversion", 
-      description: "Cast into numbered, certified bars."
+      title: t('stepByStep.deluxeMetalAccount.steps.step3.title'), 
+      description: t('stepByStep.deluxeMetalAccount.steps.step3.description')
     },
     {
       number: "4",
-      title: "Institutional Sale",
-      description: "Distributed to banks, funds, and governments."
+      title: t('stepByStep.deluxeMetalAccount.steps.step4.title'),
+      description: t('stepByStep.deluxeMetalAccount.steps.step4.description')
     },
     {
       number: "5",
-      title: "Client Benefit",
-      description: "Profits from the cycle are returned as additional physical gold credited to your Deluxe Metal Account"
+      title: t('stepByStep.deluxeMetalAccount.steps.step5.title'),
+      description: t('stepByStep.deluxeMetalAccount.steps.step5.description')
     }
   ];
 
@@ -105,13 +107,13 @@ const DeluxeMetalAccount = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <span className="text-[#DCBC7C] text-sm">
-                DELUXE METAL ACCOUNT
+                {t('metalAccounts.deluxe.hero.badge')}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair mt-2">
-            Your Gold Remains Yours. But it Grows.
+            {t('metalAccounts.deluxe.hero.title')}
             </h1>
             <p className="max-w-lg text-white text-base">
-            Secure, certified, and growing — the Deluxe Metal Account turns gold ownership into a lasting strategy for wealth protection.
+            {t('metalAccounts.deluxe.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -124,11 +126,11 @@ const DeluxeMetalAccount = () => {
             {/* Left Side - Title & Paragraph */}
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
-                What Is a Deluxe Metal Account?
+                {t('metalAccounts.deluxe.whatIs.title')}
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  As part of our independent consulting activity, we select structured tools and operating models that meet legal soundness, traceability, and asset protection criteria. We have selected Deluxe metal Account for the premium Clients - an advanced solution for utilizing physical gold that combines protection, growth, and full individual ownership. This exclusive tool allows clients to enhance their gold holdings without losing ownership. The structure ensures legal soundness, compliance with regulations, and results aligned with the objectives, structure, and time horizon of the client.
+                  {t('metalAccounts.deluxe.whatIs.description')}
                 </p>
               </div>
             </div>
@@ -157,10 +159,10 @@ const DeluxeMetalAccount = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl text-left font-semibold text-black mb-6 tracking-tight font-playfair">
-          How does it work?
+          {t('metalAccounts.deluxe.howItWorks.title')}
         </h2>
         <p className="text-left text-gray-600 leading-relaxed text-base">
-          Through a <span className="font-bold">loan-for-use contract</span>, your physical gold — which always remains your property — is temporarily employed by certified industrial companies. During this time, the gold remains securely stored in certified vaults and fully tracked. In return, you receive additional physical gold credited directly to your Metal Account Deluxe. All processes comply with regulations, ensuring transparency, contractual protection, and a focus on wealth enhancement.
+          {t('metalAccounts.deluxe.howItWorks.description')}
         </p>
 
         <div className="py-10 bg-gray-50">
@@ -176,7 +178,7 @@ const DeluxeMetalAccount = () => {
                         className="text-3xl lg:text-4xl text-center font-semibold text-gray-900 mb-6 tracking-tight"
                         variants={itemVariants}
                     >
-                        Gold Valorization Cycle
+                        {t('stepByStep.deluxeMetalAccount.title')}
                     </motion.h2>
                 </motion.div>
             <StepbyStepData steps={steps} />
@@ -187,7 +189,7 @@ const DeluxeMetalAccount = () => {
       {/* Advantages Section */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl text-left font-semibold text-black mb-6 tracking-tight font-playfair">
-          Advantages of a Deluxe Metal Account
+          {t('metalAccounts.deluxe.advantages.title')}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-15">
           {advantagesData.map((advantage) => (
@@ -212,21 +214,21 @@ const DeluxeMetalAccount = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl text-left font-semibold text-black mb-6 tracking-tight font-playfair">
-            Tailored Growth Profiles
+            {t('metalAccounts.deluxe.growthProfiles.title')}
         </h2>
         <div className="space-y-6 text-gray-600 leading-relaxed text-base">
           <ul className="space-y-4">
             <li className="flex items-start">
               <span className="text-[#DCBC7C] mr-3 font-bold text-lg">•</span>
-              <span><strong>6% Additional Gold:</strong> For deposits between €10,000 - €99,000 (credited semi-annually).</span>
+              <span><strong>{t('metalAccounts.deluxe.growthProfiles.items.sixPercent')}</strong></span>
             </li>
             <li className="flex items-start">
               <span className="text-[#DCBC7C] mr-3 font-bold text-lg">•</span>
-              <span><strong>10% Additional Gold:</strong> For deposits above €100,000 (credited quarterly).</span>
+              <span><strong>{t('metalAccounts.deluxe.growthProfiles.items.tenPercent')}</strong></span>
             </li>
           </ul>
           <p className="mt-6">
-            Contract terms: 13 to 60 months, with growth always paid in additional physical gold, backed by international certification.
+            {t('metalAccounts.deluxe.growthProfiles.contractTerms')}
           </p>
         </div>
       </div>
@@ -237,24 +239,24 @@ const DeluxeMetalAccount = () => {
             {/* Left Side - Title & Paragraph */}
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
-              Is this for you?
+              {t('metalAccounts.deluxe.isThisForYou.title')}
               </h2>
               <div className="space-y-10 text-gray-600 leading-relaxed text-base">
                 <p>
-                The Deluxe Metal Account is designed for anyone who values stability and long-term wealth protection. Whether you’re an individual looking to safeguard your savings, a family building generational wealth, or a business diversifying assets, this account offers a secure and transparent way to own gold.
+                {t('metalAccounts.deluxe.isThisForYou.description')}
                 </p>
                 <ul className="space-y-3 text-gray-600 leading-relaxed text-base font-bold">
                   <li className="flex items-start">
                     <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                    Individuals seeking stable, inflation-proof assets.
+                    {t('metalAccounts.deluxe.isThisForYou.audiences.individuals')}
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                    Families preserving wealth for future generations.
+                    {t('metalAccounts.deluxe.isThisForYou.audiences.families')}
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                    Businesses and professionals diversifying their portfolio.
+                    {t('metalAccounts.deluxe.isThisForYou.audiences.businesses')}
                   </li>
                 </ul>
               </div>
@@ -278,12 +280,12 @@ const DeluxeMetalAccount = () => {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
             <h2 className="text-2xl sm:text-3xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
-                With Mac & Ro Capital, gold is no longer just a safe store of value. It becomes a dynamic asset that offers stability, flexibility, and tangible growth — without compromising ownership or security.
+                {t('metalAccounts.deluxe.conclusion')}
             </h2>
         </div>
 
       {/* CTA Section */}
-      <MetalAccountCTA  title="Start Your Deluxe Metal Account Today" />
+      <MetalAccountCTA  title={t('metalAccounts.deluxe.cta')} />
     </div>
   )
 }

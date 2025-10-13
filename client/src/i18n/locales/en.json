@@ -1,0 +1,944 @@
+{
+  "navigation": {
+    "home": "Home",
+    "whoWeAre": "Who We Are",
+    "products": "Products",
+    "services": "Services",
+    "accreditations": "Accreditations",
+    "corporateGovernance": "Corporate Governance",
+    "news": "News",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "products": {
+    "metalAccounts": "Metal Accounts",
+    "deluxeMetalAccount": "Deluxe Metal Account",
+    "macRoMetalAccount": "Mac & Ro Metal Account",
+    "endOfTreatmentPayment": "End Of Treatment Payment (EOT)",
+    "keyManMetalAccount": "Key Man Metal Account",
+    "physicalGoldBullion": "Purchase of Physical Investment Gold (Bullion)"
+  },
+  "header": {
+    "goldSpotPrice": "Gold Spot Price",
+    "signIn": "Sign In",
+    "language": "Language"
+  },
+  "banner": {
+    "downloadApp": "Download App"
+  },
+  "languages": {
+    "english": "English",
+    "arabic": "العربية",
+    "italian": "Italiano"
+  },
+  "footer": {
+    "aboutUs": "About Us",
+    "whoWeAre": "Who We Are",
+    "metalAccount": "Metal Account",
+    "products": "Products",
+    "contact": "Contact",
+    "info": "Info",
+    "termsAndConditions": "Terms & Conditions",
+    "corporateGovernance": "Corporate Governance",
+    "privacyPolicy": "Privacy Policy",
+    "faq": "FAQ",
+    "subscribeNewsletter": "Subscribe to the Newsletter",
+    "enterEmail": "Enter your email",
+    "privacyDeclaration": "By sending this email I declare that I have read the",
+    "professionalOperatorCode": "Professional Operator Code Gold 24378",
+    "vatNumber": "VAT number 104904019700003",
+    "downloadApp": "Download App",
+    "dubai": "Dubai:",
+    "socialMedia": "Social Media",
+    "headOffice": "Head Office:",
+    "brazzaville": "Brazzaville:",
+    "copyright": "© 2025 Mac & Ro. All rights reserved.",
+    "bookConsultant": "Book Consultant"
+  },
+  "appModal": {
+    "downloadTitle": "Download ORO VIVO App",
+    "description": "Trade gold anytime, anywhere with our cutting-edge mobile application",
+    "realTimeTrading": "Real-time gold trading",
+    "locationSwap": "Location Swap feature",
+    "securePortfolio": "Secure portfolio management",
+    "marketTracking": "Market fluctuations tracking",
+    "availableDevices": "Available for iOS, Android, and Huawei devices"
+  },
+  "homepage": {
+    "hero": {
+      "title1": "Secure Your Wealth with Physical Gold -",
+      "title2": "Trusted, Flexible Investment Solutions",
+      "getStarted": "Get Started Today",
+      "scrollDown": "Scroll Down",
+      "secureEmpowered": "Secure. Empowered. Global.",
+      "description1": "Mac & Ro capital FZC brings decades of Italian gold banking expertise to Dubai—one of the world's leading hubs for physical precious metals. As a licensed Gold Bank in Italy, we now serve global clients through our Dubai entity with trusted, transparent, and world-class services.",
+      "description2": "We help individuals, families, businesses, and professional investors safeguard and grow their wealth through structured gold strategies. Operating independently and free from conflicts of interest, we ensure complete transparency, legal compliance, and operational integrity. From digital gold accounts to institutional-grade vaulting and physical bullion trading, Mac & Ro Capital FZC provides a seamless, secure, and innovative way to manage and grow your wealth with gold.",
+      "knowMore": "Know More"
+    },
+    "features": {
+      "globalVaults": "Global Vault Locations",
+      "vaultDescription": "Your Gold, Strategically Positioned Mac & Ro operates across a trusted network of vaults, providing geographical diversity and client choice",
+      "dubai": "Dubai - Middle East hub with world-class infrastructure",
+      "lecce": "Lecce - Head office, Gold Bank licensed jurisdiction",
+      "zurich": "Zurich - Swiss precision and neutrality",
+      "singapore": "Singapore - Gateway to Asia's high-growth economies",
+      "istanbul": "Istanbul - Regional vault under development",
+      "vaultProtocols": "Clients can shift balances or request physical delivery under applicable protocols.",
+      "bookConsultant": "Book Consultant",
+      "locationSwapTitle": "Location Swap of Gold",
+      "locationSwapDescription": "A location swap (from the Latina for \"locus/locatio\") is a physical gold transaction where equivalent amounts of gold are exchanged between two different locations, typically two gold hubs. Location swaps allow an efficient transfer of metal without the need to physically transport gold to a single central location.",
+      "knowMore": "Know more",
+      "orovivoTitle": "OROVIVO App",
+      "orovivoDescription": "The OROVIVO App by Mac & Ro Capital FZC lets you buy, sell, and location Swap of Gold securely in specified locations. Easily convert gold to cash and vice versa or move it to specified locations with just a few taps.",
+      "downloadNow": "Download Now"
+    },
+    "cta": {
+      "title": "Build your future on solid gold",
+      "description": "Mac & Ro Capital offers LBMA and non LBMA-certified 24K gold bars from 1g to 1kg, crafted with precision and distributed in partnership with Gold Rock Capital.",
+      "goldBars": "Gold Bars",
+      "goldBarsDescription": "Gold bars offer a cost-effective way to invest in pure gold at scale. Available in sizes from 1 gram to 1 kilo, each bar is certified for purity and globally recognized—perfect for building a strong, secure portfolio.",
+      "shopNow": "Shop Now"
+    },
+    "infoOne": {
+      "title": "Metal Bank certified by the Bank of Italy",
+      "description": "Mac & Ro Srl is a licensed Gold Bank in Italy, registered with the Banca d'Italia, ensuring all transactions meet the highest European standards of legality, transparency, and integrity. Aligned with OECD principles, we uphold responsible sourcing, sustainability, and ethical practices — giving clients full confidence in their investments.",
+      "getDocument": "Get the Document"
+    },
+    "flipCards": {
+      "deluxeTitle": "DELUXE METAL ACCOUNT",
+      "deluxeFront": "Secure your future with physical gold investments",
+      "deluxeDescription": "Invest in certified physical gold with secure vault storage and full ownership rights.",
+      "macRoTitle": "MAC & RO METAL ACCOUNT",
+      "macRoFront": "Professional wealth management services",
+      "macRoDescription": "Expert financial advisors help you build and protect your wealth portfolio.",
+      "keymanTitle": "KEYMAN METAL ACCOUNT",
+      "keymanFront": "Strategic corporate investment solutions",
+      "keymanDescription": "Tailored investment strategies for businesses and corporate entities.",
+      "eotTitle": "END OF TREATMENT (EOT)",
+      "eotFront": "Trade precious metals on global markets",
+      "eotDescription": "Access international precious metals markets with professional trading tools.",
+      "whoItsFor": "Who It's For:",
+      "keyBenefits": "Key Benefits:",
+      "learnMore": "Learn More",
+      "targetAudience": "Individuals, families, and businesses seeking stable, generational wealth.",
+      "benefits": "Full ownership, secure vaults, extra gold, globally certified."
+    },
+    "goldInfo": {
+      "title": "Why invest in gold?",
+      "inflationProtection": "Inflation Protection",
+      "inflationDescription": "Physical gold is a reliable, tangible asset known for its ability to retain value over time, free from market speculation. It's simple to own, flexible to pass on, and immune to financial instability. Whether you're looking for long-term stability or an inflation hedge, gold provides a trusted foundation.",
+      "portfolioDiversification": "Portfolio Diversification",
+      "diversificationDescription": "Investing in gold allows you to diversify your portfolio, reducing overall risk. Gold has a low correlation with other financial assets such as stocks and bonds, which means it can increase in value even when other investments are losing value.",
+      "createPortfolio": "Create Your Gold Portfolio",
+      "liquidity": "Liquidity and Ease of Sale",
+      "liquidityDescription": "Gold is a highly liquid asset that can be sold quickly and easily in almost any part of the world. This means you can turn your gold investments into cash when you need it, without long waits or complications."
+    },
+    "accounts": {
+      "title": "Our Services",
+      "description": "Mac & Ro Capital offers to all interested parties different types of Metal Accounts and services to provide solutions dedicated to the different needs of the Physical Gold Investment Market. In addition to the classic Accumulation Plan for cyclical purchases on a monthly and quarterly basis, called PAC, we have launched the possibility of taking advantage of additional targeted opportunities, suitable for specific investors. We promote a responsible wealth culture founded on stability, direct control, certified documentation, and full regulatory compliance."
+    },
+    "createSteps": {
+      "title": "Begin Securely. Operate Confidently.",
+      "description": "Onboarding with Mac & Ro Capital FZC is fast, secure, and guided by our relationship managers. We support clients across time zones and offer multilingual assistance",
+      "step1Title": "Choose Your Metal Account",
+      "step2Title": "Submit Application",
+      "step2Description": "Start online or via our institutional desk.",
+      "step3Title": "Compliance Review",
+      "step3Description": "Our team reviews, verifies, and provides account approval.",
+      "step4Title": "Account Activation",
+      "step4Description": "Gain access to the gold banking portal, vault instructions, or trading desk."
+    }
+  },
+  "stepByStep": {
+    "deluxeMetalAccount": {
+      "title": "Gold Valorization Cycle",
+      "steps": {
+        "step1": {
+          "title": "Acquisition",
+          "description": "Raw gold sourced from certified, traceable suppliers."
+        },
+        "step2": {
+          "title": "Refining",
+          "description": "Processed in LBMA-accredited facilities to 999.9 purity."
+        },
+        "step3": {
+          "title": "Conversion",
+          "description": "Cast into numbered, certified bars."
+        },
+        "step4": {
+          "title": "Institutional Sale",
+          "description": "Distributed to banks, funds, and governments."
+        },
+        "step5": {
+          "title": "Client Benefit",
+          "description": "Profits from the cycle are returned as additional physical gold credited to your Deluxe Metal Account"
+        }
+      }
+    },
+    "macRoMetalAccount": {
+      "steps": {
+        "step1": {
+          "title": "Direct Allocation",
+          "description": "Your account reflects actual physical holdings, not just a balance."
+        },
+        "step2": {
+          "title": "Physical Movement",
+          "description": "Credits and debits match the real transfer of bars in or out of the vault."
+        },
+        "step3": {
+          "title": "Full Ownership",
+          "description": "You retain full rights to your bars, even if the account operator defaults."
+        },
+        "step4": {
+          "title": "Secure Custody",
+          "description": "High-security vaults ensure your metals are protected at all times. (though physical collection is complex due to vault security)."
+        }
+      }
+    }
+  },
+  "metalAccounts": {
+    "deluxe": {
+      "hero": {
+        "badge": "DELUXE METAL ACCOUNT",
+        "title": "Your Gold Remains Yours. But it Grows.",
+        "subtitle": "Secure, certified, and growing — the Deluxe Metal Account turns gold ownership into a lasting strategy for wealth protection."
+      },
+      "whatIs": {
+        "title": "What Is a Deluxe Metal Account?",
+        "description": "As part of our independent consulting activity, we select structured tools and operating models that meet legal soundness, traceability, and asset protection criteria. We have selected Deluxe metal Account for the premium Clients - an advanced solution for utilizing physical gold that combines protection, growth, and full individual ownership. This exclusive tool allows clients to enhance their gold holdings without losing ownership. The structure ensures legal soundness, compliance with regulations, and results aligned with the objectives, structure, and time horizon of the client."
+      },
+      "howItWorks": {
+        "title": "How does it work?",
+        "description": "Through a loan-for-use contract, your physical gold — which always remains your property — is temporarily employed by certified industrial companies. During this time, the gold remains securely stored in certified vaults and fully tracked. In return, you receive additional physical gold credited directly to your Metal Account Deluxe. All processes comply with regulations, ensuring transparency, contractual protection, and a focus on wealth enhancement."
+      },
+      "advantages": {
+        "title": "Advantages of a Deluxe Metal Account",
+        "items": {
+          "ownership": {
+            "title": "100 % Ownership",
+            "description": "Gold is legally yours at all times — individually titled, traceable, and never pooled."
+          },
+          "returns": {
+            "title": "Additional Returns",
+            "description": "Additional physical gold 6-10% credited to your account."
+          },
+          "certified": {
+            "title": "Certified & Traceable",
+            "description": "Each bar is numbered, documented, and accompanied by certification of purity and origin."
+          },
+          "compliance": {
+            "title": "Compliance & Transparency",
+            "description": "International standards and legal protection."
+          }
+        }
+      },
+      "growthProfiles": {
+        "title": "Tailored Growth Profiles",
+        "items": {
+          "sixPercent": "6% Additional Gold: For deposits between €10,000 - €99,000 (credited semi-annually).",
+          "tenPercent": "10% Additional Gold: For deposits above €100,000 (credited quarterly)."
+        },
+        "contractTerms": "Contract terms: 13 to 60 months, with growth always paid in additional physical gold, backed by international certification."
+      },
+      "isThisForYou": {
+        "title": "Is this for you?",
+        "description": "The Deluxe Metal Account is designed for anyone who values stability and long-term wealth protection. Whether you're an individual looking to safeguard your savings, a family building generational wealth, or a business diversifying assets, this account offers a secure and transparent way to own gold.",
+        "audiences": {
+          "individuals": "Individuals seeking stable, inflation-proof assets.",
+          "families": "Families preserving wealth for future generations.",
+          "businesses": "Businesses and professionals diversifying their portfolio."
+        }
+      },
+      "conclusion": "With Mac & Ro Capital, gold is no longer just a safe store of value. It becomes a dynamic asset that offers stability, flexibility, and tangible growth — without compromising ownership or security.",
+      "cta": "Start Your Deluxe Metal Account Today"
+    },
+    "keyman": {
+      "hero": {
+        "badge": "KEYMAN METAL ACCOUNT",
+        "title": "Protecting What Matters Most",
+        "subtitle": "Safeguard companies against the potential loss of executives."
+      },
+      "whatIs": {
+        "title": "What is a Keyman Metal Account?",
+        "description1": "At Mac & Ro Capital, we recognize that the greatest value of a company isn't only in its capital, products, or services — it's in its people. In particular, those key individuals whose expertise, leadership, or client relationships make them indispensable to the success of the business.",
+        "description2": "The Key Man Metal Account is designed to safeguard companies against the potential loss of such individuals, ensuring continuity and stability when it matters most.",
+        "description3": "A Key Man solution in physical investment gold is a unique product where the company acts as both the policyholder and the beneficiary. It provides a financial safety net in the event of the death or total disability of a key individual — such as a CEO, managing director, creative lead, senior sales executive, or any employee with vital expertise.",
+        "description4": "By investing in physical gold, the company ensures that its protection is both solid and liquid, since gold can be realized at any moment."
+      },
+      "whyChoose": {
+        "title": "Why choose a KeyMan Metal Account?",
+        "items": {
+          "protection": {
+            "title": "Immediate Financial Protection",
+            "description": "Guarantees quick disbursement of the invested capital to support business continuity."
+          },
+          "liquidity": {
+            "title": "Liquidity & Stability",
+            "description": "Gold is universally recognized, easily tradable, and retains long-term value."
+          },
+          "continuity": {
+            "title": "Operational Continuity",
+            "description": "Funds can be used for recruitment, training, offsetting production losses, or even repurchasing shares from heirs of a deceased partner."
+          },
+          "taxAdvantages": {
+            "title": "Tax Advantages",
+            "description": "Since the company is both contractor and beneficiary, the invested capital is not treated as a personal benefit to managers. Taxation only applies on capital gains at the time of sale."
+          }
+        }
+      },
+      "isThisForYou": {
+        "title": "Is this for you?",
+        "description": "Ideal for companies seeking stability, succession planning, and executive benefits, while protecting key people and enjoying significant tax advantages.",
+        "audiences": {
+          "corporations": "Corporations and partnerships",
+          "smb": "SMEs and family businesses",
+          "professionals": "Independent entrepreneurs and professionals"
+        }
+      },
+      "conclusion": "The Mac & Ro Key Man Metal Account secures your people, protects your business, and ensures lasting resilience with the strength of gold.",
+      "cta": "Start Your Keyman Metal Account Today"
+    },
+    "macRo": {
+      "hero": {
+        "badge": "MAC & RO METAL ACCOUNT",
+        "title": "Invest in Certainty.",
+        "subtitle": "A Smarter Way to Own Precious Metals"
+      },
+      "whatIs": {
+        "title": "What is a Mac & Ro Metal Account?",
+        "description": "The Mac & Ro Metal Account is a secure and cost-effective way to invest in gold and other precious metals. Designed for both individuals and institutions, it allows you to build long-term reserves or manage short-to-medium-term investments with ease and transparency."
+      },
+      "whatMakesDifferent": {
+        "title": "What Makes It Different?",
+        "description": "Unlike traditional investments, the Metal Account is allocated — meaning your holdings are backed by specific, identifiable bars, plates, or ingots. Each piece is recorded with:",
+        "features": {
+          "serialNumber": "A unique serial number",
+          "grossWeight": "Gross weight",
+          "purity": "Purity / fineness",
+          "fineWeight": "Fine weight (for gold)"
+        },
+        "conclusion": "This ensures complete transparency and direct ownership of your metals."
+      },
+      "howItWorks": {
+        "title": "How it works?"
+      },
+      "keyBenefits": {
+        "title": "Key Benefits",
+        "items": {
+          "tangibleOwnership": "Tangible Ownership",
+          "noOverdraftRisk": "No Overdraft Risk",
+          "custodialSimplicity": "Custodial Simplicity",
+          "flexibility": "Flexibility"
+        }
+      },
+      "insurance": {
+        "title": "Insurance",
+        "description": "By default, account holders are responsible for arranging their own insurance unless otherwise agreed. This ensures maximum flexibility and control over your asset protection."
+      },
+      "cta": "Start your Metal Account Today!"
+    },
+    "eot": {
+      "hero": {
+        "badge": "EOT SOLUTION",
+        "title": "End of Term Compensation (EOT) in Physical Gold",
+        "subtitle": "Protecting your leadership, securing your company's future."
+      },
+      "whatIs": {
+        "title": "What is EOT?",
+        "description1": "The End of Term Compensation (EOT) is a corporate tool that allows companies to guarantee directors an additional, tax-efficient benefit at the end of their mandate. At Mac & Ro Capital, we make this compensation even stronger by linking it to physical investment gold.",
+        "description2": "EOT is an additional payment to directors beyond regular salary. For companies, it is fully deductible as a cost. For directors, it is a form of deferred compensation with tax advantages."
+      },
+      "whyInGold": {
+        "title": "Why in Gold?",
+        "items": {
+          "taxEfficiency": {
+            "title": "Tax Efficiency",
+            "description": "Gold is typically taxed only on capital gains. Setting aside profits in gold reduces immediate taxation."
+          },
+          "growthPotential": {
+            "title": "Growth Potential",
+            "description": "Physical gold has appreciated on average ~11% annually over the last 50 years."
+          },
+          "liquidity": {
+            "title": "Liquidity & Flexibility",
+            "description": "Gold can be liquidated anytime or even pledged for short-term financing."
+          },
+          "stability": {
+            "title": "Stability",
+            "description": "A safe-haven asset that preserves wealth against inflation and geopolitical risks."
+          }
+        }
+      },
+      "benefits": {
+        "title": "Benefits for Companies & Directors",
+        "items": {
+          "deductible": "Deductible cost for the company.",
+          "reducedTaxation": "Reduced taxation for directors at payout.",
+          "pensionReserve": "Can serve as a private \"pension reserve\" for directors planning early retirement.",
+          "goldenParachute": "Works as a \"golden parachute\" in case of unexpected termination."
+        }
+      },
+      "conclusion": "With expertise in gold trading, international compliance, and vaulting solutions, we transform EOT into a strategic corporate advantage, offering directors and companies both protection and growth.",
+      "cta": "Need to know more about EOT?"
+    }
+  },
+  "contact": {
+    "hero": {
+      "subtitle": "WE'D LOVE TO",
+      "title": "Hear From You",
+      "description": "Get in touch for more details"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "fields": {
+        "firstName": {
+          "label": "First Name",
+          "placeholder": "Enter your first name",
+          "error": "First name is required."
+        },
+        "lastName": {
+          "label": "Last Name",
+          "placeholder": "Enter your last name",
+          "error": "Last name is required."
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Enter phone number",
+          "error": "Phone number is required.",
+          "searchPlaceholder": "Search country..."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email address",
+          "error": "Please enter a valid email address."
+        },
+        "branch": {
+          "label": "Select the Branch",
+          "uae": "UAE",
+          "italy": "Italy"
+        },
+        "message": {
+          "label": "Message",
+          "placeholder": "Tell us about your investment goals and how we can help...",
+          "error": "Message is required."
+        },
+        "contactMode": {
+          "label": "Preferred Mode of Contact",
+          "phone": "Phone",
+          "email": "Email",
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "submit": "Submit",
+      "alerts": {
+        "fillRequired": "Please fill in all required fields.",
+        "validEmail": "Please enter a valid email address.",
+        "messageTooLong": "Message is too long. Please keep it under 500 characters.",
+        "formSubmitted": "Form submitted! Gmail compose window has been opened. Please review and send your message."
+      },
+      "emailTemplate": {
+        "subject": "New Contact Form Submission from {firstName} {lastName}",
+        "greeting": "Hello MAC & RO Capital Team,",
+        "intro": "I would like to get in touch regarding precious metals investment. Here are my details:",
+        "name": "Name: {firstName} {lastName}",
+        "email": "Email: {email}",
+        "phone": "Phone: {phone}",
+        "branch": "Branch: {branch}",
+        "contactMode": "Preferred Contact Method: {contactMode}",
+        "message": "Message:",
+        "closing": "I look forward to hearing from you.",
+        "signature": "Best regards,\n{firstName} {lastName}"
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "phone": "Tel: +971 585 928 981",
+      "email": "Email: {email}"
+    }
+  },
+  "productGrid": {
+    "hero": {
+      "title": "Our Products",
+      "description1": "At Mac and Ro Capital, we craft premium-grade gold ingots with meticulous precision. Available in a range of sizes—from 1 gram to 1 kilogram—each piece is produced in 24K (999.9‰) purity and certified to LBMA and non LBMA standards.",
+      "description2": "Distributed in partnership with",
+      "partnerLink": "Gold Rock Capital"
+    },
+    "products": {
+      "title": "Gold Casted Bars",
+      "shopNow": "Shop Now"
+    },
+    "whyInvest": {
+      "title": "Why Invest in Gold?",
+      "description": "Gold bars are a timeless investment, valued for their ability to preserve wealth and provide financial security. Known for their stability, gold bars serve as a trusted hedge against inflation and currency fluctuations. Their global liquidity and consistent performance during periods of economic and geopolitical uncertainty make them a smart addition to any investment portfolio. Investing in gold bars not only enhances portfolio diversification but also offers a dependable way to safeguard your assets for the long term."
+    }
+  },
+  "whoWeAre": {
+    "hero": {
+      "title": "Who we are?"
+    },
+    "intro": {
+      "description1": "Mac & Ro represents the pinnacle of excellence in precious metals investment and wealth management. As a globally recognized firm with deep roots in Italian financial tradition, we combine centuries-old expertise with cutting-edge technology to deliver exceptional value to our clients worldwide.",
+      "description2": "Our commitment to transparency, regulatory compliance, and client success has positioned us as a trusted partner for individuals and institutions seeking to diversify their portfolios with precious metals. Through our innovative metal accounts and comprehensive investment solutions, we empower our clients to build lasting wealth in an ever-changing financial landscape."
+    },
+    "missionVision": {
+      "mission": {
+        "title": "Our Mission",
+        "description": "To democratize access to precious metals investments by providing innovative, secure, and transparent financial solutions that empower individuals and institutions to build lasting wealth through strategic diversification."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "description": "To become the global leader in precious metals investment solutions, setting industry standards for innovation, client service, and regulatory compliance while expanding access to wealth-building opportunities worldwide."
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "Our team combines decades of Italian gold banking expertise with Dubai's role as a global hub for precious metals. With specialists in finance, law, operations, and technology, we provide tailored solutions built on trust, integrity, and innovation.",
+      "members": {
+        "pietro": {
+          "name": "Eng. Pietro Piccinetti",
+          "role": "(Honorary President)",
+          "description": "A high-profile manager with a long international experience and a consolidated reputation, equipped with an extensive network of relationships, a remarkable curriculum and a solid expertise in internationalization and international negotiation activities, with strong capabilities in defining strategies that allow companies to relaunch and expand on the global market. With a proven experience in M&A, he has driven a significant rate of improvement in performance in mergers/corporate management. Familiar with the complexities of due diligence and company valuation, in his long career he has successfully faced the challenges of different corporate cultures in various industrial and Financial (PE) sectors. CEO of Infratel SpA – Infrastructure and Telecommunications for Italy. Vice President of the Italian Association of Fairs and Events."
+        },
+        "angelo": {
+          "name": "Dr. Angelo Rossi",
+          "role": "(Chief Executive Officer)",
+          "description": "A highly skilled international manager in the precious metals field with a worldwide network of commercial relationships. He is the visionary driving force of the group, assisted by a team of top-level managers."
+        },
+        "francesco": {
+          "name": "Dr. Francesco Mariano Mariano",
+          "role": "(Chief Financial Officer)",
+          "description": "An Italian banker gifted with a unique understanding of the international banking system. President of the Vis Foundation at Lecce, the non-profit entity managing the Campus of the University of Salento, in Lecce."
+        },
+        "elena": {
+          "name": "Dr. Sa Elena Actis",
+          "role": "(Compliance Officer)",
+          "description": "One of the best Institutional Relationships and Public Affair experts in Italy, President of Hydro Aid Association and a University's Professor at the European Institute of Design for Marketing and Strategic Communication course."
+        },
+        "ed": {
+          "name": "Mr. Ed Bass",
+          "role": " (Chief Executive Officer USA)",
+          "description": "He serves as President and Chief Financial Officer of Equitus Corporation and prior to that he was President of Xerox Business Solutions."
+        },
+        "valentina": {
+          "name": "Miss Valentina Rossi",
+          "role": "(Chief Administration Officer)",
+          "description": "She is a former CRN's intern and today she oversees the administration of the Group"
+        }
+      }
+    },
+    "careers": {
+      "title": "Want to Work with Us?",
+      "description": "Send your resume at:",
+      "email": "info@mac-ro-capital.com"
+    },
+    "partner": {
+      "title": "Our Distribution Partner",
+      "description": "Mac & Ro Capital proudly collaborates with Gold Rock Capital as our official distribution company. This partnership ensures that our gold products and solutions are delivered with the same values we stand for — security, transparency, and professionalism.",
+      "visitLink": "Visit: Gold Rock Capital"
+    }
+  },
+  "servicePage": {
+    "hero": {
+      "title": "Our Services",
+      "description": "At Mac & Ro Capital, we provide end-to-end solutions across the gold value chain — from sourcing and mining to refining and secure vaulting. With decades of expertise and strict adherence to international standards, our services are designed to deliver transparency, reliability, and long-term value for individuals, families, and businesses seeking to safeguard and grow their wealth through physical gold."
+    },
+    "services": {
+      "consultancy": {
+        "title": "Consultancy",
+        "description": "Mac & Ro Capital FZC provides specialized consultancy in gold investment and wealth management. Our experts guide individuals, families, and businesses in building tailored strategies that focus on security, diversification, and long-term growth, with full compliance to international standards."
+      },
+      "sourcing": {
+        "title": "Sourcing",
+        "description": "We ensure the ethical and responsible sourcing of raw gold through partnerships with certified and traceable suppliers. Every step follows strict OECD guidelines, giving our clients complete transparency and confidence in the origins of their investments."
+      },
+      "mining": {
+        "title": "Mining",
+        "description": "Through strategic mining collaborations, Mac & Ro secures access to high-quality raw gold. Our commitment to responsible mining practices ensures sustainability, legal compliance, and respect for environmental and social standards."
+      },
+      "smelting": {
+        "title": "Smelting",
+        "description": "Our advanced smelting facilities transform mined materials into uniform, high-quality inputs for refining. This process guarantees reliability, consistency, and full traceability as raw material progresses through the gold value chain."
+      },
+      "refining": {
+        "title": "Refining",
+        "description": "Mac & Ro refines gold to the highest international standards, delivering LBMA and non LBMA-certified 24K (999.9) pure gold. Every bar is numbered, documented, and accompanied by certification to ensure authenticity and investment-grade quality."
+      },
+      "vaultSafeDeposit": {
+        "title": "Vault Safe Deposit",
+        "description": "We provide world-class storage solutions for precious metals in international vaults such as Brinks, Loomis, and Malca-Amit. With segregated deposits, constant tracking, and full insurance coverage, clients enjoy complete peace of mind and full legal ownership of their assets."
+      }
+    }
+  },
+  "locationSwap": {
+    "hero": {
+      "title": "Location Swap of Gold",
+      "description": "A location swap (from the Latina for \"locus/locatio\") is a physical gold transaction where equivalent amounts of gold are exchanged between two different locations, typically two gold hubs. Location swaps allow an efficient transfer of metal without the need to physically transport gold to a single central location."
+    },
+    "locations": {
+      "description": "Mac & Ro Capital FZC can provide Gold Location Swap in the following hubs:",
+      "london": "London",
+      "zurich": "Zurich",
+      "lecce": "Lecce",
+      "dubai": "Dubai",
+      "hongKong": "Hong Kong",
+      "newYork": "New York"
+    },
+    "benefits": {
+      "title": "Benefits of a Gold Location Swap",
+      "reducedTransportation": {
+        "title": "1. Reduced Transportation and Storage Costs",
+        "points": [
+          "Instead of physically moving gold from one location to another (which is expensive and risky), traders can swap it with a counterparty who already has gold in the desired location.",
+          "Saves on shipping, insurance, security, and customs fees."
+        ]
+      },
+      "improvedLiquidity": {
+        "title": "2. Improved Liquidity & Market Access",
+        "points": [
+          "Location swaps help participants gain access to local markets (e.g., Swiss refining centres, Asian buyers in Singapore or Shanghai, Middle East demand in Dubai).",
+          "This makes gold more fungible globally and ensures liquidity in multiple hubs."
+        ]
+      },
+      "regulatoryOptimization": {
+        "title": "3. Regulatory & Tax Optimization",
+        "points": [
+          "Some jurisdictions have more favourable tax, duty, or reporting regimes.",
+          "By swapping instead of shipping, parties can avoid triggering import/export taxes or regulatory hurdles."
+        ]
+      },
+      "fasterSettlement": {
+        "title": "4. Faster Settlement & Delivery",
+        "points": [
+          "Physical transportation of gold can take days or weeks.",
+          "A location swap allows \"instant\" delivery obligations to be met in another hub, helping to settle contracts more efficiently."
+        ]
+      },
+      "riskReduction": {
+        "title": "5. Risk Reduction",
+        "points": [
+          "Eliminates risks tied to physical transport (theft, delays, political instability in transit countries).",
+          "Reduces counterparty risk by using recognized exchanges, LBMA standards, or trusted vaulting networks."
+        ]
+      },
+      "flexibility": {
+        "title": "6. Flexibility for Arbitrage & Hedging",
+        "points": [
+          "Traders can arbitrage differences between regional gold prices (e.g., London spot vs. Shanghai premium).",
+          "Refineries, jewellers, or bullion banks can secure supplies where demand is highest without moving bullion across borders."
+        ]
+      },
+      "centralBankSupport": {
+        "title": "7. Support for Central Banks & Large Institutions",
+        "points": [
+          "Central banks often hold gold across multiple international vaults. Location swaps allow them to optimize holdings without disrupting physical reserves.",
+          "Institutions can rebalance gold inventory closer to end users or refiners."
+        ]
+      }
+    },
+    "cta": "Need help with swapping your gold location?"
+  },
+  "corporateGovernance": {
+    "hero": {
+      "title": "Responsible Sourcing",
+      "description": "We are committed to the ethical and responsible sourcing of gold, ensuring full compliance with international standards and due diligence practices. Our supply chain is carefully vetted to support transparency, human rights, and environmental sustainability."
+    },
+    "sections": {
+      "dubai": "Dubai",
+      "italy": "Italy"
+    },
+    "table": {
+      "reports": "Reports",
+      "downloads": "Downloads",
+      "downloadButton": "Download"
+    },
+    "alerts": {
+      "downloadNotAvailable": "Download link not available for this report.",
+      "downloadFailed": "Download failed. Please try again or contact support."
+    }
+  },
+  "liveRate": {
+    "tabs": {
+      "goldOz": "Gold/oz",
+      "goldG": "Gold/g"
+    },
+    "title": {
+      "goldOz": "GOLD/oz",
+      "goldG": "GOLD/g"
+    }
+  },
+  "productDetails": {
+    "specifications": "Specifications",
+    "weight": "Weight",
+    "length": "Length",
+    "diameter": "Diameter",
+    "thickness": "Thickness",
+    "fineness": "Fineness",
+    "certification": "Certification",
+    "description": "Description",
+    "shopNow": "Shop Now",
+    "contactSales": "Contact Sales",
+    "relatedProducts": "You May Also Prefer",
+    "emailInquiry": {
+      "subject": "Product Inquiry: {productName}",
+      "body": "Hello,\n\nI am interested in purchasing the following product:\n\nProduct: {productName}\nWeight: {weight}\nLength: {length}\nDiameter: {diameter}\nThickness: {thickness}\nFineness: {fineness}\nCertification: {certification}\n\nPlease provide me with more information about pricing, availability, and purchasing process.\n\nThank you."
+    }
+  },
+  "metalAccountsPage": {
+    "hero": {
+      "title1": "Metal Accounts:",
+      "title2": "Secure Gold Ownership",
+      "title3": "with Lasting Value"
+    },
+    "intro": {
+      "description": "Mac & Ro Capital offers to all interested parties four different types of Metal Accounts to provide solutions dedicated to the different needs of the Physical Gold Investment Market. In addition to the classic Accumulation Plan for cyclical purchases on a monthly and quarterly basis, called PAC, we have launched the possibility of taking advantage of additional targeted opportunities, suitable for specific investors. We promote a responsible wealth culture founded on stability, direct control, certified documentation, and full regulatory compliance. The Metal Trading Account is a new type of solution available for the most demanding customers, always looking for new opportunities. This is an account through which you operate on daily trading on international markets."
+    },
+    "sections": {
+      "forIndividuals": "For Individuals",
+      "forCompanies": "For Companies"
+    },
+    "accounts": {
+      "deluxe": {
+        "title": "Deluxe Metal Account",
+        "description": "Own physical gold with full security, certification, and growth potential.",
+        "whoItsFor": "Individuals, families, and businesses seeking stable, generational wealth.",
+        "keyBenefits": "Full ownership, secure vaults, extra gold, globally certified."
+      },
+      "macRo": {
+        "title": "Mac & Ro Metal Account",
+        "description": "Secure your wealth with allocated precious metals, fully certified and protected.",
+        "whoItsFor": "Investors and businesses seeking safe, tangible assets.",
+        "keyBenefits": "Numbered bars, segregated vaults, full ownership, no credit risk."
+      },
+      "eot": {
+        "title": "End Of Treatment (EOT)",
+        "description": "Severance payments in physical gold for executives.",
+        "whoItsFor": "Corporates planning executive benefits",
+        "keyBenefits": "Tax efficient, secure, flexible"
+      },
+      "keyman": {
+        "title": "Key Man Metal Account",
+        "description": "Protect your company from loss of key personnel.",
+        "whoItsFor": "Businesses with essential employees",
+        "keyBenefits": "Immediate payout, liquid asset"
+      }
+    },
+    "labels": {
+      "whoItsFor": "Who It's For:",
+      "keyBenefits": "Key Benefits:",
+      "learnMore": "Learn More"
+    },
+    "conclusion": "With global expertise, ethical sourcing, and strict compliance, Mac & Ro Capital ensures your Metal Account protects both your gold and your critical personnel.",
+    "cta": {
+      "title": "Start your investment journey today!"
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Frequently Asked Questions",
+      "description": "Find answers to common questions about our services, investment processes, and how to get started with Mac & Ro."
+    },
+    "questions": {
+      "whatIsMacRo": {
+        "question": "What is Mac & Ro Capital?",
+        "answer": "Mac & Ro Capital FZC (www.mac-ro-capital.com), is a Gold Trader and a Gold Services Provider. It is part of the Mac & Ro Group (www.mac-ro-group.it). Beyond our local presence, Mac & Ro Group is deeply rooted in the whole Gold Industry Chain, facilitating the acquisition and sale of investment-grade bullion bars and dorè."
+      },
+      "authorizedInUAE": {
+        "question": "Is Mac & Ro Capital authorized to operate in UAE?",
+        "answer": "Yes, Mac & Ro Capital FZC operates under the full authorization and regulation of the SAIF ZONE - SAIF GOLD PARK of Sharjah, holding all necessary licenses. We strictly comply with all UAE regulations governing precious metal trading, including robust Anti-Money Laundering (AML) and Know Your Customer (KYC) protocols to ensure a secure and compliant environment for all our clients."
+      },
+      "services": {
+        "question": "What services I get from Mac & Ro Capital FZC?",
+        "answer": "Mac & Ro Capital FZC is your comprehensive partner for all precious metal endeavours, offering a diverse array of services meticulously crafted for individuals, small investors, and corporate entities alike. Our offerings span direct physical acquisition, industrial services, and specialized investment and partnership solutions:",
+        "points": [
+          "Selling Gold/Precious Metals (Sharjah Office): You can directly purchase and acquire physical gold from our Sharjah office, where our expert team provides personalized service and consultation.",
+          "Selling Gold (ONLINE PLATFORM): Our secure Capital Platform provides a convenient and streamlined digital channel to buy physical gold bars from the comfort of your home, with insured delivery options.",
+          "ORO VIVO APP (Mobile Application): Engage in dynamic trading using our cutting-edge mobile app for gold trading, Location Swap, and much more — allowing you to buy and sell gold based on real-time market fluctuations and manage your holdings from your phone.",
+          "Gold Saving Account: Designed for small investors, this service enables gradual accumulation of gold through flexible, regular contributions, with the option for physical redemption once a sufficient quantity is reached.",
+          "Brokerage: We offer a dedicated brokerage channel, providing individuals and agents with the opportunity to generate revenue by referring clients to our comprehensive precious metal services.",
+          "Corporate Client Services: Tailored solutions for businesses to efficiently manage and execute large-volume precious metal transactions, meeting specific investment and operational requirements.",
+          "Bulk Gold Dealing: For significant acquisitions or sales, we facilitate bulk bullion trade, offering competitive pricing, secure logistics, and discreet service for large transactions."
+        ],
+        "conclusion": "Whether you're looking to acquire physical gold, engage in active trading, build long-term savings, or explore business partnerships, Mac & Ro Capital FZC delivers a secure, transparent, and versatile environment for all your precious metal aspirations."
+      },
+      "securityMeasures": {
+        "question": "What security measures are in place to safeguard my precious metals and funds?",
+        "answer": "We employ multi-layered security protocols to protect your assets. Physical gold holdings are secured in highly fortified, insured vaults. Our online platform utilizes advanced encryption and multi-factor authentication to secure your digital transactions and account access. All financial transfers adhere to stringent banking security standards."
+      },
+      "authenticityPurity": {
+        "question": "How do you assure the authenticity and purity of the gold you buy?",
+        "answer": "Our commitment to quality is paramount. All gold bullion products we trade are directly sourced from reputable refiners and mints, and their authenticity and purity are guaranteed by their adherence to the stringent Dubai Good Delivery (DGD) or London Good Delivery (LGD) Standards. Each physical purchase comes with a verifiable certificate of authenticity."
+      },
+      "dataProtection": {
+        "question": "How is my personal and financial information protected?",
+        "answer": "We adhere to strict data privacy principles. Your personal and financial information is handled with the utmost confidentiality, secured through robust technological safeguards, and processed in full compliance with UAE data protection regulations. We do not share your data with unauthorized third parties."
+      },
+      "howToBuy": {
+        "question": "How to buy gold from Mac & Ro Capital FZC?",
+        "answer": "Our primary business is the sale of physical gold. We offer authentic precious metal bars to both individuals and companies at competitive prices.",
+        "methods": [
+          "At Our Physical Location: You are invited to visit our Sharjah office or store where our team can guide you through the process of purchasing gold, silver, or other precious metals in person.",
+          "Through Our Online Bullion Store: Explore our selection of gold bars on our secure online bullion store. Once you've chosen your desired items, complete your payment securely online or via bank transfer. We then arrange for fully insured, certified delivery directly to your doorstep within the UAE, complemented by our commitment to buy back your purchase at our prevailing acquisition price.",
+          "Utilizing Our Online Trading Platform (Metal Account): Designed for clients keen on daily engagement, our online platform allows you to purchase gold at any moment, from any location. You retain the flexibility to sell your holdings back through the platform or request physical redemption of bullion bars at a later stage. We also facilitate bookings with a partial upfront deposit, with the remaining balance settled prior to delivery. Secure doorstep physical delivery within the UAE is also an available option.",
+          "Operating by OROVIVO APP: With our state of art APP, all our clients can trade in real time with gold bullion, they can carry out Location Swaps, and much more."
+        ]
+      },
+      "minimumQuantity": {
+        "question": "What minimum quantity I can buy from Gold Trade?",
+        "answer": "The minimum purchase quantities differ based on your chosen acquisition method:",
+        "methods": [
+          "Via Our Online Bullion Store: Our inventory includes gold in various standard denominations, ranging from 1 gram up to 1-kilogram bars and coins.",
+          "Via Our OROVIVO APP: All clients can operate for any quantity all different types of trades."
+        ]
+      },
+      "sellBack": {
+        "question": "Can I sell the purchased gold or other precious metals back to Mac & Ro Capital FZC?",
+        "answer": "Absolutely. Mac & Ro Capital FZC maintains a robust buy-back program for all precious metals originally acquired from us. You can divest your holdings either through your online bullion account (if the metal is held with us) or by physically returning the commodity if it was in your direct custody. All buy-back transactions are processed at the prevailing international spot market prices."
+      },
+      "pricing": {
+        "question": "On what price I can buy or sell gold?",
+        "answer": "When transacting on our online platform, your purchases and sales of precious metals are based on the real-time international spot market rates. These prices exhibit continuous fluctuations throughout the trading week, from Monday to Friday. Kindly note that our service charges or applicable commissions will be applied in addition to the displayed spot price."
+      },
+      "brands": {
+        "question": "Which brands are available at Mac & Ro Capital FZC? Are they certified?",
+        "answer": "Mac & Ro Capital FZC proudly offers a diverse range of esteemed global and prominent local bullion brands, including but not limited to Pamp, Credit Suisse, Chimet, Emirates Gold, Al Etihad Gold or Saif Zone Gold refineries. All our bullion products rigorously adhere to and are certified under either the Dubai Good Delivery (DGD) Standards or the London Good Delivery (LGD) Standards, guaranteeing their unparalleled authenticity and fineness."
+      },
+      "deliveryCosts": {
+        "question": "What are the delivery specifics and associated costs for shipments within the UAE?",
+        "answer": "Within the UAE, we offer fully insured, secure doorstep delivery. Specific delivery charges depend on the value and weight of the order, and estimated delivery times will be provided at the point of purchase. Details are also available on our online bullion store's delivery information section."
+      },
+      "directCollection": {
+        "question": "Is it possible to collect my physical gold or silver directly from your office?",
+        "answer": "Absolutely. You are welcome to arrange for direct collection of your physical gold or silver from our Sharjah office. To ensure a smooth process, please schedule your collection in advance and bring valid identification documents for verification."
+      },
+      "insurance": {
+        "question": "How is the insurance handled for physical deliveries?",
+        "answer": "Every physical delivery dispatched from Mac & Ro Capital FZC is comprehensively insured against loss or damage until it reaches your specified delivery address and is signed for. This ensures peace of mind throughout the transit process."
+      },
+      "internationalDelivery": {
+        "question": "Can Mac & Ro Capital FZC deliver gold outside UAE also?",
+        "answer": "Yes, Mac & Ro Capital FZC extends its delivery services for gold bars and coins beyond the UAE's borders to most international destinations, provided they are not subject to global trade restrictions. Clients should anticipate applicable courier, insurance, and any potential customs charges."
+      },
+      "secureStorage": {
+        "question": "Can I Store My Gold Securely and Receive It Later?",
+        "answer": "Yes, absolutely! We offer a truly unique and secure service that allows you to store your gold holdings electronically within our dedicated application. This means you can purchase gold from us and have it digitally represented in your account. You'll have no need for physical storage on your end, and you won't incur any storage expenses.",
+        "conclusion": "What makes this service stand out is the robust security built into our electronic system. Your gold is always fully backed by physical reserves, ensuring its integrity and your peace of mind. When you're ready to take possession, you can simply request to receive your gold in kind, and we'll provide you with the equivalent physical bars. This service uniquely combines the convenience of digital management with the unwavering security of knowing your gold is always redeemable for its physical form."
+      },
+      "documentsRequired": {
+        "question": "What specific documents are necessary to open a Metal Account or Gold Saving Account?",
+        "answer": "To open an account, we typically require a valid form of identification (e.g., passport or Emirates ID) and proof of address. Our online registration form or Bullion Purchase Agreement will list all precise requirements, ensuring a smooth onboarding process."
+      },
+      "lostCredentials": {
+        "question": "What is the procedure if I misplace my Metal Account login details?",
+        "answer": "Should you forget your login credentials, simply use the 'Forgot Password' link on our platform's login page. You'll be guided through a secure process to reset your password. Our customer support can also assist if you encounter any difficulties."
+      },
+      "customerService": {
+        "question": "What are your customer service hours and available contact channels?",
+        "answer": "Our dedicated customer service team is available to assist you during 10:00 AM to 6:00 PM, Monday to Friday via phone at +971 …………….., email at info@mac-ro-capital.com"
+      },
+      "vat": {
+        "question": "Does VAT apply to the purchase or sale of gold in Dubai/UAE?",
+        "answer": "In the UAE, investment-grade gold (with a purity of 99.5% or higher, typically in bar or coin form) is generally zero-rated for VAT. This means no Value Added Tax is applied to its purchase or sale under current regulations. However, specific types of gold jewellery or gold with lower purity might be subject to VAT. We advise consulting with a tax professional for personalized advice."
+      },
+      "otherTaxes": {
+        "question": "Are there any other taxes or duties associated with gold trading in the UAE?",
+        "answer": "Currently, individuals trading gold as an investment in the UAE are not subject to capital gains tax. Import or export duties may apply to certain physical gold movements, particularly for commercial quantities or specific forms of gold. We recommend reviewing the latest UAE tax regulations or seeking professional tax advice for your specific circumstances."
+      },
+      "onlinePlatform": {
+        "question": "What is Online Platform?",
+        "answer": "We host a sophisticated online platform, accessible via dedicated mobile and desktop applications. This tool provides real-time international spot prices for gold, reflecting continuous market shifts from Monday to Friday. It empowers you to execute online buy and sell orders for gold, allowing you to leverage these price movements strategically."
+      },
+      "accountRequired": {
+        "question": "Is there any need to open account to book price online by OROVIVO APP?",
+        "answer": "Indeed, to access and utilize our online platform or the OROVIVO APP for real-time price booking and transactions, establishing a Metal Account is a prerequisite."
+      },
+      "openAccount": {
+        "question": "How can I open a Metal Account?",
+        "answer": "Initiating your Metal Account is a swift process. You can either complete our digital On boarding registration form available on our website or by OROVIVO APP, or alternatively, download, fill out, and submit the Bullion Purchase Agreement or Metal Account form to info@mac-ro-capita.com. Both methods are designed for efficiency, typically requiring just a few minutes of your time."
+      },
+      "accessAccount": {
+        "question": "How can I access my Metal Account?",
+        "answer": "Upon approval of your Metal Account, you can gain access by downloading our specialized trading platform application to your preferred mobile device or desktop. Your provided login credentials will enable you to securely manage your account and begin your trading activities."
+      },
+      "minimumAmount": {
+        "question": "What is minimum amount needed to open a Metal Account?",
+        "answer": "To activate and commence trading with a Metal Account, an initial funding of $1000 USD is required."
+      },
+      "operationalHours": {
+        "question": "What are the operational hours for the online trading platform?",
+        "answer": "Our online trading platform operates continuously from Monday to Friday, providing 24/5 access to the markets. Please be aware that market holidays or specific maintenance periods may occasionally affect these hours, which will be communicated in advance."
+      },
+      "maintenance": {
+        "question": "Will there be scheduled downtimes or maintenance for the platform?",
+        "answer": "To ensure optimal performance and security, we occasionally schedule brief maintenance windows. Such instances are typically planned during off-peak hours and clients are notified well in advance through platform announcements and email."
+      },
+      "connectionInterruption": {
+        "question": "What occurs if my internet connection is interrupted during a trade?",
+        "answer": "In the event of an internet disruption during an active trade, our system is designed to handle orders based on the last confirmed instruction. For any immediate concerns, our customer support team is readily available via phone to assist you."
+      },
+      "spotPrice": {
+        "question": "Could you explain what the 'spot price' represents?",
+        "answer": "The 'spot price' refers to the current market price at which a precious metal can be bought or sold for immediate delivery. It's an internationally recognized benchmark, derived from global trading exchanges, forming the foundation of our pricing on the platform."
+      },
+      "hiddenFees": {
+        "question": "Are there any undisclosed fees or supplementary charges?",
+        "answer": "Transparency is a cornerstone of our service. All applicable fees for platform usage are explicitly detailed in our terms and conditions and during the transaction process. We assure you there are no hidden fees. For a complete understanding, our customer service is available to provide a full breakdown."
+      },
+      "advancedOrders": {
+        "question": "Does your platform support advanced order types, such as limit or stop-loss orders?",
+        "answer": "Yes, our online trading platform offers sophisticated order management capabilities, including the ability to place limit orders (to buy/sell at a specific price or better) and stop-loss orders (to limit potential losses). These features allow for more strategic trading."
+      },
+      "otherAccountTypes": {
+        "question": "Is there any other type of account other than Live Account?",
+        "answer": "Yes, alongside our Metal Account for active trading, we also offer the Gold Saving Account, Deluxe Metal Account, Key Man Metal Account, Location Swap Account and EOT Account."
+      },
+      "goldSavingAccount": {
+        "question": "What is Gold Saving Account?",
+        "answer": "The possibility to open a Gold Saving Account is specifically designed for individuals looking to systematically convert their monetary savings into gold. You have the flexibility to begin with a modest amount, such as AED 3670 or more, and contribute regularly or whenever convenient. Once your accumulated gold quantity reaches or exceeds one 10 grams bar, you acquire the option to redeem it in its physical form."
+      },
+      "fundingCurrencies": {
+        "question": "In which currency I can fund my account?",
+        "answer": "We facilitate the deposits in AED (United Arab Emirates Dirham), USD (United States Dollar), and EUR (Euro). Please be advised that standard bank currency conversion charges may be applied if your deposit currency differs from your designated account currency."
+      },
+      "platformCharges": {
+        "question": "What are the charges on buying and selling through platform?",
+        "answer": "We apply only nominal charges specifically when you open a position on our trading platform. There are no additional fees incurred for closing these positions. For a comprehensive overview of our fee structure, we encourage you to contact our customer service team at info@mac-ro-capital.com."
+      },
+      "fundingMethods": {
+        "question": "How to fund a Metal Account or Gold Saving Account?",
+        "answer": "You have multiple convenient methods to credit your Metal Account or Gold Saving Account:",
+        "methods": [
+          "Cash Deposit: Directly at our secure office or store location.",
+          "Wire Transfer: Funds can be transferred electronically to our official bank accounts.",
+          "Physical Bullion Deposit: You may deposit physical gold or silver bars. We will then purchase these at the prevailing market price, and the equivalent monetary value will be credited directly to your account."
+        ]
+      },
+      "redemptionTime": {
+        "question": "How long time does it take to redeem physical bars or coins?",
+        "answer": "Physical redemption of your bars or coins is usually processed within 2-3 working days under typical market circumstances. However, during periods of heightened demand or unforeseen market shifts, this timeframe may occasionally extend to two weeks."
+      },
+      "marketUpdates": {
+        "question": "How I get market update and forecast?",
+        "answer": "As a valued, registered client, you can get market intelligence and current news within our dedicated Gold News section on our website and across our official social media channels."
+      },
+      "uaeRegulation": {
+        "question": "How is the UAE's gold industry regulated?",
+        "answer": "All regulation of the UAE's gold industry is carried out at a federal level by the Ministry of Economy. The MoE has established a comprehensive set of regulations and policies to mitigate risks within the precious metals sector.",
+        "additional": "More information on the due diligence regulations for responsible sourcing of gold can be found on the official MoE website."
+      },
+      "uaeOversight": {
+        "question": "What does the UAE do to enhance the oversight of the trade and circulation of gold in the country?",
+        "answer": "The UAE Ministry of Economy established the Emirates Gold Bullion Committee to unify national efforts to enhance oversight of the gold sector.",
+        "details": [
+          "The Emirates Gold Bullion Committee overseas the UAE Good Delivery Standard for Gold, which was launched in November 2021.",
+          "This is a national standard that lays out the quality and transparency specifications for gold traders and refiners in the UAE. It was established in accordance with the latest international best-practice standards from the Organisation for Economic Co-operation and Development (OECD)."
+        ]
+      }
+    },
+    "contact": {
+      "title": "Still Have Questions?",
+      "description": "Can't find the answer you're looking for? Our team of experts is here to help. Contact us for personalized assistance with your investment needs.",
+      "contactTeam": "Contact Our Team",
+      "viewServices": "View Our Services"
+    }
+  }
+}

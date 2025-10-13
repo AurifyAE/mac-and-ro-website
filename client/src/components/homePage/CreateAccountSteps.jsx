@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const CreateAccountSteps = () => {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -29,23 +31,23 @@ const CreateAccountSteps = () => {
   const steps = [
     {
       number: "1",
-      title: "Choose Your Metal Account",
+      title: t('homepage.createSteps.step1Title'),
       description: ""
     },
     {
       number: "2", 
-      title: "Submit Application",
-      description: "Start online or via our institutional desk."
+      title: t('homepage.createSteps.step2Title'),
+      description: t('homepage.createSteps.step2Description')
     },
     {
       number: "3",
-      title: "Compliance Review", 
-      description: "Our team reviews, verifies, and provides account approval."
+      title: t('homepage.createSteps.step3Title'), 
+      description: t('homepage.createSteps.step3Description')
     },
     {
       number: "4",
-      title: "Account Activation",
-      description: "Gain access to the gold banking portal, vault instructions, or trading desk."
+      title: t('homepage.createSteps.step4Title'),
+      description: t('homepage.createSteps.step4Description')
     }
   ];
 
@@ -64,14 +66,13 @@ const CreateAccountSteps = () => {
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight font-playfair"
             variants={itemVariants}
           >
-            Begin Securely. Operate Confidently.
+            {t('homepage.createSteps.title')}
           </motion.h2>
           <motion.p 
             className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
-            Onboarding with Mac & Ro Capital FZC is fast, secure, and guided by our relationship managers.
-            We support clients across time zones and offer multilingual assistance
+            {t('homepage.createSteps.description')}
           </motion.p>
         </motion.div>
 

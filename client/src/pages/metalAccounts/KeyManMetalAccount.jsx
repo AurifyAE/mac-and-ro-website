@@ -3,29 +3,31 @@ import MetalAccountCTA from '../../components/MetalAccountCTA';
 import keymanBanner from '../../assets/metalAccount/keyman-banner.jpg';
 import keyGold from '../../assets/metalAccount/key-gold.jpg';
 import keymanImg2 from '../../assets/metalAccount/keymanimg2.jpg';
+import { useTranslation } from 'react-i18next';
 
 const KeyManMetalAccount = () => {
+  const { t } = useTranslation();
   // Dynamic cards data
   const cardsData = [
     {
       id: 1,
-      title: "Immediate Financial Protection",
-      description: "Guarantees quick disbursement of the invested capital to support business continuity."
+      title: t('metalAccounts.keyman.whyChoose.items.protection.title'),
+      description: t('metalAccounts.keyman.whyChoose.items.protection.description')
     },
     {
       id: 2,
-      title: "Liquidity & Stability",
-      description: "Gold is universally recognized, easily tradable, and retains long-term value."
+      title: t('metalAccounts.keyman.whyChoose.items.liquidity.title'),
+      description: t('metalAccounts.keyman.whyChoose.items.liquidity.description')
     },
     {
       id: 3,
-      title: "Operational Continuity",
-      description: "Funds can be used for recruitment, training, offsetting production losses, or even repurchasing shares from heirs of a deceased partner."
+      title: t('metalAccounts.keyman.whyChoose.items.continuity.title'),
+      description: t('metalAccounts.keyman.whyChoose.items.continuity.description')
     },
     {
       id: 4,
-      title: "Tax Advantages",
-      description: "Since the company is both contractor and beneficiary, the invested capital is not treated as a personal benefit to managers. Taxation only applies on capital gains at the time of sale."
+      title: t('metalAccounts.keyman.whyChoose.items.taxAdvantages.title'),
+      description: t('metalAccounts.keyman.whyChoose.items.taxAdvantages.description')
     }
   ];
 
@@ -52,13 +54,13 @@ const KeyManMetalAccount = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-xl">
             <span className="text-[#DCBC7C] text-sm">
-                KEYMAN METAL ACCOUNT
+                {t('metalAccounts.keyman.hero.badge')}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
-              Protecting What Matters Most
+              {t('metalAccounts.keyman.hero.title')}
             </h1>
             <p className="max-w-80 text-white text-base">
-              Safeguard companies against the potential loss of executives.
+              {t('metalAccounts.keyman.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -70,18 +72,18 @@ const KeyManMetalAccount = () => {
             {/* Left Side - Title & Paragraph */}
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
-                What is a Keyman Metal Account?
+                {t('metalAccounts.keyman.whatIs.title')}
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed text-base">
                 <p>
-                At Mac & Ro Capital, we recognize that the greatest value of a company isn’t only in its capital, products, or services — it’s in its people. In particular, those key individuals whose expertise, leadership, or client relationships make them indispensable to the success of the business.<br />
-                The Key Man Metal Account is designed to safeguard companies against the potential loss of such individuals, ensuring continuity and stability when it matters most.
+                {t('metalAccounts.keyman.whatIs.description1')}<br />
+                {t('metalAccounts.keyman.whatIs.description2')}
                 </p>
                 <p>
-                A Key Man solution in physical investment gold is a unique product where the company acts as both the policyholder and the beneficiary. It provides a financial safety net in the event of the death or total disability of a key individual — such as a CEO, managing director, creative lead, senior sales executive, or any employee with vital expertise.
+                {t('metalAccounts.keyman.whatIs.description3')}
                 </p>
                 <p>
-                By investing in physical gold, the company ensures that its protection is both solid and liquid, since gold can be realized at any moment.
+                {t('metalAccounts.keyman.whatIs.description4')}
                 </p>
               </div>
             </div>
@@ -111,7 +113,7 @@ const KeyManMetalAccount = () => {
           {/* Left-aligned title */}
           <div className="mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight max-w-2xl">
-              Why choose a KeyMan Metal Account?
+              {t('metalAccounts.keyman.whyChoose.title')}
             </h2>
             {/* <p className="text-gray-600 mt-4 max-w-2xl">
               Our Key Man Metal Account solutions provide strategic protection against executive loss, 
@@ -141,24 +143,24 @@ const KeyManMetalAccount = () => {
             {/* Left Side - Title & Paragraph */}
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
-              Is this for you?
+              {t('metalAccounts.keyman.isThisForYou.title')}
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed text-base">
                 <p>
-                Ideal for companies seeking stability, succession planning, and executive benefits, while protecting key people and enjoying significant tax advantages.
+                {t('metalAccounts.keyman.isThisForYou.description')}
                 </p>
                 <ul className="space-y-2 text-gray-600 leading-relaxed text-base font-bold">
                   <li className="flex items-start">
                     <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                    Corporations and partnerships
+                    {t('metalAccounts.keyman.isThisForYou.audiences.corporations')}
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                    SMEs and family businesses
+                    {t('metalAccounts.keyman.isThisForYou.audiences.smb')}
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
-                    Independent entrepreneurs and professionals
+                    {t('metalAccounts.keyman.isThisForYou.audiences.professionals')}
                   </li>
                 </ul>
               </div>
@@ -185,12 +187,12 @@ const KeyManMetalAccount = () => {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 my-20">
             <h2 className="text-2xl sm:text-3xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
-            The Mac & Ro Key Man Metal Account secures your people, protects your business, and ensures lasting resilience with the strength of gold.
+            {t('metalAccounts.keyman.conclusion')}
             </h2>
           </div>
 
       {/* CTA Section */}
-      <MetalAccountCTA  title="Start Your Keyman Metal Account Today" />
+      <MetalAccountCTA  title={t('metalAccounts.keyman.cta')} />
     </div>
   )
 }

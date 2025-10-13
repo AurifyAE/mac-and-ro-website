@@ -3,29 +3,31 @@ import MetalAccountCTA from '../../components/MetalAccountCTA';
 import tfmBanner from '../../assets/metalAccount/tfm-banner.jpg';
 import tfmSection from '../../assets/metalAccount/tfm-section.jpg';
 import tfmImg2 from '../../assets/metalAccount/tfm-img2.jpg';
+import { useTranslation } from 'react-i18next';
 
 const EndOfTreatmentPaymentTFM = () => {
+  const { t } = useTranslation();
 
   const cardsData = [
     {
       id: 1,
-      title: "Tax Efficiency",
-      description: "Gold is typically taxed only on capital gains. Setting aside profits in gold reduces immediate taxation."
+      title: t('metalAccounts.eot.whyInGold.items.taxEfficiency.title'),
+      description: t('metalAccounts.eot.whyInGold.items.taxEfficiency.description')
     },
     {
       id: 2,
-      title: "Growth Potential",
-      description: "Physical gold has appreciated on average ~11% annually over the last 50 years."
+      title: t('metalAccounts.eot.whyInGold.items.growthPotential.title'),
+      description: t('metalAccounts.eot.whyInGold.items.growthPotential.description')
     },
     {
       id: 3,
-      title: "Liquidity & Flexibility",
-      description: "Gold can be liquidated anytime or even pledged for short-term financing."
+      title: t('metalAccounts.eot.whyInGold.items.liquidity.title'),
+      description: t('metalAccounts.eot.whyInGold.items.liquidity.description')
     },
     {
       id: 4,
-      title: "Stability",
-      description: "A safe-haven asset that preserves wealth against inflation and geopolitical risks."
+      title: t('metalAccounts.eot.whyInGold.items.stability.title'),
+      description: t('metalAccounts.eot.whyInGold.items.stability.description')
     }
   ];
 
@@ -52,13 +54,13 @@ const EndOfTreatmentPaymentTFM = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-3xl">
             <span className="text-[#DCBC7C] text-sm">
-              EOT SOLUTION
+              {t('metalAccounts.eot.hero.badge')}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
-            End of Term Compensation (EOT) in Physical Gold
+            {t('metalAccounts.eot.hero.title')}
             </h1>
             <p className="max-w-lg text-white text-base">
-              Protecting your leadership, securing your company's future.
+              {t('metalAccounts.eot.hero.subtitle')}
             </p>
           </div>
         </div>
@@ -71,14 +73,14 @@ const EndOfTreatmentPaymentTFM = () => {
             {/* Left Side - Title & Paragraph */}
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
-                What is EOT?
+                {t('metalAccounts.eot.whatIs.title')}
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                The End of Term Compensation (EOT) is a corporate tool that allows companies to guarantee directors an additional, tax-efficient benefit at the end of their mandate. At Mac & Ro Capital, we make this compensation even stronger by linking it to physical investment gold.
+                {t('metalAccounts.eot.whatIs.description1')}
                 </p>
                 <p>
-                EOT is an additional payment to directors beyond regular salary. For companies, it is fully deductible as a cost. For directors, it is a form of deferred compensation with tax advantages.
+                {t('metalAccounts.eot.whatIs.description2')}
                 </p>
               </div>
             </div>
@@ -107,7 +109,7 @@ const EndOfTreatmentPaymentTFM = () => {
           {/* Left-aligned title */}
           <div className="mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight max-w-2xl">
-              Why in Gold?
+              {t('metalAccounts.eot.whyInGold.title')}
             </h2>
             {/* <p className="text-gray-600 mt-4 max-w-2xl">
               Our Key Man Metal Account solutions provide strategic protection against executive loss, 
@@ -137,7 +139,7 @@ const EndOfTreatmentPaymentTFM = () => {
             {/* Left Side - Title & Paragraph */}
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
-                Benefits for Companies & Directors
+                {t('metalAccounts.eot.benefits.title')}
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed text-base">
                 <ul className="space-y-3 text-gray-600 leading-relaxed text-base">
@@ -147,7 +149,7 @@ const EndOfTreatmentPaymentTFM = () => {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                      Deductible cost for the company.
+                      {t('metalAccounts.eot.benefits.items.deductible')}
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
@@ -155,7 +157,7 @@ const EndOfTreatmentPaymentTFM = () => {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                      Reduced taxation for directors at payout.
+                      {t('metalAccounts.eot.benefits.items.reducedTaxation')}
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
@@ -163,7 +165,7 @@ const EndOfTreatmentPaymentTFM = () => {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                      Can serve as a private “pension reserve” for directors planning early retirement.
+                      {t('metalAccounts.eot.benefits.items.pensionReserve')}
                   </li>
                   <li className="flex items-start">
                     <div className="w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
@@ -171,7 +173,7 @@ const EndOfTreatmentPaymentTFM = () => {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
-                      Works as a “golden parachute” in case of unexpected termination.
+                      {t('metalAccounts.eot.benefits.items.goldenParachute')}
                   </li>
                 </ul>
               </div>
@@ -196,12 +198,12 @@ const EndOfTreatmentPaymentTFM = () => {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-20">
           <h2 className="text-2xl sm:text-3xl text-center font-semibold text-black mb-6 tracking-tight font-playfair">
-          With expertise in gold trading, international compliance, and vaulting solutions, we transform EOT into a strategic corporate advantage, offering directors and companies both protection and growth.
+          {t('metalAccounts.eot.conclusion')}
           </h2>
       </div>
 
       {/* CTA Section */}
-      <MetalAccountCTA  title="Need to know more about EOT?" />
+      <MetalAccountCTA  title={t('metalAccounts.eot.cta')} />
     </div>
   )
 }

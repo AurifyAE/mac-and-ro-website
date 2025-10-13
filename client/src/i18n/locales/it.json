@@ -1,0 +1,944 @@
+{
+  "navigation": {
+    "home": "Home",
+    "whoWeAre": "Chi Siamo",
+    "products": "Prodotti",
+    "services": "Servizi",
+    "accreditations": "Accreditamenti",
+    "corporateGovernance": "Governance Aziendale",
+    "news": "Notizie",
+    "faq": "FAQ",
+    "contact": "Contatti"
+  },
+  "products": {
+    "metalAccounts": "Conti Metalli",
+    "deluxeMetalAccount": "Conto Metalli Deluxe",
+    "macRoMetalAccount": "Conto Metalli Mac & Ro",
+    "endOfTreatmentPayment": "Pagamento Fine Trattamento (EOT)",
+    "keyManMetalAccount": "Conto Metalli Key Man",
+    "physicalGoldBullion": "Acquisto Oro da Investimento Fisico (Lingotti)"
+  },
+  "header": {
+    "goldSpotPrice": "Prezzo Spot dell'Oro",
+    "signIn": "Accedi",
+    "language": "Lingua"
+  },
+  "banner": {
+    "downloadApp": "Scarica App"
+  },
+  "languages": {
+    "english": "English",
+    "arabic": "العربية",
+    "italian": "Italiano"
+  },
+  "footer": {
+    "aboutUs": "Chi Siamo",
+    "whoWeAre": "Chi Siamo",
+    "metalAccount": "Conto Metalli",
+    "products": "Prodotti",
+    "contact": "Contatti",
+    "info": "Informazioni",
+    "termsAndConditions": "Termini e Condizioni",
+    "corporateGovernance": "Governance Aziendale",
+    "privacyPolicy": "Politica sulla Privacy",
+    "faq": "FAQ",
+    "subscribeNewsletter": "Iscriviti alla Newsletter",
+    "enterEmail": "Inserisci la tua email",
+    "privacyDeclaration": "Inviando questa email dichiaro di aver letto la",
+    "professionalOperatorCode": "Codice Operatore Professionale Oro 24378",
+    "vatNumber": "Partita IVA 104904019700003",
+    "downloadApp": "Scarica App",
+    "dubai": "Dubai:",
+    "socialMedia": "Social Media",
+    "headOffice": "Sede Principale:",
+    "brazzaville": "Brazzaville:",
+    "copyright": "© 2025 Mac & Ro. Tutti i diritti riservati.",
+    "bookConsultant": "Prenota Consulente"
+  },
+  "appModal": {
+    "downloadTitle": "Scarica App ORO VIVO",
+    "description": "Scambia oro ovunque e in qualsiasi momento con la nostra applicazione mobile all'avanguardia",
+    "realTimeTrading": "Trading oro in tempo reale",
+    "locationSwap": "Funzione Location Swap",
+    "securePortfolio": "Gestione portfolio sicura",
+    "marketTracking": "Monitoraggio fluttuazioni di mercato",
+    "availableDevices": "Disponibile per dispositivi iOS, Android e Huawei"
+  },
+  "homepage": {
+    "hero": {
+      "title1": "Proteggi la Tua Ricchezza con Oro Fisico -",
+      "title2": "Soluzioni di Investimento Affidabili e Flessibili",
+      "getStarted": "Inizia Oggi",
+      "scrollDown": "Scorri in Basso",
+      "secureEmpowered": "Sicuro. Potenziato. Globale.",
+      "description1": "Mac & Ro Capital FZC porta decenni di esperienza bancaria italiana nell'oro a Dubai—uno dei principali hub mondiali per metalli preziosi fisici. Come Banca dell'Oro autorizzata in Italia, ora serviamo clienti globali attraverso la nostra entità di Dubai con servizi affidabili, trasparenti e di livello mondiale.",
+      "description2": "Aiutiamo individui, famiglie, aziende e investitori professionali a salvaguardare e far crescere la loro ricchezza attraverso strategie strutturate per l'oro. Operando in modo indipendente e liberi da conflitti di interesse, garantiamo completa trasparenza, conformità legale e integrità operativa. Dai conti oro digitali al deposito di livello istituzionale e al trading di lingotti fisici, Mac & Ro Capital FZC fornisce un modo fluido, sicuro e innovativo per gestire e far crescere la tua ricchezza con l'oro.",
+      "knowMore": "Scopri di Più"
+    },
+    "features": {
+      "globalVaults": "Posizioni di Deposito Globali",
+      "vaultDescription": "Il Tuo Oro, Posizionato Strategicamente Mac & Ro opera attraverso una rete affidabile di depositi, fornendo diversità geografica e scelta del cliente",
+      "dubai": "Dubai - Hub del Medio Oriente con infrastrutture di livello mondiale",
+      "lecce": "Lecce - Sede principale, giurisdizione autorizzata Banca dell'Oro",
+      "zurich": "Zurigo - Precisione e neutralità svizzera",
+      "singapore": "Singapore - Porta d'accesso alle economie asiatiche ad alto tasso di crescita",
+      "istanbul": "Istanbul - Deposito regionale in sviluppo",
+      "vaultProtocols": "I clienti possono trasferire saldi o richiedere la consegna fisica secondo i protocolli applicabili.",
+      "bookConsultant": "Prenota Consulente",
+      "locationSwapTitle": "Location Swap dell'Oro",
+      "locationSwapDescription": "Un location swap (dal latino \"locus/locatio\") è una transazione di oro fisico dove quantità equivalenti di oro vengono scambiate tra due posizioni diverse, tipicamente due hub dell'oro. I location swap permettono un trasferimento efficiente del metallo senza la necessità di trasportare fisicamente l'oro in una singola posizione centrale.",
+      "knowMore": "Scopri di più",
+      "orovivoTitle": "App OROVIVO",
+      "orovivoDescription": "L'App OROVIVO di Mac & Ro Capital FZC ti permette di comprare, vendere e fare Location Swap dell'Oro in sicurezza in posizioni specificate. Converti facilmente oro in contanti e viceversa o spostalo in posizioni specificate con pochi tocchi.",
+      "downloadNow": "Scarica Ora"
+    },
+    "cta": {
+      "title": "Costruisci il tuo futuro sull'oro solido",
+      "description": "Mac & Ro Capital offre lingotti d'oro 24K certificati LBMA e non LBMA da 1g a 1kg, realizzati con precisione e distribuiti in partnership con Gold Rock Capital.",
+      "goldBars": "Lingotti d'Oro",
+      "goldBarsDescription": "I lingotti d'oro offrono un modo conveniente per investire in oro puro su larga scala. Disponibili in dimensioni da 1 grammo a 1 chilo, ogni lingotto è certificato per purezza e riconosciuto globalmente—perfetto per costruire un portafoglio forte e sicuro.",
+      "shopNow": "Acquista Ora"
+    },
+    "infoOne": {
+      "title": "Banca dei Metalli certificata dalla Banca d'Italia",
+      "description": "Mac & Ro Srl è una Banca dell'Oro autorizzata in Italia, registrata presso la Banca d'Italia, garantendo che tutte le transazioni soddisfino i più alti standard europei di legalità, trasparenza e integrità. Allineati ai principi OCSE, sosteniamo approvvigionamento responsabile, sostenibilità e pratiche etiche—dando ai clienti piena fiducia nei loro investimenti.",
+      "getDocument": "Ottieni il Documento"
+    },
+    "flipCards": {
+      "deluxeTitle": "CONTO METALLI DELUXE",
+      "deluxeFront": "Proteggi il tuo futuro con investimenti in oro fisico",
+      "deluxeDescription": "Investi in oro fisico certificato con deposito sicuro e diritti di proprietà completi.",
+      "macRoTitle": "CONTO METALLI MAC & RO",
+      "macRoFront": "Servizi di gestione patrimoniale professionale",
+      "macRoDescription": "Consulenti finanziari esperti ti aiutano a costruire e proteggere il tuo portafoglio patrimoniale.",
+      "keymanTitle": "CONTO METALLI KEYMAN",
+      "keymanFront": "Soluzioni di investimento aziendale strategico",
+      "keymanDescription": "Strategie di investimento personalizzate per aziende ed entità corporate.",
+      "eotTitle": "FINE TRATTAMENTO (EOT)",
+      "eotFront": "Scambia metalli preziosi sui mercati globali",
+      "eotDescription": "Accedi ai mercati internazionali dei metalli preziosi con strumenti di trading professionali.",
+      "whoItsFor": "Per Chi È:",
+      "keyBenefits": "Benefici Chiave:",
+      "learnMore": "Scopri di Più",
+      "targetAudience": "Individui, famiglie e aziende che cercano ricchezza stabile e generazionale.",
+      "benefits": "Proprietà completa, depositi sicuri, oro extra, certificato globalmente."
+    },
+    "goldInfo": {
+      "title": "Perché investire in oro?",
+      "inflationProtection": "Protezione dall'Inflazione",
+      "inflationDescription": "L'oro fisico è un asset affidabile e tangibile noto per la sua capacità di mantenere valore nel tempo, libero dalla speculazione di mercato. È semplice da possedere, flessibile da trasmettere e immune dall'instabilità finanziaria. Che tu stia cercando stabilità a lungo termine o una copertura dall'inflazione, l'oro fornisce una base affidabile.",
+      "portfolioDiversification": "Diversificazione del Portafoglio",
+      "diversificationDescription": "Investire in oro ti permette di diversificare il tuo portafoglio, riducendo il rischio complessivo. L'oro ha una bassa correlazione con altri asset finanziari come azioni e obbligazioni, il che significa che può aumentare di valore anche quando altri investimenti stanno perdendo valore.",
+      "createPortfolio": "Crea il Tuo Portafoglio Oro",
+      "liquidity": "Liquidità e Facilità di Vendita",
+      "liquidityDescription": "L'oro è un asset altamente liquido che può essere venduto rapidamente e facilmente in quasi ogni parte del mondo. Questo significa che puoi trasformare i tuoi investimenti in oro in contanti quando ne hai bisogno, senza lunghe attese o complicazioni."
+    },
+    "accounts": {
+      "title": "I Nostri Servizi",
+      "description": "Mac & Ro Capital offre a tutte le parti interessate diversi tipi di Conti Metalli e servizi per fornire soluzioni dedicate ai diversi bisogni del Mercato di Investimento in Oro Fisico. Oltre al classico Piano di Accumulo per acquisti ciclici su base mensile e trimestrale, chiamato PAC, abbiamo lanciato la possibilità di sfruttare opportunità aggiuntive mirate, adatte per investitori specifici. Promuoviamo una cultura patrimoniale responsabile fondata su stabilità, controllo diretto, documentazione certificata e piena conformità normativa."
+    },
+    "createSteps": {
+      "title": "Inizia Sicuramente. Opera con Fiducia.",
+      "description": "L'onboarding con Mac & Ro Capital FZC è veloce, sicuro e guidato dai nostri relationship manager. Supportiamo clienti attraverso fusi orari e offriamo assistenza multilingue",
+      "step1Title": "Scegli il Tuo Conto Metalli",
+      "step2Title": "Invia Domanda",
+      "step2Description": "Inizia online o tramite il nostro desk istituzionale.",
+      "step3Title": "Revisione Conformità",
+      "step3Description": "Il nostro team rivede, verifica e fornisce l'approvazione del conto.",
+      "step4Title": "Attivazione Conto",
+      "step4Description": "Ottieni accesso al portale bancario dell'oro, istruzioni per il deposito, o desk di trading."
+    }
+  },
+  "stepByStep": {
+    "deluxeMetalAccount": {
+      "title": "Ciclo di Valorizzazione dell'Oro",
+      "steps": {
+        "step1": {
+          "title": "Acquisizione",
+          "description": "Oro grezzo proveniente da fornitori certificati e tracciabili."
+        },
+        "step2": {
+          "title": "Raffinazione",
+          "description": "Processato in strutture accreditate LBMA a purezza 999.9."
+        },
+        "step3": {
+          "title": "Conversione",
+          "description": "Fuso in lingotti numerati e certificati."
+        },
+        "step4": {
+          "title": "Vendita Istituzionale",
+          "description": "Distribuito a banche, fondi e governi."
+        },
+        "step5": {
+          "title": "Beneficio Cliente",
+          "description": "I profitti del ciclo vengono restituiti come oro fisico aggiuntivo accreditato al tuo Conto Metalli Deluxe"
+        }
+      }
+    },
+    "macRoMetalAccount": {
+      "steps": {
+        "step1": {
+          "title": "Allocazione Diretta",
+          "description": "Il tuo conto riflette le partecipazioni fisiche effettive, non solo un saldo."
+        },
+        "step2": {
+          "title": "Movimento Fisico",
+          "description": "Crediti e addebiti corrispondono al trasferimento reale di lingotti dentro o fuori dal deposito."
+        },
+        "step3": {
+          "title": "Proprietà Completa",
+          "description": "Conservi tutti i diritti sui tuoi lingotti, anche se l'operatore del conto va in default."
+        },
+        "step4": {
+          "title": "Custodia Sicura",
+          "description": "Depositi ad alta sicurezza garantiscono che i tuoi metalli siano protetti in ogni momento. (anche se la raccolta fisica è complessa a causa della sicurezza del deposito)."
+        }
+      }
+    }
+  },
+  "metalAccounts": {
+    "deluxe": {
+      "hero": {
+        "badge": "CONTO METALLI DELUXE",
+        "title": "Il Tuo Oro Rimane Tuo. Ma Cresce.",
+        "subtitle": "Sicuro, certificato e in crescita — il Conto Metalli Deluxe trasforma la proprietà dell'oro in una strategia duratura per la protezione del patrimonio."
+      },
+      "whatIs": {
+        "title": "Cos'è un Conto Metalli Deluxe?",
+        "description": "Come parte della nostra attività di consulenza indipendente, selezioniamo strumenti strutturati e modelli operativi che soddisfano criteri di solidità legale, tracciabilità e protezione degli asset. Abbiamo selezionato il Conto Metalli Deluxe per i Clienti premium - una soluzione avanzata per utilizzare l'oro fisico che combina protezione, crescita e piena proprietà individuale. Questo strumento esclusivo consente ai clienti di migliorare le loro partecipazioni in oro senza perdere la proprietà. La struttura garantisce solidità legale, conformità alle normative e risultati allineati agli obiettivi, struttura e orizzonte temporale del cliente."
+      },
+      "howItWorks": {
+        "title": "Come funziona?",
+        "description": "Attraverso un contratto di comodato d'uso, il tuo oro fisico — che rimane sempre di tua proprietà — viene temporaneamente impiegato da aziende industriali certificate. Durante questo periodo, l'oro rimane custodito in modo sicuro in depositi certificati e completamente tracciato. In cambio, ricevi oro fisico aggiuntivo accreditato direttamente al tuo Conto Metalli Deluxe. Tutti i processi sono conformi alle normative, garantendo trasparenza, protezione contrattuale e un focus sul miglioramento del patrimonio."
+      },
+      "advantages": {
+        "title": "Vantaggi di un Conto Metalli Deluxe",
+        "items": {
+          "ownership": {
+            "title": "100% Proprietà",
+            "description": "L'oro è legalmente tuo in ogni momento — titolato individualmente, tracciabile e mai raggruppato."
+          },
+          "returns": {
+            "title": "Rendimenti Aggiuntivi",
+            "description": "Oro fisico aggiuntivo 6-10% accreditato al tuo conto."
+          },
+          "certified": {
+            "title": "Certificato e Tracciabile",
+            "description": "Ogni lingotto è numerato, documentato e accompagnato da certificazione di purezza e origine."
+          },
+          "compliance": {
+            "title": "Conformità e Trasparenza",
+            "description": "Standard internazionali e protezione legale."
+          }
+        }
+      },
+      "growthProfiles": {
+        "title": "Profili di Crescita Personalizzati",
+        "items": {
+          "sixPercent": "6% Oro Aggiuntivo: Per depositi tra €10.000 - €99.000 (accreditato semestralmente).",
+          "tenPercent": "10% Oro Aggiuntivo: Per depositi sopra €100.000 (accreditato trimestralmente)."
+        },
+        "contractTerms": "Termini del contratto: 13 a 60 mesi, con crescita sempre pagata in oro fisico aggiuntivo, sostenuta da certificazione internazionale."
+      },
+      "isThisForYou": {
+        "title": "È per te?",
+        "description": "Il Conto Metalli Deluxe è progettato per chiunque apprezzi stabilità e protezione patrimoniale a lungo termine. Che tu sia un individuo che cerca di salvaguardare i tuoi risparmi, una famiglia che costruisce ricchezza generazionale, o un'azienda che diversifica gli asset, questo conto offre un modo sicuro e trasparente di possedere oro.",
+        "audiences": {
+          "individuals": "Individui che cercano asset stabili e protetti dall'inflazione.",
+          "families": "Famiglie che preservano la ricchezza per le future generazioni.",
+          "businesses": "Aziende e professionisti che diversificano il loro portafoglio."
+        }
+      },
+      "conclusion": "Con Mac & Ro Capital, l'oro non è più solo un deposito di valore sicuro. Diventa un asset dinamico che offre stabilità, flessibilità e crescita tangibile — senza compromettere la proprietà o la sicurezza.",
+      "cta": "Inizia il Tuo Conto Metalli Deluxe Oggi"
+    },
+    "keyman": {
+      "hero": {
+        "badge": "CONTO METALLI KEYMAN",
+        "title": "Proteggere Ciò Che Conta Di Più",
+        "subtitle": "Proteggi le aziende dalla potenziale perdita di dirigenti."
+      },
+      "whatIs": {
+        "title": "Cos'è un Conto Metalli Keyman?",
+        "description1": "In Mac & Ro Capital, riconosciamo che il valore più grande di un'azienda non è solo nel suo capitale, prodotti o servizi — è nelle sue persone. In particolare, quegli individui chiave la cui esperienza, leadership o relazioni con i clienti li rendono indispensabili per il successo dell'azienda.",
+        "description2": "Il Conto Metalli Keyman è progettato per salvaguardare le aziende dalla potenziale perdita di tali individui, garantendo continuità e stabilità quando conta di più.",
+        "description3": "Una soluzione Keyman in oro da investimento fisico è un prodotto unico in cui l'azienda agisce sia come contraente che come beneficiario. Fornisce una rete di sicurezza finanziaria in caso di morte o disabilità totale di un individuo chiave — come CEO, direttore amministrativo, responsabile creativo, dirigente vendite senior, o qualsiasi dipendente con competenze vitali.",
+        "description4": "Investendo in oro fisico, l'azienda garantisce che la sua protezione sia sia solida che liquida, poiché l'oro può essere realizzato in qualsiasi momento."
+      },
+      "whyChoose": {
+        "title": "Perché scegliere un Conto Metalli Keyman?",
+        "items": {
+          "protection": {
+            "title": "Protezione Finanziaria Immediata",
+            "description": "Garantisce lo sborso rapido del capitale investito per supportare la continuità aziendale."
+          },
+          "liquidity": {
+            "title": "Liquidità e Stabilità",
+            "description": "L'oro è universalmente riconosciuto, facilmente commerciabile e mantiene valore a lungo termine."
+          },
+          "continuity": {
+            "title": "Continuità Operativa",
+            "description": "I fondi possono essere utilizzati per reclutamento, formazione, compensazione delle perdite di produzione, o persino riacquisto di azioni dagli eredi di un partner deceduto."
+          },
+          "taxAdvantages": {
+            "title": "Vantaggi Fiscali",
+            "description": "Poiché l'azienda è sia contraente che beneficiario, il capitale investito non è trattato come beneficio personale per i manager. La tassazione si applica solo sui guadagni in conto capitale al momento della vendita."
+          }
+        }
+      },
+      "isThisForYou": {
+        "title": "È per te?",
+        "description": "Ideale per aziende che cercano stabilità, pianificazione della successione e benefici per dirigenti, proteggendo persone chiave e godendo di significativi vantaggi fiscali.",
+        "audiences": {
+          "corporations": "Corporazioni e partnership",
+          "smb": "PMI e aziende familiari",
+          "professionals": "Imprenditori e professionisti indipendenti"
+        }
+      },
+      "conclusion": "Il Conto Metalli Keyman Mac & Ro protegge le tue persone, protegge la tua azienda e garantisce resilienza duratura con la forza dell'oro.",
+      "cta": "Inizia il Tuo Conto Metalli Keyman Oggi"
+    },
+    "macRo": {
+      "hero": {
+        "badge": "CONTO METALLI MAC & RO",
+        "title": "Investi nella Certezza.",
+        "subtitle": "Un Modo Più Intelligente di Possedere Metalli Preziosi"
+      },
+      "whatIs": {
+        "title": "Cos'è un Conto Metalli Mac & Ro?",
+        "description": "Il Conto Metalli Mac & Ro è un modo sicuro e conveniente per investire in oro e altri metalli preziosi. Progettato sia per individui che istituzioni, ti consente di costruire riserve a lungo termine o gestire investimenti a breve e medio termine con facilità e trasparenza."
+      },
+      "whatMakesDifferent": {
+        "title": "Cosa Lo Rende Diverso?",
+        "description": "A differenza degli investimenti tradizionali, il Conto Metalli è allocato — significa che le tue partecipazioni sono supportate da lingotti, lastre o pani specifici e identificabili. Ogni pezzo è registrato con:",
+        "features": {
+          "serialNumber": "Un numero di serie unico",
+          "grossWeight": "Peso lordo",
+          "purity": "Purezza / finezza",
+          "fineWeight": "Peso fino (per l'oro)"
+        },
+        "conclusion": "Questo garantisce trasparenza completa e proprietà diretta dei tuoi metalli."
+      },
+      "howItWorks": {
+        "title": "Come funziona?"
+      },
+      "keyBenefits": {
+        "title": "Benefici Chiave",
+        "items": {
+          "tangibleOwnership": "Proprietà Tangibile",
+          "noOverdraftRisk": "Nessun Rischio di Scoperto",
+          "custodialSimplicity": "Semplicità di Custodia",
+          "flexibility": "Flessibilità"
+        }
+      },
+      "insurance": {
+        "title": "Assicurazione",
+        "description": "Per default, i titolari di conto sono responsabili di organizzare la propria assicurazione a meno che non sia diversamente concordato. Questo garantisce massima flessibilità e controllo sulla protezione dei tuoi asset."
+      },
+      "cta": "Inizia il Tuo Conto Metalli Oggi!"
+    },
+    "eot": {
+      "hero": {
+        "badge": "SOLUZIONE EOT",
+        "title": "Compenso Fine Mandato (EOT) in Oro Fisico",
+        "subtitle": "Proteggendo la tua leadership, assicurando il futuro della tua azienda."
+      },
+      "whatIs": {
+        "title": "Cos'è l'EOT?",
+        "description1": "Il Compenso Fine Mandato (EOT) è uno strumento aziendale che consente alle aziende di garantire ai direttori un beneficio aggiuntivo ed efficiente dal punto di vista fiscale alla fine del loro mandato. In Mac & Ro Capital, rendiamo questo compenso ancora più forte collegandolo all'oro da investimento fisico.",
+        "description2": "L'EOT è un pagamento aggiuntivo ai direttori oltre al salario regolare. Per le aziende, è completamente deducibile come costo. Per i direttori, è una forma di compenso differito con vantaggi fiscali."
+      },
+      "whyInGold": {
+        "title": "Perché in Oro?",
+        "items": {
+          "taxEfficiency": {
+            "title": "Efficienza Fiscale",
+            "description": "L'oro è tipicamente tassato solo sui guadagni in conto capitale. Mettere da parte i profitti in oro riduce la tassazione immediata."
+          },
+          "growthPotential": {
+            "title": "Potenziale di Crescita",
+            "description": "L'oro fisico è aumentato in media ~11% annuo negli ultimi 50 anni."
+          },
+          "liquidity": {
+            "title": "Liquidità e Flessibilità",
+            "description": "L'oro può essere liquidato in qualsiasi momento o persino dato in pegno per finanziamenti a breve termine."
+          },
+          "stability": {
+            "title": "Stabilità",
+            "description": "Un asset rifugio sicuro che preserva la ricchezza contro inflazione e rischi geopolitici."
+          }
+        }
+      },
+      "benefits": {
+        "title": "Benefici per Aziende e Direttori",
+        "items": {
+          "deductible": "Costo deducibile per l'azienda.",
+          "reducedTaxation": "Tassazione ridotta per i direttori al pagamento.",
+          "pensionReserve": "Può servire come \"riserva pensionistica\" privata per direttori che pianificano il pensionamento anticipato.",
+          "goldenParachute": "Funziona come un \"paracadute dorato\" in caso di licenziamento inaspettato."
+        }
+      },
+      "conclusion": "Con competenza nel trading dell'oro, conformità internazionale e soluzioni di deposito, trasformiamo l'EOT in un vantaggio aziendale strategico, offrendo ai direttori e alle aziende sia protezione che crescita.",
+      "cta": "Hai bisogno di saperne di più sull'EOT?"
+    }
+  },
+  "contact": {
+    "hero": {
+      "subtitle": "CI PIACEREBBE",
+      "title": "Sentire da Te",
+      "description": "Mettiti in contatto per maggiori dettagli"
+    },
+    "form": {
+      "title": "Inviaci un Messaggio",
+      "fields": {
+        "firstName": {
+          "label": "Nome",
+          "placeholder": "Inserisci il tuo nome",
+          "error": "Il nome è richiesto."
+        },
+        "lastName": {
+          "label": "Cognome",
+          "placeholder": "Inserisci il tuo cognome",
+          "error": "Il cognome è richiesto."
+        },
+        "phone": {
+          "label": "Numero di Telefono",
+          "placeholder": "Inserisci numero di telefono",
+          "error": "Il numero di telefono è richiesto.",
+          "searchPlaceholder": "Cerca paese..."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Inserisci il tuo indirizzo email",
+          "error": "Inserisci un indirizzo email valido."
+        },
+        "branch": {
+          "label": "Seleziona la Filiale",
+          "uae": "UAE",
+          "italy": "Italia"
+        },
+        "message": {
+          "label": "Messaggio",
+          "placeholder": "Raccontaci i tuoi obiettivi di investimento e come possiamo aiutarti...",
+          "error": "Il messaggio è richiesto."
+        },
+        "contactMode": {
+          "label": "Modalità di Contatto Preferita",
+          "phone": "Telefono",
+          "email": "Email",
+          "whatsapp": "WhatsApp"
+        }
+      },
+      "submit": "Invia",
+      "alerts": {
+        "fillRequired": "Compila tutti i campi richiesti.",
+        "validEmail": "Inserisci un indirizzo email valido.",
+        "messageTooLong": "Il messaggio è troppo lungo. Mantienilo sotto i 500 caratteri.",
+        "formSubmitted": "Modulo inviato! La finestra di composizione Gmail è stata aperta. Rivedi e invia il tuo messaggio."
+      },
+      "emailTemplate": {
+        "subject": "New Contact Form Submission from {firstName} {lastName}",
+        "greeting": "Hello MAC & RO Capital Team,",
+        "intro": "I would like to get in touch regarding precious metals investment. Here are my details:",
+        "name": "Name: {firstName} {lastName}",
+        "email": "Email: {email}",
+        "phone": "Phone: {phone}",
+        "branch": "Branch: {branch}",
+        "contactMode": "Preferred Contact Method: {contactMode}",
+        "message": "Message:",
+        "closing": "I look forward to hearing from you.",
+        "signature": "Best regards,\n{firstName} {lastName}"
+      }
+    },
+    "info": {
+      "title": "Informazioni di Contatto",
+      "phone": "Tel: +971 585 928 981",
+      "email": "Email: {email}"
+    }
+  },
+  "productGrid": {
+    "hero": {
+      "title": "I Nostri Prodotti",
+      "description1": "In Mac and Ro Capital, creiamo lingotti d'oro di qualità premium con precisione meticolosa. Disponibili in una gamma di dimensioni—da 1 grammo a 1 chilogrammo—ogni pezzo è prodotto in purezza 24K (999.9‰) e certificato secondo standard LBMA e non LBMA.",
+      "description2": "Distribuiti in partnership con",
+      "partnerLink": "Gold Rock Capital"
+    },
+    "products": {
+      "title": "Lingotti d'Oro Colati",
+      "shopNow": "Acquista Ora"
+    },
+    "whyInvest": {
+      "title": "Perché Investire in Oro?",
+      "description": "I lingotti d'oro sono un investimento senza tempo, apprezzati per la loro capacità di preservare la ricchezza e fornire sicurezza finanziaria. Noti per la loro stabilità, i lingotti d'oro servono come una copertura affidabile contro l'inflazione e le fluttuazioni valutarie. La loro liquidità globale e le prestazioni costanti durante i periodi di incertezza economica e geopolitica li rendono un'aggiunta intelligente a qualsiasi portafoglio di investimenti. Investire in lingotti d'oro non solo migliora la diversificazione del portafoglio ma offre anche un modo affidabile per salvaguardare i tuoi asset a lungo termine."
+    }
+  },
+  "whoWeAre": {
+    "hero": {
+      "title": "Chi siamo?"
+    },
+    "intro": {
+      "description1": "Mac & Ro rappresenta l'apice dell'eccellenza negli investimenti in metalli preziosi e nella gestione patrimoniale. Come azienda riconosciuta globalmente con profonde radici nella tradizione finanziaria italiana, combiniamo secoli di esperienza con tecnologie all'avanguardia per offrire valore eccezionale ai nostri clienti in tutto il mondo.",
+      "description2": "Il nostro impegno per la trasparenza, la conformità normativa e il successo del cliente ci ha posizionato come partner affidabile per individui e istituzioni che cercano di diversificare i loro portafogli con metalli preziosi. Attraverso i nostri innovativi conti metalli e soluzioni di investimento complete, diamo potere ai nostri clienti per costruire ricchezza duratura in un panorama finanziario in continua evoluzione."
+    },
+    "missionVision": {
+      "mission": {
+        "title": "La Nostra Missione",
+        "description": "Democratizzare l'accesso agli investimenti in metalli preziosi fornendo soluzioni finanziarie innovative, sicure e trasparenti che danno potere a individui e istituzioni per costruire ricchezza duratura attraverso la diversificazione strategica."
+      },
+      "vision": {
+        "title": "La Nostra Visione",
+        "description": "Diventare il leader globale nelle soluzioni di investimento in metalli preziosi, stabilendo standard di settore per innovazione, servizio clienti e conformità normativa espandendo l'accesso alle opportunità di costruzione di ricchezza in tutto il mondo."
+      }
+    },
+    "team": {
+      "title": "Il Nostro Team",
+      "description": "Il nostro team combina decenni di esperienza bancaria italiana nell'oro con il ruolo di Dubai come hub globale per i metalli preziosi. Con specialisti in finanza, diritto, operazioni e tecnologia, forniamo soluzioni personalizzate costruite su fiducia, integrità e innovazione.",
+      "members": {
+        "pietro": {
+          "name": "Ing. Pietro Piccinetti",
+          "role": "(Presidente Onorario)",
+          "description": "Un manager di alto profilo con una lunga esperienza internazionale e una reputazione consolidata, dotato di una vasta rete di relazioni, un curriculum notevole e una solida esperienza nelle attività di internazionalizzazione e negoziazione internazionale, con forti capacità nel definire strategie che permettono alle aziende di rilanciare ed espandere sul mercato globale. Con una comprovata esperienza in M&A, ha guidato un significativo tasso di miglioramento delle prestazioni nelle fusioni/gestione aziendale. Familiare con le complessità della due diligence e della valutazione aziendale, nella sua lunga carriera ha affrontato con successo le sfide di diverse culture aziendali in vari settori industriali e Finanziari (PE). CEO di Infratel SpA – Infrastrutture e Telecomunicazioni per l'Italia. Vice Presidente dell'Associazione Italiana delle Fiere ed Eventi."
+        },
+        "angelo": {
+          "name": "Dr. Angelo Rossi",
+          "role": "(Amministratore Delegato)",
+          "description": "Un manager internazionale altamente qualificato nel campo dei metalli preziosi con una rete mondiale di relazioni commerciali. È la forza trainante visionaria del gruppo, assistito da un team di manager di alto livello."
+        },
+        "francesco": {
+          "name": "Dr. Francesco Mariano Mariano",
+          "role": "(Direttore Finanziario)",
+          "description": "Un banchiere italiano dotato di una comprensione unica del sistema bancario internazionale. Presidente della Fondazione Vis a Lecce, l'entità non profit che gestisce il Campus dell'Università del Salento, a Lecce."
+        },
+        "elena": {
+          "name": "Dr. Sa Elena Actis",
+          "role": "(Responsabile Conformità)",
+          "description": "Uno dei migliori esperti di Relazioni Istituzionali e Affari Pubblici in Italia, Presidente dell'Associazione Hydro Aid e Professore Universitario presso l'Istituto Europeo di Design per il corso di Marketing e Comunicazione Strategica."
+        },
+        "ed": {
+          "name": "Mr. Ed Bass",
+          "role": " (Amministratore Delegato USA)",
+          "description": "Serve come Presidente e Direttore Finanziario di Equitus Corporation e precedentemente era Presidente di Xerox Business Solutions."
+        },
+        "valentina": {
+          "name": "Miss Valentina Rossi",
+          "role": "(Responsabile Amministrativo)",
+          "description": "È una ex stagista del CRN e oggi sovrintende all'amministrazione del Gruppo"
+        }
+      }
+    },
+    "careers": {
+      "title": "Vuoi Lavorare con Noi?",
+      "description": "Invia il tuo curriculum a:",
+      "email": "info@mac-ro-capital.com"
+    },
+    "partner": {
+      "title": "Il Nostro Partner di Distribuzione",
+      "description": "Mac & Ro Capital collabora orgogliosamente con Gold Rock Capital come nostra azienda di distribuzione ufficiale. Questa partnership garantisce che i nostri prodotti e soluzioni d'oro siano consegnati con gli stessi valori per cui ci battiamo — sicurezza, trasparenza e professionalità.",
+      "visitLink": "Visita: Gold Rock Capital"
+    }
+  },
+  "servicePage": {
+    "hero": {
+      "title": "I Nostri Servizi",
+      "description": "In Mac & Ro Capital, forniamo soluzioni end-to-end lungo tutta la catena del valore dell'oro — dall'approvvigionamento e estrazione alla raffinazione e deposito sicuro. Con decenni di esperienza e rigorosa aderenza agli standard internazionali, i nostri servizi sono progettati per offrire trasparenza, affidabilità e valore a lungo termine per individui, famiglie e aziende che cercano di salvaguardare e far crescere la loro ricchezza attraverso l'oro fisico."
+    },
+    "services": {
+      "consultancy": {
+        "title": "Consulenza",
+        "description": "Mac & Ro Capital FZC fornisce consulenza specializzata negli investimenti in oro e nella gestione patrimoniale. I nostri esperti guidano individui, famiglie e aziende nella costruzione di strategie personalizzate che si concentrano su sicurezza, diversificazione e crescita a lungo termine, con piena conformità agli standard internazionali."
+      },
+      "sourcing": {
+        "title": "Approvvigionamento",
+        "description": "Garantiamo l'approvvigionamento etico e responsabile di oro grezzo attraverso partnership con fornitori certificati e tracciabili. Ogni passaggio segue rigorose linee guida OCSE, dando ai nostri clienti completa trasparenza e fiducia nelle origini dei loro investimenti."
+      },
+      "mining": {
+        "title": "Estrazione",
+        "description": "Attraverso collaborazioni minerarie strategiche, Mac & Ro garantisce l'accesso a oro grezzo di alta qualità. Il nostro impegno per pratiche minerarie responsabili garantisce sostenibilità, conformità legale e rispetto per standard ambientali e sociali."
+      },
+      "smelting": {
+        "title": "Fusione",
+        "description": "Le nostre strutture di fusione avanzate trasformano i materiali estratti in input uniformi e di alta qualità per la raffinazione. Questo processo garantisce affidabilità, coerenza e piena tracciabilità mentre il materiale grezzo progredisce attraverso la catena del valore dell'oro."
+      },
+      "refining": {
+        "title": "Raffinazione",
+        "description": "Mac & Ro raffina l'oro ai più alti standard internazionali, fornendo oro puro 24K (999.9) certificato LBMA e non LBMA. Ogni lingotto è numerato, documentato e accompagnato da certificazione per garantire autenticità e qualità di grado di investimento."
+      },
+      "vaultSafeDeposit": {
+        "title": "Deposito Sicuro in Vault",
+        "description": "Forniamo soluzioni di stoccaggio di classe mondiale per metalli preziosi in vault internazionali come Brinks, Loomis e Malca-Amit. Con depositi segregati, tracciamento costante e copertura assicurativa completa, i clienti godono di completa tranquillità e piena proprietà legale dei loro asset."
+      }
+    }
+  },
+  "locationSwap": {
+    "hero": {
+      "title": "Location Swap dell'Oro",
+      "description": "Un location swap (dal latino \"locus/locatio\") è una transazione di oro fisico dove quantità equivalenti di oro vengono scambiate tra due posizioni diverse, tipicamente due hub dell'oro. I location swap permettono un trasferimento efficiente del metallo senza la necessità di trasportare fisicamente l'oro in una singola posizione centrale."
+    },
+    "locations": {
+      "description": "Mac & Ro Capital FZC può fornire Gold Location Swap nei seguenti hub:",
+      "london": "Londra",
+      "zurich": "Zurigo",
+      "lecce": "Lecce",
+      "dubai": "Dubai",
+      "hongKong": "Hong Kong",
+      "newYork": "New York"
+    },
+    "benefits": {
+      "title": "Benefici di un Gold Location Swap",
+      "reducedTransportation": {
+        "title": "1. Riduzione dei Costi di Trasporto e Stoccaggio",
+        "points": [
+          "Invece di spostare fisicamente l'oro da una posizione all'altra (che è costoso e rischioso), i trader possono scambiarlo con una controparte che ha già oro nella posizione desiderata.",
+          "Risparmia su spedizioni, assicurazioni, sicurezza e tasse doganali."
+        ]
+      },
+      "improvedLiquidity": {
+        "title": "2. Liquidità e Accesso al Mercato Migliorati",
+        "points": [
+          "I location swap aiutano i partecipanti ad accedere ai mercati locali (ad esempio, centri di raffinazione svizzeri, acquirenti asiatici a Singapore o Shanghai, domanda del Medio Oriente a Dubai).",
+          "Questo rende l'oro più fungibile globalmente e garantisce liquidità in più hub."
+        ]
+      },
+      "regulatoryOptimization": {
+        "title": "3. Ottimizzazione Normativa e Fiscale",
+        "points": [
+          "Alcune giurisdizioni hanno regimi fiscali, doganali o di reporting più favorevoli.",
+          "Scambiando invece di spedire, le parti possono evitare di innescare tasse di importazione/esportazione o ostacoli normativi."
+        ]
+      },
+      "fasterSettlement": {
+        "title": "4. Regolamento e Consegna Più Veloci",
+        "points": [
+          "Il trasporto fisico dell'oro può richiedere giorni o settimane.",
+          "Un location swap permette di soddisfare gli obblighi di consegna \"istantanea\" in un altro hub, aiutando a regolare i contratti più efficientemente."
+        ]
+      },
+      "riskReduction": {
+        "title": "5. Riduzione del Rischio",
+        "points": [
+          "Elimina i rischi legati al trasporto fisico (furto, ritardi, instabilità politica nei paesi di transito).",
+          "Riduce il rischio di controparte utilizzando scambi riconosciuti, standard LBMA o reti di deposito fidate."
+        ]
+      },
+      "flexibility": {
+        "title": "6. Flessibilità per Arbitraggio e Copertura",
+        "points": [
+          "I trader possono fare arbitraggio delle differenze tra i prezzi regionali dell'oro (ad esempio, spot di Londra vs premium di Shanghai).",
+          "Raffinerie, gioiellieri o banche di lingotti possono garantire forniture dove la domanda è più alta senza spostare lingotti oltre i confini."
+        ]
+      },
+      "centralBankSupport": {
+        "title": "7. Supporto per Banche Centrali e Grandi Istituzioni",
+        "points": [
+          "Le banche centrali spesso detengono oro in più vault internazionali. I location swap permettono loro di ottimizzare le partecipazioni senza interrompere le riserve fisiche.",
+          "Le istituzioni possono riequilibrare l'inventario dell'oro più vicino agli utenti finali o raffinatori."
+        ]
+      }
+    },
+    "cta": "Hai bisogno di aiuto per scambiare la posizione del tuo oro?"
+  },
+  "corporateGovernance": {
+    "hero": {
+      "title": "Approvvigionamento Responsabile",
+      "description": "Siamo impegnati nell'approvvigionamento etico e responsabile dell'oro, garantendo piena conformità agli standard internazionali e alle pratiche di due diligence. La nostra catena di fornitura è attentamente verificata per supportare trasparenza, diritti umani e sostenibilità ambientale."
+    },
+    "sections": {
+      "dubai": "Dubai",
+      "italy": "Italia"
+    },
+    "table": {
+      "reports": "Rapporti",
+      "downloads": "Download",
+      "downloadButton": "Scarica"
+    },
+    "alerts": {
+      "downloadNotAvailable": "Link di download non disponibile per questo rapporto.",
+      "downloadFailed": "Download fallito. Riprova o contatta il supporto."
+    }
+  },
+  "liveRate": {
+    "tabs": {
+      "goldOz": "Oro/oz",
+      "goldG": "Oro/g"
+    },
+    "title": {
+      "goldOz": "ORO/oz",
+      "goldG": "ORO/g"
+    }
+  },
+  "productDetails": {
+    "specifications": "Specifiche",
+    "weight": "Peso",
+    "length": "Lunghezza",
+    "diameter": "Diametro",
+    "thickness": "Spessore",
+    "fineness": "Finezza",
+    "certification": "Certificazione",
+    "description": "Descrizione",
+    "shopNow": "Acquista Ora",
+    "contactSales": "Contatta Vendite",
+    "relatedProducts": "Potresti Anche Preferire",
+    "emailInquiry": {
+      "subject": "Product Inquiry: {productName}",
+      "body": "Hello,\n\nI am interested in purchasing the following product:\n\nProduct: {productName}\nWeight: {weight}\nLength: {length}\nDiameter: {diameter}\nThickness: {thickness}\nFineness: {fineness}\nCertification: {certification}\n\nPlease provide me with more information about pricing, availability, and purchasing process.\n\nThank you."
+    }
+  },
+  "metalAccountsPage": {
+    "hero": {
+      "title1": "Conti Metalli:",
+      "title2": "Proprietà Oro Sicura",
+      "title3": "con Valore Duraturo"
+    },
+    "intro": {
+      "description": "Mac & Ro Capital offre a tutte le parti interessate quattro diversi tipi di Conti Metalli per fornire soluzioni dedicate ai diversi bisogni del Mercato di Investimento in Oro Fisico. Oltre al classico Piano di Accumulo per acquisti ciclici su base mensile e trimestrale, chiamato PAC, abbiamo lanciato la possibilità di sfruttare opportunità aggiuntive mirate, adatte per investitori specifici. Promuoviamo una cultura patrimoniale responsabile fondata su stabilità, controllo diretto, documentazione certificata e piena conformità normativa. Il Conto di Trading Metallico è un nuovo tipo di soluzione disponibile per i clienti più esigenti, sempre alla ricerca di nuove opportunità. Questo è un conto attraverso il quale operi sul trading giornaliero sui mercati internazionali."
+    },
+    "sections": {
+      "forIndividuals": "Per Individui",
+      "forCompanies": "Per Aziende"
+    },
+    "accounts": {
+      "deluxe": {
+        "title": "Conto Metalli Deluxe",
+        "description": "Possiedi oro fisico con piena sicurezza, certificazione e potenziale di crescita.",
+        "whoItsFor": "Individui, famiglie e aziende che cercano ricchezza stabile e generazionale.",
+        "keyBenefits": "Proprietà completa, depositi sicuri, oro extra, certificato globalmente."
+      },
+      "macRo": {
+        "title": "Conto Metalli Mac & Ro",
+        "description": "Proteggi la tua ricchezza con metalli preziosi allocati, completamente certificati e protetti.",
+        "whoItsFor": "Investitori e aziende che cercano asset sicuri e tangibili.",
+        "keyBenefits": "Lingotti numerati, depositi segregati, proprietà completa, nessun rischio di credito."
+      },
+      "eot": {
+        "title": "Fine Trattamento (EOT)",
+        "description": "Pagamenti di fine rapporto in oro fisico per dirigenti.",
+        "whoItsFor": "Aziende che pianificano benefici per dirigenti",
+        "keyBenefits": "Efficiente dal punto di vista fiscale, sicuro, flessibile"
+      },
+      "keyman": {
+        "title": "Conto Metalli Key Man",
+        "description": "Proteggi la tua azienda dalla perdita di personale chiave.",
+        "whoItsFor": "Aziende con dipendenti essenziali",
+        "keyBenefits": "Pagamento immediato, asset liquido"
+      }
+    },
+    "labels": {
+      "whoItsFor": "Per Chi È:",
+      "keyBenefits": "Benefici Chiave:",
+      "learnMore": "Scopri di Più"
+    },
+    "conclusion": "Con competenza globale, approvvigionamento etico e rigorosa conformità, Mac & Ro Capital garantisce che il tuo Conto Metalli protegga sia il tuo oro che il tuo personale critico.",
+    "cta": {
+      "title": "Inizia il tuo viaggio di investimento oggi!"
+    }
+  },
+  "faq": {
+    "hero": {
+      "title": "Domande Frequenti",
+      "description": "Trova risposte alle domande comuni sui nostri servizi, processi di investimento e come iniziare con Mac & Ro."
+    },
+    "questions": {
+      "whatIsMacRo": {
+        "question": "Cos'è Mac & Ro Capital?",
+        "answer": "Mac & Ro Capital FZC (www.mac-ro-capital.com) è un Trader d'Oro e Fornitore di Servizi d'Oro. Fa parte del Gruppo Mac & Ro (www.mac-ro-group.it). Oltre alla nostra presenza locale, il Gruppo Mac & Ro è profondamente radicato in tutta la Catena dell'Industria dell'Oro, facilitando l'acquisizione e la vendita di lingotti e dorè di grado investimento."
+      },
+      "authorizedInUAE": {
+        "question": "Mac & Ro Capital è autorizzata a operare negli Emirati Arabi Uniti?",
+        "answer": "Sì, Mac & Ro Capital FZC opera sotto la piena autorizzazione e regolamentazione della SAIF ZONE - SAIF GOLD PARK di Sharjah, detenendo tutte le licenze necessarie. Rispettiamo rigorosamente tutte le normative degli UAE che regolano il commercio di metalli preziosi, inclusi robusti protocolli Anti-Riciclaggio (AML) e Conosci il Tuo Cliente (KYC) per garantire un ambiente sicuro e conforme per tutti i nostri clienti."
+      },
+      "services": {
+        "question": "Quali servizi ricevo da Mac & Ro Capital FZC?",
+        "answer": "Mac & Ro Capital FZC è il tuo partner completo per tutte le iniziative sui metalli preziosi, offrendo una gamma diversificata di servizi meticolosamente progettati per individui, piccoli investitori ed entità aziendali. Le nostre offerte spaziano dall'acquisizione fisica diretta, servizi industriali e soluzioni di investimento e partnership specializzate:",
+        "points": [
+          "Vendita Oro/Metalli Preziosi (Ufficio Sharjah): Puoi acquistare e acquisire oro fisico direttamente dal nostro ufficio di Sharjah, dove il nostro team esperto fornisce servizio e consulenza personalizzati.",
+          "Vendita Oro (PIATTAFORMA ONLINE): La nostra piattaforma Capital sicura fornisce un canale digitale conveniente e semplificato per acquistare lingotti d'oro fisici dal comfort di casa tua, con opzioni di consegna assicurata.",
+          "APP ORO VIVO (Applicazione Mobile): Impegnati nel trading dinamico utilizzando la nostra app mobile all'avanguardia per il trading dell'oro, Location Swap e molto altro — permettendoti di acquistare e vendere oro basandoti su fluttuazioni di mercato in tempo reale e gestire le tue partecipazioni dal tuo telefono.",
+          "Conto Risparmio Oro: Progettato per piccoli investitori, questo servizio consente l'accumulo graduale di oro attraverso contributi regolari flessibili, con l'opzione di riscatto fisico una volta raggiunta una quantità sufficiente.",
+          "Intermediazione: Offriamo un canale di intermediazione dedicato, fornendo a individui e agenti l'opportunità di generare entrate riferendo clienti ai nostri servizi completi di metalli preziosi.",
+          "Servizi Clienti Aziendali: Soluzioni personalizzate per le aziende per gestire ed eseguire efficientemente transazioni di metalli preziosi di grande volume, soddisfacendo specifici requisiti di investimento e operativi.",
+          "Trattamento Oro all'Ingrosso: Per acquisizioni o vendite significative, facilitiamo il commercio di lingotti all'ingrosso, offrendo prezzi competitivi, logistica sicura e servizio discreto per transazioni di grandi dimensioni."
+        ],
+        "conclusion": "Che tu stia cercando di acquisire oro fisico, impegnarti nel trading attivo, costruire risparmi a lungo termine o esplorare partnership aziendali, Mac & Ro Capital FZC fornisce un ambiente sicuro, trasparente e versatile per tutte le tue aspirazioni sui metalli preziosi."
+      },
+      "securityMeasures": {
+        "question": "Quali misure di sicurezza sono in atto per proteggere i miei metalli preziosi e fondi?",
+        "answer": "Utilizziamo protocolli di sicurezza multilivello per proteggere i tuoi asset. Le partecipazioni d'oro fisico sono protette in depositi fortificati e assicurati. La nostra piattaforma online utilizza crittografia avanzata e autenticazione multi-fattore per proteggere le tue transazioni digitali e l'accesso al conto. Tutti i trasferimenti finanziari aderiscono a rigorosi standard di sicurezza bancaria."
+      },
+      "authenticityPurity": {
+        "question": "Come garantite l'autenticità e la purezza dell'oro che acquistate?",
+        "answer": "Il nostro impegno per la qualità è fondamentale. Tutti i prodotti di lingotti d'oro che commerciamo sono direttamente provenienti da raffinerie e zecche rispettabili, e la loro autenticità e purezza sono garantite dalla loro aderenza agli rigorosi Standard Dubai Good Delivery (DGD) o London Good Delivery (LGD). Ogni acquisto fisico viene con un certificato di autenticità verificabile."
+      },
+      "dataProtection": {
+        "question": "Come sono protette le mie informazioni personali e finanziarie?",
+        "answer": "Aderiamo a rigorosi principi di privacy dei dati. Le tue informazioni personali e finanziarie sono gestite con la massima riservatezza, protette attraverso robuste salvaguardie tecnologiche e processate in piena conformità con le normative di protezione dei dati degli UAE. Non condividiamo i tuoi dati con terze parti non autorizzate."
+      },
+      "howToBuy": {
+        "question": "Come acquistare oro da Mac & Ro Capital FZC?",
+        "answer": "Il nostro business principale è la vendita di oro fisico. Offriamo lingotti di metalli preziosi autentici sia a individui che aziende a prezzi competitivi.",
+        "methods": [
+          "Nel Nostro Luogo Fisico: Sei invitato a visitare il nostro ufficio o negozio di Sharjah dove il nostro team può guidarti attraverso il processo di acquisto di oro, argento o altri metalli preziosi di persona.",
+          "Attraverso il Nostro Negozio di Lingotti Online: Esplora la nostra selezione di lingotti d'oro nel nostro negozio di lingotti online sicuro. Una volta scelti gli articoli desiderati, completa il pagamento in modo sicuro online o tramite bonifico bancario. Organizziamo quindi per la consegna assicurata e certificata direttamente alla tua porta negli UAE, completata dal nostro impegno a riacquistare il tuo acquisto al nostro prezzo di acquisizione prevalente.",
+          "Utilizzando la Nostra Piattaforma di Trading Online (Conto Metalli): Progettata per clienti interessati all'impegno quotidiano, la nostra piattaforma online ti consente di acquistare oro in qualsiasi momento, da qualsiasi luogo. Mantieni la flessibilità di vendere le tue partecipazioni indietro attraverso la piattaforma o richiedere il riscatto fisico di lingotti in una fase successiva. Facilitiamo anche prenotazioni con un deposito anticipato parziale, con il saldo rimanente saldato prima della consegna. La consegna fisica sicura a domicilio negli UAE è anche un'opzione disponibile.",
+          "Operando con l'APP OROVIVO: Con la nostra app all'avanguardia, tutti i nostri clienti possono fare trading in tempo reale con lingotti d'oro, possono effettuare Location Swap e molto altro."
+        ]
+      },
+      "minimumQuantity": {
+        "question": "Quale quantità minima posso acquistare dal Trading dell'Oro?",
+        "answer": "Le quantità di acquisto minime differiscono in base al metodo di acquisizione scelto:",
+        "methods": [
+          "Via il Nostro Negozio di Lingotti Online: Il nostro inventario include oro in varie denominazioni standard, che vanno da 1 grammo fino a lingotti e monete da 1 chilogrammo.",
+          "Via la Nostra APP OROVIVO: Tutti i clienti possono operare per qualsiasi quantità di tutti i diversi tipi di trading."
+        ]
+      },
+      "sellBack": {
+        "question": "Posso vendere l'oro o altri metalli preziosi acquistati indietro a Mac & Ro Capital FZC?",
+        "answer": "Assolutamente. Mac & Ro Capital FZC mantiene un robusto programma di riacquisto per tutti i metalli preziosi originariamente acquisiti da noi. Puoi disinvestire le tue partecipazioni sia attraverso il tuo conto lingotti online (se il metallo è detenuto con noi) o restituendo fisicamente la merce se era sotto la tua custodia diretta. Tutte le transazioni di riacquisto sono processate ai prezzi di mercato spot internazionali prevalenti."
+      },
+      "pricing": {
+        "question": "A quale prezzo posso acquistare o vendere oro?",
+        "answer": "Quando transazione sulla nostra piattaforma online, i tuoi acquisti e vendite di metalli preziosi sono basati sui tassi di mercato spot internazionali in tempo reale. Questi prezzi mostrano fluttuazioni continue durante la settimana di trading, da lunedì a venerdì. Si prega di notare che le nostre commissioni di servizio o commissioni applicabili saranno applicate in aggiunta al prezzo spot visualizzato."
+      },
+      "brands": {
+        "question": "Quali marchi sono disponibili presso Mac & Ro Capital FZC? Sono certificati?",
+        "answer": "Mac & Ro Capital FZC offre con orgoglio una gamma diversificata di marchi di lingotti globali rispettabili e locali prominenti, inclusi ma non limitati a Pamp, Credit Suisse, Chimet, Emirates Gold, Al Etihad Gold o raffinerie Saif Zone Gold. Tutti i nostri prodotti di lingotti aderiscono rigorosamente e sono certificati sotto gli Standard Dubai Good Delivery (DGD) o London Good Delivery (LGD), garantendo la loro autenticità e finezza senza pari."
+      },
+      "deliveryCosts": {
+        "question": "Quali sono le specifiche di consegna e i costi associati per le spedizioni negli UAE?",
+        "answer": "Negli UAE, offriamo consegna sicura e completamente assicurata a domicilio. Le commissioni di consegna specifiche dipendono dal valore e dal peso dell'ordine, e i tempi di consegna stimati saranno forniti al momento dell'acquisto. I dettagli sono anche disponibili nella sezione informazioni di consegna del nostro negozio di lingotti online."
+      },
+      "directCollection": {
+        "question": "È possibile raccogliere il mio oro o argento fisico direttamente dal vostro ufficio?",
+        "answer": "Assolutamente. Sei il benvenuto ad organizzare la raccolta diretta del tuo oro o argento fisico dal nostro ufficio di Sharjah. Per garantire un processo fluido, si prega di programmare la raccolta in anticipo e portare documenti di identificazione validi per la verifica."
+      },
+      "insurance": {
+        "question": "Come è gestita l'assicurazione per le consegne fisiche?",
+        "answer": "Ogni consegna fisica spedita da Mac & Ro Capital FZC è completamente assicurata contro perdita o danno fino a quando non raggiunge il tuo indirizzo di consegna specificato ed è firmata. Questo garantisce tranquillità durante tutto il processo di transito."
+      },
+      "internationalDelivery": {
+        "question": "Mac & Ro Capital FZC può consegnare oro anche fuori dagli UAE?",
+        "answer": "Sì, Mac & Ro Capital FZC estende i suoi servizi di consegna per lingotti e monete d'oro oltre i confini degli UAE alla maggior parte delle destinazioni internazionali, purché non siano soggetti a restrizioni commerciali globali. I clienti dovrebbero anticipare commissioni corriere applicabili, assicurazione e eventuali commissioni doganali."
+      },
+      "secureStorage": {
+        "question": "Posso Memorizzare il Mio Oro in Sicurezza e Riceverlo Più Tardi?",
+        "answer": "Sì, assolutamente! Offriamo un servizio davvero unico e sicuro che ti consente di memorizzare le tue partecipazioni d'oro elettronicamente all'interno della nostra applicazione dedicata. Questo significa che puoi acquistare oro da noi e averlo rappresentato digitalmente nel tuo conto. Non avrai bisogno di memorizzazione fisica da parte tua, e non incorrerai in alcuna spesa di memorizzazione.",
+        "conclusion": "Quello che rende questo servizio eccezionale è la robusta sicurezza integrata nel nostro sistema elettronico. Il tuo oro è sempre completamente sostenuto da riserve fisiche, garantendo la sua integrità e la tua tranquillità. Quando sei pronto a prendere possesso, puoi semplicemente richiedere di ricevere il tuo oro in natura, e ti forniremo i lingotti fisici equivalenti. Questo servizio combina unicamente la convenienza della gestione digitale con la sicurezza incrollabile di sapere che il tuo oro è sempre riscattabile nella sua forma fisica."
+      },
+      "documentsRequired": {
+        "question": "Quali documenti specifici sono necessari per aprire un Conto Metalli o Conto Risparmio Oro?",
+        "answer": "Per aprire un conto, richiediamo tipicamente una forma valida di identificazione (es. passaporto o Emirates ID) e prova di indirizzo. Il nostro modulo di registrazione online o Accordo di Acquisto Lingotti elencherà tutti i requisiti precisi, garantendo un processo di onboarding fluido."
+      },
+      "lostCredentials": {
+        "question": "Qual è la procedura se smarrisco i dettagli di accesso del mio Conto Metalli?",
+        "answer": "Se dimentichi le tue credenziali di accesso, usa semplicemente il link 'Password Dimenticata' nella pagina di accesso della nostra piattaforma. Sarai guidato attraverso un processo sicuro per reimpostare la tua password. Il nostro supporto clienti può anche assistere se incontri difficoltà."
+      },
+      "customerService": {
+        "question": "Quali sono gli orari del servizio clienti e i canali di contatto disponibili?",
+        "answer": "Il nostro team di servizio clienti dedicato è disponibile per assisterti dalle 10:00 alle 18:00, dal lunedì al venerdì via telefono al +971 …………….., email a info@mac-ro-capital.com"
+      },
+      "vat": {
+        "question": "L'IVA si applica all'acquisto o vendita di oro a Dubai/UAE?",
+        "answer": "Negli UAE, l'oro di grado investimento (con purezza del 99.5% o superiore, tipicamente in forma di lingotti o monete) è generalmente zero-rated per l'IVA. Questo significa che nessuna Imposta sul Valore Aggiunto è applicata al suo acquisto o vendita sotto le normative attuali. Tuttavia, tipi specifici di gioielli d'oro o oro con purezza inferiore potrebbero essere soggetti all'IVA. Consigliamo di consultare un professionista fiscale per consigli personalizzati."
+      },
+      "otherTaxes": {
+        "question": "Ci sono altre tasse o dazi associati al trading dell'oro negli UAE?",
+        "answer": "Attualmente, gli individui che fanno trading dell'oro come investimento negli UAE non sono soggetti a tassa sui guadagni in conto capitale. Potrebbero applicarsi dazi di importazione o esportazione su certi movimenti fisici di oro, particolarmente per quantità commerciali o forme specifiche di oro. Raccomandiamo di rivedere le più recenti normative fiscali degli UAE o cercare consigli fiscali professionali per le tue circostanze specifiche."
+      },
+      "onlinePlatform": {
+        "question": "Cos'è la Piattaforma Online?",
+        "answer": "Ospitiamo una piattaforma online sofisticata, accessibile tramite applicazioni dedicate per dispositivi mobili e desktop. Questo strumento fornisce prezzi spot internazionali in tempo reale per l'oro, riflettendo continui spostamenti di mercato dal lunedì al venerdì. Ti permette di eseguire ordini di acquisto e vendita online per l'oro, permettendoti di sfruttare questi movimenti di prezzo strategicamente."
+      },
+      "accountRequired": {
+        "question": "C'è bisogno di aprire un conto per prenotare prezzi online tramite l'APP OROVIVO?",
+        "answer": "Infatti, per accedere e utilizzare la nostra piattaforma online o l'APP OROVIVO per la prenotazione di prezzi in tempo reale e transazioni, stabilire un Conto Metalli è un prerequisito."
+      },
+      "openAccount": {
+        "question": "Come posso aprire un Conto Metalli?",
+        "answer": "Iniziare il tuo Conto Metalli è un processo rapido. Puoi completare il nostro modulo di registrazione digitale disponibile sul nostro sito web o tramite l'APP OROVIVO, o alternativamente, scaricare, compilare e inviare l'Accordo di Acquisto Lingotti o il modulo Conto Metalli a info@mac-ro-capita.com. Entrambi i metodi sono progettati per l'efficienza, tipicamente richiedendo solo pochi minuti del tuo tempo."
+      },
+      "accessAccount": {
+        "question": "Come posso accedere al mio Conto Metalli?",
+        "answer": "Dopo l'approvazione del tuo Conto Metalli, puoi ottenere accesso scaricando la nostra applicazione di piattaforma di trading specializzata sul tuo dispositivo mobile o desktop preferito. Le tue credenziali di accesso fornite ti permetteranno di gestire il tuo conto in modo sicuro e iniziare le tue attività di trading."
+      },
+      "minimumAmount": {
+        "question": "Qual è l'importo minimo necessario per aprire un Conto Metalli?",
+        "answer": "Per attivare e iniziare il trading con un Conto Metalli, è richiesto un finanziamento iniziale di $1000 USD."
+      },
+      "operationalHours": {
+        "question": "Quali sono gli orari operativi per la piattaforma di trading online?",
+        "answer": "La nostra piattaforma di trading online opera continuamente dal lunedì al venerdì, fornendo accesso 24/5 ai mercati. Si prega di essere consapevoli che le vacanze di mercato o periodi di manutenzione specifici potrebbero occasionalmente influenzare questi orari, che saranno comunicati in anticipo."
+      },
+      "maintenance": {
+        "question": "Ci saranno tempi di inattività programmati o manutenzione per la piattaforma?",
+        "answer": "Per garantire prestazioni ottimali e sicurezza, programmiamo occasionalmente finestre di manutenzione brevi. Tali istanze sono tipicamente pianificate durante ore non di punta e i clienti sono notificati ben in anticipo attraverso annunci della piattaforma ed email."
+      },
+      "connectionInterruption": {
+        "question": "Cosa succede se la mia connessione internet viene interrotta durante un trade?",
+        "answer": "In caso di interruzione internet durante un trade attivo, il nostro sistema è progettato per gestire ordini basati sull'ultima istruzione confermata. Per qualsiasi preoccupazione immediata, il nostro team di supporto clienti è prontamente disponibile via telefono per assisterti."
+      },
+      "spotPrice": {
+        "question": "Potresti spiegare cosa rappresenta il 'prezzo spot'?",
+        "answer": "Il 'prezzo spot' si riferisce al prezzo di mercato corrente al quale un metallo prezioso può essere acquistato o venduto per consegna immediata. È un benchmark riconosciuto internazionalmente, derivato da scambi di trading globali, formando la base della nostra determinazione dei prezzi sulla piattaforma."
+      },
+      "hiddenFees": {
+        "question": "Ci sono commissioni non divulgate o addebiti supplementari?",
+        "answer": "La trasparenza è una pietra angolare del nostro servizio. Tutte le commissioni applicabili per l'uso della piattaforma sono esplicitamente dettagliate nei nostri termini e condizioni e durante il processo di transazione. Ti assicuriamo che non ci sono commissioni nascoste. Per una comprensione completa, il nostro servizio clienti è disponibile per fornire una ripartizione completa."
+      },
+      "advancedOrders": {
+        "question": "La vostra piattaforma supporta tipi di ordine avanzati, come ordini limite o stop-loss?",
+        "answer": "Sì, la nostra piattaforma di trading online offre capacità di gestione ordini sofisticate, inclusa la capacità di posizionare ordini limite (per acquistare/vendere a un prezzo specifico o migliore) e ordini stop-loss (per limitare perdite potenziali). Queste caratteristiche permettono un trading più strategico."
+      },
+      "otherAccountTypes": {
+        "question": "C'è qualche altro tipo di conto oltre al Conto Live?",
+        "answer": "Sì, insieme al nostro Conto Metalli per il trading attivo, offriamo anche il Conto Risparmio Oro, Conto Metalli Deluxe, Conto Metalli Key Man, Conto Location Swap e Conto EOT."
+      },
+      "goldSavingAccount": {
+        "question": "Cos'è il Conto Risparmio Oro?",
+        "answer": "La possibilità di aprire un Conto Risparmio Oro è specificamente progettata per individui che cercano di convertire sistematicamente i loro risparmi monetari in oro. Hai la flessibilità di iniziare con un importo modesto, come AED 3670 o più, e contribuire regolarmente o quando conveniente. Una volta che la tua quantità di oro accumulata raggiunge o supera una barra da 10 grammi, acquisisci l'opzione di riscattarla nella sua forma fisica."
+      },
+      "fundingCurrencies": {
+        "question": "In quale valuta posso finanziare il mio conto?",
+        "answer": "Facilitiamo i depositi in AED (Dirham degli Emirati Arabi Uniti), USD (Dollaro Americano) ed EUR (Euro). Si prega di essere consapevoli che potrebbero essere applicate commissioni di conversione valuta bancaria standard se la valuta del deposito differisce dalla valuta del conto designata."
+      },
+      "platformCharges": {
+        "question": "Quali sono le commissioni sull'acquisto e vendita tramite piattaforma?",
+        "answer": "Applichiamo solo commissioni nominali specificamente quando apri una posizione sulla nostra piattaforma di trading. Non ci sono commissioni aggiuntive incorse per chiudere queste posizioni. Per una panoramica completa della nostra struttura delle commissioni, ti incoraggiamo a contattare il nostro team di servizio clienti a info@mac-ro-capital.com."
+      },
+      "fundingMethods": {
+        "question": "Come finanziare un Conto Metalli o Conto Risparmio Oro?",
+        "answer": "Hai metodi multipli convenienti per accreditare il tuo Conto Metalli o Conto Risparmio Oro:",
+        "methods": [
+          "Deposito Contanti: Direttamente presso il nostro ufficio o negozio sicuro.",
+          "Bonifico Bancario: I fondi possono essere trasferiti elettronicamente ai nostri conti bancari ufficiali.",
+          "Deposito Lingotti Fisici: Puoi depositare lingotti d'oro o argento fisici. Li acquisteremo quindi al prezzo di mercato prevalente, e il valore monetario equivalente sarà accreditato direttamente al tuo conto."
+        ]
+      },
+      "redemptionTime": {
+        "question": "Quanto tempo ci vuole per riscattare lingotti o monete fisiche?",
+        "answer": "Il riscatto fisico dei tuoi lingotti o monete è solitamente processato entro 2-3 giorni lavorativi sotto circostanze di mercato tipiche. Tuttavia, durante periodi di domanda elevata o spostamenti di mercato imprevisti, questo lasso di tempo potrebbe occasionalmente estendersi a due settimane."
+      },
+      "marketUpdates": {
+        "question": "Come ottengo aggiornamenti e previsioni di mercato?",
+        "answer": "Come cliente registrato e apprezzato, puoi ottenere intelligence di mercato e notizie attuali nella nostra sezione Gold News dedicata sul nostro sito web e attraverso i nostri canali ufficiali di social media."
+      },
+      "uaeRegulation": {
+        "question": "Come è regolata l'industria dell'oro degli UAE?",
+        "answer": "Tutta la regolamentazione dell'industria dell'oro degli UAE è effettuata a livello federale dal Ministero dell'Economia. Il MoE ha stabilito un set completo di regolamenti e politiche per mitigare i rischi all'interno del settore dei metalli preziosi.",
+        "additional": "Maggiori informazioni sui regolamenti di due diligence per l'approvvigionamento responsabile dell'oro possono essere trovate sul sito web ufficiale del MoE."
+      },
+      "uaeOversight": {
+        "question": "Cosa fanno gli UAE per migliorare la supervisione del commercio e circolazione dell'oro nel paese?",
+        "answer": "Il Ministero dell'Economia degli UAE ha stabilito il Comitato Emirates Gold Bullion per unificare gli sforzi nazionali per migliorare la supervisione del settore dell'oro.",
+        "details": [
+          "Il Comitato Emirates Gold Bullion sovrintende allo Standard Emirates Good Delivery per l'Oro, che è stato lanciato nel novembre 2021.",
+          "Questo è uno standard nazionale che stabilisce le specifiche di qualità e trasparenza per trader e raffinerie d'oro negli EAU. È stato stabilito in conformità con gli ultimi standard internazionali delle migliori pratiche dall'Organizzazione per la Cooperazione e lo Sviluppo Economico (OECD)."
+        ]
+      }
+    },
+    "contact": {
+      "title": "Hai Ancora Domande?",
+      "description": "Non riesci a trovare la risposta che stai cercando? Il nostro team di esperti è qui per aiutarti. Contattaci per assistenza personalizzata con le tue esigenze di investimento.",
+      "contactTeam": "Contatta il Nostro Team",
+      "viewServices": "Visualizza i Nostri Servizi"
+    }
+  }
+}

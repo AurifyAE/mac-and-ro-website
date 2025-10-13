@@ -2,9 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ingotsImg from '../../assets/homepage/ingotsImg.png';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Cta = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -43,13 +45,13 @@ const Cta = () => {
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight font-playfair"
           variants={itemVariants}
         >
-          Build your future on solid gold
+          {t('homepage.cta.title')}
         </motion.h2>
         <motion.p 
           className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
           variants={itemVariants}
         >
-          Mac & Ro Capital offers LBMA and non LBMA-certified 24K gold bars from 1g to 1kg, crafted with precision and distributed in partnership with Gold Rock Capital.
+          {t('homepage.cta.description')}
         </motion.p>
       </motion.div>
 
@@ -84,14 +86,14 @@ const Cta = () => {
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#DCBC7C] mb-6 tracking-tight"
                 variants={itemVariants}
               >
-                Gold Bars
+                {t('homepage.cta.goldBars')}
               </motion.h3>
               
               <motion.p 
                 className="text-sm sm:text-base text-gray-300 mb-8 leading-relaxed"
                 variants={itemVariants}
               >
-                Gold bars offer a cost-effective way to invest in pure gold at scale. Available in sizes from 1 gram to 1 kilo, each bar is certified for purity and globally recognized—perfect for building a strong, secure portfolio.
+                {t('homepage.cta.goldBarsDescription')}
               </motion.p>
 
               <motion.button 
@@ -105,7 +107,7 @@ const Cta = () => {
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-                <span>Shop Now</span>
+                <span>{t('homepage.cta.shopNow')}</span>
               </motion.button>
             </motion.div>
           </div>

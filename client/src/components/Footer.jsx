@@ -8,8 +8,10 @@ import { Link } from 'react-router-dom';
 import visa from '../assets/homepage/visa.svg';
 import mastercard from '../assets/homepage/mastercard.svg';
 import bankTransfer from '../assets/homepage/bankTransfer.png';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const { t } = useTranslation();
     const [email, setEmail] = useState('');
     const [privacyChecked, setPrivacyChecked] = useState(false);
 
@@ -35,12 +37,12 @@ const Footer = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 >
-                <h3 className="text-lg font-bold mb-6 text-black">About Us</h3>
+                <h3 className="text-lg font-bold mb-6 text-black">{t('footer.aboutUs')}</h3>
                 <ul className="space-y-3">
-                    <li><Link to="/who-we-are" className="text-black hover:text-[#DCBC7C] transition-colors">Who We Are</Link></li>
-                    <li><Link to="/metal-accounts" className="text-black hover:text-[#DCBC7C] transition-colors">Metal Account</Link></li>
-                    <li><Link to="/products" className="text-black hover:text-[#DCBC7C] transition-colors">Products</Link></li>
-                    <li><Link to="/contact" className="text-black hover:text-[#DCBC7C] transition-colors">Contact</Link></li>
+                    <li><Link to="/who-we-are" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.whoWeAre')}</Link></li>
+                    <li><Link to="/metal-accounts" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.metalAccount')}</Link></li>
+                    <li><Link to="/products" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.products')}</Link></li>
+                    <li><Link to="/contact" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.contact')}</Link></li>
                 </ul>
                 </motion.div>
 
@@ -51,12 +53,12 @@ const Footer = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
                 >
-                <h3 className="text-lg font-bold mb-6 text-black">Info</h3>
+                <h3 className="text-lg font-bold mb-6 text-black">{t('footer.info')}</h3>
                 <ul className="space-y-3">
-                    <li><Link to="/terms-and-conditions" className="text-black hover:text-[#DCBC7C] transition-colors">Terms & Conditions</Link></li>
-                    <li><Link to="/corporate-governance" className="text-black hover:text-[#DCBC7C] transition-colors">Corporate Governance</Link></li>
-                    <li><Link to="/privacy-policy" className="text-black hover:text-[#DCBC7C] transition-colors">Privacy Policy</Link></li>
-                    <li><Link to="/faq" className="text-black hover:text-[#DCBC7C] transition-colors">FAQ</Link></li>
+                    <li><Link to="/terms-and-conditions" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.termsAndConditions')}</Link></li>
+                    <li><Link to="/corporate-governance" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.corporateGovernance')}</Link></li>
+                    <li><Link to="/privacy-policy" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.privacyPolicy')}</Link></li>
+                    <li><Link to="/faq" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.faq')}</Link></li>
                 </ul>
                 </motion.div>
 
@@ -67,14 +69,14 @@ const Footer = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
                 >
-                <h3 className="text-lg font-bold mb-6 text-black">Subscribe to the Newsletter</h3>
+                <h3 className="text-lg font-bold mb-6 text-black">{t('footer.subscribeNewsletter')}</h3>
                 <form onSubmit={handleSubscribe} className="space-y-4">
                     <div className="flex relative">
                     <input
                         type="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Enter your email"
+                        placeholder={t('footer.enterEmail')}
                         className="w-full px-4 py-3 pr-16 bg-transparent text-black border-2 border-black rounded-full focus:outline-none focus:ring-2 placeholder:text-black/50 focus:ring-[#DCBC7C]"
                         required
                     />
@@ -95,9 +97,9 @@ const Footer = () => {
                         required
                     />
                     <label htmlFor="privacy" className="text-sm text-black leading-relaxed">
-                        By sending this email I declare that I have read the{' '}
+                        {t('footer.privacyDeclaration')}{' '}
                         <Link to="/privacy-policy" className="text-[#DCBC7C] hover:underline">
-                            privacy policy
+                            {t('footer.privacyPolicy')}
                         </Link>
                     </label>
                     </div>
@@ -127,16 +129,16 @@ const Footer = () => {
                 
                 {/* Professional Operator Code */}
                 <p className="text-[13px] text-black">
-                    Professional Operator Code Gold 24378
+                    {t('footer.professionalOperatorCode')}
                 </p>
 
                 <p className="text-[13px] text-black">
-                    VAT number 104904019700003
+                    {t('footer.vatNumber')}
                 </p>
                 
                 {/* Secure Payments */}
                 <div>
-                    <p className="text-[13px] text-black mb-3">Download App</p>
+                    <p className="text-[13px] text-black mb-3">{t('footer.downloadApp')}</p>
                     <div className="flex space-x-3">
                     <div className="w-24 h-auto bg-white rounded">
                         <a href="https://play.google.com/store/apps">
@@ -162,7 +164,7 @@ const Footer = () => {
                 >
                 {/* Dubai Address */}
                 <div>
-                    <h4 className="text-lg font-semibold mb-3 text-black">Dubai:</h4>
+                    <h4 className="text-lg font-semibold mb-3 text-black">{t('footer.dubai')}</h4>
                     <p className="text-black text-[13px] leading-relaxed">
                     MAC & RO CAPITAL FZC, <br />
                     Saif Suite - Gold Park, Q1-1-027 Sharjah <br />
@@ -173,7 +175,7 @@ const Footer = () => {
                 
                 {/* Social Icons */}
                 <div>
-                    <h4 className="text-lg font-semibold mb-3 text-black">Social Media</h4>
+                    <h4 className="text-lg font-semibold mb-3 text-black">{t('footer.socialMedia')}</h4>
                     <div className="flex space-x-4">
                     <a href="#" className="text-black hover:text-[#DCBC7C] transition-colors">
                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -209,7 +211,7 @@ const Footer = () => {
                 >
                 {/* First Address */}
                 <div>
-                    <h4 className="text-lg font-semibold mb-3 text-black">Head Office:</h4>
+                    <h4 className="text-lg font-semibold mb-3 text-black">{t('footer.headOffice')}</h4>
                     <p className="text-black text-[13px] leading-relaxed">
                     MAC & RO SRL <br />
                     Via dei Mocenigo 9, 73100 Lecce, Italy. <br />
@@ -220,7 +222,7 @@ const Footer = () => {
                 
                 {/* Second Address */}
                 <div>
-                    <h4 className="text-lg font-semibold mb-3 text-black">Brazzaville:</h4>
+                    <h4 className="text-lg font-semibold mb-3 text-black">{t('footer.brazzaville')}</h4>
                     <p className="text-black text-[13px] leading-relaxed">   
                     MAC & RO BRAZZAVILLE SARLU, <br />
                     116 Avenue Felix Eboue Mpila Center -<br/> 
@@ -240,7 +242,7 @@ const Footer = () => {
                     {/* Copyright */}
                     <div>
                         <p className="text-white text-[13px]">
-                            © 2025 Mac & Ro. All rights reserved.
+                            {t('footer.copyright')}
                         </p>
                     </div>
                     

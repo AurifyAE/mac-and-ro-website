@@ -10,37 +10,40 @@ import Sourcing from '../assets/service/sourcing.svg';
 import Mining from '../assets/service/mining.svg';
 import Smelting from '../assets/service/smelting.svg';
 import serviceBanner from '../assets/service/service-banner.jpg';
+import { useTranslation } from 'react-i18next';
 
 const ServicePage = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
-      title: "Consultancy",
-      description: "Mac & Ro Capital FZC provides specialized consultancy in gold investment and wealth management. Our experts guide individuals, families, and businesses in building tailored strategies that focus on security, diversification, and long-term growth, with full compliance to international standards.",
+      title: t('servicePage.services.consultancy.title'),
+      description: t('servicePage.services.consultancy.description'),
       image: InvestmentAdvisory,
     },
     {
-      title: "Sourcing",
-      description: "We ensure the ethical and responsible sourcing of raw gold through partnerships with certified and traceable suppliers. Every step follows strict OECD guidelines, giving our clients complete transparency and confidence in the origins of their investments.",
+      title: t('servicePage.services.sourcing.title'),
+      description: t('servicePage.services.sourcing.description'),
       image: Sourcing,
     },
     {
-      title: "Mining",
-      description: "Through strategic mining collaborations, Mac & Ro secures access to high-quality raw gold. Our commitment to responsible mining practices ensures sustainability, legal compliance, and respect for environmental and social standards.",
+      title: t('servicePage.services.mining.title'),
+      description: t('servicePage.services.mining.description'),
       image: Mining,
     },
     {
-      title: "Smelting",
-      description: "Our advanced smelting facilities transform mined materials into uniform, high-quality inputs for refining. This process guarantees reliability, consistency, and full traceability as raw material progresses through the gold value chain.",
+      title: t('servicePage.services.smelting.title'),
+      description: t('servicePage.services.smelting.description'),
       image: Smelting,
     },
     {
-      title: "Refining",
-      description: "Mac & Ro refines gold to the highest international standards, delivering LBMA and non LBMA-certified 24K (999.9) pure gold. Every bar is numbered, documented, and accompanied by certification to ensure authenticity and investment-grade quality.",
+      title: t('servicePage.services.refining.title'),
+      description: t('servicePage.services.refining.description'),
       image: MetalAccounts, 
     },
     {
-      title: "Vault Safe Deposit",
-      description: "We provide world-class storage solutions for precious metals in international vaults such as Brinks, Loomis, and Malca-Amit. With segregated deposits, constant tracking, and full insurance coverage, clients enjoy complete peace of mind and full legal ownership of their assets.",
+      title: t('servicePage.services.vaultSafeDeposit.title'),
+      description: t('servicePage.services.vaultSafeDeposit.description'),
       image: CapitalRaising,
     }
   ];
@@ -51,10 +54,10 @@ const ServicePage = () => {
       <section className="md:py-20 py-10 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4">
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
-            Our Services
+            {t('servicePage.hero.title')}
           </h1>
           <p className="text-sm sm:text-base text-gray-600 max-w-6xl mx-auto leading-relaxed">
-          At Mac & Ro Capital, we provide end-to-end solutions across the gold value chain — from sourcing and mining to refining and secure vaulting. With decades of expertise and strict adherence to international standards, our services are designed to deliver transparency, reliability, and long-term value for individuals, families, and businesses seeking to safeguard and grow their wealth through physical gold.
+          {t('servicePage.hero.description')}
           </p>
         </div>
       </section>

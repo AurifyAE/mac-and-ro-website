@@ -2,6 +2,7 @@ import logo from '../assets/homepage/logo.svg';
 import langselector from '../assets/homepage/langselector.svg';
 import useMarketData from '../hooks/useMarketData';
 import { useCurrency } from '../context/CurrencyContext';
+import { useTranslation } from 'react-i18next';
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
@@ -9,12 +10,12 @@ const Header = () => {
     const navigate = useNavigate();
     const { marketData } = useMarketData(["GOLD"]);
     const { selectedCurrency } = useCurrency();
+    const { t, i18n } = useTranslation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSubmenu, setActiveSubmenu] = useState(null);
     const [activeNestedSubmenu, setActiveNestedSubmenu] = useState(null);
     const [previousPrice, setPreviousPrice] = useState(null);
     const [priceDirection, setPriceDirection] = useState(null); // 'up', 'down', or null
-    const [selectedLanguage, setSelectedLanguage] = useState('EN');
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
     const submenuRef = useRef(null);
 
@@ -85,68 +86,68 @@ const Header = () => {
     }, []);
 
     const languages = [
-        { code: 'EN', name: 'English' },
-        { code: 'AR', name: 'العربية' },
-        { code: 'IT', name: 'Italiano' }
+        { code: 'en', name: t('languages.english') },
+        { code: 'ar', name: t('languages.arabic') },
+        { code: 'it', name: t('languages.italian') }
     ];
 
     const navItems = [
         {
-            name: 'Home',
+            name: t('navigation.home'),
             path: '/',
             hasSubmenu: false
         },
         {
-            name: 'Who We are',
+            name: t('navigation.whoWeAre'),
             path: '/who-we-are',
             hasSubmenu: false
         },
         {
-            name: 'Products',
+            name: t('navigation.products'),
             path: '/products',
             hasSubmenu: true,
             submenuItems: [
                 { 
-                    name: 'Metal Accounts', 
+                    name: t('products.metalAccounts'), 
                     path: '/metal-accounts',
                     hasSubmenu: true,
                     submenuItems: [
-                        { name: 'Deluxe Metal Account', path: '/metal-accounts/deluxe-metal-account' },
-                        { name: 'Mac & Ro Metal Account', path: '/metal-accounts/mac-ro-metal-account' },
-                        { name: 'End Of Treatment Payment (EOT)', path: '/metal-accounts/end-of-treatment-payment-tfm' },
-                        { name: 'Key Man Metal Account', path: '/metal-accounts/key-man-metal-account' }
+                        { name: t('products.deluxeMetalAccount'), path: '/metal-accounts/deluxe-metal-account' },
+                        { name: t('products.macRoMetalAccount'), path: '/metal-accounts/mac-ro-metal-account' },
+                        { name: t('products.endOfTreatmentPayment'), path: '/metal-accounts/end-of-treatment-payment-tfm' },
+                        { name: t('products.keyManMetalAccount'), path: '/metal-accounts/key-man-metal-account' }
                     ]
                 },
-                { name: 'Purchase of Physical Investment Gold (Bullion)', path: '/products' }
+                { name: t('products.physicalGoldBullion'), path: '/products' }
             ]
         },
         {
-            name: 'Services',
+            name: t('navigation.services'),
             path: '/services',
             hasSubmenu: false
         },
         {
-            name: 'Accreditations',
+            name: t('navigation.accreditations'),
             path: '/accreditations',
             hasSubmenu: false
         },
         {
-            name: 'Corporate Governance',
+            name: t('navigation.corporateGovernance'),
             path: '/corporate-governance',
             hasSubmenu: false
         },
         {
-            name: 'News',
+            name: t('navigation.news'),
             path: '/news',
             hasSubmenu: false
         },
         {
-            name: 'FAQ',
+            name: t('navigation.faq'),
             path: '/faq',
             hasSubmenu: false
         },
         {
-            name: 'Contact',
+            name: t('navigation.contact'),
             path: '/contact',
             hasSubmenu: false
         }
@@ -240,7 +241,7 @@ const Header = () => {
                         >
                             {/* Desktop Layout */}
                             <div className="hidden md:flex items-center space-x-3">
-                                <span className="text-xs font-medium text-gray-600 tracking-light">Gold Spot Price</span>
+                                <span className="text-xs font-medium text-gray-600 tracking-light">{t('header.goldSpotPrice')}</span>
                                 <img 
                                     src={`https://flagcdn.com/${currencyInfo.countryCode}.svg`}
                                     alt={`${selectedCurrency} flag`} 
@@ -287,7 +288,7 @@ const Header = () => {
 
                             {/* Mobile Layout */}
                             <div className="flex md:hidden flex-col items-end">
-                                <div className="text-xs font-medium text-gray-600">Gold Spot Price</div>
+                                <div className="text-xs font-medium text-gray-600">{t('header.goldSpotPrice')}</div>
                                 <div className="flex items-center space-x-1">
                                     <img 
                                         src={`https://flagcdn.com/${currencyInfo.countryCode}.svg`}
@@ -408,7 +409,7 @@ const Header = () => {
                                         >
                                             <div className="flex items-center space-x-2">
                                                 <img src={langselector} alt="" className='w-5 h-5' />
-                                                <span>Language: {selectedLanguage}</span>
+                                                <span>{t('header.language')}: {i18n.language.toUpperCase()}</span>
                                             </div>
                                             <svg 
                                                 className={`w-4 h-4 transition-transform duration-200 ${
@@ -429,7 +430,7 @@ const Header = () => {
                                                     <button
                                                         key={language.code}
                                                         onClick={() => {
-                                                            setSelectedLanguage(language.code);
+                                                            i18n.changeLanguage(language.code);
                                                             setIsLanguageOpen(false);
                                                         }}
                                                         className="block w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-md"
@@ -449,7 +450,7 @@ const Header = () => {
                                             onClick={() => setIsMobileMenuOpen(false)}
                                             className="w-full px-4 py-2 text-sm font-semibold text-white bg-black border border-transparent hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 rounded-md transition duration-200 ease-in-out"
                                         >
-                                            Sign In
+                                            {t('header.signIn')}
                                         </button>
                                     </Link>
                                 </div>
