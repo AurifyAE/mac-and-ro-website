@@ -8,7 +8,9 @@ import deluxeImg2 from '../../assets/metalAccount/deluxe-img2.jpg';
 import { useTranslation } from 'react-i18next';
 
 const DeluxeMetalAccount = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -85,7 +87,7 @@ const DeluxeMetalAccount = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white"  dir={isArabic ? 'rtl' : 'ltr'}>
         <section className="relative h-[480px] flex items-center">
         {/* Background Image */}
         <div 
@@ -105,14 +107,14 @@ const DeluxeMetalAccount = () => {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl">
+          <div className={`max-w-6xl ${isArabic ? 'text-left' : ''}`}>
             <span className="text-[#DCBC7C] text-sm">
                 {t('metalAccounts.deluxe.hero.badge')}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair mt-2">
             {t('metalAccounts.deluxe.hero.title')}
             </h1>
-            <p className="max-w-lg text-white text-base">
+            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-base`}>
             {t('metalAccounts.deluxe.hero.subtitle')}
             </p>
           </div>
@@ -124,7 +126,7 @@ const DeluxeMetalAccount = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Title & Paragraph */}
-            <div className="space-y-6">
+            <div className={`${isArabic ? "text-right order-1" : "" } space-y-6`}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
                 {t('metalAccounts.deluxe.whatIs.title')}
               </h2>
@@ -136,7 +138,7 @@ const DeluxeMetalAccount = () => {
             </div>
 
             {/* Right Side - Image */}
-            <div className="relative">
+            <div className={`${isArabic ? "text-right" : "" } relative`}>
               <div className="relative overflow-hidden shadow-2xl">
                 <video 
                   src={appleGold} 
@@ -157,18 +159,18 @@ const DeluxeMetalAccount = () => {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl text-left font-semibold text-black mb-6 tracking-tight font-playfair">
+      <div className={`${isArabic ? "text-right" : "text-left" } max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-10`}>
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-semibold text-black mb-6 tracking-tight font-playfair">
           {t('metalAccounts.deluxe.howItWorks.title')}
         </h2>
-        <p className="text-left text-gray-600 leading-relaxed text-base">
+        <p className="text-gray-600 leading-relaxed text-base">
           {t('metalAccounts.deluxe.howItWorks.description')}
         </p>
 
-        <div className="py-10 bg-gray-50">
+        <div className="py-10">
             <div className="max-w-7xl mx-auto px-4">
                 <motion.div 
-                className="text-left mb-16"
+                className={`text-left mb-16`}
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
@@ -188,7 +190,7 @@ const DeluxeMetalAccount = () => {
 
       {/* Advantages Section */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 my-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl text-left font-semibold text-black mb-6 tracking-tight font-playfair">
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-semibold text-black mb-6 tracking-tight font-playfair">
           {t('metalAccounts.deluxe.advantages.title')}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-15">
@@ -213,17 +215,17 @@ const DeluxeMetalAccount = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-4xl text-left font-semibold text-black mb-6 tracking-tight font-playfair">
+        <h2 className="text-3xl sm:text-4xl lg:text-4xl font-semibold text-black mb-6 tracking-tight font-playfair">
             {t('metalAccounts.deluxe.growthProfiles.title')}
         </h2>
         <div className="space-y-6 text-gray-600 leading-relaxed text-base">
           <ul className="space-y-4">
             <li className="flex items-start">
-              <span className="text-[#DCBC7C] mr-3 font-bold text-lg">•</span>
+              <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold text-lg`}>•</span>
               <span><strong>{t('metalAccounts.deluxe.growthProfiles.items.sixPercent')}</strong></span>
             </li>
             <li className="flex items-start">
-              <span className="text-[#DCBC7C] mr-3 font-bold text-lg">•</span>
+              <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold text-lg`}>•</span>
               <span><strong>{t('metalAccounts.deluxe.growthProfiles.items.tenPercent')}</strong></span>
             </li>
           </ul>
@@ -237,7 +239,7 @@ const DeluxeMetalAccount = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Title & Paragraph */}
-            <div className="space-y-6">
+            <div className={`${isArabic ? "order-1" : ""} space-y-6`}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
               {t('metalAccounts.deluxe.isThisForYou.title')}
               </h2>
@@ -247,15 +249,15 @@ const DeluxeMetalAccount = () => {
                 </p>
                 <ul className="space-y-3 text-gray-600 leading-relaxed text-base font-bold">
                   <li className="flex items-start">
-                    <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                    <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.deluxe.isThisForYou.audiences.individuals')}
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                    <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.deluxe.isThisForYou.audiences.families')}
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                    <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.deluxe.isThisForYou.audiences.businesses')}
                   </li>
                 </ul>

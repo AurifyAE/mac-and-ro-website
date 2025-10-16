@@ -7,7 +7,9 @@ import macImg2 from '../../assets/metalAccount/mac-img2.jpg';
 import { useTranslation } from 'react-i18next';
 
 const MacRoMetalAccount = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -56,7 +58,7 @@ const MacRoMetalAccount = () => {
     },
   ]
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
         <section className="relative h-[480px] flex items-center">
         {/* Background Video */}
         <video 
@@ -78,12 +80,12 @@ const MacRoMetalAccount = () => {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-2xl">
+          <div className={`max-w-6xl ${isArabic ? 'text-left' : ''}`}>
             <span className="text-[#DCBC7C] text-sm">{t('metalAccounts.macRo.hero.badge')}</span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
               {t('metalAccounts.macRo.hero.title')}
             </h1>
-            <p className="max-w-lg text-white text-base">
+            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-base`}>
               {t('metalAccounts.macRo.hero.subtitle')}
             </p>
           </div>
@@ -125,15 +127,15 @@ const MacRoMetalAccount = () => {
               </p>
               <ul className="space-y-3 text-gray-600 leading-relaxed text-base font-bold">
                 <li className="flex items-start">
-                  <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                  <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                   {t('metalAccounts.macRo.whatMakesDifferent.features.serialNumber')}
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                  <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                   {t('metalAccounts.macRo.whatMakesDifferent.features.grossWeight')}
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                  <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                   {t('metalAccounts.macRo.whatMakesDifferent.features.purity')}
                 </li>
                 <li className="flex items-start">
@@ -152,7 +154,7 @@ const MacRoMetalAccount = () => {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-30 bg-gray-50">
             <motion.div 
-            className="text-left mb-16"
+            className={`${isArabic ? "" : "text-left"}  mb-16`}
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"

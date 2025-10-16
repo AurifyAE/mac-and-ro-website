@@ -6,7 +6,8 @@ import tfmImg2 from '../../assets/metalAccount/tfm-img2.jpg';
 import { useTranslation } from 'react-i18next';
 
 const EndOfTreatmentPaymentTFM = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   const cardsData = [
     {
@@ -32,7 +33,7 @@ const EndOfTreatmentPaymentTFM = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
         <section className="relative h-[480px] flex items-center">
         {/* Background Image */}
         <div 
@@ -52,14 +53,14 @@ const EndOfTreatmentPaymentTFM = () => {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-3xl">
+          <div className={`max-w-6xl ${isArabic ? 'text-left' : ''}`}>
             <span className="text-[#DCBC7C] text-sm">
               {t('metalAccounts.eot.hero.badge')}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
             {t('metalAccounts.eot.hero.title')}
             </h1>
-            <p className="max-w-lg text-white text-base">
+            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-base`}>
               {t('metalAccounts.eot.hero.subtitle')}
             </p>
           </div>
@@ -71,7 +72,7 @@ const EndOfTreatmentPaymentTFM = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Title & Paragraph */}
-            <div className="space-y-6">
+            <div className={`${isArabic ? "text-right order-1" : "" } space-y-6`}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
                 {t('metalAccounts.eot.whatIs.title')}
               </h2>
@@ -144,7 +145,7 @@ const EndOfTreatmentPaymentTFM = () => {
               <div className="space-y-4 text-gray-600 leading-relaxed text-base">
                 <ul className="space-y-3 text-gray-600 leading-relaxed text-base">
                   <li className="flex items-start">
-                    <div className="w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                    <div className={`w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center ${isArabic ? "ml-3" : "mr-3"} mt-0.5 flex-shrink-0`}>
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -152,7 +153,7 @@ const EndOfTreatmentPaymentTFM = () => {
                       {t('metalAccounts.eot.benefits.items.deductible')}
                   </li>
                   <li className="flex items-start">
-                    <div className="w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                    <div className={`w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center ${isArabic ? "ml-3" : "mr-3"} mt-0.5 flex-shrink-0`}>
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -160,7 +161,7 @@ const EndOfTreatmentPaymentTFM = () => {
                       {t('metalAccounts.eot.benefits.items.reducedTaxation')}
                   </li>
                   <li className="flex items-start">
-                    <div className="w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                    <div className={`w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center ${isArabic ? "ml-3" : "mr-3"} mt-0.5 flex-shrink-0`}>
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
@@ -168,7 +169,7 @@ const EndOfTreatmentPaymentTFM = () => {
                       {t('metalAccounts.eot.benefits.items.pensionReserve')}
                   </li>
                   <li className="flex items-start">
-                    <div className="w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                    <div className={`w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center ${isArabic ? "ml-3" : "mr-3"} mt-0.5 flex-shrink-0`}>
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>

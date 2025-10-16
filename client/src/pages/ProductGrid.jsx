@@ -8,7 +8,8 @@ import { useTranslation } from 'react-i18next';
 
 
 const ProductGrid = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
     const navigate = useNavigate();
 
     // Function to handle navigation to product details
@@ -26,7 +27,7 @@ const ProductGrid = () => {
     // };
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
             {/* Banner Section */}
             <section className="relative bg-cover bg-center bg-no-repeat h-96" 
                      style={{ backgroundImage: `url(${productBanner})` }}>

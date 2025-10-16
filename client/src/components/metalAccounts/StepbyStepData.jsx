@@ -31,7 +31,7 @@ const StepbyStepData = ({ steps }) => {
 
         {/* Steps with Numbered Boxes */}
         <motion.div 
-          className="flex flex-wrap lg:flex-nowrap lg:flex-row items-center justify-center gap-8 lg:space-y-0 lg:gap-0"
+          className="flex flex-wrap lg:flex-nowrap lg:flex-row items-start justify-center gap-8 lg:space-y-0 lg:gap-0"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"

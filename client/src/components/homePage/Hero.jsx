@@ -9,7 +9,8 @@ const Hero = () => {
     const videoRef = useRef(null);
     const secondVideoRef = useRef(null);
     const navigate = useNavigate();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const isArabic = i18n.language === 'ar';
     useEffect(() => {
         if (videoRef.current) {
         videoRef.current.play().catch(error => {
@@ -26,7 +27,7 @@ const Hero = () => {
     return (
         <>
         {/* First Hero Section */}
-        <div className="relative h-screen w-full overflow-hidden">
+        <div className={`relative h-screen w-full overflow-hidden ${isArabic ? 'rtl' : 'ltr'}`} dir={isArabic ? 'rtl' : 'ltr'}>
             {/* Video Background */}
             <video
             ref={videoRef}
@@ -46,7 +47,8 @@ const Hero = () => {
 			{/* Content */}
 			<div className="relative z-10 flex items-center justify-center pb-40 h-full">
 				<motion.div
-					className="text-left text-white px-10 sm:px-12 lg:px-12"
+					className={`text-white px-10 sm:px-12 lg:px-12 ${isArabic ? 'text-right' : 'text-left'}`}
+					dir={isArabic ? 'rtl' : 'ltr'}
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -68,7 +70,7 @@ const Hero = () => {
 						{t('homepage.hero.title2')}
 					</motion.p>
 					<motion.div
-						className="flex flex-col sm:flex-row gap-4 justify-start items-start md:items-center"
+						className={`flex flex-col sm:flex-row gap-4 items-start md:items-center ${isArabic ? 'justify-end' : 'justify-start'}`}
 						initial={{ opacity: 0, y: 10 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ delay: 0.4, duration: 0.5 }}
@@ -100,12 +102,12 @@ const Hero = () => {
         </div>    
 
         {/* Second Video Section */}
-        <div className="relative w-full overflow-hidden bg-black">
+        <div className={`relative w-full overflow-hidden bg-black ${isArabic ? 'rtl' : 'ltr'}`} dir={isArabic ? 'rtl' : 'ltr'}>
             {/* Content Section Above Video with Fade Effects */}
             <div className="relative z-20 bg-black">
                 {/* Content Area */}
                 <div className="py-10">
-                    <div className="max-w-6xl mx-auto text-center text-white px-4 sm:px-6 lg:px-8">
+                    <div className={`max-w-6xl mx-auto text-center text-white px-4 sm:px-6 lg:px-8 ${isArabic ? 'text-center' : 'text-center'}`} dir={isArabic ? 'rtl' : 'ltr'}>
 						<motion.h2
 							className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 tracking-tight"
 							initial={{ opacity: 0, y: 16 }}

@@ -6,11 +6,12 @@ import { useTranslation } from 'react-i18next';
 
 const GoldInfo = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const itemVariants = {
     hidden: { 
       opacity: 0, 
-      x: -100 
+      x: isArabic ? 100 : -100 
     },
     visible: {
       opacity: 1,
@@ -23,12 +24,12 @@ const GoldInfo = () => {
   };
 
   return (
-    <div className="bg-white md:py-20 py-10">
+    <div className="bg-white md:py-20 py-10" dir={isArabic ? 'rtl' : 'ltr'}>
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${isArabic ? 'lg:grid-flow-col-dense' : ''}`}>
           
-          {/* Left Side - Image (No Animation) */}
-          <div className="order-2 lg:order-1">
+          {/* Image Section */}
+          <div className={`${isArabic ? 'order-1 lg:order-1' : 'order-2 lg:order-1'}`}>
             <div className="relative">
               <img 
                 src={GoldInfoImage} 
@@ -39,11 +40,11 @@ const GoldInfo = () => {
             </div>
           </div>
 
-          {/* Right Side - Content (Individual Animations) */}
-          <div className="order-1 lg:order-2">
+          {/* Content Section */}
+          <div className={`${isArabic ? 'order-2 lg:order-2' : 'order-1 lg:order-2'}`} dir={isArabic ? 'rtl' : 'ltr'}>
             {/* Main Heading */}
             <motion.h2 
-              className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 tracking-tight"
+              className={`font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-12 tracking-tight ${isArabic ? 'text-right' : 'text-left'}`}
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"
@@ -61,10 +62,10 @@ const GoldInfo = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.2 }}
             >
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide">
+              <h3 className={`text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.inflationProtection')}
               </h3>
-              <p className="text-gray-600 leading-relaxed tracking-wide">
+              <p className={`text-gray-600 leading-relaxed tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.inflationDescription')}
               </p>
             </motion.div>
@@ -78,19 +79,21 @@ const GoldInfo = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.4 }}
             >
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide">
+              <h3 className={`text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.portfolioDiversification')}
               </h3>
-              <p className="text-gray-600 leading-relaxed tracking-wide mb-6">
+              <p className={`text-gray-600 leading-relaxed tracking-wide mb-6 ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.diversificationDescription')}
               </p>
-              <Link to="/portfolio">
-                <button 
-                  className="px-6 py-2 bg-white border-1 border-black hover:bg-black hover:text-white  text-black font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base"
-                >
-                  {t('homepage.goldInfo.createPortfolio')}
-                </button>
-              </Link>
+              <div className={`flex justify-start`}>
+                <Link to="/portfolio">
+                  <button 
+                    className="px-6 py-2 bg-white border-1 border-black hover:bg-black hover:text-white  text-black font-semibold rounded-sm transition-colors duration-300 ease-in-out tracking-wide text-base"
+                  >
+                    {t('homepage.goldInfo.createPortfolio')}
+                  </button>
+                </Link>
+              </div>
             </motion.div>
 
             {/* Third Sub-section */}
@@ -102,10 +105,10 @@ const GoldInfo = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ delay: 0.6 }}
             >
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide">
+              <h3 className={`text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.liquidity')}
               </h3>
-              <p className="text-gray-600 leading-relaxed tracking-wide">
+              <p className={`text-gray-600 leading-relaxed tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.liquidityDescription')}
               </p>
             </motion.div>

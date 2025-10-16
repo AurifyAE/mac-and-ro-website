@@ -10,7 +10,18 @@ import { useTranslation } from 'react-i18next';
 
 const Features = () => { 
     const navigate = useNavigate();
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    // Determine if the language is Arabic (rtl)
+    const isArabic = i18n.language === 'ar';
+
+    // Array of location data
+    const locations = [
+        { key: 'dubai' },
+        { key: 'lecce' },
+        { key: 'zurich' },
+        { key: 'singapore' },
+        { key: 'istanbul' }
+    ];
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -75,7 +86,7 @@ const Features = () => {
         <>
         <section className="md:py-20 py-10 bg-gradient-to-br from-gray-50 to-white">
             <div className="container mx-auto px-4 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-center" dir={isArabic ? 'rtl' : 'ltr'}>
                     <motion.div 
                         className="order-2 lg:order-1"
                         variants={slideInLeft}
@@ -98,28 +109,19 @@ const Features = () => {
                         </motion.p>
 
                         <motion.ul 
-                            className="mb-8 space-y-4 list-disc list-inside flex flex-col items-start px-10"
+                            className="mb-8 space-y-4 list-disc list-inside px-10"
+                            
                             variants={itemVariants}
                         >
-                            <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            {t('homepage.features.dubai')}
-                            </motion.li>
-                            
-                            <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            {t('homepage.features.lecce')}
-                            </motion.li>
-                            
-                            <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            {t('homepage.features.zurich')}
-                            </motion.li>
-                            
-                            <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            {t('homepage.features.singapore')}
-                            </motion.li>
-                            
-                            <motion.li className="text-sm sm:text-base font-light tracking-wide text-gray-600" variants={itemVariants}>
-                            {t('homepage.features.istanbul')}
-                            </motion.li>
+                            {locations.map((location, index) => (
+                                <motion.li
+                                    key={location.key}
+                                    className={`text-sm sm:text-base font-light tracking-wide text-gray-600 flex items-center w-full`}
+                                    variants={itemVariants}
+                                >
+                                    {t(`homepage.features.${location.key}`)}
+                                </motion.li>
+                            ))}
                         </motion.ul>
 
                         <motion.p 
@@ -162,7 +164,7 @@ const Features = () => {
 
         <section className="md:py-20 py-10 bg-white">
             <div className="container mx-auto px-4 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-center" dir={isArabic ? 'rtl' : 'ltr'}>
                     <motion.div 
                         variants={slideInLeft}
                         initial="hidden"
@@ -220,7 +222,7 @@ const Features = () => {
 
         <section className="md:py-20 py-10 bg-white">
             <div className="container mx-auto px-4 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-center" dir={isArabic ? 'rtl' : 'ltr'}>
                     <motion.div 
                         className="order-2 lg:order-1 text-center"
                         variants={slideInLeft}

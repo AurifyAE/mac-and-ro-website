@@ -3,14 +3,15 @@ import FlipCards from './FlipCards';
 import { useTranslation } from 'react-i18next';
 
 const Accounts = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const isArabic = i18n.language === 'ar';
 
     return (
         <div className="bg-gray-50 md:py-20 py-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-14">
                 
                 {/* Left-aligned Heading and Paragraph */}
-                <div className="text-left mb-16">
+                <div className={`${isArabic ? "text-right" : "text-left"} mb-16`} dir={isArabic ? 'rtl' : 'ltr'}>
                     <h2 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
                         {t('homepage.accounts.title')}
                     </h2>

@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   const faqs = [
     {
@@ -240,7 +241,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
       {/* Header Section */}
       <section className="py-10 md:py-20 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4 text-left">

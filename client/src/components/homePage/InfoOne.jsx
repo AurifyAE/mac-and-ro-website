@@ -7,7 +7,8 @@ import { useTranslation } from 'react-i18next';
 
 const InfoOne = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   return (
     <div className="bg-black w-full">
@@ -15,7 +16,7 @@ const InfoOne = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
           {/* Left Side - Image */}
-          <div className="order-2 lg:order-1">
+          <div className={`${isArabic ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}`}>
             <div className="relative">
               <img 
                 src={bankCertified} 
@@ -27,7 +28,7 @@ const InfoOne = () => {
           </div>
 
           {/* Right Side - Content */}
-          <div className="order-1 lg:order-2 text-white p-10">
+          <div className={`${isArabic ? 'order-2 lg:order-1' : 'order-2 lg:order-2'} text-white p-10`} dir={isArabic ? 'rtl' : 'ltr'}>
             {/* Heading */}
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 tracking-wide leading-snug">
             {t('homepage.infoOne.title')}

@@ -4,7 +4,8 @@ import { products } from '../data/products';
 import { useTranslation } from 'react-i18next';
 
 const ProductDetails = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
     const { productId } = useParams();
     const navigate = useNavigate();
 

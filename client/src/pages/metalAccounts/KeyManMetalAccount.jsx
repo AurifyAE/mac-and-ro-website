@@ -6,7 +6,8 @@ import keymanImg2 from '../../assets/metalAccount/keymanimg2.jpg';
 import { useTranslation } from 'react-i18next';
 
 const KeyManMetalAccount = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   // Dynamic cards data
   const cardsData = [
     {
@@ -32,7 +33,7 @@ const KeyManMetalAccount = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
         <section className="relative h-[480px] flex items-center">
         {/* Background Image */}
         <div 
@@ -52,14 +53,14 @@ const KeyManMetalAccount = () => {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-xl">
+          <div className={`max-w-6xl ${isArabic ? 'text-left' : ''}`}>
             <span className="text-[#DCBC7C] text-sm">
                 {t('metalAccounts.keyman.hero.badge')}
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
               {t('metalAccounts.keyman.hero.title')}
             </h1>
-            <p className="max-w-80 text-white text-base">
+            <p className={`${isArabic ? "" : "max-w-80"} text-white text-base`}>
               {t('metalAccounts.keyman.hero.subtitle')}
             </p>
           </div>
@@ -70,7 +71,7 @@ const KeyManMetalAccount = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Title & Paragraph */}
-            <div className="space-y-6">
+            <div className={`${isArabic ? "text-right order-1" : "" } space-y-6`}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
                 {t('metalAccounts.keyman.whatIs.title')}
               </h2>
@@ -141,7 +142,7 @@ const KeyManMetalAccount = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Title & Paragraph */}
-            <div className="space-y-6">
+            <div className={`${isArabic ? "order-1" : ""} space-y-6`}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
               {t('metalAccounts.keyman.isThisForYou.title')}
               </h2>
@@ -151,15 +152,15 @@ const KeyManMetalAccount = () => {
                 </p>
                 <ul className="space-y-2 text-gray-600 leading-relaxed text-base font-bold">
                   <li className="flex items-start">
-                    <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                    <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.keyman.isThisForYou.audiences.corporations')}
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                    <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.keyman.isThisForYou.audiences.smb')}
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#DCBC7C] mr-2 font-bold">•</span>
+                    <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.keyman.isThisForYou.audiences.professionals')}
                   </li>
                 </ul>

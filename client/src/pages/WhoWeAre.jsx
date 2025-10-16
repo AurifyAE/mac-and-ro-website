@@ -7,7 +7,8 @@ import whoweHero from '../assets/about/whowe-hero.jpg';
 import { useTranslation } from 'react-i18next';
 
 const WhoWeAre = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   
   // Team data array
   const teamMembers = [
@@ -58,7 +59,7 @@ const WhoWeAre = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className={`min-h-screen bg-white`} dir={isArabic ? 'rtl' : 'ltr'}>
       {/* Header Section */}
       <section className="relative md:py-20 py-10">
         <div className="max-w-6xl mx-auto">
@@ -121,7 +122,7 @@ const WhoWeAre = () => {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           {/* Team Header */}
-          <div className="text-left mb-16">
+          <div className={`${isArabic ? "text-right" : "text-left"}  mb-16`}>
             <h2 className="text-4xl font-bold text-[#A78E52] mb-6 font-playfair">{t('whoWeAre.team.title')}</h2>
             <p className="text-base text-gray-700 mx-auto leading-relaxed">
             {t('whoWeAre.team.description')}

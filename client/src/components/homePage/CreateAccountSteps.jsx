@@ -3,7 +3,9 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 const CreateAccountSteps = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -52,7 +54,7 @@ const CreateAccountSteps = () => {
   ];
 
   return (
-    <section className="md:py-20 py-10 bg-gray-50">
+    <section className="md:py-20 py-10 bg-gray-50" dir={isArabic ? 'rtl' : 'ltr'}>
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading and Paragraph */}
         <motion.div 

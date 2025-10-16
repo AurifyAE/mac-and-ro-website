@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const MetalAccountCTA = ({title}) => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
     
     return (
         <section className="py-20 bg-black relative max-w-4xl mx-auto mb-20">

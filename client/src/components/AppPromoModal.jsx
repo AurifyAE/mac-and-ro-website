@@ -5,7 +5,8 @@ import featureImage3 from '../assets/homepage/orovivo-app.png';
 import { useTranslation } from 'react-i18next';
 
 const AppPromoModal = ({ isOpen, onClose }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const [isClosing, setIsClosing] = useState(false);
   useEffect(() => {
     const handleEscape = (e) => {

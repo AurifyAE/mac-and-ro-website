@@ -11,7 +11,8 @@ import bankTransfer from '../assets/homepage/bankTransfer.png';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
     const [email, setEmail] = useState('');
     const [privacyChecked, setPrivacyChecked] = useState(false);
 

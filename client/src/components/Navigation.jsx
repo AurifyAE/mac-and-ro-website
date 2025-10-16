@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next';
 
 const Navigation = () => {
   const location = useLocation();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const [activeItem, setActiveItem] = useState(t('navigation.home'));
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [openTimeout, setOpenTimeout] = useState(null);
@@ -75,7 +76,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex justify-center items-center h-12">
           <ul className="flex items-center space-x-16">
-            {navItems.map((item) => (
+            {(isArabic ? [...navItems].reverse() : navItems).map((item) => (
               <li key={item.name} className="relative">
                 {item.hasDropdown ? (
                   <div

@@ -6,7 +6,8 @@ import MetalAccountCTA from '../components/MetalAccountCTA';
 import { Link } from 'react-router-dom';
 
 const MetalAccounts = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   
   const cardVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -53,7 +54,7 @@ const MetalAccounts = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
       {/* Hero Section with Background Image and Gradient Overlay */}
       <section className="relative h-[480px] flex items-center">
         {/* Background Image */}
@@ -74,7 +75,7 @@ const MetalAccounts = () => {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <div className="max-w-2xl">
+          <div className={`max-w-6xl ${isArabic ? 'text-left' : ''}`}>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
               {t('metalAccountsPage.hero.title1')} <br /> {t('metalAccountsPage.hero.title2')} <br /> {t('metalAccountsPage.hero.title3')}
             </h1>
@@ -85,7 +86,7 @@ const MetalAccounts = () => {
       {/* Accounts Cards Section */}
       <section className="py-10 bg-[#F1F0E8]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className='text-left text-base text-black mb-6'>
+            <p className={`${isArabic ? 'text-right' : 'text-left'} text-base text-black mb-6`}>
             {t('metalAccountsPage.intro.description')}
             </p>
           <div className="my-16">

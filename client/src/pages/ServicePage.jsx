@@ -13,7 +13,8 @@ import serviceBanner from '../assets/service/service-banner.jpg';
 import { useTranslation } from 'react-i18next';
 
 const ServicePage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   
   const services = [
     {
@@ -49,7 +50,7 @@ const ServicePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
       {/* Header Section */}
       <section className="md:py-20 py-10 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4">

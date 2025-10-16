@@ -15,7 +15,8 @@ const reportsDataOfItaly = [
 ]
 
 const CorporateGovernance = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
 
   const reportsDataOfItaly = [
 
@@ -110,6 +111,7 @@ const CorporateGovernance = () => {
     <div className="min-h-screen bg-white">
       {/* Header Section */}
       <section className="relative bg-cover bg-center bg-no-repeat h-96" 
+                dir={isArabic ? 'rtl' : 'ltr'}
                      style={{ backgroundImage: `url(${governanceBg})` }}>
                 <div className="absolute inset-0 bg-black/80"></div>
                 <div className="relative z-10 flex items-center justify-center h-full">

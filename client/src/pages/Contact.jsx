@@ -5,7 +5,8 @@ import 'react-phone-input-2/lib/style.css';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const COMPANY_EMAIL = 'info@mac-ro-capital.com';
   const [formData, setFormData] = useState({
     firstName: '',
@@ -106,7 +107,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" >
       {/* Header Section */}
       {/* <section className="py-20 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4 text-left">

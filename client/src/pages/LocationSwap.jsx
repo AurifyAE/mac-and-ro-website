@@ -5,7 +5,8 @@ import locationIcon from '../assets/location-swap/location-icon.png';
 import { useTranslation } from 'react-i18next';
 
 const LocationSwap = () => {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
     
     // Dynamic location data
     const locations = [
@@ -66,7 +67,7 @@ const LocationSwap = () => {
     }
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
             {/* Hero Section with Background Image */}
             <section className="relative min-h-screen flex items-end justify-center">
                 {/* Background Image */}

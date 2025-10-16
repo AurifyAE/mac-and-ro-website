@@ -6,7 +6,9 @@ import { useTranslation } from 'react-i18next';
 
 const Cta = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -67,7 +69,7 @@ const Cta = () => {
           <div className="flex flex-col items-center justify-evenly lg:flex-row">
             {/* Left Image */}
             <motion.div 
-              className="lg:w-1/2 h-80 lg:h-80"
+              className={`${isArabic ? 'order-1 lg:order-2' : 'order-1 lg:order-1'} lg:w-1/2 h-80 lg:h-80`}
               variants={itemVariants}
             >
               <img 
@@ -79,7 +81,8 @@ const Cta = () => {
 
             {/* Right Content */}
             <motion.div 
-              className="lg:w-2/3 p-8 sm:p-12 lg:p-16 flex flex-col justify-center"
+              className={`${isArabic ? 'order-2 lg:order-1' : 'order-2 lg:order-2'} lg:w-2/3 p-8 sm:p-12 lg:p-16 flex flex-col justify-center`}
+              dir={isArabic ? 'rtl' : 'ltr'}
               variants={itemVariants}
             >
               <motion.h3 

@@ -3,7 +3,8 @@ import React, { useEffect, useRef, useState, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 function LiveRate() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isArabic = i18n.language === 'ar';
   const containerRef = useRef();
   const [activeTab, setActiveTab] = useState('oz'); // 'oz' | 'g'
 
@@ -48,7 +49,7 @@ function LiveRate() {
   }, [activeTab]);
 
   return (
-    <div className="py-8 px-4 sm:py-12 sm:px-6 lg:py-20 lg:px-40">
+    <div className="py-8 px-4 sm:py-12 sm:px-6 lg:py-20 lg:px-40" dir={isArabic ? 'rtl' : 'ltr'}>
       {/* Tab Container */}
       <div className="flex justify-center mb-4">
         <div className="inline-flex rounded-full p-1 bg-gray-100 dark:bg-neutral-800">
