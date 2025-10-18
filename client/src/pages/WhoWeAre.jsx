@@ -84,7 +84,7 @@ const WhoWeAre = () => {
       {/* Introduction Paragraphs */}
       <section className="py-5 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="text-left">
+          <div className={`${isArabic ? "text-right" : "text-left" } `}>
             <p className="text-base text-gray-700 mb-6 leading-relaxed">
               {t('whoWeAre.intro.description1')}
             </p>
@@ -177,7 +177,7 @@ const WhoWeAre = () => {
           </div>
 
           {/* Our Distribution Partner Section */}
-          <div className="mt-16 text-left">
+          <div className={`${isArabic ? "text-right" : "text-left"} mt-16 text-left`}>
             <h3 className="text-3xl font-bold text-[#A78E52] mb-6 font-playfair">{t('whoWeAre.partner.title')}</h3>
             <p className="text-base text-gray-700 mx-auto mb-8 leading-relaxed">
               {t('whoWeAre.partner.description')}

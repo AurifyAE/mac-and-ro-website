@@ -244,7 +244,7 @@ const FAQ = () => {
     <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
       {/* Header Section */}
       <section className="py-10 md:py-20 bg-[#F1F0E8]">
-        <div className="max-w-6xl mx-auto px-4 text-left">
+        <div className={`max-w-6xl mx-auto px-4 ${isArabic ? "text-right" : "text-left"}`}>
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             {t('faq.hero.title')}
           </h1>
