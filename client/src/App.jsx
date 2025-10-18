@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Banner from './components/Banner';
 import Header from './components/Header';
@@ -26,8 +26,33 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
 import useScrollToTop from './hooks/useScrollToTop';
 import LiveRate from './pages/LiveRate';
+import Profile from './pages/Profile';
+import SEO from './components/SEO.jsx';
+import NewsDetail from './pages/NewsDetail.jsx';
   
 function App() {
+  const [subdomain, setSubdomain] = useState('');
+
+  useEffect(() => {
+    const hostname = window.location.hostname.toLowerCase();
+    const parts = hostname.split('.');
+    const isLocalhostLabel = hostname.endsWith('.localhost');
+    if (parts.length > 2 || isLocalhostLabel) {
+      setSubdomain(parts[0]);
+    }
+  }, []);
+
+  if (subdomain === 'profiles') {
+    return (
+      <CurrencyProvider>
+        <Router>
+          <div className="App">
+            <Profile />
+          </div>
+        </Router>
+      </CurrencyProvider>
+    );
+  }
   return (
     <CurrencyProvider>
       <Router>
@@ -44,6 +69,7 @@ function AppContent() {
 
   return (
     <div className="App">
+      <SEO />
       <Banner />
       <Header />
       <Navigation />
@@ -54,6 +80,7 @@ function AppContent() {
         <Route path="/accreditations" element={<Accreditations />} />
         <Route path="/corporate-governance" element={<CorporateGovernance />} />
         <Route path="/news" element={<News />} />
+        <Route path="/news/:slug" element={<NewsDetail />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/metal-accounts" element={<MetalAccounts />} />

@@ -13,6 +13,8 @@ const Banner = () => {
   const { t, i18n } = useTranslation();
   const [isCurrencyOpen, setIsCurrencyOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [activeTooltip, setActiveTooltip] = useState(null);
+  const tooltipRef = useRef(null);
   
   const dropdownsRef = useRef(null);
 
@@ -46,28 +48,86 @@ const Banner = () => {
     };
   }, []);
 
+  const handleClick = (tooltipId, e) => {
+    e.preventDefault();
+    setActiveTooltip(activeTooltip === tooltipId ? null : tooltipId);
+  };
+
+  // Close tooltip when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        tooltipRef.current &&
+        !tooltipRef.current.contains(event.target)
+      ) {
+        setActiveTooltip(null);
+      }
+    }
+  
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="bg-black shadow-sm border-b border-gray-800 z-60">
+    <div className="bg-black shadow-sm border-b border-gray-800 z-60 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-12">
           {/* Left side - Download App */}
           <div className="flex items-center space-x-3">
             <span className="text-white text-sm font-medium">{t('banner.downloadApp')}</span>
             <div className="hidden md:flex items-center space-x-2">
-              <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer">
-                <img src={googlePlay} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
-              </a>
-              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
-                <img src={appStore} alt="App Store" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
-              </a>
+            <div className="group">
+            <button className="block"> {/* Changed from <a> to <button> */}
+              <img src={googlePlay} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+            </button>
+              <span className="absolute top-[90%] left-35 mb-2 px-2 py-1 text-xs text-white bg-gray-950 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                Coming soon
+              </span>
+            </div>
+            <div className="group">
+            <button className="block"> {/* Changed from <a> to <button> */}
+              <img src={appStore} alt="App Store" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+            </button>
+              <span className="absolute top-[90%] left-54 mb-2 px-2 py-1 text-xs text-white bg-gray-950 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
+                Coming soon
+              </span>
+            </div>
             </div>
             <div className="flex md:hidden items-center space-x-2">
-              <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer">
+              <div>
+              <button 
+                className="block"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent any default behavior
+                  handleClick('google-play', e);
+                }}
+              >
                 <img src={googleMobile} alt="Google Play" className="h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
-              </a>
-              <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer">
-                <img src={appleMobile} alt="App Store" className="h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
-              </a>
+              </button>
+
+              {activeTooltip === 'google-play' && (
+                <span className="absolute top-[90%] left-35 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded whitespace-nowrap z-10">
+                  Coming Soon
+                </span>
+              )}
+              </div>
+              <div className="">
+                <button
+                  className="block"
+                  onClick={e => handleClick('app-store', e)}
+                  aria-label="App Store"
+                  type="button"
+                >
+                  <img src={appleMobile} alt="App Store" className="h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                </button>
+                {activeTooltip === 'app-store' && (
+                  <span className="absolute top-[90%] left-50 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded whitespace-nowrap z-10">
+                    Coming Soon
+                  </span>
+                )}
+              </div>
             </div>
           </div>
 

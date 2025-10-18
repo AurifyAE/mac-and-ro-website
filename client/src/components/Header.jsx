@@ -41,6 +41,18 @@ const Header = () => {
         return convertedPrice.toFixed(2);
     };
 
+    // Format price with locale-aware thousand separators
+    const formatPrice = (value) => {
+        if (value === null || value === undefined) return value;
+        const numeric = Number(value);
+        if (Number.isNaN(numeric)) return value;
+        return numeric.toLocaleString('en-US', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+            useGrouping: true,
+        });
+    };
+
     const convertedPrice = convertPrice(marketData?.bid);
 
     // Track price changes and set direction
@@ -274,7 +286,7 @@ const Header = () => {
                                         </svg>
                                     )}
                                     <p className="w-20 text-sm font-semibold text-gray-900 tracking-wide">
-                                        {convertedPrice ? `${currencyInfo.symbol} ${convertedPrice}` : '--'}
+                                        {convertedPrice ? `${currencyInfo.symbol} ${formatPrice(convertedPrice)}` : '--'}
                                     </p>
                                     <span className="text-sm font-medium text-gray-500 tracking-wide">{currencyInfo.unit}</span>
                                 </div>
@@ -319,7 +331,7 @@ const Header = () => {
                                         </svg>
                                     )}
                                     <p className="text-xs font-semibold text-gray-900">
-                                        {convertedPrice ? `${currencyInfo.symbol} ${convertedPrice}` : '--'}
+                                        {convertedPrice ? `${currencyInfo.symbol} ${formatPrice(convertedPrice)}` : '--'}
                                     </p>
                                 </div>
                                 <div className="text-xs text-gray-500">{currencyInfo.unit}</div>

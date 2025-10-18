@@ -1,33 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { newsItems } from '../data/news';
 
 const News = () => {
-  const newsItems = [
-    {
-      title: "Mac & Ro Expands to Dubai",
-      date: "March 15, 2024",
-      excerpt: "We're excited to announce the opening of our new Dubai office, expanding our presence in the Middle East region.",
-      category: "Company News"
-    },
-    {
-      title: "Gold Market Update Q1 2024",
-      date: "March 1, 2024",
-      excerpt: "Analysis of gold market performance and outlook for the first quarter of 2024.",
-      category: "Market Analysis"
-    },
-    {
-      title: "New Sharia-Compliant Products",
-      date: "February 20, 2024",
-      excerpt: "Launch of new Islamic finance compliant gold investment products for our Middle Eastern clients.",
-      category: "Product Launch"
-    },
-    {
-      title: "Regulatory Compliance Update",
-      date: "February 10, 2024",
-      excerpt: "Latest updates on regulatory requirements and our continued compliance with international standards.",
-      category: "Compliance"
-    }
-  ];
+  
 
   return (
     <div className="min-h-screen bg-white">
@@ -64,13 +40,13 @@ const News = () => {
                   {news.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed whitespace-pre-line">
                   {news.excerpt}
                 </p>
                 
-                <button className="text-[#DCBC7C] hover:text-[#C4A76A] font-semibold transition-colors">
+                <Link to={`/news/${news.slug}`} className="text-[#DCBC7C] hover:text-[#C4A76A] font-semibold transition-colors">
                   Read More →
-                </button>
+                </Link>
               </div>
             ))}
           </div>

@@ -437,23 +437,23 @@
         "formSubmitted": "Form submitted! Gmail compose window has been opened. Please review and send your message."
       },
       "emailTemplate": {
-        "subject": "New Contact Form Submission from {firstName} {lastName}",
+        "subject": "New Contact Form Submission from {{firstName}} {{lastName}}",
         "greeting": "Hello MAC & RO Capital Team,",
         "intro": "I would like to get in touch regarding precious metals investment. Here are my details:",
-        "name": "Name: {firstName} {lastName}",
-        "email": "Email: {email}",
-        "phone": "Phone: {phone}",
-        "branch": "Branch: {branch}",
-        "contactMode": "Preferred Contact Method: {contactMode}",
+        "name": "Name: {{firstName}} {{lastName}}",
+        "email": "Email: {{email}}",
+        "phone": "Phone: {{phone}}",
+        "branch": "Branch: {{branch}}",
+        "contactMode": "Preferred Contact Method: {{contactMode}}",
         "message": "Message:",
         "closing": "I look forward to hearing from you.",
-        "signature": "Best regards,\n{firstName} {lastName}"
+        "signature": "Best regards,\n{{firstName}} {{lastName}}"
       }
     },
     "info": {
       "title": "Contact Information",
       "phone": "Tel: +971 585 928 981",
-      "email": "Email: {email}"
+      "email": "Email: {{email}}"
     }
   },
   "productGrid": {
