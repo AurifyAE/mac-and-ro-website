@@ -52,11 +52,11 @@
     "socialMedia": "Social Media",
     "headOffice": "Head Office:",
     "brazzaville": "Brazzaville:",
-    "copyright": "© 2025 Mac & Ro. All rights reserved.",
+    "copyright": "© 2025 Mac & Ro Capital FZC. All rights reserved.",
     "bookConsultant": "Book Consultant"
   },
   "appModal": {
-    "downloadTitle": "Download ORO VIVO App",
+    "downloadTitle": "Download OROVIVO App",
     "description": "Trade gold anytime, anywhere with our cutting-edge mobile application",
     "realTimeTrading": "Real-time gold trading",
     "locationSwap": "Location Swap feature",
@@ -171,7 +171,7 @@
         },
         "step5": {
           "title": "Client Benefit",
-          "description": "Profits from the cycle are returned as additional physical gold credited to your Deluxe Metal Account"
+          "description": "Profits are credited as additional physical gold to your Deluxe Metal Account."
         }
       }
     },
@@ -191,7 +191,7 @@
         },
         "step4": {
           "title": "Secure Custody",
-          "description": "High-security vaults ensure your metals are protected at all times. (though physical collection is complex due to vault security)."
+          "description": "High-security vaults keep your metals safe, though physical collection is restricted."
         }
       }
     }
@@ -477,7 +477,7 @@
       "title": "Who we are?"
     },
     "intro": {
-      "description1": "Mac & Ro represents the pinnacle of excellence in precious metals investment and wealth management. As a globally recognized firm with deep roots in Italian financial tradition, we combine centuries-old expertise with cutting-edge technology to deliver exceptional value to our clients worldwide.",
+      "description1": "Mac & Ro capital represents the pinnacle of excellence in precious metals investment and wealth management. As a globally recognized firm with deep roots in Italian financial tradition, we combine centuries-old expertise with cutting-edge technology to deliver exceptional value to our clients worldwide.",
       "description2": "Our commitment to transparency, regulatory compliance, and client success has positioned us as a trusted partner for individuals and institutions seeking to diversify their portfolios with precious metals. Through our innovative metal accounts and comprehensive investment solutions, we empower our clients to build lasting wealth in an ever-changing financial landscape."
     },
     "missionVision": {
@@ -553,7 +553,7 @@
       },
       "mining": {
         "title": "Mining",
-        "description": "Through strategic mining collaborations, Mac & Ro secures access to high-quality raw gold. Our commitment to responsible mining practices ensures sustainability, legal compliance, and respect for environmental and social standards."
+        "description": "Through strategic mining collaborations, Mac & Ro Capital secures access to high-quality raw gold. Our commitment to responsible mining practices ensures sustainability, legal compliance, and respect for environmental and social standards."
       },
       "smelting": {
         "title": "Smelting",

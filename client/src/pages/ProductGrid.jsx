@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import productBanner from '../assets/service/product-banner.jpg';
 import goldRockLogo from '../assets/service/goldrocklogo.png';
 import { products } from '../data/products';
-import whyInvest from '../assets/service/whyinvest.jpg';
+import whyInvest from '../assets/service/whyInvest.png';
 import { useTranslation } from 'react-i18next';
 
 

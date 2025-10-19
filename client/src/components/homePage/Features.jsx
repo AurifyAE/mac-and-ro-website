@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import featureImage1 from '../../assets/homepage/feature-image1.jpg';
-import featureImage3 from '../../assets/homepage/orovivo-app.png';
+import featureImage1 from '../../assets/homepage/goldVault.png';
+import featureImage3 from '../../assets/homepage/orovivo-app.jpg';
 import locationSwapVideo from '../../assets/location-swap/location-swap-video.mov';
 import googlePlay from '../../assets/homepage/googlePlay.png';
 import appStore from '../../assets/homepage/appStore.png';
@@ -13,6 +13,28 @@ const Features = () => {
     const { t, i18n } = useTranslation();
     // Determine if the language is Arabic (rtl)
     const isArabic = i18n.language === 'ar';
+    
+    // State for mobile tooltips
+    const [activeTooltip, setActiveTooltip] = useState(null);
+
+    const handleClick = (tooltipId, e) => {
+        e.preventDefault();
+        setActiveTooltip(activeTooltip === tooltipId ? null : tooltipId);
+    };
+
+    // Close tooltip when clicking outside
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (!event.target.closest('.tooltip-container')) {
+                setActiveTooltip(null);
+            }
+        }
+
+        document.addEventListener('click', handleClickOutside);
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
 
     // Array of location data
     const locations = [
@@ -252,9 +274,45 @@ const Features = () => {
                             className="px-6 py-2 bg-transparent hover:bg-black hover:text-white border-2 border-black text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
                                 {t('homepage.features.downloadNow')}
                             </button>
-                            <div className="flex justify-center gap-4 mt-8">
-                                <img src={googlePlay} alt="OROVIVO App" className="w-28 h-auto shadow-2xl" />
-                                <img src={appStore} alt="OROVIVO App" className="w-28 h-auto shadow-2xl" />
+                            <div className="flex items-center justify-center gap-4 mt-8">
+                                <div className="tooltip-container">
+                                    <div className="relative group cursor-pointer">
+                                        <button 
+                                            className="block"
+                                            onClick={(e) => handleClick('google-play', e)}
+                                        >
+                                            <img 
+                                                src={googlePlay} 
+                                                alt="OROVIVO App" 
+                                                className="w-28 h-auto shadow-2xl" 
+                                            />
+                                        </button>
+                                        <span className={`absolute top-full left-8 mt-2 px-2 py-1 text-xs text-white bg-gray-950 rounded transition-opacity duration-300 whitespace-nowrap z-10 ${
+                                            activeTooltip === 'google-play' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                                        }`}>
+                                            Coming soon
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="tooltip-container">
+                                    <div className="relative group cursor-pointer">
+                                        <button 
+                                            className="block"
+                                            onClick={(e) => handleClick('app-store', e)}
+                                        >
+                                            <img 
+                                                src={appStore} 
+                                                alt="OROVIVO App" 
+                                                className="w-28 h-auto shadow-2xl" 
+                                            />
+                                        </button>
+                                        <span className={`absolute top-full left-12 mt-2 px-2 py-1 text-xs text-white bg-gray-950 rounded transition-opacity duration-300 whitespace-nowrap z-10 ${
+                                            activeTooltip === 'app-store' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                                        }`}>
+                                            Coming soon
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                         </motion.div>
                     </motion.div>

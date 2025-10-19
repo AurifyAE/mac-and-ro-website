@@ -118,7 +118,7 @@ const Hero = () => {
 							{t('homepage.hero.secureEmpowered')}
 						</motion.h2>
 						<motion.p
-							className="text-sm sm:text-base mb-8 font-light tracking-wide leading-relaxed"
+							className="text-sm sm:text-base text-justify md:text-center mb-8 font-light tracking-wide leading-relaxed"
 							initial={{ opacity: 0, y: 16 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true, amount: 0.3 }}
@@ -127,7 +127,7 @@ const Hero = () => {
 							{t('homepage.hero.description1')}
 						</motion.p>
 						<motion.p
-							className="text-sm sm:text-base mb-8 font-light tracking-wide leading-relaxed"
+							className="text-sm sm:text-base text-justify md:text-center mb-8 font-light tracking-wide leading-relaxed"
 							initial={{ opacity: 0, y: 16 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true, amount: 0.3 }}

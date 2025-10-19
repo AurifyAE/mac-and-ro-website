@@ -153,10 +153,10 @@ const CorporateGovernance = () => {
                       <thead className="bg-black">
                         <tr>
                           <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
-{t('corporateGovernance.table.reports')}
+                            {t('corporateGovernance.table.reports')}
                           </th>
                           <th className="px-6 py-4 text-center text-sm font-semibold text-white uppercase tracking-wider">
-{t('corporateGovernance.table.downloads')}
+                            {t('corporateGovernance.table.downloads')}
                           </th>
                         </tr>
                       </thead>
@@ -164,7 +164,7 @@ const CorporateGovernance = () => {
                         {reportsDataOfDubai.map((report) => (
                           <tr key={report.id} className="hover:bg-gray-50">
                             <td className="px-6 py-4">
-                              <div className="text-sm font-medium text-gray-900">{report.title}</div>
+                              <div className="text-sm font-medium uppercase text-gray-900">{report.title}</div>
                             </td>
                             <td className="px-6 py-4 text-center">
                               <button 
@@ -202,10 +202,10 @@ const CorporateGovernance = () => {
                       <thead className="bg-black">
                         <tr>
                           <th className="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider">
-{t('corporateGovernance.table.reports')}
+                            {t('corporateGovernance.table.reports')}
                           </th>
                           <th className="px-6 py-4 text-center text-sm font-semibold text-white uppercase tracking-wider">
-{t('corporateGovernance.table.downloads')}
+                            {t('corporateGovernance.table.downloads')}
                           </th>
                         </tr>
                       </thead>
@@ -213,7 +213,7 @@ const CorporateGovernance = () => {
                         {reportsDataOfItaly.map((report) => (
                           <tr key={report.id} className="hover:bg-gray-50">
                             <td className="px-6 py-4">
-                              <div className="text-sm font-medium text-gray-900">{report.title}</div>
+                              <div className="text-sm font-medium uppercase text-gray-900">{report.title}</div>
                             </td>
                             <td className="px-6 py-4 text-center">
                               <button 
@@ -233,9 +233,7 @@ const CorporateGovernance = () => {
                   </div>
                 </div>
               </div>
-            </section>
-
-            
+            </section>            
     </div>
   );
 };

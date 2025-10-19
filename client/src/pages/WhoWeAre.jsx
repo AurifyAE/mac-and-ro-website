@@ -153,7 +153,7 @@ const WhoWeAre = () => {
                   </h3>
                   <p className="text-[#A78E52] font-semibold mb-3">{member.role}</p>
                   <p className={`text-sm leading-relaxed ${
-                    member.id > 2 ? 'text-gray-300' : 'text-gray-600'
+                    member.id > 2 ? 'text-gray-300' : 'text-gray-600 text-justify'
                   }`}>
                     {member.description}
                   </p>

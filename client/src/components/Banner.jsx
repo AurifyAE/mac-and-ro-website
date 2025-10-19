@@ -75,8 +75,8 @@ const Banner = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-12">
           {/* Left side - Download App */}
-          <div className="flex items-center space-x-3">
-            <span className="text-white text-sm font-medium">{t('banner.downloadApp')}</span>
+          <div className="flex items-center space-x-0 md:space-x-3">
+            <span className="text-white text-xs md:text-sm font-medium">{t('banner.downloadApp')}</span>
             <div className="hidden md:flex items-center space-x-2">
             <div className="group">
             <button className="block"> {/* Changed from <a> to <button> */}
@@ -95,7 +95,7 @@ const Banner = () => {
               </span>
             </div>
             </div>
-            <div className="flex md:hidden items-center space-x-2">
+            <div className="flex md:hidden items-center space-x-0">
               <div>
               <button 
                 className="block"
@@ -104,11 +104,11 @@ const Banner = () => {
                   handleClick('google-play', e);
                 }}
               >
-                <img src={googleMobile} alt="Google Play" className="h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                <img src={googleMobile} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
               </button>
 
               {activeTooltip === 'google-play' && (
-                <span className="absolute top-[90%] left-35 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded whitespace-nowrap z-10">
+                <span className="absolute top-[90%] left-30 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded whitespace-nowrap z-10">
                   Coming Soon
                 </span>
               )}
@@ -120,10 +120,10 @@ const Banner = () => {
                   aria-label="App Store"
                   type="button"
                 >
-                  <img src={appleMobile} alt="App Store" className="h-8 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                  <img src={appleMobile} alt="App Store" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
                 </button>
                 {activeTooltip === 'app-store' && (
-                  <span className="absolute top-[90%] left-50 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded whitespace-nowrap z-10">
+                  <span className="absolute top-[90%] left-35 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded whitespace-nowrap z-10">
                     Coming Soon
                   </span>
                 )}

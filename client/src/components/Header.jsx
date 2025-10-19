@@ -139,11 +139,6 @@ const Header = () => {
             hasSubmenu: false
         },
         {
-            name: t('navigation.accreditations'),
-            path: '/accreditations',
-            hasSubmenu: false
-        },
-        {
             name: t('navigation.corporateGovernance'),
             path: '/corporate-governance',
             hasSubmenu: false
