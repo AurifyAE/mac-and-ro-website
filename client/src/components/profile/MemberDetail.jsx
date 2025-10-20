@@ -16,32 +16,39 @@ import { getInitials } from '../../data/teamMembers';
 
 function MemberDetail({ name, role, email, phone, whatsapp, address, photo }) {
 
+
     const handleSaveContact = () => {
-        const vcard = `
-            BEGIN:VCARD
-            VERSION:3.0
-            FN:${name}
-            ORG:Mac & Ro Capital
-            TITLE:${role}
-            TEL;TYPE=WORK,VOICE:${phone || ''}
-            TEL;TYPE=CELL,VOICE:${whatsapp || ''}
-            EMAIL;TYPE=PREF,INTERNET:${email || ''}
-            ADR;TYPE=WORK:;;${address || ''};;;;
-            END:VCARD
-            `.trim();
+        const escape = (str) => (str || '').replace(/,/g, '\\,').replace(/;/g, '\\;').replace(/\n/g, '\\n');
+        const vcardLines = [
+            'BEGIN:VCARD',
+            'VERSION:3.0',
+            `FN:${escape(name)}`,
+            'ORG:Mac & Ro Capital',
+            `TITLE:${escape(role)}`,
+            phone ? `TEL;TYPE=WORK,VOICE:${escape(phone)}` : '',
+            whatsapp ? `TEL;TYPE=CELL,VOICE:${escape(whatsapp)}` : '',
+            email ? `EMAIL;TYPE=PREF,INTERNET:${escape(email)}` : '',
+            address ? `ADR;TYPE=WORK:;;${escape(address)};;;;` : '',
+            'END:VCARD'
+        ].filter(Boolean);
 
-            // Encode for a data URL
-            const encodedVcard = encodeURIComponent(vcard);
+        // Ensure CRLF line endings per vCard spec
+        const vcard = vcardLines.join('\r\n');
 
-            // Create the "Add Contact" link
-            const vcardUrl = `data:text/vcard;charset=utf-8,${encodedVcard}`;
+        // Encode for a data URL
+        const encodedVcard = encodeURIComponent(vcard);
 
-            // Trigger the link
-            const link = document.createElement('a');
-            link.href = vcardUrl;
-            link.download = `${name.replace(/\s+/g, '_')}.vcf`;
-            link.click();
-      };
+        // Create the "Add Contact" link
+        const vcardUrl = `data:text/vcard;charset=utf-8,${encodedVcard}`;
+
+        // Trigger the link
+        const link = document.createElement('a');
+        link.href = vcardUrl;
+        link.download = `${(name || 'contact').replace(/\s+/g, '_')}.vcf`;
+        document.body.appendChild(link); // safer for some browsers
+        link.click();
+        document.body.removeChild(link);
+    };
 
 
     return (
