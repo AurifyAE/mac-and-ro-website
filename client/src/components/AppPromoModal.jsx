@@ -7,58 +7,32 @@ import { useTranslation } from 'react-i18next';
 const AppPromoModal = ({ isOpen, onClose }) => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
-  const [isClosing, setIsClosing] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') {
-        handleClose();
-      }
-    };
+  const [timerId, setTimerId] = useState(null);
 
+  useEffect(() => {
     if (isOpen) {
-      setIsClosing(false);
-      document.addEventListener('keydown', handleEscape);
+      // Start timer for 10 minutes when page/component loaded AND isOpen
+      const id = setTimeout(() => {
+        setShowModal(true);
+      }, 600000);
+      setTimerId(id);
+      // Hide scroll
       document.body.style.overflow = 'hidden';
     }
-
     return () => {
-      document.removeEventListener('keydown', handleEscape);
+      clearTimeout(timerId);
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
 
-  // 10-minute delay to show modal
-  useEffect(() => {
-    const hasSeenModal = localStorage.getItem('appPromoModalSeen');
-    const lastShownTime = localStorage.getItem('appPromoModalLastShown');
-    const now = Date.now();
-    
-    // Check if modal was never shown or if 10 minutes (600000 ms) have passed
-    const shouldShowModal = !hasSeenModal || (lastShownTime && (now - parseInt(lastShownTime)) >= 600000);
-    
-    if (shouldShowModal && isOpen) {
-      setShowModal(true);
-      localStorage.setItem('appPromoModalLastShown', now.toString());
-    }
-  }, [isOpen]);
-
+  // handleClose logic stays the same
   const handleClose = () => {
-    setIsClosing(true);
-    localStorage.setItem('appPromoModalSeen', 'true');
-    setTimeout(() => {
-      setShowModal(false);
-      onClose();
-    }, 300); // Match fade out duration
+    setShowModal(false);
+    onClose();
   };
 
   if (!isOpen || !showModal) return null;
-
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      handleClose();
-    }
-  };
 
   return (
     <div 

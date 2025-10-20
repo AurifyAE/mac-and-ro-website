@@ -17,29 +17,31 @@ import { getInitials } from '../../data/teamMembers';
 function MemberDetail({ name, role, email, phone, whatsapp, address, photo }) {
 
     const handleSaveContact = () => {
-        const vCard = `
-    BEGIN:VCARD
-    VERSION:3.0
-    FN:${name}
-    ORG:Mac & Ro Capital
-    TITLE:${role}
-    TEL;TYPE=WORK,VOICE:${phone || ''}
-    TEL;TYPE=CELL,VOICE:${whatsapp || ''}
-    EMAIL;TYPE=PREF,INTERNET:${email || ''}
-    ADR;TYPE=WORK:;;${address || ''};;;;
-    END:VCARD
-        `.trim();
+        const vcard = `
+            BEGIN:VCARD
+            VERSION:3.0
+            FN:${name}
+            ORG:Mac & Ro Capital
+            TITLE:${role}
+            TEL;TYPE=WORK,VOICE:${phone || ''}
+            TEL;TYPE=CELL,VOICE:${whatsapp || ''}
+            EMAIL;TYPE=PREF,INTERNET:${email || ''}
+            ADR;TYPE=WORK:;;${address || ''};;;;
+            END:VCARD
+            `.trim();
 
-        const blob = new Blob([vCard], { type: 'text/vcard' });
-        const url = URL.createObjectURL(blob);
+            // Encode for a data URL
+            const encodedVcard = encodeURIComponent(vcard);
 
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `${name.replace(/\s+/g, '_')}.vcf`;
-        link.click();
+            // Create the "Add Contact" link
+            const vcardUrl = `data:text/vcard;charset=utf-8,${encodedVcard}`;
 
-        URL.revokeObjectURL(url);
-    };
+            // Trigger the link
+            const link = document.createElement('a');
+            link.href = vcardUrl;
+            link.download = `${name.replace(/\s+/g, '_')}.vcf`;
+            link.click();
+      };
 
 
     return (
