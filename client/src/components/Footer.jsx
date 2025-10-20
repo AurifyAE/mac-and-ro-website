@@ -47,91 +47,92 @@ const Footer = () => {
     return (
         <footer className="text-black border-t border-gray-800">
         {/* First Section */}
-        <section className="py-16 bg-[#F1F0E8]">
+        <section className="py-5 md:py-16 bg-[#F1F0E8]">
             <div className="max-w-6xl mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                {/* Column 1 - About Us */}
-                <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                >
-                <h3 className="text-lg font-bold mb-6 text-black">{t('footer.aboutUs')}</h3>
-                <ul className="space-y-3">
-                    <li><Link to="/who-we-are" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.whoWeAre')}</Link></li>
-                    <li><Link to="/metal-accounts" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.metalAccount')}</Link></li>
-                    <li><Link to="/products" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.products')}</Link></li>
-                    <li><Link to="/contact" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.contact')}</Link></li>
-                </ul>
-                </motion.div>
-
-                {/* Column 2 - Info */}
-                <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                >
-                <h3 className="text-lg font-bold mb-6 text-black">{t('footer.info')}</h3>
-                <ul className="space-y-3">
-                    <li><Link to="/terms-and-conditions" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.termsAndConditions')}</Link></li>
-                    <li><Link to="/corporate-governance" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.corporateGovernance')}</Link></li>
-                    <li><Link to="/privacy-policy" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.privacyPolicy')}</Link></li>
-                    <li><Link to="/faq" className="text-black hover:text-[#DCBC7C] transition-colors">{t('footer.faq')}</Link></li>
-                </ul>
-                </motion.div>
-
-                {/* Column 3 - Newsletter */}
-                <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                >
-                <h3 className="text-lg font-bold mb-6 text-black">{t('footer.subscribeNewsletter')}</h3>
-                <form onSubmit={handleSubscribe} className="space-y-4">
-                    <div className="flex relative">
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder={t('footer.enterEmail')}
-                        className="w-full px-4 py-3 pr-16 bg-transparent text-black border-2 border-black rounded-full focus:outline-none focus:ring-2 placeholder:text-black/50 focus:ring-[#DCBC7C]"
-                        required
-                    />
-                    <button
-                        type="submit"
-                        className="absolute right-2 top-1/2 transform -translate-y-1/2 px-3 py-2 bg-[#DCBC7C] text-black font-semibold rounded-full hover:bg-[#C4A76A] transition-colors flex items-center justify-center"
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    
+                    {/* Column 1 - About Us */}
+                    <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
                     >
-                        <img src={send} alt="Send" className="w-4 h-4" />
-                    </button>
-                    </div>
-                    <div className="flex items-start space-x-3">
-                    <input
-                        type="checkbox"
-                        id="privacy"
-                        checked={privacyChecked}
-                        onChange={(e) => setPrivacyChecked(e.target.checked)}
-                        className="mt-1 w-4 h-4 text-[#DCBC7C] bg-gray-800 border-gray-600 rounded focus:ring-[#DCBC7C]"
-                        required
-                    />
-                    <label htmlFor="privacy" className="text-sm text-black leading-relaxed">
-                        {t('footer.privacyDeclaration')}{' '}
-                        <Link to="/privacy-policy" className="text-[#DCBC7C] hover:underline">
-                            {t('footer.privacyPolicy')}
-                        </Link>
-                    </label>
-                    </div>
-                </form>
-                </motion.div>
-            </div>
+                    <h3 className="text-lg font-bold mb-6 text-black">{t('footer.aboutUs')}</h3>
+                    <ul className="space-y-3">
+                        <li><Link to="/who-we-are" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.whoWeAre')}</Link></li>
+                        <li><Link to="/metal-accounts" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.metalAccount')}</Link></li>
+                        <li><Link to="/products" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.products')}</Link></li>
+                        <li><Link to="/contact" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.contact')}</Link></li>
+                    </ul>
+                    </motion.div>
+
+                    {/* Column 2 - Info */}
+                    <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    >
+                    <h3 className="text-lg font-bold mb-6 text-black">{t('footer.info')}</h3>
+                    <ul className="space-y-3">
+                        <li><Link to="/terms-and-conditions" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.termsAndConditions')}</Link></li>
+                        <li><Link to="/corporate-governance" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.corporateGovernance')}</Link></li>
+                        <li><Link to="/privacy-policy" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.privacyPolicy')}</Link></li>
+                        <li><Link to="/faq" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.faq')}</Link></li>
+                    </ul>
+                    </motion.div>
+
+                    {/* Column 3 - Newsletter */}
+                    <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className='col-span-2 md:col-span-1'
+                    >
+                    <h3 className="text-lg font-bold mb-6 text-black">{t('footer.subscribeNewsletter')}</h3>
+                    <form onSubmit={handleSubscribe} className="space-y-4">
+                        <div className="flex relative">
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder={t('footer.enterEmail')}
+                            className="w-full px-4 py-3 pr-16 bg-transparent text-black border-2 border-black rounded-full focus:outline-none focus:ring-2 placeholder:text-black/50 focus:ring-[#DCBC7C]"
+                            required
+                        />
+                        <button
+                            type="submit"
+                            className="absolute right-2 top-1/2 transform -translate-y-1/2 px-3 py-2 bg-[#DCBC7C] text-black font-semibold rounded-full hover:bg-[#C4A76A] transition-colors flex items-center justify-center"
+                        >
+                            <img src={send} alt="Send" className="w-4 h-4" />
+                        </button>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                        <input
+                            type="checkbox"
+                            id="privacy"
+                            checked={privacyChecked}
+                            onChange={(e) => setPrivacyChecked(e.target.checked)}
+                            className="mt-1 w-4 h-4 text-[#DCBC7C] bg-gray-800 border-gray-600 rounded focus:ring-[#DCBC7C]"
+                            required
+                        />
+                        <label htmlFor="privacy" className="text-sm text-black leading-relaxed">
+                            {t('footer.privacyDeclaration')}{' '}
+                            <Link to="/privacy-policy" className="text-[#DCBC7C] hover:underline">
+                                {t('footer.privacyPolicy')}
+                            </Link>
+                        </label>
+                        </div>
+                    </form>
+                    </motion.div>
+                </div>
             </div>
         </section>
 
         {/* Second Section */}
-        <section className="py-16">
+        <section className="py-5 md:py-16">
             <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 

@@ -57,7 +57,7 @@ const ServicePage = () => {
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             {t('servicePage.hero.title')}
           </h1>
-          <p className="text-sm sm:text-base text-gray-600 max-w-6xl mx-auto leading-relaxed">
+          <p className="text-sm md:text-base text-gray-600 max-w-6xl mx-auto leading-relaxed">
           {t('servicePage.hero.description')}
           </p>
         </div>
@@ -76,7 +76,7 @@ const ServicePage = () => {
                 <h3 className="text-lg font-playfair font-bold mb-4 text-black">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
                   {service.description}
                 </p>
               </div>

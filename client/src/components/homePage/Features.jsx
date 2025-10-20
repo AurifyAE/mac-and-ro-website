@@ -124,7 +124,7 @@ const Features = () => {
                         </motion.h2>
                         
                         <motion.p 
-                            className="text-base text-gray-600 mb-8 leading-relaxed text-center"
+                            className="text-sm md:text-base text-gray-600 mb-8 leading-relaxed text-center"
                             variants={fadeInUp}
                         >
                             {t('homepage.features.vaultDescription')}
@@ -138,7 +138,7 @@ const Features = () => {
                             {locations.map((location, index) => (
                                 <motion.li
                                     key={location.key}
-                                    className={`text-sm sm:text-base font-light tracking-wide text-gray-600 flex items-center w-full`}
+                                    className={`text-sm md:text-base font-light tracking-wide text-gray-600 flex items-center w-full`}
                                     variants={itemVariants}
                                 >
                                     {t(`homepage.features.${location.key}`)}
@@ -147,7 +147,7 @@ const Features = () => {
                         </motion.ul>
 
                         <motion.p 
-                            className="text-base text-gray-600 mb-8 leading-relaxed text-center"
+                            className="text-sm md:text-base text-gray-600 mb-8 leading-relaxed text-center"
                             variants={fadeInUp}
                         >
                             {t('homepage.features.vaultProtocols')}
@@ -222,7 +222,7 @@ const Features = () => {
                         </motion.h2>
                         
                         <motion.p 
-                            className="text-base text-gray-600 mb-8 leading-relaxed"
+                            className="text-sm md:text-base text-gray-600 mb-8 leading-relaxed"
                             variants={fadeInUp}
                         >
                             {t('homepage.features.locationSwapDescription')}
@@ -260,7 +260,7 @@ const Features = () => {
                         </motion.h2>
                         
                         <motion.p 
-                            className="text-base text-gray-600 mb-8 leading-relaxed"
+                            className="text-sm md:text-base text-gray-600 mb-8 leading-relaxed"
                             variants={fadeInUp}
                         >
                             {t('homepage.features.orovivoDescription')}

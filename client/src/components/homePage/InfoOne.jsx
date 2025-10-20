@@ -35,7 +35,7 @@ const InfoOne = () => {
             </h2>
 
             {/* Paragraph */}
-            <p className="text-sm sm:text-base lg:text-base mb-8 font-light tracking-wide leading-relaxed text-gray-300">
+            <p className="text-sm md:text-base mb-8 font-light tracking-wide leading-relaxed text-gray-300">
               {t('homepage.infoOne.description')}
             </p>
 

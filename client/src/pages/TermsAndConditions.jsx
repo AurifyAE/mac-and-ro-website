@@ -2,14 +2,14 @@ import React from 'react';
 
 const TermsAndConditions = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white text-sm md:text-base">
             {/* Header Section */}
             <section className="bg-gray-50 py-16">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 font-playfair leading-tight mb-6">
                         Terms & Conditions
                     </h1>
-                    <p className="text-base text-gray-600 leading-relaxed">
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                         Please read these terms and conditions carefully before using our website and services.
                     </p>
                 </div>

@@ -65,7 +65,7 @@ const GoldInfo = () => {
               <h3 className={`text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.inflationProtection')}
               </h3>
-              <p className={`text-gray-600 leading-relaxed tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
+              <p className={`text-sm md:text-base text-gray-600 leading-relaxed tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.inflationDescription')}
               </p>
             </motion.div>
@@ -82,7 +82,7 @@ const GoldInfo = () => {
               <h3 className={`text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.portfolioDiversification')}
               </h3>
-              <p className={`text-gray-600 leading-relaxed tracking-wide mb-6 ${isArabic ? 'text-right' : 'text-left'}`}>
+              <p className={`text-sm md:text-base text-gray-600 leading-relaxed tracking-wide mb-6 ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.diversificationDescription')}
               </p>
               <div className={`flex justify-start`}>
@@ -108,7 +108,7 @@ const GoldInfo = () => {
               <h3 className={`text-xl sm:text-2xl font-semibold text-gray-800 mb-4 tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.liquidity')}
               </h3>
-              <p className={`text-gray-600 leading-relaxed tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
+              <p className={`text-sm md:text-base text-gray-600 leading-relaxed tracking-wide ${isArabic ? 'text-right' : 'text-left'}`}>
                 {t('homepage.goldInfo.liquidityDescription')}
               </p>
             </motion.div>

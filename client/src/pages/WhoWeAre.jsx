@@ -85,10 +85,10 @@ const WhoWeAre = () => {
       <section className="py-5 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className={`${isArabic ? "text-right" : "text-left" } `}>
-            <p className="text-base text-gray-700 mb-6 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed">
               {t('whoWeAre.intro.description1')}
             </p>
-            <p className="text-base text-gray-700 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-700 leading-relaxed">
               {t('whoWeAre.intro.description2')}
             </p>
           </div>
@@ -100,17 +100,17 @@ const WhoWeAre = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Our Mission */}
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white p-6 md:p-8 rounded-lg shadow-sm">
               <h3 className="text-4xl font-bold text-[#A78E52] mb-4 font-playfair">{t('whoWeAre.missionVision.mission.title')}</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                 {t('whoWeAre.missionVision.mission.description')}
               </p>
             </div>
 
             {/* Our Vision */}
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white p-6 md:p-8 rounded-lg shadow-sm">
               <h3 className="text-4xl font-bold text-[#A78E52] mb-4 font-playfair">{t('whoWeAre.missionVision.vision.title')}</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-700 leading-relaxed">
                 {t('whoWeAre.missionVision.vision.description')}
               </p>
             </div>
@@ -124,7 +124,7 @@ const WhoWeAre = () => {
           {/* Team Header */}
           <div className={`${isArabic ? "text-right" : "text-left"}  mb-16`}>
             <h2 className="text-4xl font-bold text-[#A78E52] mb-6 font-playfair">{t('whoWeAre.team.title')}</h2>
-            <p className="text-base text-gray-700 mx-auto leading-relaxed">
+            <p className="text-sm md:text-base text-gray-700 mx-auto leading-relaxed">
             {t('whoWeAre.team.description')}
             </p>
           </div>
@@ -179,7 +179,7 @@ const WhoWeAre = () => {
           {/* Our Distribution Partner Section */}
           <div className={`${isArabic ? "text-right" : "text-left"} mt-16 text-left`}>
             <h3 className="text-3xl font-bold text-[#A78E52] mb-6 font-playfair">{t('whoWeAre.partner.title')}</h3>
-            <p className="text-base text-gray-700 mx-auto mb-8 leading-relaxed">
+            <p className="text-sm md:text-base text-gray-700 mx-auto mb-8 leading-relaxed">
               {t('whoWeAre.partner.description')}
             </p>
             

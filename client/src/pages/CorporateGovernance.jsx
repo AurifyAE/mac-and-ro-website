@@ -120,7 +120,7 @@ const CorporateGovernance = () => {
                           {t('corporateGovernance.hero.title')}
                         </h1>
 
-                        <p className="text-base mb-4 leading-relaxed">
+                        <p className="text-sm md:text-base mb-4 leading-relaxed">
                         {t('corporateGovernance.hero.description')}
                         </p>
 

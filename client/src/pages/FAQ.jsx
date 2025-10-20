@@ -267,7 +267,7 @@ const FAQ = () => {
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                   onClick={() => toggleFAQ(index)}
                 >
-                  <span className="text-lg font-semibold text-gray-900">
+                  <span className="text-base md:text-lg font-semibold text-gray-900">
                     {faq.question}
                   </span>
                   <svg 
@@ -284,7 +284,7 @@ const FAQ = () => {
                 
                 {openIndex === index && (
                   <div className="px-6 py-4">
-                    <div className="text-gray-600 leading-relaxed">
+                    <div className="text-sm md:text-base text-gray-600 leading-relaxed">
                       {faq.answer}
                     </div>
                   </div>
@@ -298,22 +298,22 @@ const FAQ = () => {
       {/* Contact Section */}
       <section className="py-10 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 font-playfair">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 font-playfair">
             {t('faq.contact.title')}
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-base text-gray-600 mb-8 max-w-2xl mx-auto">
             {t('faq.contact.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
-              className="px-8 py-4 bg-[#DCBC7C] hover:bg-[#C4A76A] text-black font-semibold rounded-lg transition-all duration-300 text-lg"
+              className="px-8 py-4 bg-[#DCBC7C] hover:bg-[#C4A76A] text-black font-semibold rounded-lg transition-all duration-300 text-base"
             >
               {t('faq.contact.contactTeam')}
             </Link>
             <Link 
               to="/services"
-              className="px-8 py-4 bg-transparent border-2 border-[#DCBC7C] text-[#DCBC7C] hover:bg-[#DCBC7C] hover:text-black font-semibold rounded-lg transition-all duration-300 text-lg"
+              className="px-8 py-4 bg-transparent border-2 border-[#DCBC7C] text-[#DCBC7C] hover:bg-[#DCBC7C] hover:text-black font-semibold rounded-lg transition-all duration-300 text-base"
             >
               {t('faq.contact.viewServices')}
             </Link>

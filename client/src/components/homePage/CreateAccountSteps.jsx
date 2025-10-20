@@ -71,7 +71,7 @@ const CreateAccountSteps = () => {
             {t('homepage.createSteps.title')}
           </motion.h2>
           <motion.p 
-            className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
             variants={itemVariants}
           >
             {t('homepage.createSteps.description')}

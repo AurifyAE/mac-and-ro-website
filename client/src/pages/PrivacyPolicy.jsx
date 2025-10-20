@@ -2,14 +2,14 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-white text-sm md:text-base">
             {/* Header Section */}
             <section className="bg-gray-50 py-16">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 font-playfair leading-tight mb-6">
                         Privacy Policy
                     </h1>
-                    <p className="text-base text-gray-600 leading-relaxed">
+                    <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                         Your privacy is important to us. This document outlines how we collect, use, and protect your information.
                     </p>
                 </div>

@@ -38,18 +38,18 @@ const ProductGrid = () => {
                         {t('productGrid.hero.title')}
                         </h1>
 
-                        <p className="text-base mb-4 leading-relaxed">
+                        <p className="text-sm md:text-base mb-4 leading-relaxed">
                         {t('productGrid.hero.description1')}
                         </p>
 
-                        <p className="text-base mb-4 leading-relaxed flex items-center">
+                        <p className="text-sm md:text-base mb-4 leading-relaxed flex items-center">
                         {t('productGrid.hero.description2')} 
                         <img 
                             src={goldRockLogo} 
                             alt="Gold Rock Capital Logo" 
                             className="w-12 h-12 inline-block ml-2" 
                         /> 
-                        <a href="https://goldrockcapital.eu" target="_blank" rel="noopener noreferrer" className="ml-2 text-base underline hover:text-[#c59c6a] transition-all duration-300">{t('productGrid.hero.partnerLink')}</a>
+                        <a href="https://goldrockcapital.eu" target="_blank" rel="noopener noreferrer" className="ml-2 text-sm md:text-base underline hover:text-[#c59c6a] transition-all duration-300">{t('productGrid.hero.partnerLink')}</a>
                         </p>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ const ProductGrid = () => {
                             <h2 className="text-4xl font-playfair font-bold text-gray-900 mb-6 leading-tight">
                                 {t('productGrid.whyInvest.title')}
                             </h2>
-                            <p className="text-base text-gray-600 mb-6 leading-relaxed">
+                            <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed">
                                 {t('productGrid.whyInvest.description')}
                             </p>
                         </div>

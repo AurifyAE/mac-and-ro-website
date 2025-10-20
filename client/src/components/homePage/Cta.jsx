@@ -50,7 +50,7 @@ const Cta = () => {
           {t('homepage.cta.title')}
         </motion.h2>
         <motion.p 
-          className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
+          className="text-sm md:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed"
           variants={itemVariants}
         >
           {t('homepage.cta.description')}
@@ -93,7 +93,7 @@ const Cta = () => {
               </motion.h3>
               
               <motion.p 
-                className="text-sm sm:text-base text-gray-300 mb-8 leading-relaxed"
+                className="text-sm md:text-base text-gray-300 mb-8 leading-relaxed"
                 variants={itemVariants}
               >
                 {t('homepage.cta.goldBarsDescription')}

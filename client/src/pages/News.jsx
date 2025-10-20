@@ -8,12 +8,12 @@ const News = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header Section */}
-      <section className="py-20 bg-[#F1F0E8]">
+      <section className="py-10 md:py-16 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4 text-left">
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight font-playfair">
             News & Updates
           </h1>
-          <p className="text-base sm:text-base text-gray-600 mx-auto leading-relaxed">
+          <p className="text-sm md:text-base sm:text-base text-gray-600 mx-auto leading-relaxed">
             Stay informed about the latest developments at Mac & Ro, market insights, 
             and industry updates from the world of precious metals investment.
           </p>
@@ -21,7 +21,7 @@ const News = () => {
       </section>
 
       {/* News Grid */}
-      <section className="py-20">
+      <section className="py-10 md:py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {newsItems.map((news, index) => (
@@ -40,7 +40,7 @@ const News = () => {
                   {news.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed whitespace-pre-line">
+                <p className="text-sm md:text-base text-gray-600 mb-6 leading-relaxed whitespace-pre-line">
                   {news.excerpt}
                 </p>
                 
@@ -54,12 +54,12 @@ const News = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 md:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6 font-playfair">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 font-playfair">
             Stay Updated
           </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-gray-600 mb-8 max-w-2xl mx-auto">
             Subscribe to our newsletter to receive the latest news, market updates, 
             and exclusive insights directly to your inbox.
           </p>
@@ -72,33 +72,6 @@ const News = () => {
             <button className="px-6 py-3 bg-[#DCBC7C] hover:bg-[#C4A76A] text-black font-semibold rounded-lg transition-all duration-300">
               Subscribe
             </button>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-[#F1F0E8]">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 font-playfair">
-            Get in Touch
-          </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Have questions about our news or want to learn more about our services? 
-            Our team is here to help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="px-8 py-4 bg-[#DCBC7C] hover:bg-[#C4A76A] text-black font-semibold rounded-lg transition-all duration-300 text-lg"
-            >
-              Contact Us
-            </Link>
-            <Link 
-              to="/"
-              className="px-8 py-4 bg-transparent border-2 border-[#DCBC7C] text-[#DCBC7C] hover:bg-[#DCBC7C] hover:text-black font-semibold rounded-lg transition-all duration-300 text-lg"
-            >
-              Back to Home
-            </Link>
           </div>
         </div>
       </section>

@@ -60,7 +60,7 @@ const EndOfTreatmentPaymentTFM = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
             {t('metalAccounts.eot.hero.title')}
             </h1>
-            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-base`}>
+            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-sm md:text-base`}>
               {t('metalAccounts.eot.hero.subtitle')}
             </p>
           </div>
@@ -76,7 +76,7 @@ const EndOfTreatmentPaymentTFM = () => {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
                 {t('metalAccounts.eot.whatIs.title')}
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-sm md:text-base text-gray-600 leading-relaxed">
                 <p>
                 {t('metalAccounts.eot.whatIs.description1')}
                 </p>
@@ -125,7 +125,7 @@ const EndOfTreatmentPaymentTFM = () => {
                 <h3 className="text-xl font-bold mb-4">
                   {card.title}
                 </h3>
-                <p className="text-[#D9D9D9] leading-relaxed">
+                <p className="text-sm md:text-base text-[#D9D9D9] leading-relaxed">
                   {card.description}
                 </p>
               </div>
@@ -142,8 +142,8 @@ const EndOfTreatmentPaymentTFM = () => {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
                 {t('metalAccounts.eot.benefits.title')}
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed text-base">
-                <ul className="space-y-3 text-gray-600 leading-relaxed text-base">
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <ul className="space-y-3 text-gray-600 leading-relaxed text-sm md:text-base">
                   <li className="flex items-start">
                     <div className={`w-5 h-5 bg-[#C9A14A] rounded-full flex items-center justify-center ${isArabic ? "ml-3" : "mr-3"} mt-0.5 flex-shrink-0`}>
                       <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">

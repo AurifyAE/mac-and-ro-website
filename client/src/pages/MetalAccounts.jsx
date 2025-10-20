@@ -86,7 +86,7 @@ const MetalAccounts = () => {
       {/* Accounts Cards Section */}
       <section className="py-10 bg-[#F1F0E8]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className={`${isArabic ? 'text-right' : 'text-left'} text-base text-black mb-6`}>
+            <p className={`${isArabic ? 'text-right' : 'text-left'} text-sm md:text-base text-black mb-6`}>
             {t('metalAccountsPage.intro.description')}
             </p>
           <div className="my-16">

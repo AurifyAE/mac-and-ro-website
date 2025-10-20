@@ -116,7 +116,7 @@ const ProductDetails = () => {
                             {/* Product Description */}
                             <div className="mb-8">
                                 <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('productDetails.description')}</h3>
-                                <p className="text-gray-600 leading-relaxed">
+                                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                                     {product.description}
                                 </p>
                             </div>

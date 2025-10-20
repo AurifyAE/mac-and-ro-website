@@ -148,13 +148,13 @@ const FlipCards = () => {
                         <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180 bg-[#C9A14A] rounded-2xl shadow-lg p-6">
                             <div className="h-full flex flex-col items-center justify-center text-center text-white">
                                 <div className={`w-full max-w-sm mx-auto`} dir={isArabic ? 'rtl' : 'ltr'}>
-                                    <p className="text-lg leading-relaxed mb-4">
+                                    <p className="md:text-lg leading-relaxed mb-4">
                                         {card.backContent.description}
                                     </p>
-                                    <p className="text-lg leading-relaxed mb-4">
+                                    <p className="md:text-lg leading-relaxed mb-4">
                                         <span className="font-semibold text-black">{t('homepage.flipCards.whoItsFor')}</span> {card.backContent.who}
                                     </p>
-                                    <p className="text-lg leading-relaxed mb-4">
+                                    <p className="md:text-lg leading-relaxed mb-4">
                                         <span className="font-semibold text-black">{t('homepage.flipCards.keyBenefits')}</span> {card.backContent.benefits}
                                     </p>
                                 </div>

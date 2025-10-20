@@ -114,7 +114,7 @@ const DeluxeMetalAccount = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair mt-2">
             {t('metalAccounts.deluxe.hero.title')}
             </h1>
-            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-base`}>
+            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-sm md:text-base`}>
             {t('metalAccounts.deluxe.hero.subtitle')}
             </p>
           </div>
@@ -131,7 +131,7 @@ const DeluxeMetalAccount = () => {
                 {t('metalAccounts.deluxe.whatIs.title')}
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
-                <p>
+                <p className='text-sm md:text-base'>
                   {t('metalAccounts.deluxe.whatIs.description')}
                 </p>
               </div>
@@ -163,7 +163,7 @@ const DeluxeMetalAccount = () => {
         <h2 className="text-3xl sm:text-4xl lg:text-4xl font-semibold text-black mb-6 tracking-tight font-playfair">
           {t('metalAccounts.deluxe.howItWorks.title')}
         </h2>
-        <p className="text-gray-600 leading-relaxed text-base">
+        <p className="text-sm md:text-base text-gray-600 leading-relaxed text-base">
           {t('metalAccounts.deluxe.howItWorks.description')}
         </p>
 
@@ -205,7 +205,7 @@ const DeluxeMetalAccount = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{advantage.title}</h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   {advantage.description}
                 </p>
               </div>
@@ -222,14 +222,14 @@ const DeluxeMetalAccount = () => {
           <ul className="space-y-4">
             <li className="flex items-start">
               <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold text-lg`}>•</span>
-              <span><strong>{t('metalAccounts.deluxe.growthProfiles.items.sixPercent')}</strong></span>
+              <span className='text-sm md:text-base'><strong>{t('metalAccounts.deluxe.growthProfiles.items.sixPercent')}</strong></span>
             </li>
             <li className="flex items-start">
               <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold text-lg`}>•</span>
-              <span><strong>{t('metalAccounts.deluxe.growthProfiles.items.tenPercent')}</strong></span>
+              <span className='text-sm md:text-base'><strong>{t('metalAccounts.deluxe.growthProfiles.items.tenPercent')}</strong></span>
             </li>
           </ul>
-          <p className="mt-6">
+          <p className="mt-6 text-sm md:text-base">
             {t('metalAccounts.deluxe.growthProfiles.contractTerms')}
           </p>
         </div>
@@ -244,19 +244,19 @@ const DeluxeMetalAccount = () => {
               {t('metalAccounts.deluxe.isThisForYou.title')}
               </h2>
               <div className="space-y-10 text-gray-600 leading-relaxed text-base">
-                <p>
+                <p className='text-sm md:text-base'>
                 {t('metalAccounts.deluxe.isThisForYou.description')}
                 </p>
                 <ul className="space-y-3 text-gray-600 leading-relaxed text-base font-bold">
-                  <li className="flex items-start">
+                  <li className="flex items-start text-sm md:text-base">
                     <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.deluxe.isThisForYou.audiences.individuals')}
                   </li>
-                  <li className="flex items-start">
+                  <li className="flex items-start text-sm md:text-base">
                     <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.deluxe.isThisForYou.audiences.families')}
                   </li>
-                  <li className="flex items-start">
+                  <li className="flex items-start text-sm md:text-base">
                     <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.deluxe.isThisForYou.audiences.businesses')}
                   </li>

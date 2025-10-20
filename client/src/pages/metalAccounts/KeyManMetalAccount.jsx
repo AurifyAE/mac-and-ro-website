@@ -60,7 +60,7 @@ const KeyManMetalAccount = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
               {t('metalAccounts.keyman.hero.title')}
             </h1>
-            <p className={`${isArabic ? "" : "max-w-80"} text-white text-base`}>
+            <p className={`${isArabic ? "" : "max-w-80"} text-white text-sm md:text-base`}>
               {t('metalAccounts.keyman.hero.subtitle')}
             </p>
           </div>
@@ -75,7 +75,7 @@ const KeyManMetalAccount = () => {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-playfair leading-tight">
                 {t('metalAccounts.keyman.whatIs.title')}
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed text-base">
+              <div className="space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
                 <p>
                 {t('metalAccounts.keyman.whatIs.description1')}<br />
                 {t('metalAccounts.keyman.whatIs.description2')}
@@ -129,7 +129,7 @@ const KeyManMetalAccount = () => {
                 <h3 className="text-xl font-bold mb-4">
                   {card.title}
                 </h3>
-                <p className="text-[#D9D9D9] leading-relaxed">
+                <p className="text-[#D9D9D9] text-sm md:text-base leading-relaxed">
                   {card.description}
                 </p>
               </div>
@@ -147,10 +147,10 @@ const KeyManMetalAccount = () => {
               {t('metalAccounts.keyman.isThisForYou.title')}
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed text-base">
-                <p>
+                <p className='text-sm md:text-base'>
                 {t('metalAccounts.keyman.isThisForYou.description')}
                 </p>
-                <ul className="space-y-2 text-gray-600 leading-relaxed text-base font-bold">
+                <ul className="space-y-2 text-gray-600 leading-relaxed text-sm md:text-base font-bold">
                   <li className="flex items-start">
                     <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                     {t('metalAccounts.keyman.isThisForYou.audiences.corporations')}

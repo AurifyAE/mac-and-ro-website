@@ -85,7 +85,7 @@ const MacRoMetalAccount = () => {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight font-playfair">
               {t('metalAccounts.macRo.hero.title')}
             </h1>
-            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-base`}>
+            <p className={`${isArabic ? "" : "max-w-lg"} text-white text-sm md:text-base`}>
               {t('metalAccounts.macRo.hero.subtitle')}
             </p>
           </div>
@@ -105,7 +105,7 @@ const MacRoMetalAccount = () => {
             
             {/* Answer */}
             <div>
-              <p className="text-gray-600 leading-relaxed text-base">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed text-base">
               {t('metalAccounts.macRo.whatIs.description')}
               </p>
             </div>
@@ -122,10 +122,10 @@ const MacRoMetalAccount = () => {
             
             {/* Answer */}
             <div>
-              <p className="text-gray-600 leading-relaxed text-base mb-6">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed text-base mb-6">
               {t('metalAccounts.macRo.whatMakesDifferent.description')}
               </p>
-              <ul className="space-y-3 text-gray-600 leading-relaxed text-base font-bold">
+              <ul className="space-y-3 text-gray-600 leading-relaxed text-sm md:text-base font-bold">
                 <li className="flex items-start">
                   <span className={`text-[#DCBC7C] ${isArabic ? "ml-3" : "mr-3"} font-bold`}>•</span>
                   {t('metalAccounts.macRo.whatMakesDifferent.features.serialNumber')}
@@ -143,7 +143,7 @@ const MacRoMetalAccount = () => {
                   {t('metalAccounts.macRo.whatMakesDifferent.features.fineWeight')}
                 </li>
               </ul>
-              <p className="text-gray-600 leading-relaxed text-base mt-6">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed text-base mt-6">
                 {t('metalAccounts.macRo.whatMakesDifferent.conclusion')}
               </p>
             </div>
@@ -154,7 +154,7 @@ const MacRoMetalAccount = () => {
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-30 bg-gray-50">
             <motion.div 
-            className={`${isArabic ? "" : "text-left"}  mb-16`}
+            className={`${isArabic ? "" : "text-center"}  mb-16`}
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -265,14 +265,14 @@ const MacRoMetalAccount = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Question */}
             <div>
-              <h3 className="text-4xl font-semibold text-gray-900 mb-4 font-playfair">
+              <h3 className="text-4xl font-semibold text-gray-900 mb-2 font-playfair">
               {t('metalAccounts.macRo.insurance.title')}
               </h3>
             </div>
             
             {/* Answer */}
             <div>
-              <p className="text-gray-600 leading-relaxed text-base">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                 {t('metalAccounts.macRo.insurance.description')}
               </p>
             </div>

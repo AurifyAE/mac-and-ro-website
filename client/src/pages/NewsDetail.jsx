@@ -33,18 +33,18 @@ const NewsDetail = () => {
 
       <section className="py-12">
         <div className="max-w-3xl mx-auto px-4">
-          <div className="prose prose-lg max-w-none whitespace-pre-line text-gray-800">
+          <div className="prose prose-lg max-w-none whitespace-pre-line text-sm md:text-base text-gray-800">
             {article.content}
           </div>
           {Array.isArray(article.bullets) && article.bullets.length > 0 && (
-            <ul className="list-disc pl-6 my-4 text-gray-800">
+            <ul className="list-disc pl-6 my-4 text-sm md:text-base text-gray-800">
               {article.bullets.map((b, i) => (
                 <li key={i}>{b}</li>
               ))}
             </ul>
           )}
           {article.postContent && (
-            <div className="prose prose-lg max-w-none whitespace-pre-line text-gray-800">
+            <div className="prose prose-lg max-w-none whitespace-pre-line text-sm md:text-base text-gray-800">
               {article.postContent}
             </div>
           )}

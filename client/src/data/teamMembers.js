@@ -20,7 +20,7 @@ export const members = [
 		email: 'administration@mac-ro-capital.com',
 		phone: '+971 50 660 2595',
 		whatsapp: '+971 50 660 2595',
-		address: 'Italy, EU',
+		address: 'Dubai, UAE',
 		photo: valentinaPhoto,
 	},
 	{

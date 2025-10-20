@@ -15,7 +15,7 @@ const Accounts = () => {
                     <h2 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight">
                         {t('homepage.accounts.title')}
                     </h2>
-                    <p className="text-sm lg:text-base text-justify md:text-left  text-gray-600 leading-relaxed tracking-wide">
+                    <p className="text-sm md:text-base text-justify md:text-left  text-gray-600 leading-relaxed tracking-wide">
                         {t('homepage.accounts.description')}
                     </p>
                 </div>
