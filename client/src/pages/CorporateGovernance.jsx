@@ -30,15 +30,15 @@ const CorporateGovernance = () => {
       title: "ETHIC CODE MAC N RO SRL",
       downloadUrl: "src/assets/downloadFiles/italy/Codice-Etico-Mac-Ro-Srl.pdf"
     },
-    {
-      id: 3,
-      title: "MAC N RO SRL SUPPLY CHAIN POLICY",
-      downloadUrl: ""
-    },
+    // {
+    //   id: 3,
+    //   title: "MAC N RO SRL SUPPLY CHAIN POLICY",
+    //   downloadUrl: ""
+    // },
     {
       id: 4,
       title: "MAC N RO SRL AML / CFT POLICY",
-      downloadUrl: ""
+      downloadUrl: "src/assets/downloadFiles/italy/Conto-Metallo-Deluxe-Ed.MR-2025-14.7.pdf"
     },
     {
       id: 5,
@@ -63,11 +63,11 @@ const CorporateGovernance = () => {
       title: "ETHIC CODE MAC N RO CAPITAL",
       downloadUrl: "src/assets/downloadFiles/dubai/Mac-n-Ro-Capital-Code-of-Ethics.pdf"
     },
-    {
-      id: 3,
-      title: "MAC N RO CAPITAL SUPPLY CHAIN POLICY",
-      downloadUrl: ""
-    },
+    // {
+    //   id: 3,
+    //   title: "MAC N RO CAPITAL SUPPLY CHAIN POLICY",
+    //   downloadUrl: ""
+    // },
     {
       id: 4,
       title: "MAC N RO CAPITAL AML / CFT POLICY",
