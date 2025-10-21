@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import governanceBg from '../assets/corporate/corporatebg.jpg';
 import dubaiIcon from '../assets/corporate/dubai-icon.svg';
 import italyIcon from '../assets/corporate/italy-icon.svg';
-import MacRoSrlBusinessPolicyItaly from "../assets/downloadFiles/italy/Mac-Ro-Srl-STANDARD.pdf"
+import MacRoSrlBusinessPolicyItaly from "../assets/downloadFiles/italy/Mac-Ro-Srl-STANDARD.pdf";
 import MacRoEthicCodeItaly from "../assets/downloadFiles/italy/Codice-Etico-Mac-Ro-Srl.pdf";
 import MacRoAmlCftPolicyItaly from "../assets/downloadFiles/italy/Conto-Metallo-Deluxe-Ed.MR-2025-14.7.pdf";
 import MacRoEthicsSustainabilityItaly from "../assets/downloadFiles/italy/ETICA-E-SOSTENIBILITA_Mac-Ro-Srl.pdf";
@@ -14,18 +14,8 @@ import MacRoEthicCodeDubai from "../assets/downloadFiles/dubai/Mac-n-Ro-Capital-
 import MacRoAmlCftPolicyDubai from "../assets/downloadFiles/dubai/AML-POLICY-AND-PROCEDURES-MAC-&-RO-CAPITAL-REPORT-1.pdf";
 import MacRoEthicsSustainabilityDubai from "../assets/downloadFiles/dubai/ETHICS-AND-SUSTAINABILITY.pdf";
 
-
-
 import { useTranslation } from 'react-i18next';
 
-const reportsDataOfItaly = [
-
-  {
-    id: 1,
-    title: "MAC N RO CAPITAL BUSINESS POLICY",
-    downloadUrl: "/reports/italy/business-policy.pdf"
-  }
-]
 
 const CorporateGovernance = () => {
   const { t, i18n } = useTranslation();
