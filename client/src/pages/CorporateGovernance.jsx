@@ -3,6 +3,19 @@ import { Link } from 'react-router-dom';
 import governanceBg from '../assets/corporate/corporatebg.jpg';
 import dubaiIcon from '../assets/corporate/dubai-icon.svg';
 import italyIcon from '../assets/corporate/italy-icon.svg';
+import MacRoSrlBusinessPolicyItaly from "../assets/downloadFiles/italy/Mac-Ro-Srl-STANDARD.pdf"
+import MacRoEthicCodeItaly from "../assets/downloadFiles/italy/Codice-Etico-Mac-Ro-Srl.pdf";
+import MacRoAmlCftPolicyItaly from "../assets/downloadFiles/italy/Conto-Metallo-Deluxe-Ed.MR-2025-14.7.pdf";
+import MacRoEthicsSustainabilityItaly from "../assets/downloadFiles/italy/ETICA-E-SOSTENIBILITA_Mac-Ro-Srl.pdf";
+import MacRoProfessionalOperatorItaly from "../assets/downloadFiles/italy/Professional_Operators_for_gold(ITALY)_ELE_ORO_certification.pdf";
+
+import MacRoCapitalBusinessPolicyDubai from "../assets/downloadFiles/dubai/Mac-&-Ro-Standard.pdf";
+import MacRoEthicCodeDubai from "../assets/downloadFiles/dubai/Mac-n-Ro-Capital-Code-of-Ethics.pdf";
+import MacRoAmlCftPolicyDubai from "../assets/downloadFiles/dubai/AML-POLICY-AND-PROCEDURES-MAC-&-RO-CAPITAL-REPORT-1.pdf";
+import MacRoEthicsSustainabilityDubai from "../assets/downloadFiles/dubai/ETHICS-AND-SUSTAINABILITY.pdf";
+
+
+
 import { useTranslation } from 'react-i18next';
 
 const reportsDataOfItaly = [
@@ -23,12 +36,12 @@ const CorporateGovernance = () => {
     {
       id: 1,
       title: "MAC N RO SRL BUSINESS POLICY",
-      downloadUrl: "src/assets/downloadFiles/italy/Mac-Ro-Srl-STANDARD.pdf"
+      downloadUrl: MacRoSrlBusinessPolicyItaly
     },
     {
       id: 2,
       title: "ETHIC CODE MAC N RO SRL",
-      downloadUrl: "src/assets/downloadFiles/italy/Codice-Etico-Mac-Ro-Srl.pdf"
+      downloadUrl: MacRoEthicCodeItaly
     },
     // {
     //   id: 3,
@@ -38,17 +51,17 @@ const CorporateGovernance = () => {
     {
       id: 4,
       title: "MAC N RO SRL AML / CFT POLICY",
-      downloadUrl: "src/assets/downloadFiles/italy/Conto-Metallo-Deluxe-Ed.MR-2025-14.7.pdf"
+      downloadUrl: MacRoAmlCftPolicyItaly
     },
     {
       id: 5,
       title: "ETHICS AND SUSTAINABILITY REPORT",
-      downloadUrl: "src/assets/downloadFiles/italy/ETICA-E-SOSTENIBILITA_Mac-Ro-Srl.pdf"
+      downloadUrl: MacRoEthicsSustainabilityItaly
     },
     {
       id: 6,
       title: "Professional operator of Gold",
-      downloadUrl: "src/assets/downloadFiles/italy/Professional_Operators_for_gold(ITALY)_ELE_ORO_certification.pdf"
+      downloadUrl: MacRoProfessionalOperatorItaly
     }
   ]
 
@@ -56,12 +69,12 @@ const CorporateGovernance = () => {
     {
       id: 1,
       title: "MAC N RO CAPITAL BUSINESS POLICY",
-      downloadUrl: "src/assets/downloadFiles/dubai/Mac-&-Ro-Standard.pdf"
+      downloadUrl: MacRoCapitalBusinessPolicyDubai
     },
     {
       id: 2,
       title: "ETHIC CODE MAC N RO CAPITAL",
-      downloadUrl: "src/assets/downloadFiles/dubai/Mac-n-Ro-Capital-Code-of-Ethics.pdf"
+      downloadUrl: MacRoEthicCodeDubai
     },
     // {
     //   id: 3,
@@ -71,12 +84,12 @@ const CorporateGovernance = () => {
     {
       id: 4,
       title: "MAC N RO CAPITAL AML / CFT POLICY",
-      downloadUrl: "src/assets/downloadFiles/dubai/AML-POLICY-AND-PROCEDURES-MAC-&-RO-CAPITAL-REPORT-1.pdf"
+      downloadUrl: MacRoAmlCftPolicyDubai
     },
     {
       id: 5,
       title: "ETHICS AND SUSTAINABILITY REPORT",
-      downloadUrl: "src/assets/downloadFiles/dubai/ETHICS-AND-SUSTAINABILITY.pdf"
+      downloadUrl: MacRoEthicsSustainabilityDubai
     }
   ];
 
