@@ -5,12 +5,15 @@ import dubaiIcon from '../assets/corporate/dubai-icon.svg';
 import italyIcon from '../assets/corporate/italy-icon.svg';
 import MacRoSrlBusinessPolicyItaly from "../assets/downloadFiles/italy/Mac-Ro-Srl-STANDARD.pdf";
 import MacRoEthicCodeItaly from "../assets/downloadFiles/italy/Codice-Etico-Mac-Ro-Srl.pdf";
+import MacRoChainOfCustodyPolicyItaly from "../assets/downloadFiles/italy/POLICY-DI-CHAIN-OF-CUSTODY.pdf";
 import MacRoAmlCftPolicyItaly from "../assets/downloadFiles/italy/Conto-Metallo-Deluxe-Ed.MR-2025-14.7.pdf";
 import MacRoEthicsSustainabilityItaly from "../assets/downloadFiles/italy/ETICA-E-SOSTENIBILITA_Mac-Ro-Srl.pdf";
 import MacRoProfessionalOperatorItaly from "../assets/downloadFiles/italy/Professional_Operators_for_gold(ITALY)_ELE_ORO_certification.pdf";
 
+
 import MacRoCapitalBusinessPolicyDubai from "../assets/downloadFiles/dubai/Mac-&-Ro-Standard.pdf";
 import MacRoEthicCodeDubai from "../assets/downloadFiles/dubai/Mac-n-Ro-Capital-Code-of-Ethics.pdf";
+import SupplyChainPolicyOfDubai from "../assets/downloadFiles/dubai/supply-chain-policy-en.pdf";
 import MacRoAmlCftPolicyDubai from "../assets/downloadFiles/dubai/AML-POLICY-AND-PROCEDURES-MAC-&-RO-CAPITAL-REPORT-1.pdf";
 import MacRoEthicsSustainabilityDubai from "../assets/downloadFiles/dubai/ETHICS-AND-SUSTAINABILITY.pdf";
 
@@ -33,11 +36,11 @@ const CorporateGovernance = () => {
       title: "ETHIC CODE MAC N RO SRL",
       downloadUrl: MacRoEthicCodeItaly
     },
-    // {
-    //   id: 3,
-    //   title: "MAC N RO SRL SUPPLY CHAIN POLICY",
-    //   downloadUrl: ""
-    // },
+    {
+      id: 3,
+      title: "MAC N RO SRL SUPPLY CHAIN POLICY",
+      downloadUrl: MacRoChainOfCustodyPolicyItaly
+    },
     {
       id: 4,
       title: "MAC N RO SRL AML / CFT POLICY",
@@ -66,11 +69,11 @@ const CorporateGovernance = () => {
       title: "ETHIC CODE MAC N RO CAPITAL",
       downloadUrl: MacRoEthicCodeDubai
     },
-    // {
-    //   id: 3,
-    //   title: "MAC N RO CAPITAL SUPPLY CHAIN POLICY",
-    //   downloadUrl: ""
-    // },
+    {
+      id: 3,
+      title: "MAC N RO CAPITAL SUPPLY CHAIN POLICY",
+      downloadUrl: SupplyChainPolicyOfDubai
+    },
     {
       id: 4,
       title: "MAC N RO CAPITAL AML / CFT POLICY",
