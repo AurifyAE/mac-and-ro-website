@@ -225,7 +225,7 @@ const Header = () => {
                             navigate('/');
                         }}
                         className="flex items-center justify-center cursor-pointer">
-                            <img src={logo} alt="" className='w-30 h-15' />
+                            <img src={logo} alt="" className='w-24 h-auto max-h-14 object-contain' />
                         </div>
                     </div>
 
@@ -236,7 +236,7 @@ const Header = () => {
                         navigate('/');
                     }}
                     >
-                        <img src={logo} alt="" className='w-30 h-15' />
+                        <img src={logo} alt="" className='w-32 h-auto max-h-16 object-contain' />
                     </div>
 
                     {/* Right side - Gold Spot Price */}
