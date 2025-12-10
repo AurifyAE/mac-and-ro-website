@@ -200,7 +200,7 @@ const Banner = () => {
             </div>
 
             {/* Sign In Button */}
-            <Link to="https://macandro.netlify.app/register" target="_blank" rel="noopener noreferrer">
+            <Link to="https://orovivo.mac-ro-capital.com" target="_blank" rel="noopener noreferrer">
             <button className="hidden md:flex px-4 py-1 text-sm font-semibold text-black bg-white border border-transparent hover:bg-[#f1f0e8ea] hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 tracking-wide">
               {t('header.signIn')}
             </button>
