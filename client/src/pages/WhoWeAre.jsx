@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import teamMember1 from '../assets/about/team-member-1.jpg';
 import teamMember2 from '../assets/about/team-member-2.jpg';
+import teamMember3 from '../assets/about/team-member-3.jpg';
 import goldRockLogo from '../assets/service/goldrocklogo.png';
 import whoweHero from '../assets/about/whowe-hero.jpg';
 import { useTranslation } from 'react-i18next';
@@ -30,33 +31,89 @@ const WhoWeAre = () => {
     },
     {
       id: 3,
+      name: t('whoWeAre.team.members.burak.name'),
+      role: t('whoWeAre.team.members.burak.role'),
+      description: t('whoWeAre.team.members.burak.description'),
+      description2: t('whoWeAre.team.members.burak.description2'),
+      description3: t('whoWeAre.team.members.burak.description3'),
+      image: teamMember3,
+      hasImage: true
+    },
+    {
+      id: 4,
       name: t('whoWeAre.team.members.francesco.name'),
       role: t('whoWeAre.team.members.francesco.role'),
       description: t('whoWeAre.team.members.francesco.description'),
       hasImage: false
     },
     {
-      id: 4,
+      id: 5,
       name: t('whoWeAre.team.members.elena.name'),
       role: t('whoWeAre.team.members.elena.role'),
       description: t('whoWeAre.team.members.elena.description'),
       hasImage: false
     },
     {
-      id: 5,
+      id: 6,
       name: t('whoWeAre.team.members.ed.name'),
       role: t('whoWeAre.team.members.ed.role'),
       description: t('whoWeAre.team.members.ed.description'),
       hasImage: false
     },
     {
-      id: 6,
+      id: 7,
       name: t('whoWeAre.team.members.valentina.name'),
       role: t('whoWeAre.team.members.valentina.role'),
       description: t('whoWeAre.team.members.valentina.description'),
       hasImage: false
     }
   ];
+
+  const renderMemberCard = (member) => (
+    <div 
+      key={member.id} 
+      className={`rounded-4xl shadow-sm overflow-hidden ${
+        member.id > 3 ? 'bg-black text-white' : 'bg-white'
+      }`}
+    >
+      {member.hasImage && (
+        <img 
+          src={member.image} 
+          alt={member.name}
+          className="w-64 h-80 object-cover rounded-4xl mx-auto"
+        />
+      )}
+      <div className="p-8 text-center">
+        <h3 className={`text-xl font-bold mb-2 ${
+          member.id > 3 ? 'text-white' : 'text-gray-900'
+        }`}>
+          {member.name}
+        </h3>
+        <p className="text-[#A78E52] font-semibold mb-3">{member.role}</p>
+        <div className={`${member.id === 2 ? 'max-w-3xl mx-auto' : ''}`}>
+          <p className={`text-sm leading-relaxed mb-2 ${
+            member.id === 2 ? 'text-center' : member.id > 3 ? 'text-gray-300' : 'text-gray-600 text-justify'
+          }`}>
+            {member.description}
+          </p>
+          <p className={`text-sm leading-relaxed mb-2 ${
+            member.id > 3 ? 'text-gray-300' : 'text-gray-600 text-justify'
+          }`}>
+            {member.description2 || ''}
+          </p>
+          <p className={`text-sm leading-relaxed mb-2 ${
+            member.id > 3 ? 'text-gray-300' : 'text-gray-600 text-justify'
+          }`}>
+            {member.description3 || ''}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+
+  const featuredMember = teamMembers.find((member) => member.id === 2);
+  const primaryMembers = teamMembers.filter((member) => member.id === 1 || member.id === 3);
+  const remainingMembers = teamMembers.filter((member) => ![1, 2, 3].includes(member.id));
 
   return (
     <div className={`min-h-screen bg-white`} dir={isArabic ? 'rtl' : 'ltr'}>
@@ -129,37 +186,25 @@ const WhoWeAre = () => {
             </p>
           </div>
 
-          {/* Team Members Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {teamMembers.map((member) => (
-              <div 
-                key={member.id} 
-                className={`rounded-4xl shadow-sm overflow-hidden ${
-                  member.id > 2 ? 'bg-black text-white' : 'bg-white'
-                }`}
-              >
-                {member.hasImage && (
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-80 object-contain rounded-4xl"
-                  />
-                )}
-                <div className="p-8 text-center">
-                  <h3 className={`text-xl font-bold mb-2 ${
-                    member.id > 2 ? 'text-white' : 'text-gray-900'
-                  }`}>
-                    {member.name}
-                  </h3>
-                  <p className="text-[#A78E52] font-semibold mb-3">{member.role}</p>
-                  <p className={`text-sm leading-relaxed ${
-                    member.id > 2 ? 'text-gray-300' : 'text-gray-600 text-justify'
-                  }`}>
-                    {member.description}
-                  </p>
-                </div>
+          {/* Team Members layout: featured id 2, then id 1 & 3, then the rest */}
+          <div className="space-y-12 mb-12">
+            {featuredMember && (
+              <div className="w-full">
+                {renderMemberCard(featuredMember)}
               </div>
-            ))}
+            )}
+
+            {primaryMembers.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {primaryMembers.map((member) => renderMemberCard(member))}
+              </div>
+            )}
+
+            {remainingMembers.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {remainingMembers.map((member) => renderMemberCard(member))}
+              </div>
+            )}
           </div>
 
           {/* Want to Work with Us Card */}
