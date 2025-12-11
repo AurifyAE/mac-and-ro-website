@@ -66,6 +66,13 @@ const WhoWeAre = () => {
       role: t('whoWeAre.team.members.valentina.role'),
       description: t('whoWeAre.team.members.valentina.description'),
       hasImage: false
+    },
+    {
+      id: 8,
+      name: t('whoWeAre.team.members.asmait.name'),
+      role: t('whoWeAre.team.members.asmait.role'),
+      description: t('whoWeAre.team.members.asmait.description'),
+      hasImage: false
     }
   ];
 
@@ -113,7 +120,8 @@ const WhoWeAre = () => {
 
   const featuredMember = teamMembers.find((member) => member.id === 2);
   const primaryMembers = teamMembers.filter((member) => member.id === 1 || member.id === 3);
-  const remainingMembers = teamMembers.filter((member) => ![1, 2, 3].includes(member.id));
+  const finalMember = teamMembers.find((member) => member.id === 8);
+  const remainingMembers = teamMembers.filter((member) => ![1, 2, 3, 8].includes(member.id));
 
   return (
     <div className={`min-h-screen bg-white`} dir={isArabic ? 'rtl' : 'ltr'}>
@@ -203,6 +211,12 @@ const WhoWeAre = () => {
             {remainingMembers.length > 0 && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {remainingMembers.map((member) => renderMemberCard(member))}
+              </div>
+            )}
+
+            {finalMember && (
+              <div className="w-full">
+                {renderMemberCard(finalMember)}
               </div>
             )}
           </div>
