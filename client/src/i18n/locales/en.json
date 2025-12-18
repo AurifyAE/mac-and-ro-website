@@ -66,8 +66,8 @@
   },
   "homepage": {
     "hero": {
-      "title1": "Secure Your Wealth with Physical Gold -",
-      "title2": "Trusted, Flexible Investment Solutions",
+      "title1": "Secure Your Wealth with Sharia-Compliant Physical Gold -",
+      "title2": "Trusted, Ethical, Flexible Investment Solutions",
       "getStarted": "Get Started Today",
       "scrollDown": "Scroll Down",
       "secureEmpowered": "Secure. Empowered. Global.",
@@ -154,24 +154,24 @@
       "title": "Gold Valorization Cycle",
       "steps": {
         "step1": {
-          "title": "Acquisition",
-          "description": "Raw gold sourced from certified, traceable suppliers."
+          "title": "Ownership",
+          "description": "Your metal is deposited and remains legally and beneficially yours."
         },
         "step2": {
-          "title": "Refining",
-          "description": "Processed in LBMA-accredited facilities to 999.9 purity."
+          "title": "Agency Execution",
+          "description": "Mac & Ro Capital carries out the agreed storage and administrative services."
         },
         "step3": {
-          "title": "Conversion",
-          "description": "Cast into numbered, certified bars."
+          "title": "Sharia-Compliant Deployment (Optional)",
+          "description": "Your gold is used only in real, asset-backed activities - never interest-based or speculative."
         },
         "step4": {
-          "title": "Institutional Sale",
-          "description": "Distributed to banks, funds, and governments."
+          "title": "Profit/Loss Allocation",
+          "description": "Real business outcomes (profit or loss) are attributed to your gold holdings."
         },
         "step5": {
-          "title": "Client Benefit",
-          "description": "Profits are credited as additional physical gold to your Deluxe Metal Account."
+          "title": "Redemption or Reinvestment",
+          "description": "You may redeem your gold physically or reinvest into another cycle."
         }
       }
     },
@@ -200,16 +200,17 @@
     "deluxe": {
       "hero": {
         "badge": "DELUXE METAL ACCOUNT",
-        "title": "Your Gold Remains Yours. But it Grows.",
-        "subtitle": "Secure, certified, and growing — the Deluxe Metal Account turns gold ownership into a lasting strategy for wealth protection."
+        "title": "Your Gold. Your Ownership. Our Expertise",
+        "subtitle": "A premium metal account where your gold remains fully yours while Mac & Ro Capital provides secure storage, transfers, and optional Sharia-approved utilization  - all under a transparent fee structure."
       },
       "whatIs": {
         "title": "What Is a Deluxe Metal Account?",
-        "description": "As part of our independent consulting activity, we select structured tools and operating models that meet legal soundness, traceability, and asset protection criteria. We have selected Deluxe metal Account for the premium Clients - an advanced solution for utilizing physical gold that combines protection, growth, and full individual ownership. This exclusive tool allows clients to enhance their gold holdings without losing ownership. The structure ensures legal soundness, compliance with regulations, and results aligned with the objectives, structure, and time horizon of the client."
+        "description": "As part of our independent consulting activity, we select structured tools and operating models that meet legal soundness, traceability, and asset protection criteria. The Deluxe Metal Account is a fully Sharia-compliant gold management solution based on the Wakalah (Agency) Model. You retain full ownership of your gold while Mac & Ro Capital provides secure storage, transfers, and optional Sharia-approved utilization - all under a transparent fee structure.",
+        "description2": "You get secure, professionally managed gold ownership with ethical, compliant growth opportunities, without losing ownership or control."
       },
       "howItWorks": {
         "title": "How does it work?",
-        "description": "Through a loan-for-use contract, your physical gold — which always remains your property — is temporarily employed by certified industrial companies. During this time, the gold remains securely stored in certified vaults and fully tracked. In return, you receive additional physical gold credited directly to your Metal Account Deluxe. All processes comply with regulations, ensuring transparency, contractual protection, and a focus on wealth enhancement."
+        "description": "You deposit or purchase gold, which remains fully allocated in your name under a Wakalah agreement that appoints Mac & Ro Capital as your agent to manage and safeguard it for Sharia-compliant purposes, with a transparent fixed service fee. If you opt in, your gold can be utilized in approved, asset-backed activities where any profit or loss belongs entirely to you, and you may withdraw your gold physically or digitally at any time."
       },
       "advantages": {
         "title": "Advantages of a Deluxe Metal Account",
@@ -219,16 +220,20 @@
             "description": "Gold is legally yours at all times — individually titled, traceable, and never pooled."
           },
           "returns": {
-            "title": "Additional Returns",
-            "description": "Additional physical gold 6-10% credited to your account."
+            "title": "Transparent Fixed Fee",
+            "description": "Mac & Ro Capital earns only a Wakalah fee -no profit-sharing or hidden spreads."
           },
           "certified": {
-            "title": "Certified & Traceable",
-            "description": "Each bar is numbered, documented, and accompanied by certification of purity and origin."
+            "title": "Real Asset Security",
+            "description": "Your holdings are backed by physical gold stored in audited, insured vaults."
           },
           "compliance": {
-            "title": "Compliance & Transparency",
-            "description": "International standards and legal protection."
+            "title": "Optional Ethical Growth",
+            "description": "Any returns are tied to real-world, Sharia-approved commerce."
+          },
+          "flexible": {
+            "title": "Flexible at Every Step",
+            "description": "Deposit, deploy, or withdraw gold at your convenience."
           }
         }
       },
@@ -244,9 +249,12 @@
         "title": "Is this for you?",
         "description": "The Deluxe Metal Account is designed for anyone who values stability and long-term wealth protection. Whether you're an individual looking to safeguard your savings, a family building generational wealth, or a business diversifying assets, this account offers a secure and transparent way to own gold.",
         "audiences": {
-          "individuals": "Individuals seeking stable, inflation-proof assets.",
-          "families": "Families preserving wealth for future generations.",
-          "businesses": "Businesses and professionals diversifying their portfolio."
+          "safekeeping": "Safekeeping Profile",
+          "safekeepingDescription": "Ideal for individuals seeking long-term gold storage and preservation of value.",
+          "hybrid": "Hybrid Profile",
+          "hybridDescription": "Perfect for families seeking a balance between safety and growth, with the option to deploy gold for Sharia-compliant purposes.",
+          "strategic": "Strategic Utilization Profile",
+          "strategicDescription": "Ideal for businesses seeking a secure, tax-efficient way to invest in gold for Sharia-compliant purposes."
         }
       },
       "conclusion": "With Mac & Ro Capital, gold is no longer just a safe store of value. It becomes a dynamic asset that offers stability, flexibility, and tangible growth — without compromising ownership or security.",

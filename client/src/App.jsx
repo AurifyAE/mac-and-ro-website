@@ -9,6 +9,7 @@ import WhoWeAre from './pages/WhoWeAre';
 import Accreditations from './pages/Accreditations';
 import CorporateGovernance from './pages/CorporateGovernance';
 import News from './pages/News';
+import BlogContent from './pages/BlogContent';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import Homepage from './pages/Homepage';
@@ -29,7 +30,8 @@ import LiveRate from './pages/LiveRate';
 import Profile from './pages/Profile';
 import SEO from './components/SEO.jsx';
 import NewsDetail from './pages/NewsDetail.jsx';
-  
+import Blogs from './pages/Blogs';
+
 function App() {
   const [subdomain, setSubdomain] = useState('');
 
@@ -81,6 +83,8 @@ function AppContent() {
         <Route path="/corporate-governance" element={<CorporateGovernance />} />
         <Route path="/news" element={<News />} />
         <Route path="/news/:slug" element={<NewsDetail />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:slug" element={<BlogContent />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/metal-accounts" element={<MetalAccounts />} />

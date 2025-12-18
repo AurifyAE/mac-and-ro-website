@@ -16,6 +16,7 @@ import MacRoEthicCodeDubai from "../assets/downloadFiles/dubai/Mac-n-Ro-Capital-
 import SupplyChainPolicyOfDubai from "../assets/downloadFiles/dubai/supply-chain-policy-en.pdf";
 import MacRoAmlCftPolicyDubai from "../assets/downloadFiles/dubai/AML-POLICY-AND-PROCEDURES-MAC-&-RO-CAPITAL-REPORT-1.pdf";
 import MacRoEthicsSustainabilityDubai from "../assets/downloadFiles/dubai/ETHICS-AND-SUSTAINABILITY.pdf";
+import MacRoShariaComplianceCertificateDubai from "../assets/downloadFiles/dubai/sharia-compliance-certificate.pdf";
 
 import { useTranslation } from 'react-i18next';
 
@@ -83,6 +84,11 @@ const CorporateGovernance = () => {
       id: 5,
       title: "ETHICS AND SUSTAINABILITY REPORT",
       downloadUrl: MacRoEthicsSustainabilityDubai
+    },
+    {
+      id: 6,
+      title: "SHARIA COMPLIANCE CERTIFICATE",
+      downloadUrl: MacRoShariaComplianceCertificateDubai
     }
   ];
 
