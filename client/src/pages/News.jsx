@@ -24,7 +24,7 @@ const News = () => {
       <section className="py-10 md:py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {newsItems.map((news, index) => (
+            {[...newsItems].reverse().map((news, index) => (
               <div 
                 key={index}
                 className="bg-white rounded-2xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-all duration-300"
