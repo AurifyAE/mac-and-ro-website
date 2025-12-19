@@ -222,7 +222,7 @@ const DeluxeMetalAccount = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <h2 className="text-3xl sm:text-4xl lg:text-4xl font-semibold text-black mb-6 tracking-tight font-playfair">
             {t('metalAccounts.deluxe.growthProfiles.title')}
         </h2>
@@ -241,7 +241,7 @@ const DeluxeMetalAccount = () => {
             {t('metalAccounts.deluxe.growthProfiles.contractTerms')}
           </p>
         </div>
-      </div>
+      </div> */}
 
       <section className="py-10 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
