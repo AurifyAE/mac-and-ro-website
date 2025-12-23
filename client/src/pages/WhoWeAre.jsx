@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import teamMember1 from '../assets/about/team-member-1.jpg';
 import teamMember2 from '../assets/about/team-member-2.jpg';
 import teamMember3 from '../assets/about/team-member-3.jpg';
+import teamMember4 from '../assets/about/edward-bass.jpeg';
 import goldRockLogo from '../assets/service/goldrocklogo.png';
 import whoweHero from '../assets/about/whowe-hero.jpg';
 import { useTranslation } from 'react-i18next';
@@ -12,17 +13,10 @@ const WhoWeAre = () => {
   const isArabic = i18n.language === 'ar';
   
   // Team data array
+  // Note: First 4 members (ids 1-4) have images, rest (ids 5-8) don't have images
   const teamMembers = [
     {
       id: 1,
-      name: t('whoWeAre.team.members.pietro.name'),
-      role: t('whoWeAre.team.members.pietro.role'),
-      description: t('whoWeAre.team.members.pietro.description'),
-      image: teamMember1,
-      hasImage: true
-    },
-    {
-      id: 2,
       name: t('whoWeAre.team.members.angelo.name'),
       role: t('whoWeAre.team.members.angelo.role'),
       description: t('whoWeAre.team.members.angelo.description'),
@@ -30,7 +24,23 @@ const WhoWeAre = () => {
       hasImage: true
     },
     {
+      id: 2,
+      name: t('whoWeAre.team.members.ed.name'),
+      role: t('whoWeAre.team.members.ed.role'),
+      description: t('whoWeAre.team.members.ed.description'),
+      image: teamMember4,
+      hasImage: true
+    },
+    {
       id: 3,
+      name: t('whoWeAre.team.members.pietro.name'),
+      role: t('whoWeAre.team.members.pietro.role'),
+      description: t('whoWeAre.team.members.pietro.description'),
+      image: teamMember1,
+      hasImage: true
+    },
+    {
+      id: 4,
       name: t('whoWeAre.team.members.burak.name'),
       role: t('whoWeAre.team.members.burak.role'),
       description: t('whoWeAre.team.members.burak.description'),
@@ -40,24 +50,17 @@ const WhoWeAre = () => {
       hasImage: true
     },
     {
-      id: 4,
+      id: 5,
       name: t('whoWeAre.team.members.francesco.name'),
       role: t('whoWeAre.team.members.francesco.role'),
       description: t('whoWeAre.team.members.francesco.description'),
       hasImage: false
     },
     {
-      id: 5,
+      id: 6,
       name: t('whoWeAre.team.members.elena.name'),
       role: t('whoWeAre.team.members.elena.role'),
       description: t('whoWeAre.team.members.elena.description'),
-      hasImage: false
-    },
-    {
-      id: 6,
-      name: t('whoWeAre.team.members.ed.name'),
-      role: t('whoWeAre.team.members.ed.role'),
-      description: t('whoWeAre.team.members.ed.description'),
       hasImage: false
     },
     {
@@ -80,7 +83,7 @@ const WhoWeAre = () => {
     <div 
       key={member.id} 
       className={`rounded-4xl shadow-sm overflow-hidden ${
-        member.id > 3 ? 'bg-black text-white' : 'bg-white'
+        member.id > 4 ? 'bg-black text-white' : 'bg-white'
       }`}
     >
       {member.hasImage && (
@@ -92,24 +95,24 @@ const WhoWeAre = () => {
       )}
       <div className="p-8 text-center">
         <h3 className={`text-xl font-bold mb-2 ${
-          member.id > 3 ? 'text-white' : 'text-gray-900'
+          member.id > 4 ? 'text-white' : 'text-gray-900'
         }`}>
           {member.name}
         </h3>
         <p className="text-[#A78E52] font-semibold mb-3">{member.role}</p>
-        <div className={`${member.id === 2 ? 'max-w-3xl mx-auto' : ''}`}>
+        <div>
           <p className={`text-sm leading-relaxed mb-2 ${
-            member.id === 2 ? 'text-center' : member.id > 3 ? 'text-gray-300' : 'text-gray-600 text-justify'
+            member.id > 4 ? 'text-gray-300' : 'text-gray-600 text-justify'
           }`}>
             {member.description}
           </p>
           <p className={`text-sm leading-relaxed mb-2 ${
-            member.id > 3 ? 'text-gray-300' : 'text-gray-600 text-justify'
+            member.id > 4 ? 'text-gray-300' : 'text-gray-600 text-justify'
           }`}>
             {member.description2 || ''}
           </p>
           <p className={`text-sm leading-relaxed mb-2 ${
-            member.id > 3 ? 'text-gray-300' : 'text-gray-600 text-justify'
+            member.id > 4 ? 'text-gray-300' : 'text-gray-600 text-justify'
           }`}>
             {member.description3 || ''}
           </p>
@@ -117,11 +120,6 @@ const WhoWeAre = () => {
       </div>
     </div>
   );
-
-  const featuredMember = teamMembers.find((member) => member.id === 2);
-  const primaryMembers = teamMembers.filter((member) => member.id === 1 || member.id === 3);
-  const finalMember = teamMembers.find((member) => member.id === 8);
-  const remainingMembers = teamMembers.filter((member) => ![1, 2, 3, 8].includes(member.id));
 
   return (
     <div className={`min-h-screen bg-white`} dir={isArabic ? 'rtl' : 'ltr'}>
@@ -194,31 +192,9 @@ const WhoWeAre = () => {
             </p>
           </div>
 
-          {/* Team Members layout: featured id 2, then id 1 & 3, then the rest */}
-          <div className="space-y-12 mb-12">
-            {featuredMember && (
-              <div className="w-full">
-                {renderMemberCard(featuredMember)}
-              </div>
-            )}
-
-            {primaryMembers.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {primaryMembers.map((member) => renderMemberCard(member))}
-              </div>
-            )}
-
-            {remainingMembers.length > 0 && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {remainingMembers.map((member) => renderMemberCard(member))}
-              </div>
-            )}
-
-            {finalMember && (
-              <div className="w-full">
-                {renderMemberCard(finalMember)}
-              </div>
-            )}
+          {/* Team Members Grid - Simple 2 column layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {teamMembers.map((member) => renderMemberCard(member))}
           </div>
 
           {/* Want to Work with Us Card */}
