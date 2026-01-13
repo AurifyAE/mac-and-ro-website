@@ -3,6 +3,7 @@ import appStore from '../assets/homepage/appStore.png';
 import googlePlay from '../assets/homepage/googlePlay.png';
 import featureImage3 from '../assets/homepage/orovivo-app.jpg';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
 
 const AppPromoModal = ({ isOpen, onClose }) => {
   const { t, i18n } = useTranslation();
@@ -134,7 +135,10 @@ const AppPromoModal = ({ isOpen, onClose }) => {
                   style={{ pointerEvents: 'none' }}
                 />
               </span>
-              <span className="w-auto cursor-not-allowed opacity-70">
+              <Link
+                to="https://play.google.com/store/apps/details?id=com.orovivo.app"
+                target='_blank'
+                className="w-auto">
                 <img
                   src={googlePlay}
                   alt="Get it on Google Play"
@@ -142,7 +146,7 @@ const AppPromoModal = ({ isOpen, onClose }) => {
                   loading="lazy"
                    style={{ pointerEvents: 'none' }}
                 />
-              </span>
+              </Link>
             </div>
 
             {/* Footer */}
