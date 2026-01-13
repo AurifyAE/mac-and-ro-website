@@ -79,12 +79,13 @@ const Banner = () => {
             <span className="text-white text-xs md:text-sm font-medium">{t('banner.downloadApp')}</span>
             <div className="hidden md:flex items-center space-x-2">
             <div className="group">
-            <button className="block"> {/* Changed from <a> to <button> */}
+            <Link 
+              to="https://play.google.com/store/apps/details?id=com.orovivo.app"
+              className="block"
+              target='_blank'
+            >
               <img src={googlePlay} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
-            </button>
-              <span className="absolute top-[90%] left-35 mb-2 px-2 py-1 text-xs text-white bg-gray-950 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                Coming soon
-              </span>
+            </Link>
             </div>
             <div className="group">
             <button className="block"> {/* Changed from <a> to <button> */}
@@ -97,21 +98,14 @@ const Banner = () => {
             </div>
             <div className="flex md:hidden items-center space-x-0">
               <div>
-              <button 
+              <Link 
+                to="https://play.google.com/store/apps/details?id=com.orovivo.app"
                 className="block"
-                onClick={(e) => {
-                  e.preventDefault(); // Prevent any default behavior
-                  handleClick('google-play', e);
-                }}
+                target='_blank'
               >
                 <img src={googleMobile} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
-              </button>
+              </Link>
 
-              {activeTooltip === 'google-play' && (
-                <span className="absolute top-[90%] left-30 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded whitespace-nowrap z-10">
-                  Coming Soon
-                </span>
-              )}
               </div>
               <div className="">
                 <button

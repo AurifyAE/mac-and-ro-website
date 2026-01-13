@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import featureImage1 from '../../assets/homepage/goldVault.png';
 import featureImage3 from '../../assets/homepage/orovivo-app.jpg';
+import orovivoAppTutorial from '../../assets/homepage/Orovivo-App-Tutorial-Video.mp4';
 import locationSwapVideo from '../../assets/location-swap/location-swap-video.mov';
 import googlePlay from '../../assets/homepage/googlePlay.png';
 import appStore from '../../assets/homepage/appStore.png';
@@ -267,31 +268,26 @@ const Features = () => {
                         </motion.p>
                         
                         <motion.div variants={fadeInUp}>
-                            <button 
-                            onClick={() => {
-                                navigate('/');
-                            }}
+                            <Link 
+                            to="https://play.google.com/store/apps/details?id=com.orovivo.app"
+                            target='_blank'
                             className="px-6 py-2 bg-transparent hover:bg-black hover:text-white border-2 border-black text-black font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
                                 {t('homepage.features.downloadNow')}
-                            </button>
+                            </Link>
                             <div className="flex items-center justify-center gap-4 mt-8">
                                 <div className="tooltip-container">
                                     <div className="relative group cursor-pointer">
-                                        <button 
+                                        <Link 
+                                            to="https://play.google.com/store/apps/details?id=com.orovivo.app"
                                             className="block"
-                                            onClick={(e) => handleClick('google-play', e)}
+                                            target='_blank'                     
                                         >
                                             <img 
                                                 src={googlePlay} 
                                                 alt="OROVIVO App" 
                                                 className="w-28 h-auto shadow-2xl" 
                                             />
-                                        </button>
-                                        <span className={`absolute top-full left-8 mt-2 px-2 py-1 text-xs text-white bg-gray-950 rounded transition-opacity duration-300 whitespace-nowrap z-10 ${
-                                            activeTooltip === 'google-play' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                                        }`}>
-                                            Coming soon
-                                        </span>
+                                        </Link>
                                     </div>
                                 </div>
                                 <div className="tooltip-container">
@@ -325,12 +321,16 @@ const Features = () => {
                         viewport={{ once: true, amount: 0.3 }}
                     >
                         <div className="relative">
-                            <img 
-                                src={featureImage3} 
-                                alt="Premium Metal Account Services" 
+                            <video
+                                src={orovivoAppTutorial}
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
-                            />
-                            
+                                controls
+                                autoPlay
+                                muted
+                                playsInline
+                            >
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </motion.div>
                 </div>

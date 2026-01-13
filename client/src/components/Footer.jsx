@@ -166,17 +166,13 @@ const Footer = () => {
                     <div className="flex items-center space-x-3">
                     <div className="tooltip-container">
                         <div className="w-24 h-auto bg-white rounded relative group cursor-pointer">
-                            <button 
+                            <Link 
+                                to="https://play.google.com/store/apps/details?id=com.orovivo.app"
                                 className="block"
-                                onClick={(e) => handleClick('footer-google-play', e)}
+                                target='_blank'
                             >
                                 <img src={googlePlay} alt="Google Play" className="w-24 h-auto" />
-                            </button>
-                            <span className={`absolute top-full left-8 mb-2 px-2 py-1 text-xs text-white bg-gray-950 rounded transition-opacity duration-300 whitespace-nowrap z-10 ${
-                                activeTooltip === 'footer-google-play' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                            }`}>
-                                Coming soon
-                            </span>
+                            </Link>
                         </div>
                     </div>
                     <div className="tooltip-container">
