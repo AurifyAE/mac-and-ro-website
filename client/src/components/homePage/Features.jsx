@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import featureImage1 from '../../assets/homepage/goldVault.png';
-import featureImage3 from '../../assets/homepage/orovivo-app.jpg';
 import orovivoAppTutorial from '../../assets/homepage/Orovivo-App-Tutorial-Video.mp4';
 import locationSwapVideo from '../../assets/location-swap/location-swap-video.mov';
 import googlePlay from '../../assets/homepage/googlePlay.png';
