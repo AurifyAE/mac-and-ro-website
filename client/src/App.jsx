@@ -24,6 +24,7 @@ import EndOfTreatmentPaymentTFM from './pages/metalAccounts/EndOfTreatmentPaymen
 import KeyManMetalAccount from './pages/metalAccounts/KeyManMetalAccount';
 import LocationSwap from './pages/LocationSwap';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import OrovivoPrivacyPolicy from './pages/OrovivoPrivacyPolicy.jsx';
 import TermsAndConditions from './pages/TermsAndConditions';
 import useScrollToTop from './hooks/useScrollToTop';
 import LiveRate from './pages/LiveRate';
@@ -98,6 +99,7 @@ function AppContent() {
         <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path="/location-swap" element={<LocationSwap />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/privacy-policies" element={<OrovivoPrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Routes>
       <Footer />
