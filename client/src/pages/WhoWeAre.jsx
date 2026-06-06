@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import teamMember1 from '../assets/about/team-member-1.jpg';
 import teamMember2 from '../assets/about/team-member-2.jpg';
 import teamMember3 from '../assets/about/team-member-3.jpg';
@@ -123,6 +124,12 @@ const WhoWeAre = () => {
 
   return (
     <div className={`min-h-screen bg-white`} dir={isArabic ? 'rtl' : 'ltr'}>
+      <SEO
+        title="Digital Gold Account & Physical Investment | Mac & Ro Capital"
+        description="Secure your wealth with Mac & Ro Capital. Open a digital gold account, invest in certified physical bullion, and benefit from expert Italian gold banking."
+        keywords="Physical Gold Investment Dubai, Sharia-Compliant Gold Investment, Gold Bank UAE, Buy Physical Gold Online, Certified Gold Bars Investment, Digital Gold Account, Gold Accumulation Plan (PAC), Institutional Gold Vaulting, Precious Metals Trading, Gold Location Swap, Licensed Gold Bank, Secure Gold Storage Dubai, Italian Gold Banking Expertise, Transparent Gold Investment"
+        url="https://mac-ro-capital.com/who-we-are"
+      />
       {/* Header Section */}
       <section className="relative md:py-20 py-10">
         <div className="max-w-6xl mx-auto">

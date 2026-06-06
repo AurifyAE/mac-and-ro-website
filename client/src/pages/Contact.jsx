@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { useTranslation } from 'react-i18next';
@@ -108,6 +109,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white" >
+      <SEO
+        title="Best Wealth investing and Management solution company in UAE"
+        description="Mac & Ro capital is the best precious metals investment and wealth management company in Uae. Best physical gold selling company in uae."
+        keywords="Gold investment accounts, Precious metals wealth management, Sharia-compliant gold investment, Secure gold storage Dubai, Allocated bullion storage, Transparent gold investment, Certified physical gold bars, Gold bank Dubai, Institutional precious metals investment, Precious metals vaulting services, Wealth diversification with gold"
+        url="https://mac-ro-capital.com/contact"
+      />
       {/* Header Section */}
       {/* <section className="py-20 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4 text-left">

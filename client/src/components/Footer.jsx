@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import logo from '../assets/homepage/logo.svg';
 import send from '../assets/homepage/send.svg';
@@ -15,26 +15,6 @@ const Footer = () => {
     const isArabic = i18n.language === 'ar';
     const [email, setEmail] = useState('');
     const [privacyChecked, setPrivacyChecked] = useState(false);
-    const [activeTooltip, setActiveTooltip] = useState(null);
-
-    const handleClick = (tooltipId, e) => {
-        e.preventDefault();
-        setActiveTooltip(activeTooltip === tooltipId ? null : tooltipId);
-    };
-
-    // Close tooltip when clicking outside
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (!event.target.closest('.tooltip-container')) {
-                setActiveTooltip(null);
-            }
-        }
-
-        document.addEventListener('click', handleClickOutside);
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, []);
 
     const handleSubscribe = (e) => {
         e.preventDefault();
@@ -177,17 +157,13 @@ const Footer = () => {
                     </div>
                     <div className="tooltip-container">
                         <div className="w-24 h-auto bg-white rounded relative group cursor-pointer">
-                            <button 
+                            <Link
+                                to="https://apps.apple.com/us/app/orovivo/id6759100030"
                                 className="block"
-                                onClick={(e) => handleClick('footer-app-store', e)}
+                                target="_blank"
                             >
                                 <img src={appStore} alt="App Store" className="w-24 h-8" />
-                            </button>
-                            <span className={`absolute top-full left-12 mb-2 px-2 py-1 text-xs text-white bg-gray-950 rounded transition-opacity duration-300 whitespace-nowrap z-10 ${
-                                activeTooltip === 'footer-app-store' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                            }`}>
-                                Coming soon
-                            </span>
+                            </Link>
                         </div>
                     </div>
                     </div>

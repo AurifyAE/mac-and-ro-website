@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import featureImage1 from '../../assets/homepage/goldVault.png';
@@ -13,28 +13,6 @@ const Features = () => {
     const { t, i18n } = useTranslation();
     // Determine if the language is Arabic (rtl)
     const isArabic = i18n.language === 'ar';
-    
-    // State for mobile tooltips
-    const [activeTooltip, setActiveTooltip] = useState(null);
-
-    const handleClick = (tooltipId, e) => {
-        e.preventDefault();
-        setActiveTooltip(activeTooltip === tooltipId ? null : tooltipId);
-    };
-
-    // Close tooltip when clicking outside
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (!event.target.closest('.tooltip-container')) {
-                setActiveTooltip(null);
-            }
-        }
-
-        document.addEventListener('click', handleClickOutside);
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, []);
 
     // Array of location data
     const locations = [
@@ -291,21 +269,17 @@ const Features = () => {
                                 </div>
                                 <div className="tooltip-container">
                                     <div className="relative group cursor-pointer">
-                                        <button 
+                                        <Link
+                                            to="https://apps.apple.com/us/app/orovivo/id6759100030"
                                             className="block"
-                                            onClick={(e) => handleClick('app-store', e)}
+                                            target="_blank"
                                         >
                                             <img 
                                                 src={appStore} 
                                                 alt="OROVIVO App" 
                                                 className="w-28 h-auto shadow-2xl" 
                                             />
-                                        </button>
-                                        <span className={`absolute top-full left-12 mt-2 px-2 py-1 text-xs text-white bg-gray-950 rounded transition-opacity duration-300 whitespace-nowrap z-10 ${
-                                            activeTooltip === 'app-store' ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                                        }`}>
-                                            Coming soon
-                                        </span>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

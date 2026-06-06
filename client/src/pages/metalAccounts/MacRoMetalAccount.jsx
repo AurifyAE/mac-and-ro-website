@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../../components/SEO';
 import StepbyStepData from '../../components/metalAccounts/StepbyStepData'
 import { motion } from 'framer-motion';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
@@ -59,6 +60,12 @@ const MacRoMetalAccount = () => {
   ]
   return (
     <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
+      <SEO
+        title="Best Allocated Gold & Precious Metals Account in Uae"
+        description="The Mac & Ro Metal Account is a secure and cost-effective way to invest in gold and other precious metals. Best investing Metal Account for you in UAE."
+        keywords="Allocated gold accumulation account, Physical bullion account Dubai, Secure digital gold reserves, Serial numbered gold investment, Institutional gold deposit account, Allocated physical gold backing, Gold investment with serial number tracking, Low cost physical gold accumulation, Transparent precious metal custody UAE"
+        url="https://mac-ro-capital.com/metal-accounts/mac-ro-metal-account"
+      />
         <section className="relative h-[480px] flex items-center">
         {/* Background Video */}
         <video 

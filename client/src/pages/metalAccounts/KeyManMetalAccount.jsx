@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../../components/SEO';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
 import keymanBanner from '../../assets/metalAccount/keyman-banner.jpg';
 import keyGold from '../../assets/metalAccount/key-gold.jpg';
@@ -34,6 +35,12 @@ const KeyManMetalAccount = () => {
 
   return (
     <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
+      <SEO
+        title="Key Man Metal Account | Corporate Wealth Protection"
+        description="Protect your business from executive loss. Use a Key Man Metal Account with Mac & Ro Capital to back vital corporate insurance reserves with allocated gold."
+        keywords="best metal account for companies, Key man business continuity gold, Funding key person risk with gold, Corporate key man asset protection, Precious metals for executive retention, Key man insurance reserve investment, Key person wealth management strategies, Corporate liability matching with precious metals, Executive loss financial buffer UAE"
+        url="https://mac-ro-capital.com/metal-accounts/key-man-metal-account"
+      />
         <section className="relative h-[480px] flex items-center">
         {/* Background Image */}
         <div 

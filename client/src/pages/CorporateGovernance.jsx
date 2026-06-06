@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import governanceBg from '../assets/corporate/corporatebg.jpg';
 import dubaiIcon from '../assets/corporate/dubai-icon.svg';
 import italyIcon from '../assets/corporate/italy-icon.svg';
@@ -121,6 +122,12 @@ const CorporateGovernance = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Best Digital Gold Account & Physical Investment Company in UAE"
+        description="Protect your portfolio with Mac & Ro Capital. We offer licensed physical gold investment, secure vaulting, and Sharia-compliant wealth solutions for investors."
+        keywords="best metal account company in uae, Sharia-Compliant Gold Investment, wealth management company in uae, digital gold accounts in uae"
+        url="https://mac-ro-capital.com/corporate-governance"
+      />
       {/* Header Section */}
       <section className="relative bg-cover bg-center bg-no-repeat h-96" 
                 dir={isArabic ? 'rtl' : 'ltr'}

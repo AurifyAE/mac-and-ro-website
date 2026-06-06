@@ -16,7 +16,7 @@ and investment solutions in a modern and accessible setting.
 
 Office Highlights:`,
     bullets: [
-      'Operating Hours: 10:00 AM – 10:00 PM, Monday to Saturday.',
+      'Operating Hours: 10:00 AM - 10:00 PM, Monday to Saturday.',
       'Premium Customer Experience: Dedicated team for personalized support.',
       'Strategic Location: Situated in Dubai’s iconic Gold Souk area, at the heart of international trade.'
     ],
@@ -125,7 +125,43 @@ bridging the gap between traditional gold trading and digital innovation.`
     About Mac & Ro Capital FZC
 
     Mac & Ro Capital FZC is a specialized Gold firm based in the UAE with a mission to build the first real Fintech gold company in the industry, dedicated to providing robust and accessible investment solutions in precious metals. Focusing on innovation, security, and client satisfaction, the company offers a pioneering Digital Gold Account that allows clients to buy, sell, and own physical gold with ease and transparency. Mac&Ro Capital FZC is committed to upholding the highest standards of governance and ethical practice.`
-  }
+  },
+  {
+    slug: 'mac-ro-capital-forms-strategic-partnership-with-alhuda-cibe-to-advance-global-islamic-finance',
+    title: 'MAC & RO Capital Forms Strategic Partnership with AlHuda CIBE to Advance Global Islamic Finance',
+    date: 'February 4, 2026',
+    category: 'Company News',
+    excerpt:
+      'MAC & RO Capital is proud to announce a strategic partnership with the AlHuda Centre of Islamic Banking and Economics (AlHuda CIBE), marking a significant milestone in the company\'s global expansion and its ongoing commitment to advancing Shariah-compliant financial solutions.',
+    content: `MAC & RO Capital is proud to announce a strategic partnership with the AlHuda Centre of Islamic Banking and Economics (AlHuda CIBE), marking a significant milestone in the company's global expansion and its ongoing commitment to advancing Shariah-compliant financial solutions.
+
+As part of this collaboration, MAC & RO Capital has been appointed Gold Partner for AlHuda CIBE's international conferences, exposure visits, and educational webinars. The partnership aims to drive the development of ethical, sustainable, and innovation-led Islamic finance initiatives across key global markets.
+
+Strengthening Global Engagement in Islamic Finance
+
+AlHuda CIBE is a globally recognized leader in Islamic banking research, advisory services, and capacity building. Through this partnership, MAC & RO Capital will actively engage in international forums that bring together financial institutions, regulators, policymakers, scholars, and industry experts to exchange insights and explore emerging trends in Shariah-compliant finance.
+
+By leveraging AlHuda CIBE's international platforms, MAC & RO Capital reinforces its dedication to contributing meaningfully to the Islamic finance ecosystem through collaboration, research, and thought leadership.
+
+Shared Commitment to Ethical and Sustainable Finance
+
+This partnership reflects a shared vision to promote financial solutions grounded in ethics, transparency, sustainability, and long-term value creation. Both organizations recognize the rising global demand for Islamic financial products that combine commercial success with responsible investment principles.
+
+MAC & RO Capital brings extensive expertise in investment structuring, asset-backed solutions, and Shariah-compliant strategies, while AlHuda CIBE offers deep knowledge in research, policy advisory, and education. Together, they aim to foster knowledge sharing and cross-border collaboration among key stakeholders.
+
+Expanding Knowledge, Research, and Collaboration
+
+Through joint participation in international events and educational initiatives, the partnership will focus on advancing research, supporting professional development, and facilitating dialogue on best practices in Islamic finance. These efforts are expected to strengthen industry standards and enhance global awareness of Shariah-compliant financial models.
+
+The collaboration also opens doors to engagement with emerging markets and financial hubs where Islamic finance continues to play a crucial role in economic growth.`,
+    bullets: [],
+    postContent: `A Strategic Step in MAC & RO Capital's Global Growth
+
+This partnership reinforces MAC & RO Capital's position as a leading contributor to the global Islamic finance landscape. It aligns with the company's broader strategy to expand its international presence, build trusted institutional relationships, and support the growth of ethical financial systems worldwide.
+
+By joining forces with AlHuda CIBE, MAC & RO Capital underscores its commitment to innovation, integrity, and excellence in Shariah-compliant finance.`
+  },
+
 ];
 
 

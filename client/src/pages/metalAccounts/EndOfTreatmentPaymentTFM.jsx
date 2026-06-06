@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../../components/SEO';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
 import tfmBanner from '../../assets/metalAccount/tfm-banner.jpg';
 import tfmSection from '../../assets/metalAccount/tfm-section.jpg';
@@ -34,6 +35,12 @@ const EndOfTreatmentPaymentTFM = () => {
 
   return (
     <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
+      <SEO
+        title="EOT is Best Physical Investment Metal Account for corporate"
+        description="Fund and secure your corporate end of service benefit liabilities with physical gold. Discover strategic, allocated asset backing with Mac & Ro Capital."
+        keywords="End of service benefit gold investment, Funding gratuity liabilities with gold, UAE end of service gratuity fund management, Corporate end of service benefit asset backing, Gold accounts for corporate liabilities, Managing employee end of service funds UAE, Corporate cash reserve diversification gold, Precious metals for employee benefit funds, Tax efficient corporate gratuity funding UAE, Allocated bullion for corporate liability matching"
+        url="https://mac-ro-capital.com/metal-accounts/end-of-treatment-payment-tfm"
+      />
         <section className="relative h-[480px] flex items-center">
         {/* Background Image */}
         <div 

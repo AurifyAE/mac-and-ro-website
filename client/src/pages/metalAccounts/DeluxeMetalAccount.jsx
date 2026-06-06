@@ -1,4 +1,5 @@
 import React from 'react'
+import SEO from '../../components/SEO';
 import StepbyStepData from '../../components/metalAccounts/StepbyStepData'
 import { motion } from 'framer-motion';
 import MetalAccountCTA from '../../components/MetalAccountCTA';
@@ -93,6 +94,12 @@ const DeluxeMetalAccount = () => {
 
   return (
     <div className="min-h-screen bg-white"  dir={isArabic ? 'rtl' : 'ltr'}>
+      <SEO
+        title="Deluxe Metal Account | Sharia Gold | Mac & Ro Capital"
+        description="Open a Sharia-compliant Deluxe Metal Account based on the Wakalah model. Retain 100% physical gold ownership with secure, transparent vault storage."
+        keywords="Sharia compliant gold account, Wakalah gold investment, Fully allocated physical gold account, Islamic gold wealth management, 100% ownership gold investment, Ethical gold investment Dubai, Transparent fee gold management, Individually titled gold bullion storage, Corporate gold diversification UAE, Family office gold wealth protection, Sharia compliant corporate asset management"
+        url="https://mac-ro-capital.com/metal-accounts/deluxe-metal-account"
+      />
         <section className="relative h-[480px] flex items-center">
         {/* Background Image */}
         <div 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 import productBanner from '../assets/service/product-banner.jpg';
 import goldRockLogo from '../assets/service/goldrocklogo.png';
 import { products } from '../data/products';
@@ -28,6 +29,12 @@ const ProductGrid = () => {
 
     return (
         <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
+            <SEO
+                title="Physical Gold Bars for Sale in UAE | Mac & Ro Capital Products"
+                description="Purchase pure, LBMA-certified 24K gold bars from 1g to 12.5kg. Secure your wealth with verified, premium physical bullion from Mac & Ro Capital in Dubai."
+                keywords="Buy 24K gold bars Dubai, Physical gold bars for sale, LBMA certified gold bars, Pure gold bullion shop UAE, Buy physical investment gold, 1 kg gold bar price Dubai, Buy 100 gram gold bars, Small investment gold bars (5g to 50g), 12.5 kg institutional gold bar, Certified gold ingots for sale, Pure 999.9 gold bullion, Gold investment bars with certificate, Authentic 24 karat gold casted bars, Physical asset wealth preservation"
+                url="https://mac-ro-capital.com/products"
+            />
             {/* Banner Section */}
             <section className="relative bg-cover bg-center bg-no-repeat h-96" 
                      style={{ backgroundImage: `url(${productBanner})` }}>

@@ -125,16 +125,18 @@ const AppPromoModal = ({ isOpen, onClose }) => {
 
             {/* Download Buttons */}
             <div className={`flex items-center ${isArabic ? 'justify-end' : 'justify-start'} gap-3 md:gap-4`}>
-              {/* TODO: Replace href="#" with actual App Store & Play links */}
-              <span className="w-auto cursor-not-allowed opacity-70">
+              <Link
+                to="https://apps.apple.com/us/app/orovivo/id6759100030"
+                target="_blank"
+                className="w-auto"
+              >
                 <img
                   src={appStore}
                   alt="Download on App Store"
-                  className="w-auto h-6 md:h-8 object-contain transition-opacity"
+                  className="w-auto h-6 md:h-8 object-contain transition-opacity hover:opacity-80"
                   loading="lazy"
-                  style={{ pointerEvents: 'none' }}
                 />
-              </span>
+              </Link>
               <Link
                 to="https://play.google.com/store/apps/details?id=com.orovivo.app"
                 target='_blank'

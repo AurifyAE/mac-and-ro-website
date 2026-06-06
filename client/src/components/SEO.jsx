@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 export default function SEO({
     title = 'Mac & Ro Capital FZC | Open Your Digital Gold Account in UAE',
     description = 'Open a secure digital gold account in the UAE with Mac & Ro Capital FZC and gain the freedom to buy, sell, and transfer gold seamlessly. Invest, store, and manage your holdings with unmatched transparency, global trust, and the assurance of real physical value.',
+    keywords = 'digital gold account UAE, digital gold account, gold account UAE, buy gold online UAE',
     url = 'https://mac-ro-capital.com/',
     image = '/og-default.jpg',
     noIndex = false,
@@ -23,7 +24,7 @@ export default function SEO({
         // Basic
         ensureMeta('meta', 'name', { key: 'description', content: description });
         ensureMeta('meta', 'name', { key: 'robots', content: noIndex ? 'noindex, nofollow' : 'index, follow' });
-        ensureMeta('meta', 'name', { key: 'keywords', content: 'digital gold account UAE, digital gold account, gold account UAE, buy gold online UAE' });
+        ensureMeta('meta', 'name', { key: 'keywords', content: keywords });
 
         // Open Graph
         ensureMeta('meta', 'property', { key: 'og:type', content: 'website' });

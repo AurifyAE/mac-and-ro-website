@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import Accounts from '../components/homePage/Accounts';
 import CreateAccountSteps from '../components/homePage/CreateAccountSteps';
@@ -51,6 +52,12 @@ const ServicePage = () => {
 
   return (
     <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
+      <SEO
+        title="Gold Investment Management Services | Mac & Ro Capital"
+        description="Maximize your portfolio stability with our structured metal services. From flagship allocated accounts to corporate liability backing, secure your wealth."
+        keywords="Sharia compliant gold services Dubai, Gold investment management services, Precious metals wealth solutions, Physical gold account structures, Structured gold wealth management, Corporate precious metal solutions UAE, Corporate asset diversification with gold, Strategic gold account options, Precious metals liability matching, Institutional physical gold custody"
+        url="https://mac-ro-capital.com/services"
+      />
       {/* Header Section */}
       <section className="md:py-20 py-10 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4">

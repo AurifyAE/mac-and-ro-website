@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { newsItems } from '../data/news';
+import SEO from '../components/SEO';
 
 const News = () => {
   
 
   return (
     <div className="min-h-screen bg-white">
+      <SEO
+        title="Physical Gold Investment Dubai | Certified Gold Bars Investment"
+        description="Best and secure physical gold investment company in UAE Dubai. Certified gold bars selling company in dubai uae. Best investing solution company in UAE."
+        keywords="Sharia-compliant gold investment, best metal account for companies, buy physical gold in uae, buy physical gold in uae online"
+        url="https://mac-ro-capital.com/news"
+      />
       {/* Header Section */}
       <section className="py-10 md:py-16 bg-[#F1F0E8]">
         <div className="max-w-6xl mx-auto px-4 text-left">

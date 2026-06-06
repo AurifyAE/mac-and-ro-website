@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
 import { useTranslation } from 'react-i18next';
 import metalAccountBanner from '../assets/metalAccount/metal-account-banner.jpg';
 import MetalAccountCTA from '../components/MetalAccountCTA';
@@ -55,6 +56,12 @@ const MetalAccounts = () => {
 
   return (
     <div className="min-h-screen bg-white" dir={isArabic ? 'rtl' : 'ltr'}>
+      <SEO
+        title="Digital Gold Investment Accounts company in UAE | Mac & Ro Capital FZC"
+        description="Grow your wealth with Mac & Ro Capital's metal accounts. Benefit from certified physical gold, secure storage, and flexible, transparent investment options."
+        keywords="Digital gold account, Allocated precious metals account, Physical gold investment Dubai, Gold investment accounts, Precious metals wealth management, Sharia-compliant gold investment, Secure gold storage Dubai, Allocated bullion storage, Transparent gold investment, Certified physical gold bars, Gold bank Dubai, Institutional precious metals investment, Precious metals vaulting services, Wealth diversification with gold"
+        url="https://mac-ro-capital.com/metal-accounts"
+      />
       {/* Hero Section with Background Image and Gradient Overlay */}
       <section className="relative h-[480px] flex items-center">
         {/* Background Image */}
