@@ -23,16 +23,16 @@ export const members = [
 		address: 'Dubai, UAE',
 		photo: valentinaPhoto,
 	},
-	{
-		slug: 'asmait',
-		name: 'Asmait F. Ghebrehiwet',
-		role: 'Sales Manager',
-		email: 'asmaitfutsumbrhan@gmail.com',
-		phone: '+971 50 188 3042',
-		whatsapp: '+971 50 188 3042',
-		address: 'Dubai, UAE',
-        photo: asmaitPhoto,
-	},
+	// {
+	// 	slug: 'asmait',
+	// 	name: 'Asmait F. Ghebrehiwet',
+	// 	role: 'Sales Manager',
+	// 	email: 'asmaitfutsumbrhan@gmail.com',
+	// 	phone: '+971 50 188 3042',
+	// 	whatsapp: '+971 50 188 3042',
+	// 	address: 'Dubai, UAE',
+    //     photo: asmaitPhoto,
+	// },
 ];
 
 export function getInitials(name) {
