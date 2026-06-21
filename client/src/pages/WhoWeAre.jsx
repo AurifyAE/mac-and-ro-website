@@ -71,13 +71,13 @@ const WhoWeAre = () => {
       description: t('whoWeAre.team.members.valentina.description'),
       hasImage: false
     },
-    {
-      id: 8,
-      name: t('whoWeAre.team.members.asmait.name'),
-      role: t('whoWeAre.team.members.asmait.role'),
-      description: t('whoWeAre.team.members.asmait.description'),
-      hasImage: false
-    }
+    // {
+    //   id: 8,
+    //   name: t('whoWeAre.team.members.asmait.name'),
+    //   role: t('whoWeAre.team.members.asmait.role'),
+    //   description: t('whoWeAre.team.members.asmait.description'),
+    //   hasImage: false
+    // }
   ];
 
   const renderMemberCard = (member) => (
