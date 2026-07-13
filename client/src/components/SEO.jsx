@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 export default function SEO({
-    title = 'Mac & Ro Capital FZC | Open Your Digital Gold Account in UAE',
+    title = 'Open Your Digital Gold Account in UAE | Mac & Ro Capital FZC',
     description = 'Open a secure digital gold account in the UAE with Mac & Ro Capital FZC and gain the freedom to buy, sell, and transfer gold seamlessly. Invest, store, and manage your holdings with unmatched transparency, global trust, and the assurance of real physical value.',
     keywords = 'digital gold account UAE, digital gold account, gold account UAE, buy gold online UAE',
     url = 'https://mac-ro-capital.com/',
