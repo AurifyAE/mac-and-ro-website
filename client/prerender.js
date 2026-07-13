@@ -9,10 +9,12 @@
 // real per-page <title>/meta, then snapshots the finished HTML to
 // dist/<route>/index.html. No changes to the app's SEO/router code are needed.
 //
-// Run automatically after `vite build` (see package.json "build" script).
+// Runs automatically after `vite build` (see package.json "build" script).
+//
+// Local dev uses puppeteer's bundled Chromium. On Vercel/CI (Amazon Linux, no
+// system Chrome libs) we launch @sparticuz/chromium via puppeteer-core instead.
 
 import { preview } from 'vite';
-import puppeteer from 'puppeteer';
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -20,6 +22,9 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const distDir = path.resolve(__dirname, 'dist');
 const PORT = 4180;
+
+// Vercel sets VERCEL=1 during builds; CI covers GitHub Actions etc.
+const isCloudBuild = !!process.env.VERCEL || !!process.env.CI;
 
 // Static routes to prerender. Dynamic detail pages (/news/:slug, /blogs/:slug,
 // /product/:productId) are not listed here — add them once their slugs should
@@ -58,6 +63,25 @@ const blockedHosts = [
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+async function launchBrowser() {
+  if (isCloudBuild) {
+    const chromium = (await import('@sparticuz/chromium')).default;
+    const puppeteer = (await import('puppeteer-core')).default;
+    console.log('[prerender] using @sparticuz/chromium (cloud build)');
+    return puppeteer.launch({
+      args: [...chromium.args, '--no-sandbox', '--disable-setuid-sandbox'],
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
+  }
+  const puppeteer = (await import('puppeteer')).default;
+  console.log('[prerender] using bundled puppeteer Chromium (local)');
+  return puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
+}
+
 async function run() {
   const server = await preview({
     root: __dirname,
@@ -66,74 +90,75 @@ async function run() {
   });
   const origin = `http://localhost:${PORT}`;
 
-  const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
-
+  const browser = await launchBrowser();
   let failures = 0;
 
-  for (const route of routes) {
-    const page = await browser.newPage();
-    await page.setRequestInterception(true);
-    page.on('request', (req) => {
-      if (blockedHosts.some((h) => req.url().includes(h))) req.abort();
-      else req.continue();
-    });
-
-    try {
-      await page.goto(origin + route, {
-        waitUntil: 'domcontentloaded',
-        timeout: 30000,
+  try {
+    for (const route of routes) {
+      const page = await browser.newPage();
+      await page.setRequestInterception(true);
+      page.on('request', (req) => {
+        if (blockedHosts.some((h) => req.url().includes(h))) req.abort();
+        else req.continue();
       });
 
-      // Wait until the app has mounted and a <SEO> effect has populated the head.
-      await page
-        .waitForFunction(
-          () =>
-            document.title &&
-            document.querySelector('#root')?.children.length > 0 &&
-            document.querySelector('meta[name="description"]')?.content,
-          { timeout: 20000 },
-        )
-        .catch(() => {
-          console.warn(`  ! ${route}: SEO tags not detected before timeout`);
+      try {
+        await page.goto(origin + route, {
+          waitUntil: 'domcontentloaded',
+          timeout: 30000,
         });
 
-      // Let any page-level <SEO> override finish applying over the global default.
-      await sleep(400);
+        // Wait until the app mounted and a <SEO> effect populated the head.
+        await page
+          .waitForFunction(
+            () =>
+              document.title &&
+              document.querySelector('#root')?.children.length > 0 &&
+              document.querySelector('meta[name="description"]')?.content,
+            { timeout: 20000 },
+          )
+          .catch(() => {
+            console.warn(`  ! ${route}: SEO tags not detected before timeout`);
+          });
 
-      const html = await page.content();
-      const outPath =
-        route === '/'
-          ? path.join(distDir, 'index.html')
-          : path.join(distDir, route, 'index.html');
-      await fs.mkdir(path.dirname(outPath), { recursive: true });
-      await fs.writeFile(outPath, html, 'utf8');
+        // Let any page-level <SEO> override finish applying over the default.
+        await sleep(400);
 
-      const title = await page.title();
-      console.log(`  ✓ ${route}  ->  ${path.relative(distDir, outPath)}`);
-      console.log(`      title: ${title}`);
-    } catch (err) {
-      failures++;
-      console.error(`  ✗ ${route}: ${err.message}`);
-    } finally {
-      await page.close();
+        const html = await page.content();
+        const outPath =
+          route === '/'
+            ? path.join(distDir, 'index.html')
+            : path.join(distDir, route, 'index.html');
+        await fs.mkdir(path.dirname(outPath), { recursive: true });
+        await fs.writeFile(outPath, html, 'utf8');
+
+        const title = await page.title();
+        console.log(`  ✓ ${route}  ->  ${path.relative(distDir, outPath)}`);
+        console.log(`      title: ${title}`);
+      } catch (err) {
+        failures++;
+        console.error(`  ✗ ${route}: ${err.message}`);
+      } finally {
+        await page.close();
+      }
     }
+  } finally {
+    await browser.close();
+    if (typeof server.close === 'function') await server.close();
+    else server.httpServer.close();
   }
-
-  await browser.close();
-  if (typeof server.close === 'function') await server.close();
-  else server.httpServer.close();
 
   if (failures > 0) {
     console.error(`\nPrerender finished with ${failures} failed route(s).`);
-    process.exit(1);
+  } else {
+    console.log(`\nPrerendered ${routes.length} routes.`);
   }
-  console.log(`\nPrerendered ${routes.length} routes.`);
 }
 
 run().catch((err) => {
-  console.error(err);
-  process.exit(1);
+  console.error('[prerender] FAILED:', err);
+  // Never block the deploy: on a cloud build, ship the normal SPA build (which
+  // still has client-side SEO) rather than failing and keeping the old site.
+  // Locally, exit non-zero so the failure is obvious.
+  process.exit(isCloudBuild ? 0 : 1);
 });
