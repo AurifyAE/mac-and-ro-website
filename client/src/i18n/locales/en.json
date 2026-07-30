@@ -21,7 +21,13 @@
   "header": {
     "goldSpotPrice": "Gold Spot Price",
     "signIn": "Sign In",
-    "language": "Language"
+    "language": "Language",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "homeLink": "Mac & Ro Capital — go to homepage",
+    "viewLiveRates": "View live gold rates",
+    "openCurrencyMenu": "Change currency",
+    "openLanguageMenu": "Change language"
   },
   "banner": {
     "downloadApp": "Download App"

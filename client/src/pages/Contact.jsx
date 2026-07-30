@@ -5,6 +5,12 @@ import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { useTranslation } from 'react-i18next';
 
+// Module scope so both handleSubmit and the inline email error message can reach it.
+// It used to be declared inside handleSubmit, which meant the JSX reference to
+// `emailRegex` threw a ReferenceError as soon as formSubmitted flipped to true —
+// i.e. the whole Contact page white-screened the first time anyone pressed Send.
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const Contact = () => {
   const { t, i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
@@ -46,8 +52,7 @@ const Contact = () => {
     }
 
     // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
+    if (!EMAIL_REGEX.test(formData.email)) {
       alert(t('contact.form.alerts.validEmail'));
       return;
     }
@@ -273,7 +278,7 @@ const Contact = () => {
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#A78E52] focus:border-transparent"
                     placeholder={t('contact.form.fields.email.placeholder')}
                   />
-                  {formSubmitted && !emailRegex.test(formData.email) && (
+                  {formSubmitted && !EMAIL_REGEX.test(formData.email) && (
                     <p id="email-error" className="text-red-600 text-sm mt-1">
                       {t('contact.form.fields.email.error')}
                     </p>

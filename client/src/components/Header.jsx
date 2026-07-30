@@ -205,12 +205,21 @@ const Header = () => {
                 <div className="flex justify-between items-center h-20 relative">
                     {/* Left side - Mobile Toggle + Logo (Mobile) / Just Mobile Toggle (Desktop) */}
                     <div className="flex items-center space-x-4 lg:hidden">
-                        {/* Mobile Toggle Button */}
+                        {/* Mobile Toggle Button.
+                            Was SVG-only, so screen readers announced it as just
+                            "button" — the one failing element in the Lighthouse
+                            "Buttons do not have an accessible name" audit.
+                            text-gray-600 also failed contrast on the #F1F0E8
+                            background; gray-700 clears 4.5:1. */}
                         <button
+                            type="button"
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                            aria-label={isMobileMenuOpen ? t('header.closeMenu') : t('header.openMenu')}
+                            aria-expanded={isMobileMenuOpen}
+                            aria-controls="mobile-menu"
+                            className="p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
                         >
-                            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg className="h-6 w-6" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 {isMobileMenuOpen ? (
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                                 ) : (
@@ -219,39 +228,48 @@ const Header = () => {
                             </svg>
                         </button>
                         
-                        {/* Logo - Mobile Only */}
-                        <div 
-                        onClick={() => {
-                            navigate('/');
-                        }}
-                        className="flex items-center justify-center cursor-pointer">
-                            <img src={logo} alt="" className='w-24 h-auto max-h-14 object-contain' />
-                        </div>
+                        {/* Logo - Mobile Only.
+                            Was a <div onClick> with alt="" — not reachable by keyboard
+                            and invisible to screen readers despite being the primary
+                            route home. Now a real link. */}
+                        <Link
+                            to="/"
+                            aria-label={t('header.homeLink')}
+                            className="flex items-center justify-center cursor-pointer"
+                        >
+                            <img src={logo} alt="" width="96" height="56" className='w-24 h-auto max-h-14 object-contain' />
+                        </Link>
                     </div>
 
                     {/* Center Logo - Desktop Only */}
-                    <div 
-                    className="hidden lg:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
-                    onClick={() => {
-                        navigate('/');
-                    }}
+                    <Link
+                        to="/"
+                        aria-label={t('header.homeLink')}
+                        className="hidden lg:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 cursor-pointer"
                     >
-                        <img src={logo} alt="" className='w-32 h-auto max-h-16 object-contain' />
-                    </div>
+                        <img src={logo} alt="" width="128" height="64" className='w-32 h-auto max-h-16 object-contain' />
+                    </Link>
 
                     {/* Right side - Gold Spot Price */}
                     <div className="flex items-center space-x-3 w-auto justify-end ml-auto">
-                        <div className="relative flex items-center space-x-3 cursor-pointer group"
-                        onClick={() => {
-                            navigate('/live-rate');
-                        }}
+                        {/* Also a <div onClick> previously — keyboard-inaccessible.
+                            This element is what Lighthouse flagged as the CLS culprit
+                            (div.relative.flex.items-center.space-x-3.cursor-pointer.group),
+                            because the price text arrives asynchronously over the socket.
+                            The fixed-width price <p> below reserves its space. */}
+                        <Link
+                        to="/live-rate"
+                        aria-label={t('header.viewLiveRates')}
+                        className="relative flex items-center space-x-3 cursor-pointer group"
                         >
                             {/* Desktop Layout */}
                             <div className="hidden md:flex items-center space-x-3">
-                                <span className="text-xs font-medium text-gray-600 tracking-light">{t('header.goldSpotPrice')}</span>
-                                <img 
+                                <span className="text-xs font-medium text-gray-700 tracking-light">{t('header.goldSpotPrice')}</span>
+                                <img
                                     src={`https://flagcdn.com/${currencyInfo.countryCode}.svg`}
-                                    alt={`${selectedCurrency} flag`} 
+                                    alt={`${selectedCurrency} flag`}
+                                    width="28"
+                                    height="16"
                                     className="w-7 h-4 rounded-sm object-cover"
                                     onError={(e) => {
                                         // Fallback to a colored div if flag fails to load
@@ -283,7 +301,7 @@ const Header = () => {
                                     <p className="w-20 text-sm font-semibold text-gray-900 tracking-wide">
                                         {convertedPrice ? `${currencyInfo.symbol} ${formatPrice(convertedPrice)}` : '--'}
                                     </p>
-                                    <span className="text-sm font-medium text-gray-500 tracking-wide">{currencyInfo.unit}</span>
+                                    <span className="text-sm font-medium text-gray-700 tracking-wide">{currencyInfo.unit}</span>
                                 </div>
 
                                 {/* Tooltip */}
@@ -295,11 +313,13 @@ const Header = () => {
 
                             {/* Mobile Layout */}
                             <div className="flex md:hidden flex-col items-end">
-                                <div className="text-xs font-medium text-gray-600">{t('header.goldSpotPrice')}</div>
+                                <div className="text-xs font-medium text-gray-700">{t('header.goldSpotPrice')}</div>
                                 <div className="flex items-center space-x-1">
-                                    <img 
+                                    <img
                                         src={`https://flagcdn.com/${currencyInfo.countryCode}.svg`}
-                                        alt={`${selectedCurrency} flag`} 
+                                        alt={`${selectedCurrency} flag`}
+                                        width="20"
+                                        height="12"
                                         className="w-5 h-3 rounded-sm object-cover"
                                         onError={(e) => {
                                             e.target.style.display = 'none';
@@ -329,15 +349,18 @@ const Header = () => {
                                         {convertedPrice ? `${currencyInfo.symbol} ${formatPrice(convertedPrice)}` : '--'}
                                     </p>
                                 </div>
-                                <div className="text-xs text-gray-500">{currencyInfo.unit}</div>
+                                {/* text-gray-500 on #F1F0E8 measured ~4.3:1 — this was the
+                                    failing element in the Lighthouse contrast audit.
+                                    gray-700 clears the 4.5:1 minimum. */}
+                                <div className="text-xs text-gray-700">{currencyInfo.unit}</div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
 
                 {/* Mobile Navigation Menu - Absolute Positioned */}
                 {isMobileMenuOpen && (
-                    <div className="lg:hidden absolute top-full left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
+                    <div id="mobile-menu" className="lg:hidden absolute top-full left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
                         <div className="px-2 pt-2 pb-3 space-y-1">
                             {navItems.map((item) => (
                                 <div key={item.name}>

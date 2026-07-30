@@ -1,18 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
-import featureImage1 from '../../assets/homepage/goldVault.png';
-import orovivoAppTutorial from '../../assets/homepage/Orovivo-App-Tutorial-Video.mp4';
-import locationSwapVideo from '../../assets/location-swap/location-swap-video.mov';
+import featureImage1 from '../../assets/homepage/goldVault.webp';
+import locationSwapVideo from '../../assets/location-swap/location-swap-video.web.mp4';
 import googlePlay from '../../assets/homepage/googlePlay.png';
 import appStore from '../../assets/homepage/appStore.png';
 import { useTranslation } from 'react-i18next';
+import useLazyVideo from '../../hooks/useLazyVideo';
+import YouTubeEmbed from '../YouTubeEmbed';
 
-const Features = () => { 
+// The tutorial used to be a self-hosted 27MB HEVC file. HEVC isn't decodable in Chrome
+// on Windows/Android or in Firefox, so for most visitors it rendered as a blank box —
+// while still being downloaded. Now served from YouTube, which handles adaptive bitrate,
+// codec negotiation and captions.
+const OROVIVO_TUTORIAL_VIDEO_ID = 'QBcXUxDYJz0';
+
+const Features = () => {
     const navigate = useNavigate();
     const { t, i18n } = useTranslation();
     // Determine if the language is Arabic (rtl)
     const isArabic = i18n.language === 'ar';
+    // 14MB decorative loop, well below the fold — hold off until it's near the viewport.
+    const locationSwapVideoRef = useLazyVideo();
 
     // Array of location data
     const locations = [
@@ -150,12 +159,19 @@ const Features = () => {
                         viewport={{ once: true, amount: 0.3 }}
                     >
                         <div className="relative">
-                            <img 
-                                src={featureImage1} 
-                                alt="Gold Investment Solutions" 
+                            {/* Was a 4.06MB PNG of a photograph — the biggest image on
+                                the site by an order of magnitude. Now 146KB of WebP at
+                                1600px. width/height reserve the box (CLS audit). */}
+                            <img
+                                src={featureImage1}
+                                alt="Gold bars stored in a Mac &amp; Ro Capital secure vault"
+                                width="1600"
+                                height="1244"
+                                loading="lazy"
+                                decoding="async"
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
                             />
-                            
+
                         </div>
                     </motion.div>
                 </div>
@@ -172,16 +188,21 @@ const Features = () => {
                         viewport={{ once: true, amount: 0.3 }}
                     >
                         <div className="relative">
-                            <video 
-                                src={locationSwapVideo} 
-                                alt="Gold Market Intelligence" 
+                            {/* `alt` isn't a valid attribute on <video> and was doing
+                                nothing; decorative loop, so aria-hidden instead. */}
+                            <video
+                                ref={locationSwapVideoRef}
+                                src={locationSwapVideo}
                                 className="w-full h-auto rounded-[40px] shadow-2xl"
-                                autoPlay
                                 muted
                                 loop
                                 playsInline
+                                preload="none"
+                                poster="/video-posters/location-swap-video.webp"
+                                aria-hidden="true"
+                                tabIndex={-1}
                             />
-                            
+
                         </div>
                     </motion.div>
                     
@@ -259,10 +280,14 @@ const Features = () => {
                                             className="block"
                                             target='_blank'                     
                                         >
-                                            <img 
-                                                src={googlePlay} 
-                                                alt="OROVIVO App" 
-                                                className="w-28 h-auto shadow-2xl" 
+                                            <img
+                                                src={googlePlay}
+                                                alt="Get OROVIVO on Google Play"
+                                                width="124"
+                                                height="35"
+                                                loading="lazy"
+                                                decoding="async"
+                                                className="w-28 h-auto shadow-2xl"
                                             />
                                         </Link>
                                     </div>
@@ -274,10 +299,14 @@ const Features = () => {
                                             className="block"
                                             target="_blank"
                                         >
-                                            <img 
-                                                src={appStore} 
-                                                alt="OROVIVO App" 
-                                                className="w-28 h-auto shadow-2xl" 
+                                            <img
+                                                src={appStore}
+                                                alt="Download OROVIVO on the App Store"
+                                                width="107"
+                                                height="35"
+                                                loading="lazy"
+                                                decoding="async"
+                                                className="w-28 h-auto shadow-2xl"
                                             />
                                         </Link>
                                     </div>
@@ -294,16 +323,17 @@ const Features = () => {
                         viewport={{ once: true, amount: 0.3 }}
                     >
                         <div className="relative">
-                            <video
-                                src={orovivoAppTutorial}
-                                className="w-full h-auto rounded-[40px] shadow-2xl"
-                                controls
-                                autoPlay
-                                muted
-                                playsInline
-                            >
-                                Your browser does not support the video tag.
-                            </video>
+                            {/* autoplayOnVisible: starts muted once the section is half
+                                in view, so the iframe cost is only paid by visitors who
+                                actually scroll this far. Clicking the facade before then
+                                plays it unmuted instead. */}
+                            <YouTubeEmbed
+                                videoId={OROVIVO_TUTORIAL_VIDEO_ID}
+                                poster="/video-posters/orovivo-app-tutorial.webp"
+                                title={t('homepage.features.orovivoTitle')}
+                                className="rounded-[40px] shadow-2xl"
+                                autoplayOnVisible
+                            />
                         </div>
                     </motion.div>
                 </div>

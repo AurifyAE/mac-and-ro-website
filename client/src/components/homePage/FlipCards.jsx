@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 // Import images
-import deluxeBanner from '../../assets/homepage/deluxe-flip.jpg';
+import deluxeBanner from '../../assets/homepage/deluxe-flip.webp';
 import macBanner from '../../assets/homepage/mac-flip.jpg';
 import keymanBanner from '../../assets/homepage/keyman-flip.jpg';
-import tfmBanner from '../../assets/homepage/tfm-flip.jpg';
+import tfmBanner from '../../assets/homepage/tfm-flip.webp';
 
 const getFlipCardsData = (t) => [
     {
@@ -158,8 +158,15 @@ const FlipCards = () => {
                                         <span className="font-semibold text-black">{t('homepage.flipCards.keyBenefits')}</span> {card.backContent.benefits}
                                     </p>
                                 </div>
-                                <Link 
+                                {/* All four cards used to render a bare "Learn More",
+                                    which failed both the a11y "identical links have the
+                                    same purpose" audit and the SEO "links do not have
+                                    descriptive text" audit — the only scored SEO failure.
+                                    The visible label stays short; aria-label carries the
+                                    destination for screen readers and crawlers. */}
+                                <Link
                                     to={card.backContent.ctaLink}
+                                    aria-label={`${t('homepage.flipCards.learnMore')} — ${card.title}`}
                                     className="w-full max-w-xs mx-auto px-4 py-2 bg-black hover:bg-transparent hover:border-1 hover:border-black hover:text-black text-white font-semibold rounded-lg transition-all duration-300 text-sm cursor-pointer block text-center"
                                 >
                                     {t('homepage.flipCards.learnMore')}

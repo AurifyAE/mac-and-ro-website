@@ -108,17 +108,25 @@ async function run() {
           timeout: 30000,
         });
 
-        // Wait until the app mounted and a <SEO> effect populated the head.
+        // Wait until the app mounted, the lazy route chunk resolved, and a <SEO>
+        // effect populated the head.
+        //
+        // Routes are React.lazy'd, so #root gets children (the shell) well before the
+        // page itself renders. The [aria-busy="true"] check waits out the <Suspense>
+        // fallback in App.jsx — without it we'd snapshot an empty placeholder and ship
+        // contentless HTML to crawlers.
         await page
           .waitForFunction(
             () =>
               document.title &&
               document.querySelector('#root')?.children.length > 0 &&
+              !document.querySelector('[aria-busy="true"]') &&
+              document.querySelector('main#main-content')?.children.length > 0 &&
               document.querySelector('meta[name="description"]')?.content,
             { timeout: 20000 },
           )
           .catch(() => {
-            console.warn(`  ! ${route}: SEO tags not detected before timeout`);
+            console.warn(`  ! ${route}: content/SEO tags not detected before timeout`);
           });
 
         // Let any page-level <SEO> override finish applying over the default.

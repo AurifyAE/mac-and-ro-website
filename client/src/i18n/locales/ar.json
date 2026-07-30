@@ -21,7 +21,13 @@
   "header": {
     "goldSpotPrice": "سعر الذهب الفوري",
     "signIn": "تسجيل الدخول",
-    "language": "اللغة"
+    "language": "اللغة",
+    "openMenu": "فتح قائمة التنقل",
+    "closeMenu": "إغلاق قائمة التنقل",
+    "homeLink": "ماك آند رو كابيتال — الانتقال إلى الصفحة الرئيسية",
+    "viewLiveRates": "عرض أسعار الذهب المباشرة",
+    "openCurrencyMenu": "تغيير العملة",
+    "openLanguageMenu": "تغيير اللغة"
   },
   "banner": {
     "downloadApp": "تحميل التطبيق"

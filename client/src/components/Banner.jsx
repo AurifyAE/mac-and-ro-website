@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import langselector from '../assets/homepage/langselector.svg';
 import appStore from '../assets/homepage/appStore.png';
-import appleMobile from '../assets/homepage/apple-png.png';
-import googleMobile from '../assets/homepage/gplay.webp';
+import appleMobile from '../assets/homepage/apple-icon-48.png';
+import googleMobile from '../assets/homepage/gplay-74.webp';
 import googlePlay from '../assets/homepage/googlePlay.png';
 import { useCurrency } from '../context/CurrencyContext';
 import { useTranslation } from 'react-i18next';
@@ -60,7 +60,7 @@ const Banner = () => {
               className="block"
               target='_blank'
             >
-              <img src={googlePlay} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+              <img src={googlePlay} alt="Get it on Google Play" width="124" height="35" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
             </Link>
             </div>
             <div className="group">
@@ -69,7 +69,7 @@ const Banner = () => {
               className="block"
               target="_blank"
             >
-              <img src={appStore} alt="App Store" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+              <img src={appStore} alt="Download on the App Store" width="107" height="35" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
             </Link>
             </div>
             </div>
@@ -80,7 +80,8 @@ const Banner = () => {
                 className="block"
                 target='_blank'
               >
-                <img src={googleMobile} alt="Google Play" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                {/* Was 880x572 for a 37x24 slot; now a 74x48 source (2x for retina). */}
+                <img src={googleMobile} alt="Get it on Google Play" width="37" height="24" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
               </Link>
 
               </div>
@@ -91,7 +92,10 @@ const Banner = () => {
                   aria-label="App Store"
                   target="_blank"
                 >
-                  <img src={appleMobile} alt="App Store" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
+                  {/* Was a 2048x2048 PNG rendered at 24x24 (38.9KB). Now a 48x48
+                      source at 0.8KB — 2x the display size, so it stays crisp on
+                      retina. */}
+                  <img src={appleMobile} alt="Download on the App Store" width="24" height="24" className="h-6 w-auto cursor-pointer hover:opacity-80 transition-opacity" />
                 </Link>
               </div>
             </div>
@@ -102,11 +106,15 @@ const Banner = () => {
             {/* Currency Dropdown */}
             <div className="relative">
               <button
+                type="button"
                 onClick={() => setIsCurrencyOpen(!isCurrencyOpen)}
+                aria-label={`${t('header.openCurrencyMenu')} (${selectedCurrency})`}
+                aria-expanded={isCurrencyOpen}
+                aria-haspopup="true"
                 className="flex items-center space-x-2 px-1 md:px-3 py-1 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 transition duration-200 ease-in-out tracking-wide"
               >
                 <span>{selectedCurrency}</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
@@ -137,10 +145,14 @@ const Banner = () => {
             {/* Language Selector */}
             <div className="relative">
               <button
+                type="button"
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                aria-label={`${t('header.openLanguageMenu')} (${i18n.language.toUpperCase()})`}
+                aria-expanded={isLanguageOpen}
+                aria-haspopup="true"
                 className="hidden md:flex items-center space-x-2 px-3 py-1 text-sm font-semibold text-white bg-black rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-600 transition duration-200 ease-in-out tracking-wide"
               >
-                <img src={langselector} alt="" className='w-5 h-5' />
+                <img src={langselector} alt="" width="20" height="20" className='w-5 h-5' />
                 <span>{i18n.language.toUpperCase()}</span>
               </button>
 

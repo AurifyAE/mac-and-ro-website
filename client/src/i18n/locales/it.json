@@ -21,7 +21,13 @@
   "header": {
     "goldSpotPrice": "Prezzo Spot dell'Oro",
     "signIn": "Accedi",
-    "language": "Lingua"
+    "language": "Lingua",
+    "openMenu": "Apri il menu di navigazione",
+    "closeMenu": "Chiudi il menu di navigazione",
+    "homeLink": "Mac & Ro Capital — vai alla homepage",
+    "viewLiveRates": "Visualizza le quotazioni oro in tempo reale",
+    "openCurrencyMenu": "Cambia valuta",
+    "openLanguageMenu": "Cambia lingua"
   },
   "banner": {
     "downloadApp": "Scarica App"

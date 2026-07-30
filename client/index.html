@@ -2,8 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="#" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts. Previously @import'ed from src/index.css, which made them a third hop in
+         the critical path (HTML -> index.css -> css2 -> woff2). Preconnecting to the
+         font CDNs and linking the stylesheet directly parallelises the requests.
+         Lighthouse measured ~190ms of LCP savings from the fonts.gstatic.com preconnect
+         alone, and ~1420ms of render-blocking savings on mobile. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
+    />
     <title>Open Your Digital Gold Account in UAE | Mac & Ro Capital FZC</title>
     <meta name="description" content="Open a secure digital gold account in the UAE with Mac & Ro Capital FZC and gain the freedom to buy, sell, and transfer gold seamlessly. Invest, store, and manage your holdings with unmatched transparency, global trust, and the assurance of real physical value." />
     <meta name="keywords" content="digital gold account UAE, digital gold account, gold account UAE, buy gold online UAE" />
@@ -19,13 +31,42 @@
     <meta property="og:image" content="/og-default.jpg" />
 
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X5QXJRSWCG"></script>
+    <!-- Google tag (gtag.js), loaded off the critical path.
+         gtag.js is 162KB and cost 86ms of main-thread time on desktop / 296ms on mobile
+         while competing with the app bundle. The dataLayer + gtag() stub is defined
+         synchronously here, so the js/config calls queue immediately and are replayed
+         the moment the real script arrives — page_view attribution is preserved.
+         The script itself is fetched at the first of: user interaction, browser idle,
+         or a 3s timeout. To go back to eager loading, restore the plain
+         <script async src="...gtag/js?id=..."> tag and delete loadGtag(). -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-X5QXJRSWCG');
+
+      (function () {
+        var loaded = false;
+        function loadGtag() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-X5QXJRSWCG';
+          document.head.appendChild(s);
+          ['pointerdown', 'keydown', 'scroll'].forEach(function (evt) {
+            window.removeEventListener(evt, loadGtag);
+          });
+        }
+        ['pointerdown', 'keydown', 'scroll'].forEach(function (evt) {
+          window.addEventListener(evt, loadGtag, { once: true, passive: true });
+        });
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(loadGtag, { timeout: 3000 });
+        } else {
+          setTimeout(loadGtag, 3000);
+        }
+      })();
     </script>
 
     <!-- Twitter -->

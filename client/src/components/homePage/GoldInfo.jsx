@@ -1,5 +1,5 @@
 import React from 'react';
-import GoldInfoImage from '../../assets/homepage/goldInfo.jpg';
+import GoldInfoImage from '../../assets/homepage/goldInfo.webp';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -31,9 +31,14 @@ const GoldInfo = () => {
           {/* Image Section */}
           <div className={`${isArabic ? 'order-1 lg:order-1' : 'order-2 lg:order-1'}`}>
             <div className="relative">
-              <img 
-                src={GoldInfoImage} 
-                alt="Gold Investment" 
+              {/* Was a 454KB JPEG; now 59KB of WebP at the same 648x985. */}
+              <img
+                src={GoldInfoImage}
+                alt="Gold bullion bars representing a physical gold investment"
+                width="648"
+                height="985"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-cover rounded-lg shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
