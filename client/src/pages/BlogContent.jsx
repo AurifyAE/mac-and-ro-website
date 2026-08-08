@@ -10,9 +10,10 @@ const BlogContent = () => {
     if (!text) return null;
 
     const lines = text.split('\n');
+    const usesExplicitHeadings = lines.some((line) => /^#{2,3}\s/.test(line.trim()));
 
-    const isTitleLine = (line, idx) => idx === 0 && !!line;
-    const isSubtitleLine = (line, idx) => idx === 1 && /^\(.*\)$/.test(line);
+    const isTitleLine = (line, idx) => !usesExplicitHeadings && idx === 0 && !!line;
+    const isSubtitleLine = (line, idx) => !usesExplicitHeadings && idx === 1 && /^\(.*\)$/.test(line);
     const isSectionHeading = (line) => {
       if (!line) return false;
       if (/^[0-9]+\.\s+/.test(line)) return false; // numbered items are not headings
@@ -26,6 +27,22 @@ const BlogContent = () => {
       const line = raw.trim();
 
       if (!line) return <div key={idx} className="h-3" />;
+
+      if (line.startsWith('## ')) {
+        return (
+          <h2 key={idx} className="mt-8 mb-3 text-xl md:text-2xl font-bold text-gray-900 font-playfair">
+            {line.slice(3)}
+          </h2>
+        );
+      }
+
+      if (line.startsWith('### ')) {
+        return (
+          <h3 key={idx} className="mt-6 mb-2 text-lg md:text-xl font-semibold text-gray-900">
+            {line.slice(4)}
+          </h3>
+        );
+      }
 
       // Top title/subtitle inside content
       if (isTitleLine(line, idx)) {
@@ -105,11 +122,23 @@ const BlogContent = () => {
           <h1 className="text-3xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-playfair">
             {article.title}
           </h1>
+          {article.subtitle && (
+            <p className="mt-3 max-w-3xl text-base md:text-lg text-gray-600 leading-relaxed">
+              {article.subtitle}
+            </p>
+          )}
         </div>
       </section>
 
       <section className="py-12">
         <div className="max-w-3xl mx-auto px-4">
+          {article.image && (
+            <img
+              src={article.image}
+              alt={article.title}
+              className="w-full aspect-video object-cover rounded-2xl mb-10"
+            />
+          )}
           <div className="prose prose-lg max-w-none">
             {renderBlogText(article.content)}
           </div>

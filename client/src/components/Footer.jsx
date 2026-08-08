@@ -45,6 +45,7 @@ const Footer = () => {
                         <li><Link to="/who-we-are" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.whoWeAre')}</Link></li>
                         <li><Link to="/metal-accounts" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.metalAccount')}</Link></li>
                         <li><Link to="/products" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.products')}</Link></li>
+                        <li><Link to="/blogs" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.blogs')}</Link></li>
                         <li><Link to="/contact" className="text-sm md:text-base text-black hover:text-[#DCBC7C] transition-colors">{t('footer.contact')}</Link></li>
                     </ul>
                     </motion.div>
