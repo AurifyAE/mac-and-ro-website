@@ -1,8 +1,8 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import io from "socket.io-client";
 
-const SOCKET_SERVER_URL = "https://capital-server-gnsu.onrender.com";
-const SECRET_KEY = "aurify@123";
+const SOCKET_SERVER_URL = import.meta.env.SOCKET_SERVER_URL;
+const SECRET_KEY = import.meta.env.MARKET_SECRET;
 
 export default function useMarketData(symbols = ["GOLD"]) {
   const [marketData, setMarketData] = useState(null);
